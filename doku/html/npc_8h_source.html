@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Verlies: npc.h Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Verlies
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Suchen');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Suchen');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">npc.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="npc_8h.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//   Verlies - ein Adventure im Retrodesign</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//   Copyright (C) 2018-2019 Heiko Wolf</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">//   This program is free software; you can redistribute it and/or modify</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//   it under the terms of the GNU General Public License As published by</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//   the Free Software Foundation; either version 2 of the License, or</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">//   (at your option) any later version.</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">//   This program is distributed in the hope that it will be useful,</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">//   but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">//   MERCHANTABILITY Or FITNESS For A PARTICULAR PURPOSE.  See the</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">//   GNU General Public License For more details.</span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">//</span></div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">//   You should have received a copy of the GNU General Public License along</span></div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">//   With this program; if not, write to the Free Software Foundation, Inc.,</span></div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">//   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.</span></div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">//</span></div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">//   Kontakt: magister@skywave-2000.de</span></div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#ifndef _NPC_H_</span></div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#define _NPC_H_</span></div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="globals_8h.html">globals.h</a>&quot;</span></div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keywordtype">void</span> <a class="code" href="npc_8h.html#a7b25631c5a6fbc6f65ac7625ffe575eb">p_npc_heiler</a> (UINT8 l_mk) BANKED;</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keywordtype">void</span> <a class="code" href="npc_8h.html#a61f23cd4600e151b186df8d11069cf23">p_fiona</a> () BANKED;</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keywordtype">void</span> <a class="code" href="npc_8h.html#a803f428cfb5b34c659eb15728d752791">p_max</a> () BANKED;</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keywordtype">void</span> <a class="code" href="npc_8h.html#a2b27bad864b5348c265c253f12cae600">p_provianthaendler</a> () BANKED;</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keywordtype">void</span> <a class="code" href="npc_8h.html#ac78fe0c7fa7dc89468c6402b103ccfb5">p_ausdauerhandlerin</a> () BANKED;</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keywordtype">void</span> <a class="code" href="npc_8h.html#a391e164a8e1ce08d6345557fae954a93">p_heiltrankhaendlerin</a> () BANKED;</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keywordtype">void</span> <a class="code" href="npc_8h.html#a3ad242c6e8e10479fad915cc187755a1">p_zauberstaubhaendler</a> () BANKED;</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">/*void p_npc_helfer (UINT8 v_nxk, UINT8 v_nyk, UINT8 v_ntyp, UINT8 v_nqnr) BANKED;</span></div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">void p_npc_questgeber1 (UINT8 v_nxk, UINT8 v_nyk, UINT8 v_qnr) BANKED;</span></div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">void p_npc_tausch_proviant (UINT8 nxk, UINT8 nyk) BANKED;</span></div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">void p_nicht_genug_gold () BANKED;*/</span></div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#endif</span></div><div class="ttc" id="npc_8h_html_a7b25631c5a6fbc6f65ac7625ffe575eb"><div class="ttname"><a href="npc_8h.html#a7b25631c5a6fbc6f65ac7625ffe575eb">p_npc_heiler</a></div><div class="ttdeci">void p_npc_heiler(UINT8 l_mk) BANKED</div><div class="ttdoc">Heiler. </div><div class="ttdef"><b>Definition:</b> npc.c:55</div></div>
+<div class="ttc" id="npc_8h_html_a803f428cfb5b34c659eb15728d752791"><div class="ttname"><a href="npc_8h.html#a803f428cfb5b34c659eb15728d752791">p_max</a></div><div class="ttdeci">void p_max() BANKED</div><div class="ttdef"><b>Definition:</b> npc.c:88</div></div>
+<div class="ttc" id="npc_8h_html_a3ad242c6e8e10479fad915cc187755a1"><div class="ttname"><a href="npc_8h.html#a3ad242c6e8e10479fad915cc187755a1">p_zauberstaubhaendler</a></div><div class="ttdeci">void p_zauberstaubhaendler() BANKED</div><div class="ttdef"><b>Definition:</b> npc.c:227</div></div>
+<div class="ttc" id="globals_8h_html"><div class="ttname"><a href="globals_8h.html">globals.h</a></div></div>
+<div class="ttc" id="npc_8h_html_a2b27bad864b5348c265c253f12cae600"><div class="ttname"><a href="npc_8h.html#a2b27bad864b5348c265c253f12cae600">p_provianthaendler</a></div><div class="ttdeci">void p_provianthaendler() BANKED</div><div class="ttdoc">Provianthändler. </div><div class="ttdef"><b>Definition:</b> npc.c:99</div></div>
+<div class="ttc" id="npc_8h_html_a391e164a8e1ce08d6345557fae954a93"><div class="ttname"><a href="npc_8h.html#a391e164a8e1ce08d6345557fae954a93">p_heiltrankhaendlerin</a></div><div class="ttdeci">void p_heiltrankhaendlerin() BANKED</div><div class="ttdef"><b>Definition:</b> npc.c:185</div></div>
+<div class="ttc" id="npc_8h_html_a61f23cd4600e151b186df8d11069cf23"><div class="ttname"><a href="npc_8h.html#a61f23cd4600e151b186df8d11069cf23">p_fiona</a></div><div class="ttdeci">void p_fiona() BANKED</div><div class="ttdef"><b>Definition:</b> npc.c:78</div></div>
+<div class="ttc" id="npc_8h_html_ac78fe0c7fa7dc89468c6402b103ccfb5"><div class="ttname"><a href="npc_8h.html#ac78fe0c7fa7dc89468c6402b103ccfb5">p_ausdauerhandlerin</a></div><div class="ttdeci">void p_ausdauerhandlerin() BANKED</div><div class="ttdoc">Ausdauertrankverkäuferin. </div><div class="ttdef"><b>Definition:</b> npc.c:143</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Erzeugt von &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.14
+</small></address>
+</body>
+</html>

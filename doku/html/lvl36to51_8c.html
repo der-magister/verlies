@@ -1,0 +1,510 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Verlies: lvl36to51.c-Dateireferenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Verlies
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.8.14 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Suchen');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Suchen');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funktionen</a>  </div>
+  <div class="headertitle">
+<div class="title">lvl36to51.c-Dateireferenz</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="globals_8h_source.html">globals.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="engine_8h_source.html">engine.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="gegner_8h_source.html">gegner.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="truhen_8h_source.html">truhen.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="schilder_8h_source.html">schilder.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="npc_8h_source.html">npc.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="boss_8h_source.html">boss.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="hud_8h_source.html">hud.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lvlstatus_8h_source.html">lvlstatus.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lvlgegner_8h_source.html">lvlgegner.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="text_8h_source.html">text.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="portale_8h_source.html">portale.h</a>&quot;</code><br />
+<code>#include &quot;daten/lvldaten/35.h&quot;</code><br />
+<code>#include &quot;daten/lvldaten/36.h&quot;</code><br />
+<code>#include &quot;daten/lvldaten/37.h&quot;</code><br />
+<code>#include &quot;daten/lvldaten/38.h&quot;</code><br />
+<code>#include &quot;daten/lvldaten/39.h&quot;</code><br />
+<code>#include &quot;daten/lvldaten/40.h&quot;</code><br />
+<code>#include &quot;daten/lvldaten/41.h&quot;</code><br />
+<code>#include &quot;daten/lvldaten/42.h&quot;</code><br />
+<code>#include &quot;daten/lvldaten/43.h&quot;</code><br />
+<code>#include &quot;daten/lvldaten/44.h&quot;</code><br />
+<code>#include &quot;daten/lvldaten/45.h&quot;</code><br />
+<code>#include &quot;daten/lvldaten/46.h&quot;</code><br />
+<code>#include &quot;daten/lvldaten/47.h&quot;</code><br />
+<code>#include &quot;daten/lvldaten/48.h&quot;</code><br />
+<code>#include &quot;daten/lvldaten/49.h&quot;</code><br />
+<code>#include &quot;daten/lvldaten/50.h&quot;</code><br />
+<code>#include &quot;daten/lvldaten/51.h&quot;</code><br />
+<code>#include &quot;daten/lvldaten/52.h&quot;</code><br />
+<code>#include &quot;daten/lvldaten/53.h&quot;</code><br />
+<code>#include &quot;daten/txt/questen/rubintxt.h&quot;</code><br />
+<code>#include &quot;daten/txt/truhen/truheleertxt1.h&quot;</code><br />
+<code>#include &quot;daten/txt/schilder/schildtxt4.h&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funktionen</h2></td></tr>
+<tr class="memitem:a5f46d3e51581bc94331c6bb5fcbe6dd0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lvl36to51_8c.html#a5f46d3e51581bc94331c6bb5fcbe6dd0">p_lvl36</a> ()</td></tr>
+<tr class="memdesc:a5f46d3e51581bc94331c6bb5fcbe6dd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ablauf Screen 36.  <a href="#a5f46d3e51581bc94331c6bb5fcbe6dd0">Mehr ...</a><br /></td></tr>
+<tr class="separator:a5f46d3e51581bc94331c6bb5fcbe6dd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a672a0d342ebb619a96aafbe8292916eb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lvl36to51_8c.html#a672a0d342ebb619a96aafbe8292916eb">p_lvl37</a> ()</td></tr>
+<tr class="memdesc:a672a0d342ebb619a96aafbe8292916eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ablauf Screen 37.  <a href="#a672a0d342ebb619a96aafbe8292916eb">Mehr ...</a><br /></td></tr>
+<tr class="separator:a672a0d342ebb619a96aafbe8292916eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34434216de31afaf492ea39d04b3c089"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lvl36to51_8c.html#a34434216de31afaf492ea39d04b3c089">p_lvl38</a> ()</td></tr>
+<tr class="memdesc:a34434216de31afaf492ea39d04b3c089"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ablauf Screen 38.  <a href="#a34434216de31afaf492ea39d04b3c089">Mehr ...</a><br /></td></tr>
+<tr class="separator:a34434216de31afaf492ea39d04b3c089"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a341a3b37b1fbc1f173c4e500190e50ed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lvl36to51_8c.html#a341a3b37b1fbc1f173c4e500190e50ed">p_lvl39</a> ()</td></tr>
+<tr class="memdesc:a341a3b37b1fbc1f173c4e500190e50ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ablauf Screen 39.  <a href="#a341a3b37b1fbc1f173c4e500190e50ed">Mehr ...</a><br /></td></tr>
+<tr class="separator:a341a3b37b1fbc1f173c4e500190e50ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5cbb586a40363d9c8bc3c6ea4098ac4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lvl36to51_8c.html#af5cbb586a40363d9c8bc3c6ea4098ac4">p_lvl40</a> ()</td></tr>
+<tr class="memdesc:af5cbb586a40363d9c8bc3c6ea4098ac4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ablauf Screen 40.  <a href="#af5cbb586a40363d9c8bc3c6ea4098ac4">Mehr ...</a><br /></td></tr>
+<tr class="separator:af5cbb586a40363d9c8bc3c6ea4098ac4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7e63eb4395b1d624812c1b2a8fde0ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lvl36to51_8c.html#ad7e63eb4395b1d624812c1b2a8fde0ec">p_lvl41</a> ()</td></tr>
+<tr class="memdesc:ad7e63eb4395b1d624812c1b2a8fde0ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ablauf Screen 41.  <a href="#ad7e63eb4395b1d624812c1b2a8fde0ec">Mehr ...</a><br /></td></tr>
+<tr class="separator:ad7e63eb4395b1d624812c1b2a8fde0ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0658203014beabcedb84097e4eb7f243"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lvl36to51_8c.html#a0658203014beabcedb84097e4eb7f243">p_lvl42</a> ()</td></tr>
+<tr class="memdesc:a0658203014beabcedb84097e4eb7f243"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ablauf Level 42.  <a href="#a0658203014beabcedb84097e4eb7f243">Mehr ...</a><br /></td></tr>
+<tr class="separator:a0658203014beabcedb84097e4eb7f243"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08579b34fad1af5154dcbde57f37376f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lvl36to51_8c.html#a08579b34fad1af5154dcbde57f37376f">p_lvl43</a> ()</td></tr>
+<tr class="memdesc:a08579b34fad1af5154dcbde57f37376f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ablauf Level 43.  <a href="#a08579b34fad1af5154dcbde57f37376f">Mehr ...</a><br /></td></tr>
+<tr class="separator:a08579b34fad1af5154dcbde57f37376f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad02434e7e54f48eab5d6945df28b882f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lvl36to51_8c.html#ad02434e7e54f48eab5d6945df28b882f">p_lvl44</a> ()</td></tr>
+<tr class="memdesc:ad02434e7e54f48eab5d6945df28b882f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ablauf Level 44.  <a href="#ad02434e7e54f48eab5d6945df28b882f">Mehr ...</a><br /></td></tr>
+<tr class="separator:ad02434e7e54f48eab5d6945df28b882f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0981478caaea9feb9098b762da331494"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lvl36to51_8c.html#a0981478caaea9feb9098b762da331494">p_lvl45</a> ()</td></tr>
+<tr class="memdesc:a0981478caaea9feb9098b762da331494"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ablauf Level 45.  <a href="#a0981478caaea9feb9098b762da331494">Mehr ...</a><br /></td></tr>
+<tr class="separator:a0981478caaea9feb9098b762da331494"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6372ee6361bff8a0f889fb75575679e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lvl36to51_8c.html#a6372ee6361bff8a0f889fb75575679e5">p_lvl46</a> ()</td></tr>
+<tr class="memdesc:a6372ee6361bff8a0f889fb75575679e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ablauf Level 46 () BANKED.  <a href="#a6372ee6361bff8a0f889fb75575679e5">Mehr ...</a><br /></td></tr>
+<tr class="separator:a6372ee6361bff8a0f889fb75575679e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e5a37f8ce0f2940375448ca66764526"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lvl36to51_8c.html#a5e5a37f8ce0f2940375448ca66764526">p_lvl47</a> ()</td></tr>
+<tr class="memdesc:a5e5a37f8ce0f2940375448ca66764526"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ablauf Level 47 () BANKED.  <a href="#a5e5a37f8ce0f2940375448ca66764526">Mehr ...</a><br /></td></tr>
+<tr class="separator:a5e5a37f8ce0f2940375448ca66764526"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bccb2e304016d2bb8eaf26341494097"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lvl36to51_8c.html#a6bccb2e304016d2bb8eaf26341494097">p_lvl48</a> ()</td></tr>
+<tr class="memdesc:a6bccb2e304016d2bb8eaf26341494097"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ablauf Level 48.  <a href="#a6bccb2e304016d2bb8eaf26341494097">Mehr ...</a><br /></td></tr>
+<tr class="separator:a6bccb2e304016d2bb8eaf26341494097"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfc6b3315a96096b1696ebbc4c4d160d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lvl36to51_8c.html#acfc6b3315a96096b1696ebbc4c4d160d">p_lvl49</a> ()</td></tr>
+<tr class="memdesc:acfc6b3315a96096b1696ebbc4c4d160d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ablauf Level 49.  <a href="#acfc6b3315a96096b1696ebbc4c4d160d">Mehr ...</a><br /></td></tr>
+<tr class="separator:acfc6b3315a96096b1696ebbc4c4d160d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae33777a0857f007e1ffc3e29f663815f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lvl36to51_8c.html#ae33777a0857f007e1ffc3e29f663815f">p_lvl50</a> ()</td></tr>
+<tr class="memdesc:ae33777a0857f007e1ffc3e29f663815f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ablauf Level 50.  <a href="#ae33777a0857f007e1ffc3e29f663815f">Mehr ...</a><br /></td></tr>
+<tr class="separator:ae33777a0857f007e1ffc3e29f663815f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2a117d01cb90f97edafc031d0d828b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lvl36to51_8c.html#aa2a117d01cb90f97edafc031d0d828b1">p_lvl51</a> ()</td></tr>
+<tr class="memdesc:aa2a117d01cb90f97edafc031d0d828b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ablauf Level 51.  <a href="#aa2a117d01cb90f97edafc031d0d828b1">Mehr ...</a><br /></td></tr>
+<tr class="separator:aa2a117d01cb90f97edafc031d0d828b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afce1787f4af4cdd842a277184cb3a6fd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lvl36to51_8c.html#afce1787f4af4cdd842a277184cb3a6fd">p_lvl52</a> ()</td></tr>
+<tr class="memdesc:afce1787f4af4cdd842a277184cb3a6fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ablauf Level 52.  <a href="#afce1787f4af4cdd842a277184cb3a6fd">Mehr ...</a><br /></td></tr>
+<tr class="separator:afce1787f4af4cdd842a277184cb3a6fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9902db89c32ebf7c85fa0c0a5ed7133c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lvl36to51_8c.html#a9902db89c32ebf7c85fa0c0a5ed7133c">p_lvl53</a> ()</td></tr>
+<tr class="memdesc:a9902db89c32ebf7c85fa0c0a5ed7133c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ablauf Level 53.  <a href="#a9902db89c32ebf7c85fa0c0a5ed7133c">Mehr ...</a><br /></td></tr>
+<tr class="separator:a9902db89c32ebf7c85fa0c0a5ed7133c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Dokumentation der Funktionen</h2>
+<a id="a5f46d3e51581bc94331c6bb5fcbe6dd0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f46d3e51581bc94331c6bb5fcbe6dd0">&#9670;&nbsp;</a></span>p_lvl36()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void p_lvl36 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ablauf Screen 36. </p>
+
+</div>
+</div>
+<a id="a672a0d342ebb619a96aafbe8292916eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a672a0d342ebb619a96aafbe8292916eb">&#9670;&nbsp;</a></span>p_lvl37()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void p_lvl37 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ablauf Screen 37. </p>
+
+</div>
+</div>
+<a id="a34434216de31afaf492ea39d04b3c089"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34434216de31afaf492ea39d04b3c089">&#9670;&nbsp;</a></span>p_lvl38()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void p_lvl38 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ablauf Screen 38. </p>
+
+</div>
+</div>
+<a id="a341a3b37b1fbc1f173c4e500190e50ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a341a3b37b1fbc1f173c4e500190e50ed">&#9670;&nbsp;</a></span>p_lvl39()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void p_lvl39 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ablauf Screen 39. </p>
+
+</div>
+</div>
+<a id="af5cbb586a40363d9c8bc3c6ea4098ac4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5cbb586a40363d9c8bc3c6ea4098ac4">&#9670;&nbsp;</a></span>p_lvl40()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void p_lvl40 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ablauf Screen 40. </p>
+
+</div>
+</div>
+<a id="ad7e63eb4395b1d624812c1b2a8fde0ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7e63eb4395b1d624812c1b2a8fde0ec">&#9670;&nbsp;</a></span>p_lvl41()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void p_lvl41 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ablauf Screen 41. </p>
+
+</div>
+</div>
+<a id="a0658203014beabcedb84097e4eb7f243"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0658203014beabcedb84097e4eb7f243">&#9670;&nbsp;</a></span>p_lvl42()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void p_lvl42 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ablauf Level 42. </p>
+
+</div>
+</div>
+<a id="a08579b34fad1af5154dcbde57f37376f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08579b34fad1af5154dcbde57f37376f">&#9670;&nbsp;</a></span>p_lvl43()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void p_lvl43 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ablauf Level 43. </p>
+
+</div>
+</div>
+<a id="ad02434e7e54f48eab5d6945df28b882f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad02434e7e54f48eab5d6945df28b882f">&#9670;&nbsp;</a></span>p_lvl44()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void p_lvl44 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ablauf Level 44. </p>
+
+</div>
+</div>
+<a id="a0981478caaea9feb9098b762da331494"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0981478caaea9feb9098b762da331494">&#9670;&nbsp;</a></span>p_lvl45()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void p_lvl45 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ablauf Level 45. </p>
+
+</div>
+</div>
+<a id="a6372ee6361bff8a0f889fb75575679e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6372ee6361bff8a0f889fb75575679e5">&#9670;&nbsp;</a></span>p_lvl46()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void p_lvl46 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ablauf Level 46 () BANKED. </p>
+
+</div>
+</div>
+<a id="a5e5a37f8ce0f2940375448ca66764526"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e5a37f8ce0f2940375448ca66764526">&#9670;&nbsp;</a></span>p_lvl47()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void p_lvl47 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ablauf Level 47 () BANKED. </p>
+
+</div>
+</div>
+<a id="a6bccb2e304016d2bb8eaf26341494097"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6bccb2e304016d2bb8eaf26341494097">&#9670;&nbsp;</a></span>p_lvl48()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void p_lvl48 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ablauf Level 48. </p>
+
+</div>
+</div>
+<a id="acfc6b3315a96096b1696ebbc4c4d160d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfc6b3315a96096b1696ebbc4c4d160d">&#9670;&nbsp;</a></span>p_lvl49()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void p_lvl49 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ablauf Level 49. </p>
+
+</div>
+</div>
+<a id="ae33777a0857f007e1ffc3e29f663815f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae33777a0857f007e1ffc3e29f663815f">&#9670;&nbsp;</a></span>p_lvl50()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void p_lvl50 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ablauf Level 50. </p>
+
+</div>
+</div>
+<a id="aa2a117d01cb90f97edafc031d0d828b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2a117d01cb90f97edafc031d0d828b1">&#9670;&nbsp;</a></span>p_lvl51()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void p_lvl51 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ablauf Level 51. </p>
+
+</div>
+</div>
+<a id="afce1787f4af4cdd842a277184cb3a6fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afce1787f4af4cdd842a277184cb3a6fd">&#9670;&nbsp;</a></span>p_lvl52()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void p_lvl52 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ablauf Level 52. </p>
+
+</div>
+</div>
+<a id="a9902db89c32ebf7c85fa0c0a5ed7133c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9902db89c32ebf7c85fa0c0a5ed7133c">&#9670;&nbsp;</a></span>p_lvl53()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void p_lvl53 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ablauf Level 53. </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Erzeugt von &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.14
+</small></address>
+</body>
+</html>
