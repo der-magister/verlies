@@ -1,0 +1,10 @@
+Dokumentation/
+obj/
+release/
+verlies.gb
+*.o
+*.asm
+*.lst
+*.sym
+*.map
+
