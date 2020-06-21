@@ -1,6 +1,6 @@
 //   Verlies - ein Adventure im Retrodesign
 //
-//   Copyright (C) 2018 Heiko Wolf
+//   Copyright (C) 2018-2020 Heiko Wolf
 //
 //   This program is free software; you can redistribute it and/or modify
 //   it under the terms of the GNU General Public License As published by
@@ -23,8 +23,8 @@
 
 #include "globals.h"
 
-void p_lvl1 () BANKED;
-void p_lvl2 () BANKED;
-void p_lvl3 () BANKED;
+extern void p_lvl1 () __banked;
+extern void p_lvl2 () __banked;
+extern void p_lvl3 () __banked;
 
 #endif

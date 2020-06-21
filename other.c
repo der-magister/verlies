@@ -48,7 +48,7 @@ const UINT8 v_timerdat [35] =
         v_gameover = TRUE; v_slp = v_smlp;
         v_lvl = 1; v_info = FALSE; v_bosskampf = FALSE; v_kampf = FALSE;
         if (v_spr == 0) ++v_spr;
-}
+}*/
 
 ///wartet auf Steuerung unten
 void p_engine_down (void) __banked
@@ -61,7 +61,7 @@ void p_engine_A (void) __banked
 {
         delay (200);
         waitpad (J_A);
-}*/
+}
 
 ///Startintro
 void p_intro (void) __banked

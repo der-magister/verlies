@@ -25,8 +25,8 @@
 #include "globals.h"
 
 ///Gibt angegebenen Text aus
-void p_engine_set_txt (unsigned char l_txt [81]) BANKED;
-void p_engine_rahmen () BANKED;
-void p_engine_after_txt () BANKED;
+extern void p_engine_set_txt (unsigned char l_txt [81]) __banked;
+extern void p_engine_rahmen () __banked;
+extern void p_engine_after_txt () __banked;
 
 #endif

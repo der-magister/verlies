@@ -22,6 +22,6 @@
 #define ogerboss1Height 4
 #define ogerboss1Bank 0
 
-extern unsigned char ogerboss1[];
+extern const unsigned char ogerboss1[];
 
 /* End of OGERBOSS1.H */

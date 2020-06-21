@@ -1,4 +1,4 @@
-#pragma bank=3
+//#pragma bank=3
 
 const unsigned char lfelsengrund[] =
 {

@@ -18,9 +18,9 @@
 //
 //   Kontakt: magister@kabelmail.de
 
-#pragma bank=11
+//#pragma bank=11
 
-#include "globals.h"
+#include "lvlstatus.h"
 #include "engine.h"
 #include "schilder.h"
 #include "umgebung.h"
@@ -35,7 +35,7 @@
 #include "eichenwald2.h"
 #include "alte-baum.h"
 
-void p_lvl_whichLvL () BANKED
+void p_lvl_whichLvL () __banked
 {
 	if (v_lvl == 1) p_lvl1 ();
         else if (v_lvl == 2) p_lvl2 ();
@@ -189,7 +189,7 @@ void p_lvl_whichLvL () BANKED
         else if (v_lvl == 164) p_lvl164 ();
 }
 
-void p_lvl_status () BANKED
+void p_lvl_status () __banked
 {
         v_tile [0] = 38;
 
@@ -450,3 +450,4 @@ void p_lvl_status () BANKED
 
         p_umgebung_state ();    
 }
+

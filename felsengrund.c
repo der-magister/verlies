@@ -18,7 +18,7 @@
 //
 //   Kontakt: magister@kabelmail.de
 
-#pragma bank=15
+//#pragma bank=15
 
 #include "hud.h"
 #include "engine.h"
@@ -91,7 +91,7 @@
 #include "daten/other/techend.h"
 
 ///Ablauf Raum 1
-void p_lvl1 () BANKED
+void p_lvl1 () __banked
 {
 
         //Heiler
@@ -273,7 +273,7 @@ void p_lvl1 () BANKED
 }
 
 ///Ablauf Raum 2
-void p_lvl2 () BANKED
+void p_lvl2 () __banked
 {
         p_portal (22);
 
@@ -302,7 +302,7 @@ void p_lvl2 () BANKED
 	}
 }
 
-void p_lvl3 () BANKED
+void p_lvl3 () __banked
 {
         //Schild
         p_schild (195, schildtxt1e);
@@ -374,3 +374,4 @@ void p_lvl3 () BANKED
                 }
         }
 }
+

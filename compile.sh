@@ -2,7 +2,7 @@
 
 rm -rf obj/*.o
 
-alias lcc='nice -n 19 /opt/gbdk/bin/lcc'
+alias lcc='/opt/gbdk/bin/lcc'
 
 #lcc -Wa-l -Wl-m -Wl-j -Wf-bo3 -c -o obj/k_felsengrund.o daten/karten/k_felsengrund.c
 #lcc -Wa-l -Wl-m -Wl-j -Wf-bo3 -c -o obj/k_gefaengnis.o daten/karten/k_gefaengnis.c
@@ -105,57 +105,57 @@ lcc -Wa-l -Wl-m -Wl-j -Wf-bo3 -c -o obj/felsengrund.o daten/txt/locations/locati
 #lcc -Wa-l -Wl-m -Wl-j -Wf-bo3 -c -o obj/stadtgefaengnis.o daten/txt/locations/stadtgefaengnis.c
 #lcc -Wa-l -Wl-m -Wl-j -Wf-bo3 -c -o obj/lwiesen.o daten/txt/locations/wiesen.c
 
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/rahmen.o gfx/rahmen.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/rahmen.o gfx/rahmen.c
 
 #npcs
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/ausdauerverkaeuferin1.o daten/txt/npcs/ausdauerverkaeuferin1.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/ausdauerverkaeuferin2.o daten/txt/npcs/ausdauerverkaeuferin2.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/fiona-1.o daten/txt/npcs/fiona-1.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/heilertxt1.o daten/txt/npcs/heilertxt1.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/heilertxt2.o daten/txt/npcs/heilertxt2.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/heiltrankverkaeuferin1.o daten/txt/npcs/heiltrankverkaeuferin1.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/heiltrankverkaeuferin2.o daten/txt/npcs/heiltrankverkaeuferin2.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/hugotxt1.o daten/txt/npcs/hugotxt1.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/hugotxt2.o daten/txt/npcs/hugotxt2.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/hugotxt3.o daten/txt/npcs/hugotxt3.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/hugotxt4.o daten/txt/npcs/hugotxt4.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/hugotxt5.o daten/txt/npcs/hugotxt5.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/hugotxt6.o daten/txt/npcs/hugotxt6.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/hugotxt7.o daten/txt/npcs/hugotxt7.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/hugotxt8.o daten/txt/npcs/hugotxt8.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/max-1.o daten/txt/npcs/max-1.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/ogerboss1.o daten/txt/npcs/ogerboss1.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/ogerboss2.o daten/txt/npcs/ogerboss2.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/phobetxt1.o daten/txt/npcs/phobetxt1.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/phobetxt2.o daten/txt/npcs/phobetxt2.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/phobetxt3.o daten/txt/npcs/phobetxt3.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/provianthaendler1.o daten/txt/npcs/provianthaendler1.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/provianthaendler2.o daten/txt/npcs/provianthaendler2.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/saratxt1.o daten/txt/npcs/saratxt1.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/saratxt2.o daten/txt/npcs/saratxt2.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/saratxt3.o daten/txt/npcs/saratxt3.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/saratxt4.o daten/txt/npcs/saratxt4.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/saratxt5.o daten/txt/npcs/saratxt5.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/saratxt6.o daten/txt/npcs/saratxt6.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/saratxt7.o daten/txt/npcs/saratxt7.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/xavertxt1.o daten/txt/npcs/xavertxt1.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/xavertxt2.o daten/txt/npcs/xavertxt2.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/xavertxt3.o daten/txt/npcs/xavertxt3.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/xavertxt4.o daten/txt/npcs/xavertxt4.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/xavertxt5.o daten/txt/npcs/xavertxt5.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/xavertxt6.o daten/txt/npcs/xavertxt6.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/xavertxt7.o daten/txt/npcs/xavertxt7.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/xavertxt8.o daten/txt/npcs/xavertxt8.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/xavertxt9.o daten/txt/npcs/xavertxt9.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/xavertxt10.o daten/txt/npcs/xavertxt10.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/xavertxt11.o daten/txt/npcs/xavertxt11.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/xavertxt12.o daten/txt/npcs/xavertxt12.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/xavertxt13.o daten/txt/npcs/xavertxt13.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/xavertxt14.o daten/txt/npcs/xavertxt14.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/xavertxt15.o daten/txt/npcs/xavertxt15.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/xavertxt16.o daten/txt/npcs/xavertxt16.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/xavertxt17.o daten/txt/npcs/xavertxt17.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/handelnichtmoeglich.o daten/txt/other/handelnichtmoeglich.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/ausdauerverkaeuferin1.o daten/txt/npcs/ausdauerverkaeuferin1.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/ausdauerverkaeuferin2.o daten/txt/npcs/ausdauerverkaeuferin2.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/fiona-1.o daten/txt/npcs/fiona-1.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/heilertxt1.o daten/txt/npcs/heilertxt1.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/heilertxt2.o daten/txt/npcs/heilertxt2.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/heiltrankverkaeuferin1.o daten/txt/npcs/heiltrankverkaeuferin1.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/heiltrankverkaeuferin2.o daten/txt/npcs/heiltrankverkaeuferin2.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/hugotxt1.o daten/txt/npcs/hugotxt1.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/hugotxt2.o daten/txt/npcs/hugotxt2.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/hugotxt3.o daten/txt/npcs/hugotxt3.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/hugotxt4.o daten/txt/npcs/hugotxt4.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/hugotxt5.o daten/txt/npcs/hugotxt5.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/hugotxt6.o daten/txt/npcs/hugotxt6.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/hugotxt7.o daten/txt/npcs/hugotxt7.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/hugotxt8.o daten/txt/npcs/hugotxt8.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/max-1.o daten/txt/npcs/max-1.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/ogerboss1.o daten/txt/npcs/ogerboss1.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/ogerboss2.o daten/txt/npcs/ogerboss2.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/phobetxt1.o daten/txt/npcs/phobetxt1.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/phobetxt2.o daten/txt/npcs/phobetxt2.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/phobetxt3.o daten/txt/npcs/phobetxt3.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/provianthaendler1.o daten/txt/npcs/provianthaendler1.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/provianthaendler2.o daten/txt/npcs/provianthaendler2.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/saratxt1.o daten/txt/npcs/saratxt1.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/saratxt2.o daten/txt/npcs/saratxt2.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/saratxt3.o daten/txt/npcs/saratxt3.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/saratxt4.o daten/txt/npcs/saratxt4.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/saratxt5.o daten/txt/npcs/saratxt5.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/saratxt6.o daten/txt/npcs/saratxt6.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/saratxt7.o daten/txt/npcs/saratxt7.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/xavertxt1.o daten/txt/npcs/xavertxt1.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/xavertxt2.o daten/txt/npcs/xavertxt2.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/xavertxt3.o daten/txt/npcs/xavertxt3.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/xavertxt4.o daten/txt/npcs/xavertxt4.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/xavertxt5.o daten/txt/npcs/xavertxt5.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/xavertxt6.o daten/txt/npcs/xavertxt6.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/xavertxt7.o daten/txt/npcs/xavertxt7.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/xavertxt8.o daten/txt/npcs/xavertxt8.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/xavertxt9.o daten/txt/npcs/xavertxt9.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/xavertxt10.o daten/txt/npcs/xavertxt10.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/xavertxt11.o daten/txt/npcs/xavertxt11.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/xavertxt12.o daten/txt/npcs/xavertxt12.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/xavertxt13.o daten/txt/npcs/xavertxt13.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/xavertxt14.o daten/txt/npcs/xavertxt14.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/xavertxt15.o daten/txt/npcs/xavertxt15.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/xavertxt16.o daten/txt/npcs/xavertxt16.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/xavertxt17.o daten/txt/npcs/xavertxt17.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/handelnichtmoeglich.o daten/txt/other/handelnichtmoeglich.c
 
 #schilder
 #lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/schildtxt1.o daten/txt/schilder/schildtxt1.c
@@ -178,6 +178,9 @@ lcc -Wa-l -Wl-m -Wl-j -Wf-bo3 -c -o obj/felsengrund.o daten/txt/locations/locati
 #lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/schwerttruhe.o daten/txt/truhen/schwerttruhe.c
 #lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/truheleer.o daten/txt/truhen/truheleer.c
 
+#lvlablauf
+lcc -Wa-l -Wl-m -Wl-j -c -o obj/felsengrund.o felsengrund.c
+
 #main
 lcc -Wa-l -Wl-m -Wl-j -c -o obj/verlies.o verlies.c
 lcc -Wa-l -Wl-. -Wl-j -c -o obj/globals.o globals.c
@@ -191,8 +194,8 @@ lcc -Wa-l -Wl-m -Wl-j -Wf-bo8 -c -o obj/hud.o hud.c
 #lcc -Wa-l -Wl-m -Wl-j -Wf-bo8 -c -o obj/infoscreen.o infoscreen.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo9 -c -o obj/player.o player.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo9 -c -o obj/tiledat.o tiledat.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/text.o text.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo11 -c -o obj/lvlstatus.o lvlstatus.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/text.o text.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo11 -c -o obj/lvlstatus.o lvlstatus.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo12 -c -o obj/items.o items.c
 #lcc -Wa-l -Wl-m -Wl-j -Wf-bo12 -c -o obj/npc.o npc.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo12 -c -o obj/schilder.o schilder.c
@@ -211,5 +214,4 @@ cd obj/
 obj=$(ls | grep [.][o])
 
 lcc -Wa-l -Wl-m -Wl-j -Wl-yt0x019 -Wl-yo128 -o ../verlies.gb $obj 
-#engine.o init.o font-82-127.o grundtiles-38-81.o felsengrund_1-8-37.o v_spriteset_1.o v_lvl1a.o
 

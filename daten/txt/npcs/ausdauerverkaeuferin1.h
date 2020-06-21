@@ -22,6 +22,6 @@
 #define ausdauerverkaeuferin1Height 4
 #define ausdauerverkaeuferin1Bank 0
 
-extern unsigned char ausdauerverkaeuferin1[];
+extern const unsigned char ausdauerverkaeuferin1[];
 
 /* End of AUSDAUERVERKAEUFERIN1.H */

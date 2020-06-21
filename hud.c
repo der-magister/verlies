@@ -256,7 +256,7 @@ void p_gui_show_infoscreen () __banked
         p_hud_showKey ();
         p_hud_showSpitzhacke ();
         p_hud_showSichel ();
-        //p_showMap ();
+        p_showMap ();
         
         move_win (7, 0);
         SHOW_WIN;  
@@ -292,8 +292,7 @@ void p_hud_show () __banked
   p_hud_showXYK ();
   p_hud_showAD ();
   
-
-  //p_drawSelectItem ();
+  p_drawSelectItem ();
   p_view_sword ();
 }
 

@@ -22,6 +22,6 @@
 #define rahmenHeight 6
 #define rahmenBank 0
 
-extern unsigned char rahmen[];
+extern const unsigned char rahmen[];
 
 /* End of RAHMEN.H */

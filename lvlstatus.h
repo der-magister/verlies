@@ -21,7 +21,10 @@
 #ifndef _LVLSTATUS_H_
 #define _LVLSTATUS_H_
 
-void p_lvl_status () BANKED;
-void p_lvl_whichLvL () BANKED;
+#include "globals.h"
+
+extern void p_lvl_status () __banked;
+extern void p_lvl_whichLvL () __banked;
 
 #endif
+

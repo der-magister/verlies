@@ -18,7 +18,7 @@
 //
 //   Kontakt: magister@skywave-2000.de
 
-#pragma bank=10
+//#pragma bank=10
 
 #include "globals.h"
 #include "engine.h"
@@ -30,13 +30,13 @@
 
 
 ///Zeichnet Rahmen
-void p_engine_rahmen () BANKED
+void p_engine_rahmen () __banked
 {
   set_win_tiles (0, 0, 20, 6, rahmen);
 }
 
 ///Textausgabe
-void p_engine_set_txt (unsigned char l_txt [81]) BANKED
+void p_engine_set_txt (unsigned char l_txt [81]) __banked
 {
         if (v_syk >= 104) for (v_i = 0; v_i < 4; ++v_i) { move_sprite (v_i, 0, 0); }
 
@@ -53,7 +53,7 @@ void p_engine_set_txt (unsigned char l_txt [81]) BANKED
         delay (160);
 }
 
-void p_engine_after_txt () BANKED
+void p_engine_after_txt () __banked
 {
 	v_aktion = TRUE; v_win = FALSE;
 	HIDE_WIN;
@@ -68,3 +68,4 @@ void p_engine_after_txt () BANKED
         
 	delay (160);    
 }
+
