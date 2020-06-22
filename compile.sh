@@ -4,13 +4,13 @@ rm -rf obj/*.o
 
 alias lcc='/opt/gbdk/bin/lcc'
 
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo3 -c -o obj/k_felsengrund.o daten/karten/k_felsengrund.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo3 -c -o obj/k_gefaengnis.o daten/karten/k_gefaengnis.c
+## Daten
 
 #hud
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo8 -c -o obj/hudgui.o daten/hud/hudgui.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo8 -c -o obj/v_infoscreen.o daten/hud/v_infoscreen.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo8 -c -o obj/v_statscreen.o daten/hud/v_statscreen.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/rahmen.o gfx/rahmen.c
 
 #karten
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo3 -c -o obj/k_felsengrund.o daten/karten/k_felsengrund.c
@@ -24,65 +24,16 @@ lcc -Wa-l -Wl-m -Wl-j -Wf-bo3 -c -o obj/nomap.o daten/karten/nomap.c
 
 #lvl
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo5 -c -o obj/lvldatfelsengrund.o daten/lvl/lvldatfelsengrund.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo5 -c -o obj/v_lvl1b.o daten/lvl/v_lvl1b.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo5 -c -o obj/v_lvl1c.o daten/lvl/v_lvl1c.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo5 -c -o obj/v_lvl5.o daten/lvl/v_lvl5.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo5 -c -o obj/v_lvl6.o daten/lvl/v_lvl6.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo5 -c -o obj/v_lvl7.o daten/lvl/v_lvl7.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo5 -c -o obj/v_lvl8.o daten/lvl/v_lvl8.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo5 -c -o obj/v_lvl9.o daten/lvl/v_lvl9.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo5 -c -o obj/v_lvl10.o daten/lvl/v_lvl10.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo5 -c -o obj/v_lvl11.o daten/lvl/v_lvl11.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo5 -c -o obj/v_lvl12.o daten/lvl/v_lvl12.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo5 -c -o obj/v_lvl13.o daten/lvl/v_lvl13.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo5 -c -o obj/v_lvl20.o daten/lvl/v_lvl20.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo5 -c -o obj/v_lvl21.o daten/lvl/v_lvl21.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo5 -c -o obj/v_lvl22.o daten/lvl/v_lvl22.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo5 -c -o obj/v_lvl22b.o daten/lvl/v_lvl22b.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo5 -c -o obj/v_lvl24.o daten/lvl/v_lvl24.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo5 -c -o obj/v_lvl25.o daten/lvl/v_lvl25.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo5 -c -o obj/v_lvl26.o daten/lvl/v_lvl26.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo5 -c -o obj/v_lvl27.o daten/lvl/v_lvl27.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo5 -c -o obj/v_lvl28.o daten/lvl/v_lvl28.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo5 -c -o obj/v_lvl29.o daten/lvl/v_lvl29.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo5 -c -o obj/v_lvl30.o daten/lvl/v_lvl30.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo5 -c -o obj/v_lvl31.o daten/lvl/v_lvl31.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo5 -c -o obj/v_lvl32.o daten/lvl/v_lvl32.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo5 -c -o obj/v_lvl33.o daten/lvl/v_lvl33.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo5 -c -o obj/v_lvl34.o daten/lvl/v_lvl34.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo5 -c -o obj/v_lvl35.o daten/lvl/v_lvl35.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo5 -c -o obj/v_lvl36.o daten/lvl/v_lvl36.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo5 -c -o obj/v_lvl37.o daten/lvl/v_lvl37.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo5 -c -o obj/v_lvl40.o daten/lvl/v_lvl40.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo5 -c -o obj/v_lvl41.o daten/lvl/v_lvl41.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo5 -c -o obj/v_lvl42.o daten/lvl/v_lvl42.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo5 -c -o obj/v_lvl43.o daten/lvl/v_lvl43.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo5 -c -o obj/v_lvl44.o daten/lvl/v_lvl44.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo5 -c -o obj/v_lvl45.o daten/lvl/v_lvl45.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo5 -c -o obj/v_lvl46.o daten/lvl/v_lvl46.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo5 -c -o obj/v_lvl47.o daten/lvl/v_lvl47.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo5 -c -o obj/v_lvl48.o daten/lvl/v_lvl48.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo5 -c -o obj/v_lvl49.o daten/lvl/v_lvl49.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo5 -c -o obj/v_lvl50.o daten/lvl/v_lvl50.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo5 -c -o obj/v_lvl51.o daten/lvl/v_lvl51.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo5 -c -o obj/v_lvl52.o daten/lvl/v_lvl52.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo5 -c -o obj/v_lvl53.o daten/lvl/v_lvl53.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo5 -c -o obj/v_lvl54.o daten/lvl/v_lvl54.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo5 -c -o obj/v_lvl55.o daten/lvl/v_lvl55.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo5 -c -o obj/v_lvl56.o daten/lvl/v_lvl56.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo5 -c -o obj/v_lvl57.o daten/lvl/v_lvl57.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo5 -c -o obj/v_lvl58.o daten/lvl/v_lvl58.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo5 -c -o obj/v_lvl59.o daten/lvl/v_lvl59.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo5 -c -o obj/v_lvl60.o daten/lvl/v_lvl60.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo5 -c -o obj/v_lvl61.o daten/lvl/v_lvl61.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo5 -c -o obj/v_lvl62.o daten/lvl/v_lvl62.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo5 -c -o obj/v_lvl63.o daten/lvl/v_lvl63.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo5 -c -o obj/v_lvl64.o daten/lvl/v_lvl64.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo5 -c -o obj/v_lvl65.o daten/lvl/v_lvl65.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo5 -c -o obj/v_lvl66.o daten/lvl/v_lvl66.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo5 -c -o obj/lvldatstadtgefaengnis.o daten/lvl/lvldatstadtgefaengnis.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo5 -c -o obj/lvldatwiesen.o daten/lvl/lvldatwiesen.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo6 -c -o obj/lvldatogerhoehlen.o daten/lvl/lvldatogerhoehlen.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo6 -c -o obj/lvldatdorfseefeen.o daten/lvl/lvldatdorfseefeen.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo6 -c -o obj/lvldatfeensee.o daten/lvl/lvldatfeensee.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo18 -c -o obj/lvldateichenwald.o daten/lvl/lvldateichenwald.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo18 -c -o obj/lvldatalterbaum.o daten/lvl/lvldatalterbaum.c
 
 #other
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo3 -c -o obj/gameover.o daten/other/gameover.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo3 -c -o obj/gameover.o daten/other/gameover.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo3 -c -o obj/titel.o daten/other/titel.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo3 -c -o obj/kredits.o daten/other/kredits.c
 
@@ -93,21 +44,19 @@ lcc -Wa-l -Wl-m -Wl-j -Wf-bo2 -c -o obj/v_spriteset_1.o daten/spritesets/v_sprit
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo2 -c -o obj/font-82-127.o daten/tilesets/font-82-127.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo2 -c -o obj/grundtiles-38-81.o daten/tilesets/grundtiles-38-81.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo2 -c -o obj/felsengrund_1-8-37.o daten/tilesets/felsengrund_1-8-37.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo2 -c -o obj/felsengrund_2-4-19.o daten/tilesets/felsengrund_2-4-19.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo2 -c -o obj/felsengrund_3-4-19.o daten/tilesets/felsengrund_3-4-19.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo2 -c -o obj/ogerhoehlen-4-38.o daten/tilesets/ogerhoehlen-4-38.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo2 -c -o obj/stadtgefaengnis-14-37.o daten/tilesets/stadtgefaengnis-14-37.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo2 -c -o obj/wiesen_1-4-37.o daten/tilesets/wiesen_1-4-37.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo2 -c -o obj/felsengrund_2-4-19.o daten/tilesets/felsengrund_2-4-19.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo2 -c -o obj/felsengrund_3-4-19.o daten/tilesets/felsengrund_3-4-19.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo2 -c -o obj/ogerhoehlen-4-38.o daten/tilesets/ogerhoehlen-4-38.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo2 -c -o obj/stadtgefaengnis-14-37.o daten/tilesets/stadtgefaengnis-14-37.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo2 -c -o obj/wiesen_1-4-37.o daten/tilesets/wiesen_1-4-37.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo2 -c -o obj/feensee-4-37.o daten/tilesets/feensee-4-37.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo2 -c -o obj/eichenwald-4-42.o daten/tilesets/eichenwald-4-42.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo2 -c -o obj/alte-baum-4-38.o daten/tilesets/alte-baum-4-38.c
 
 #locations
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo3 -c -o obj/felsengrund.o daten/txt/locations/locations.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo3 -c -o obj/logerhoehlen.o daten/txt/locations/ogerhoehlen.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo3 -c -o obj/stadtgefaengnis.o daten/txt/locations/stadtgefaengnis.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo3 -c -o obj/lwiesen.o daten/txt/locations/wiesen.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo3 -c -o obj/locationstxt.o daten/txt/locations/locations.c
 
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/rahmen.o gfx/rahmen.c
-
-#npcs
+#Texte von Npcs und Gegnern
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/ausdauerverkaeuferin1.o daten/txt/npcs/ausdauerverkaeuferin1.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/ausdauerverkaeuferin2.o daten/txt/npcs/ausdauerverkaeuferin2.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/fiona-1.o daten/txt/npcs/fiona-1.c
@@ -155,31 +104,89 @@ lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/xavertxt14.o daten/txt/npcs/xavertxt14.
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/xavertxt15.o daten/txt/npcs/xavertxt15.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/xavertxt16.o daten/txt/npcs/xavertxt16.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/xavertxt17.o daten/txt/npcs/xavertxt17.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/xavertxt18.o daten/txt/npcs/xavertxt18.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/xavertxt19.o daten/txt/npcs/xavertxt19.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/xavertxt20.o daten/txt/npcs/xavertxt20.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/xavertxt21.o daten/txt/npcs/xavertxt21.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/xavertxt22.o daten/txt/npcs/xavertxt22.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/handelnichtmoeglich.o daten/txt/other/handelnichtmoeglich.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/zauberstaubhaendler1.o daten/txt/npcs/zauberstaubhaendler1.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/zauberstaubhaendler2.o daten/txt/npcs/zauberstaubhaendler2.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/feenaeltestetxt1.o daten/txt/npcs/feenaeltestetxt1.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/feenaeltestetxt2.o daten/txt/npcs/feenaeltestetxt2.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/feenaeltestetxt3.o daten/txt/npcs/feenaeltestetxt3.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/feenaeltestetxt4.o daten/txt/npcs/feenaeltestetxt4.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/feenaeltestetxt5.o daten/txt/npcs/feenaeltestetxt5.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/feenaeltestetxt6.o daten/txt/npcs/feenaeltestetxt6.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/feenaeltestetxt7.o daten/txt/npcs/feenaeltestetxt7.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/feenaeltestetxt8.o daten/txt/npcs/feenaeltestetxt8.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/feenaeltestetxt9.o daten/txt/npcs/feenaeltestetxt9.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/feenaeltestetxt10.o daten/txt/npcs/feenaeltestetxt10.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/feenaeltestetxt11.o daten/txt/npcs/feenaeltestetxt11.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/feenaeltestetxt12.o daten/txt/npcs/feenaeltestetxt12.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/feenaeltestetxt13.o daten/txt/npcs/feenaeltestetxt13.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/feenaeltestetxt14.o daten/txt/npcs/feenaeltestetxt14.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/ranartxt1.o daten/txt/npcs/ranartxt1.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/ranartxt2.o daten/txt/npcs/ranartxt2.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/ranartxt3.o daten/txt/npcs/ranartxt3.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/ranartxt4.o daten/txt/npcs/ranartxt4.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/ranartxt5.o daten/txt/npcs/ranartxt5.c
 
-#schilder
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/schildtxt1.o daten/txt/schilder/schildtxt1.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/schildtxt1b.o daten/txt/schilder/schildtxt1b.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/schildtxt1c.o daten/txt/schilder/schildtxt1c.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/schildtxt1d.o daten/txt/schilder/schildtxt1d.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/schildtxt1e.o daten/txt/schilder/schildtxt1e.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/schildtxt2.o daten/txt/schilder/schildtxt2.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/schluessel.o daten/txt/schilder/schluessel.c
+# Texte Portale
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo8 -c -o obj/portal.o daten/txt/portale/portal.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo8 -c -o obj/portalfelsengrund.o daten/txt/portale/portalfelsengrund.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo8 -c -o obj/portalfeensee.o daten/txt/portale/portalfeensee.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo8 -c -o obj/portaleichenwald.o daten/txt/portale/portaleichenwald.c
 
-#truhen
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/ausdauertrank.o daten/txt/truhen/ausdauertrank.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/brotbuechse-1.o daten/txt/truhen/brotbuechse-1.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/erhalten.o daten/txt/truhen/erhalten.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/goldvoll.o daten/txt/truhen/goldvoll.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/heiltrank.o daten/txt/truhen/heiltrank.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/kartetruhe.o daten/txt/truhen/kartetruhe.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/proviant.o daten/txt/truhen/proviant.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/schluesselt.o daten/txt/truhen/schluessel.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/schwerttruhe.o daten/txt/truhen/schwerttruhe.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/truheleer.o daten/txt/truhen/truheleer.c
+#Texte Schilder
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/schildtxt1.o daten/txt/schilder/schildtxt1.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/schildtxt1b.o daten/txt/schilder/schildtxt1b.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/schildtxt1c.o daten/txt/schilder/schildtxt1c.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/schildtxt1d.o daten/txt/schilder/schildtxt1d.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/schildtxt1e.o daten/txt/schilder/schildtxt1e.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/schildtxt2.o daten/txt/schilder/schildtxt2.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/schildtxt3.o daten/txt/schilder/schildtxt3.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/schildtxt4.o daten/txt/schilder/schildtxt4.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/schildtxt5.o daten/txt/schilder/schildtxt5.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/schildtxt6.o daten/txt/schilder/schildtxt6.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/schildtxt7.o daten/txt/schilder/schildtxt7.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/schildtxt8.o daten/txt/schilder/schildtxt8.c
+
+#andere Texte
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/schluessel.o daten/txt/schilder/schluessel.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/oelloch.o daten/txt/other/oelloch.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/oelloch2.o daten/txt/other/oelloch2.c
+
+#Texte Truhen
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/ausdauertrank.o daten/txt/truhen/ausdauertrank.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/erhalten.o daten/txt/truhen/erhalten.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/goldvoll.o daten/txt/truhen/goldvoll.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/heiltrank.o daten/txt/truhen/heiltrank.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/kartetruhe.o daten/txt/truhen/kartetruhe.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/proviant.o daten/txt/truhen/proviant.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/schluesselt.o daten/txt/truhen/schluessel.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/schwerttruhe.o daten/txt/truhen/schwerttruhe.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/truheleer.o daten/txt/truhen/truheleer.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/brotbuechse-1.o daten/txt/truhen/brotbuechse-1.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/brotbuechse-2.o daten/txt/truhen/brotbuechse-2.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/geldkatze1.o daten/txt/truhen/geldkatze1.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/wappenrock.o daten/txt/truhen/wappenrock.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/magischer_stein.o daten/txt/truhen/magischer_stein.c
+
+
+## Daten Ende
+
 
 #lvlablauf
 lcc -Wa-l -Wl-m -Wl-j -c -o obj/felsengrund.o felsengrund.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo16 -c -o obj/stadtgefaengnis.o stadtgefaengnis.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo16 -c -o obj/ogerhoehlen.o ogerhoehlen.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo16 -c -o obj/wiesen.o wiesen.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo16 -c -o obj/feensee.o feensee.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo16 -c -o obj/eichenwald.o eichenwald.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo17 -c -o obj/eichenwald2.o eichenwald2.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo17 -c -o obj/alte-baum.o alte-baum.c
+
 
 #main
 lcc -Wa-l -Wl-m -Wl-j -c -o obj/verlies.o verlies.c
@@ -189,24 +196,21 @@ lcc -Wa-l -Wl-m -Wl-j -Wf-bo3 -c -o obj/locations.o locations.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo3 -c -o obj/map.o map.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo3 -c -o obj/other.o other.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo4 -c -o obj/init.o init.c 
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo7 -c -o obj/truhen.o truhen.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo7 -c -o obj/truhen.o truhen.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo8 -c -o obj/hud.o hud.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo8 -c -o obj/infoscreen.o infoscreen.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo8 -c -o obj/portale.o portale.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo8 -c -o obj/infoscreen.o infoscreen.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo9 -c -o obj/player.o player.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo9 -c -o obj/tiledat.o tiledat.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/text.o text.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo11 -c -o obj/lvlstatus.o lvlstatus.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo12 -c -o obj/items.o items.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo12 -c -o obj/npc.o npc.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo12 -c -o obj/npc.o npc.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo12 -c -o obj/schilder.o schilder.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo13 -c -o obj/gegner.o gegner.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo13 -c -o obj/lvlgegner.o lvlgegner.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo13 -c -o obj/lvlgegner.o lvlgegner.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo13 -c -o obj/tiledatg.o tiledatg.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo14 -c -o obj/boss.o boss.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo15 -c -o obj/lvl1.o lvl1.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo16 -c -o obj/l_stadtgefaengnis.o l_stadtgefaengnis.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo16 -c -o obj/ogerhoehlen.o ogerhoehlen.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo16 -c -o obj/wiesen.o wiesen.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo17 -c -o obj/umgebung.o umgebung.c
 
 cd obj/

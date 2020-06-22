@@ -22,6 +22,6 @@
 #define fiona1Height 4
 #define fiona1Bank 0
 
-extern unsigned char fiona1[];
+extern const unsigned char fiona1[];
 
 /* End of FIONA-1.H */

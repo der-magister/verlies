@@ -3,7 +3,8 @@
 
 #include "globals.h"
 
-void p_portal (UINT8 l_smk) BANKED;
+extern void p_portal (UINT8 l_smk) __banked;
 
 
 #endif
+

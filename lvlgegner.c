@@ -18,13 +18,13 @@
 //
 //   Kontakt: magister@kabelmail.de
 
-#pragma bank=13
+//#pragma bank=13
 
 #include "lvlgegner.h"
 #include "gegner.h"
 
 ///Gegnerinformationen
-void p_set_gegner (void) BANKED
+void p_set_gegner (void) __banked
 {
         if (v_lvl == 5)
         {
@@ -453,3 +453,4 @@ void p_set_gegner (void) BANKED
         }
         
 }
+

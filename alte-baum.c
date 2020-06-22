@@ -18,7 +18,7 @@
 //
 //   Kontakt: magister@kabelmail.de
 
-#pragma bank=17
+//#pragma bank=17
 
 #include "alte-baum.h"
 
@@ -49,7 +49,7 @@
 #include "daten/lvl/v_lvl164.h"
 #include "daten/lvl/v_lvl165.h"
 
-void p_lvl145 (void) BANKED
+void p_lvl145 (void) __banked
 {
 	if (v_smk == 124)
 	{
@@ -58,7 +58,7 @@ void p_lvl145 (void) BANKED
 	}
 }
 
-void p_lvl146 (void) BANKED
+void p_lvl146 (void) __banked
 {
 	if (v_smk == 108)
 	{
@@ -72,7 +72,7 @@ void p_lvl146 (void) BANKED
 	}
 }
 
-void p_lvl147 (void) BANKED
+void p_lvl147 (void) __banked
 {
 	p_truhe_proviant (195, 44, 2);
 	p_busch (186, 3);
@@ -89,7 +89,7 @@ void p_lvl147 (void) BANKED
 	}
 }
 
-void p_lvl148 (void) BANKED
+void p_lvl148 (void) __banked
 {
 	if (v_smk == 6)
 	{
@@ -108,7 +108,7 @@ void p_lvl148 (void) BANKED
 	}
 }
 
-void p_lvl149 (void) BANKED
+void p_lvl149 (void) __banked
 {
 	p_truhe_schluessel (188, 45);
 
@@ -119,7 +119,7 @@ void p_lvl149 (void) BANKED
 	}
 }
 
-void p_lvl150 (void) BANKED
+void p_lvl150 (void) __banked
 {
 	if (v_keyflag == 1)
         {
@@ -148,7 +148,7 @@ void p_lvl150 (void) BANKED
 	}
 }
 
-void p_lvl151 (void) BANKED
+void p_lvl151 (void) __banked
 {
 	p_stein (136, 23);
 
@@ -164,7 +164,7 @@ void p_lvl151 (void) BANKED
 	}
 }
 
-void p_lvl152 (void) BANKED
+void p_lvl152 (void) __banked
 {
 	if (v_smk == 100)
 	{
@@ -178,7 +178,7 @@ void p_lvl152 (void) BANKED
 	}
 }
 
-void p_lvl153 (void) BANKED
+void p_lvl153 (void) __banked
 {
 	if (v_smk == 52)
 	{
@@ -193,7 +193,7 @@ void p_lvl153 (void) BANKED
 
 }
 
-void p_lvl154 (void) BANKED
+void p_lvl154 (void) __banked
 {
 	p_truhe_gold (37, 46, 2);
 
@@ -209,7 +209,7 @@ void p_lvl154 (void) BANKED
 	}
 }
 
-void p_lvl155 (void) BANKED
+void p_lvl155 (void) __banked
 {
 	p_busch (104, 4);
 
@@ -225,7 +225,7 @@ void p_lvl155 (void) BANKED
 	}
 }
 
-void p_lvl156 (void) BANKED
+void p_lvl156 (void) __banked
 {
 	p_schalter_tuer (181, 5);
 
@@ -241,7 +241,7 @@ void p_lvl156 (void) BANKED
 	}
 }
 
-void p_lvl157 (void) BANKED
+void p_lvl157 (void) __banked
 {
 	if (v_smk == 90)
 	{
@@ -255,7 +255,7 @@ void p_lvl157 (void) BANKED
 	}
 }
 
-void p_lvl158 (void) BANKED
+void p_lvl158 (void) __banked
 {
 	if (v_smk == 213)
 	{
@@ -269,7 +269,7 @@ void p_lvl158 (void) BANKED
 	}
 }
 
-void p_lvl159 (void) BANKED
+void p_lvl159 (void) __banked
 {
 	p_truhe_ausdauertrank (51, 47);
 
@@ -285,7 +285,7 @@ void p_lvl159 (void) BANKED
 	}	
 }
 
-void p_lvl160 (void) BANKED
+void p_lvl160 (void) __banked
 {
 	p_stein (110, 24);
 
@@ -306,7 +306,7 @@ void p_lvl160 (void) BANKED
 	}
 }
 
-void p_lvl161 (void) BANKED
+void p_lvl161 (void) __banked
 {
 	if (v_smk == 144)
 	{
@@ -320,7 +320,7 @@ void p_lvl161 (void) BANKED
 	}
 }
 
-void p_lvl162 (void) BANKED
+void p_lvl162 (void) __banked
 {
 	p_truhe_proviant (44, 48, 2);
 
@@ -331,7 +331,7 @@ void p_lvl162 (void) BANKED
 	}
 }
 
-void p_lvl163 (void) BANKED
+void p_lvl163 (void) __banked
 {
 	if (v_smk == 124)
 	{
@@ -345,7 +345,7 @@ void p_lvl163 (void) BANKED
 	}
 }
 
-void p_lvl164 (void) BANKED
+void p_lvl164 (void) __banked
 {
 	if (v_smk == 57)
 	{

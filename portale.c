@@ -1,5 +1,5 @@
 
-#pragma bank=8
+//#pragma bank=8
 
 #include "portale.h"
 #include "engine.h"
@@ -9,10 +9,10 @@
 #include "other.h"
 #include "locations.h"
 
-#include "daten\txt\portale\portalfeensee.h"
-#include "daten\txt\portale\portalfelsengrund.h"
-#include "daten\txt\portale\portaleichenwald.h"
-#include "daten\txt\portale\portal.h"
+#include "daten/txt/portale/portalfeensee.h"
+#include "daten/txt/portale/portalfelsengrund.h"
+#include "daten/txt/portale/portaleichenwald.h"
+#include "daten/txt/portale/portal.h"
 
 #include "daten/tilesets/felsengrund_1-8-37.h"
 #include "daten/tilesets/felsengrund_2-4-19.h"
@@ -28,8 +28,7 @@
 
 #include "daten/tilesets/eichenwald-4-42.h"
 
-
-void p_portal_setup () BANKED
+void p_portal_setup (void) __banked
 {
 	v_aktion = TRUE;
 	p_engine_rahmen ();
@@ -37,7 +36,7 @@ void p_portal_setup () BANKED
 	v_win = TRUE;
 }
 
-void p_portal (UINT8 l_smk) BANKED
+void p_portal (UINT8 l_smk) __banked
 {
 	BOOLEAN l_quit = FALSE;
 
@@ -152,4 +151,5 @@ void p_portal (UINT8 l_smk) BANKED
 	        p_engine_after_txt ();
 	}
 	 
-}	
+}
+

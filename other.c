@@ -36,7 +36,7 @@ const UINT8 v_timerdat [35] =
         97, 9, 48, 91, 64, 20, 30, 174, 164, 10, 66, 145, 3, 201, 83
 };
 
-/*void p_gameover (void) __banked
+void p_gameover (void) __banked
 {
 	HIDE_SPRITES;
 	HIDE_WIN;
@@ -48,7 +48,7 @@ const UINT8 v_timerdat [35] =
         v_gameover = TRUE; v_slp = v_smlp;
         v_lvl = 1; v_info = FALSE; v_bosskampf = FALSE; v_kampf = FALSE;
         if (v_spr == 0) ++v_spr;
-}*/
+}
 
 ///wartet auf Steuerung unten
 void p_engine_down (void) __banked

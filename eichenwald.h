@@ -18,26 +18,29 @@
 //
 //   Kontakt: magister@kabelmail.de
 
+#ifndef _EICHENWALD_H_
+#define _EICHENWALD_H_
+
 #include "globals.h"
 
-void p_lvl120 (void) BANKED;
-void p_lvl121 (void) BANKED;
-void p_lvl122 (void) BANKED;
-void p_lvl123 (void) BANKED;
-void p_lvl124 (void) BANKED;
-void p_lvl125 (void) BANKED;
-void p_lvl126 (void) BANKED;
-void p_lvl127 (void) BANKED;
-void p_lvl128 (void) BANKED;
-void p_lvl129 (void) BANKED;
-void p_lvl130 (void) BANKED;
-void p_lvl131 (void) BANKED;
-void p_lvl132 (void) BANKED;
-void p_lvl133 (void) BANKED;
-void p_lvl134 (void) BANKED;
-void p_lvl135 (void) BANKED;
-void p_lvl136 (void) BANKED;
-void p_lvl137 (void) BANKED;
+extern void p_lvl120 (void) __banked;
+extern void p_lvl121 (void) __banked;
+extern void p_lvl122 (void) __banked;
+extern void p_lvl123 (void) __banked;
+extern void p_lvl124 (void) __banked;
+extern void p_lvl125 (void) __banked;
+extern void p_lvl126 (void) __banked;
+extern void p_lvl127 (void) __banked;
+extern void p_lvl128 (void) __banked;
+extern void p_lvl129 (void) __banked;
+extern void p_lvl130 (void) __banked;
+extern void p_lvl131 (void) __banked;
+extern void p_lvl132 (void) __banked;
+extern void p_lvl133 (void) __banked;
+extern void p_lvl134 (void) __banked;
+extern void p_lvl135 (void) __banked;
+extern void p_lvl136 (void) __banked;
+extern void p_lvl137 (void) __banked;
 
-
+#endif
 

@@ -47,7 +47,7 @@ void main (void) __nonbanked
                 //game loop
                 while (v_gameover == FALSE)
                 {
-                        /*if ((v_kampf == TRUE) && (v_win == FALSE) && (v_info == FALSE))
+                        if ((v_kampf == TRUE) && (v_win == FALSE) && (v_info == FALSE))
                         {
                                 if (gloop == v_gspeed)
                                 {
@@ -153,7 +153,7 @@ void main (void) __nonbanked
 
 			++v_looptime; ++v_timer;
 
-			if (v_slp <= 0) { p_gameover (); }*/
+			if (v_slp <= 0) { p_gameover (); }
 
 			wait_vbl_done ();
 

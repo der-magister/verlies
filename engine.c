@@ -71,11 +71,11 @@ void p_engine_changeLvl (UINT8 l_lvl, UINT8 l_xk, UINT8 l_yk) __nonbanked
                 v_aktion = TRUE;
                 v_lvl = l_lvl;
                 set_bkg_tiles (1, 1, 18, 14, v_leveldaten);
-                //p_truhe_status ();
+                p_truhe_status ();
                 p_spieler_set_sprite (l_xk, l_yk);
-                //p_lvl_status ();
+                p_lvl_status ();
                 p_hud_showLvl ();
-                //p_set_gegner ();
+                p_set_gegner ();
                 DISPLAY_ON;
         }
 }

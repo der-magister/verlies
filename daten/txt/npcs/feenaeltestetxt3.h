@@ -22,6 +22,6 @@
 #define feenaeltestetxt3Height 4
 #define feenaeltestetxt3Bank 0
 
-extern unsigned char feenaeltestetxt3[];
+extern const unsigned char feenaeltestetxt3[];
 
 /* End of FEENAELTESTETXT3.H */

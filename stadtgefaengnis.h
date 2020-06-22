@@ -18,19 +18,19 @@
 //
 //   Kontakt: magister@skywave-2000.de
 
-#ifndef _L_STADTGEFAENGNIS_H_
-#define _L_STADTGEFAENGNIS_H_
+#ifndef _STADTGEFAENGNIS_H_
+#define _STADTGEFAENGNIS_H_
 
 #include "globals.h"
 
-void p_lvl5 () BANKED;
-void p_lvl6 () BANKED;
-void p_lvl7 () BANKED;
-void p_lvl8 () BANKED;
-void p_lvl9 () BANKED;
-void p_lvl10 () BANKED;
-void p_lvl11 () BANKED;
-void p_lvl12 () BANKED;
-void p_lvl13 () BANKED;
+extern void p_lvl5 (void) __banked;
+extern void p_lvl6 (void) __banked;
+extern void p_lvl7 (void) __banked;
+extern void p_lvl8 (void) __banked;
+extern void p_lvl9 (void) __banked;
+extern void p_lvl10 (void)__banked;
+extern void p_lvl11 (void) __banked;
+extern void p_lvl12 (void) __banked;
+extern void p_lvl13 (void) __banked;
 
 #endif

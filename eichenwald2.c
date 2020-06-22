@@ -18,7 +18,7 @@
 //
 //   Kontakt: magister@kabelmail.de
 
-#pragma bank=17
+//#pragma bank=17
 
 #include "eichenwald2.h"
 
@@ -43,7 +43,6 @@
 #include "daten/lvl/v_lvl143.h"
 #include "daten/lvl/v_lvl145.h"
 
-
 #include "daten/txt/locations/locations.h"
 
 #include "daten/txt/schilder/schildtxt7.h"
@@ -57,7 +56,7 @@
 #include "daten/tilesets/alte-baum-4-38.h"
 
 ///Ablauf Raum 138
-void p_lvl138 (void) BANKED
+void p_lvl138 (void) __banked
 {
 	p_portal (194);
 
@@ -99,7 +98,7 @@ void p_lvl138 (void) BANKED
 }
 
 ///Ablauf Raum 139
-void p_lvl139 (void) BANKED
+void p_lvl139 (void) __banked
 {
 	if (v_smk == 108)
 	{
@@ -114,7 +113,7 @@ void p_lvl139 (void) BANKED
 }
 
 ///Ablauf Raum 140
-void p_lvl140 (void) BANKED
+void p_lvl140 (void) __banked
 {
 	if (v_smk == 108)
 	{
@@ -129,7 +128,7 @@ void p_lvl140 (void) BANKED
 }
 
 ///Ablauf Raum 141
-void p_lvl141 (void) BANKED
+void p_lvl141 (void) __banked
 {
 	p_npc_heiler (84);
 
@@ -146,7 +145,7 @@ void p_lvl141 (void) BANKED
 }
 
 ///Ablauf Raum 142
-void p_lvl142 (void) BANKED
+void p_lvl142 (void) __banked
 {
 	p_schild (192, schildtxt7);
 
@@ -176,7 +175,7 @@ void p_lvl142 (void) BANKED
 }
 
 ///Ablauf Raum 143
-void p_lvl143 (void) BANKED
+void p_lvl143 (void) __banked
 {
 	p_truhe_gold (98, 41, 1);
 

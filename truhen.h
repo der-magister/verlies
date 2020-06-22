@@ -16,33 +16,33 @@
 //   With this program; if not, write to the Free Software Foundation, Inc.,
 //   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 //
-//   Kontakt: magister@kabelmail.de
+//   Kontakt: heiko.wolf.mail@gmail.com
 
 #ifndef _TRUHEN_H_
 #define _TRUHEN_H_
 
 #include "globals.h"
 
-void p_truhe_gold (UINT8 l_smk, UINT8 l_tnr, UINT8 l_anz) BANKED;
-void p_truhe_proviant (UINT8 l_smk, UINT8 l_tnr, UINT8 l_anz) BANKED;
-void p_truhe_status () BANKED;
-void p_truhe_schwert (UINT8 l_smk, UINT8 l_tnr) BANKED;
-void p_truhe_karte (UINT8 l_smk, UINT8 l_knr, UINT8 l_tnr) BANKED; 
-void p_truhe_ausdauertrank (UINT8 l_smk, UINT8 v_tnr) BANKED;
-void p_truhe_heiltrank (UINT8 l_smk, UINT8 v_tnr) BANKED;
-void p_truhe_kraut (UINT8 l_smk, UINT8 v_tnr) BANKED;
-void p_truhe_brotbuechse_1 () BANKED;
-void p_truhe_brotbuechse_2 () BANKED;
-void p_truhe_geldkatze1 () BANKED;
-void p_truhe_schluessel (UINT8 l_mk, UINT8 l_nr) BANKED;
-void p_truhe_lebenskristall (UINT8 l_mk, UINT8 l_nr) BANKED;
-void p_truhe_magischer_stein () BANKED;
-void p_truhe_wappenrock () BANKED;
+extern void p_truhe_gold (UINT8 l_smk, UINT8 l_tnr, UINT8 l_anz) __banked;
+extern void p_truhe_proviant (UINT8 l_smk, UINT8 l_tnr, UINT8 l_anz) __banked;
+extern void p_truhe_status (void) __banked;
+extern void p_truhe_schwert (UINT8 l_smk, UINT8 l_tnr) __banked;
+extern void p_truhe_karte (UINT8 l_smk, UINT8 l_knr, UINT8 l_tnr) __banked; 
+extern void p_truhe_ausdauertrank (UINT8 l_smk, UINT8 v_tnr) __banked;
+extern void p_truhe_heiltrank (UINT8 l_smk, UINT8 v_tnr) __banked;
+extern void p_truhe_kraut (UINT8 l_smk, UINT8 v_tnr) __banked;
+extern void p_truhe_brotbuechse_1 (void) __banked;
+extern void p_truhe_brotbuechse_2 (void) __banked;
+extern void p_truhe_geldkatze1 (void) __banked;
+extern void p_truhe_schluessel (UINT8 l_mk, UINT8 l_nr) __banked;
+extern void p_truhe_lebenskristall (UINT8 l_mk, UINT8 l_nr) __banked;
+extern void p_truhe_magischer_stein (void) __banked;
+extern void p_truhe_wappenrock (void) __banked;
 
 
 
 /**Truhe die Runen beinhaltet
    XK, YK der Truhe, Truhennummer**/
-//void p_truhe_runen (UINT8 v_txk, UINT8 v_tyk, UINT8 v_tnr) BANKED;
+//extern void p_truhe_runen (UINT8 v_txk, UINT8 v_tyk, UINT8 v_tnr) __banked;
 
 #endif

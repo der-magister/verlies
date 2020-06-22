@@ -19,7 +19,7 @@
 //   Kontakt: magister@kabelmail.de
 
 
-#pragma bank=16
+//#pragma bank=16
 
 #include "eichenwald.h"
 
@@ -65,11 +65,8 @@
 
 #include "daten/tilesets/wiesen_1-4-37.h"
 
-
-
-
 ///Ablauf Raum 120
-void p_lvl120 (void) BANKED
+void p_lvl120 (void) __banked
 {
 	p_schild (192, schildtxt6);
 
@@ -93,7 +90,7 @@ void p_lvl120 (void) BANKED
 }
 
 ///Ablauf Raum 121
-void p_lvl121 (void) BANKED
+void p_lvl121 (void) __banked
 {
 	if (v_smk == 108)
 	{
@@ -108,7 +105,7 @@ void p_lvl121 (void) BANKED
 }
 
 ///Ablauf Raum 122
-void p_lvl122 (void) BANKED
+void p_lvl122 (void) __banked
 {
 	p_truhe_karte (62, 6, 36);
 	if (v_smk == 144)
@@ -119,7 +116,7 @@ void p_lvl122 (void) BANKED
 }
 
 ///Ablauf Raum 123
-void p_lvl123 (void) BANKED
+void p_lvl123 (void) __banked
 {
 	p_truhe_proviant (68, 37, 2);
 
@@ -141,7 +138,7 @@ void p_lvl123 (void) BANKED
 }
 
 ///Ablauf Raum 124
-void p_lvl124 (void) BANKED
+void p_lvl124 (void) __banked
 {
 	if (v_smk == 72)
 	{
@@ -156,7 +153,7 @@ void p_lvl124 (void) BANKED
 }
 
 ///Ablauf Raum 125
-void p_lvl125 (void) BANKED
+void p_lvl125 (void) __banked
 {
 	p_stein (40, 20);
 	p_stein (42, 21);
@@ -175,7 +172,7 @@ void p_lvl125 (void) BANKED
 }
 
 ///Ablauf Raum 126
-void p_lvl126 (void) BANKED
+void p_lvl126 (void) __banked
 {
 	if (v_smk == 98)
 	{
@@ -191,7 +188,7 @@ void p_lvl126 (void) BANKED
 }
 
 ///Ablauf Raum 127
-void p_lvl127 (void) BANKED
+void p_lvl127 (void) __banked
 {
 	if (v_smk == 124)
 	{
@@ -211,7 +208,7 @@ void p_lvl127 (void) BANKED
 }
 
 ///Ablauf Raum 128
-void p_lvl128 (void) BANKED
+void p_lvl128 (void) __banked
 {
 	p_truhe_gold (56, 39, 2);
 
@@ -224,7 +221,7 @@ void p_lvl128 (void) BANKED
 }
 
 ///Ablauf Raum 129
-void p_lvl129 (void) BANKED
+void p_lvl129 (void) __banked
 {
 	if (v_smk == 228)
 	{
@@ -240,7 +237,7 @@ void p_lvl129 (void) BANKED
 }
 
 ///Ablauf Raum 130
-void p_lvl130 (void) BANKED
+void p_lvl130 (void) __banked
 {
 	if (v_smk == 220)
 	{
@@ -255,7 +252,7 @@ void p_lvl130 (void) BANKED
 }
 
 ///Ablauf Raum 131
-void p_lvl131 (void) BANKED
+void p_lvl131 (void) __banked
 {
 	if (v_smk == 88)
 	{
@@ -270,7 +267,7 @@ void p_lvl131 (void) BANKED
 }
 
 ///Ablauf Raum 132
-void p_lvl132 (void) BANKED
+void p_lvl132 (void) __banked
 {
 	if (v_smk == 222)
 	{
@@ -285,7 +282,7 @@ void p_lvl132 (void) BANKED
 }
 
 ///Ablauf Raum 133
-void p_lvl133 (void) BANKED
+void p_lvl133 (void) __banked
 {
 	p_truhe_heiltrank (58, 40);
 
@@ -302,7 +299,7 @@ void p_lvl133 (void) BANKED
 }
 
 ///Ablauf Raum 134
-void p_lvl134 (void) BANKED
+void p_lvl134 (void) __banked
 {
 	if (v_smk == 144)
 	{
@@ -317,7 +314,7 @@ void p_lvl134 (void) BANKED
 }
 
 ///Ablauf Raum 135
-void p_lvl135 (void) BANKED
+void p_lvl135 (void) __banked
 {
 	p_schild (186, schildtxt8);
 
@@ -339,7 +336,7 @@ void p_lvl135 (void) BANKED
 }
 
 ///Ablauf Raum 136
-void p_lvl136 (void) BANKED
+void p_lvl136 (void) __banked
 {
 	if (v_smk == 6)
 	{
@@ -366,7 +363,7 @@ void p_lvl136 (void) BANKED
 
 
 ///Ablauf Raum 137
-void p_lvl137 (void) BANKED
+void p_lvl137 (void) __banked
 {
 	p_truhe_kraut (56, 43); //Truhe mit Kraut
 

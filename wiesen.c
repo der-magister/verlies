@@ -18,7 +18,7 @@
 //
 //   Kontakt: magister@kabelmail.de
 
-#pragma bank=16
+//#pragma bank=16
 
 #include "wiesen.h"
 #include "engine.h"
@@ -89,7 +89,7 @@
 #include "daten/txt/schilder/schildtxt4.h"
 
 ///Ablauf Raum 20
-void p_lvl20 () BANKED
+void p_lvl20 () __banked
 {
 	p_schild (195, schildtxt4);
 	
@@ -119,7 +119,7 @@ void p_lvl20 () BANKED
 }
 
 ///Ablauf Raum 21
-void p_lvl21 () BANKED
+void p_lvl21 () __banked
 {
         //Raumwechsel
         if (v_keyflag == 1)
@@ -138,7 +138,7 @@ void p_lvl21 () BANKED
 }
 
 ///Ablauf Raum 22
-void p_lvl22 () BANKED
+void p_lvl22 () __banked
 {
 	//Stein
 	p_stein (45, 1);
@@ -160,7 +160,7 @@ void p_lvl22 () BANKED
 }
 
 ///Ablauf Raum 23
-void p_lvl23 () BANKED
+void p_lvl23 () __banked
 {
 	//Truhe mit 2 Gold
 	p_truhe_gold (64, 5, 2);
@@ -179,7 +179,7 @@ void p_lvl23 () BANKED
 }
 
 ///Ablauf Raum 24
-void p_lvl24 () BANKED
+void p_lvl24 () __banked
 {
         if (v_keyflag == 1)
         {
@@ -202,7 +202,7 @@ void p_lvl24 () BANKED
 }
 
 ///Ablauf Raum 25
-void p_lvl25 () BANKED
+void p_lvl25 () __banked
 {
         //Goldtruhe
         p_truhe_gold (50, 7, 1);
@@ -223,7 +223,7 @@ void p_lvl25 () BANKED
 }
 
 ///Ablauf Raum 26
-void p_lvl26 () BANKED
+void p_lvl26 () __banked
 {
         if (v_keyflag == 1)
         {
@@ -241,7 +241,7 @@ void p_lvl26 () BANKED
 }
 
 ///Ablauf Raum 27
-void p_lvl27 () BANKED
+void p_lvl27 () __banked
 {
         if (v_keyflag == 1)
         {
@@ -266,7 +266,7 @@ void p_lvl27 () BANKED
 
 
 ///Ablauf Raum 28
-void p_lvl28 () BANKED
+void p_lvl28 () __banked
 {
         p_truhe_ausdauertrank (195, 8);
 
@@ -282,7 +282,7 @@ void p_lvl28 () BANKED
 
 
 ///Ablauf Raum 29
-void p_lvl29 () BANKED
+void p_lvl29 () __banked
 {
 
         p_stein (128, 2);
@@ -308,7 +308,7 @@ void p_lvl29 () BANKED
 }
 
 ///Ablauf Raum 31
-void p_lvl31 () BANKED
+void p_lvl31 () __banked
 {
         p_truhe_proviant (145, 10, 1);
 
@@ -328,7 +328,7 @@ void p_lvl31 () BANKED
 }
 
 ///Ablauf Raum 30
-void p_lvl30 () BANKED
+void p_lvl30 () __banked
 {
         if (v_keyflag == 1)
         {
@@ -346,7 +346,7 @@ void p_lvl30 () BANKED
 }
 
 ///Ablauf Raum 32
-void p_lvl32 () BANKED
+void p_lvl32 () __banked
 {
         if (v_keyflag == 1)
         {
@@ -365,7 +365,7 @@ void p_lvl32 () BANKED
 }
 
 ///Ablauf Raum 33
-void p_lvl33 () BANKED
+void p_lvl33 () __banked
 {
         if (v_keyflag == 1)
         {
@@ -383,7 +383,7 @@ void p_lvl33 () BANKED
 }
 
 ///Ablauf Raum 34
-void p_lvl34 () BANKED
+void p_lvl34 () __banked
 {
      if (v_keyflag == 1)
      { 
@@ -405,7 +405,7 @@ void p_lvl34 () BANKED
      }   
 }
 
-void p_lvl35 () BANKED
+void p_lvl35 () __banked
 {
         if (v_smk == 160)
         {
@@ -425,7 +425,7 @@ void p_lvl35 () BANKED
 }
 
 ///Ablauf Raum 36
-void p_lvl36 () BANKED
+void p_lvl36 () __banked
 {
 	p_busch (188, 1);
 	
@@ -450,7 +450,7 @@ void p_lvl36 () BANKED
 }
 
 ///Ablauf Raum 37
-void p_lvl37 () BANKED
+void p_lvl37 () __banked
 {
         p_schild (74, schildtxt2);
 
@@ -471,7 +471,7 @@ void p_lvl37 () BANKED
         }
 }
 
-void p_lvl38 () BANKED
+void p_lvl38 () __banked
 {
         if (v_keyflag == 1)
         {
@@ -488,7 +488,7 @@ void p_lvl38 () BANKED
         }
 }
 
-void p_lvl39 () BANKED
+void p_lvl39 () __banked
 {
         p_truhe_gold (116, 22, 2);
 
@@ -502,7 +502,7 @@ void p_lvl39 () BANKED
         }
 }
 
-void p_lvl70 () BANKED
+void p_lvl70 () __banked
 {
         p_schild (201, schildtxt3);
         p_busch (188, 0);
@@ -535,7 +535,7 @@ void p_lvl70 () BANKED
         }
 }
 
-void p_lvl71 () BANKED
+void p_lvl71 () __banked
 {
         p_truhe_gold (44, 23, 1);
 
@@ -549,7 +549,7 @@ void p_lvl71 () BANKED
         }
 }
 
-void p_lvl72 () BANKED 
+void p_lvl72 () __banked 
 {
         if (v_keyflag == 1)
         {
@@ -566,7 +566,7 @@ void p_lvl72 () BANKED
         }
 }
 
-void p_lvl73 () BANKED
+void p_lvl73 () __banked
 {
         if (v_keyflag == 1)
         {
@@ -582,13 +582,13 @@ void p_lvl73 () BANKED
                 }
                 else if (v_smk == 178)
                 {
-                        p_engine_loadMap (v_lvl76, BANK_6, BANK_16);
+                        p_engine_loadMap (v_lvl76, BANK_5, BANK_16);
                         p_engine_changeLvl (76, 16, 96);
                 }
         }
 }
 
-void p_lvl74 () BANKED
+void p_lvl74 () __banked
 {
         if (v_keyflag == 1)
         {
@@ -605,7 +605,7 @@ void p_lvl74 () BANKED
         }
 }
 
-void p_lvl75 () BANKED
+void p_lvl75 () __banked
 {
         p_npc_heiler (61);
 
@@ -619,7 +619,7 @@ void p_lvl75 () BANKED
         }
 }
 
-void p_lvl76 () BANKED
+void p_lvl76 () __banked
 {
 	if (v_keyflag == 1)
 	{
@@ -636,7 +636,7 @@ void p_lvl76 () BANKED
 	}
 }
 
-void p_lvl77 () BANKED
+void p_lvl77 () __banked
 {
 	p_truhe_gold (188, 24, 2);
 	
@@ -650,7 +650,7 @@ void p_lvl77 () BANKED
 	}
 }
 
-void p_lvl78 () BANKED
+void p_lvl78 () __banked
 {
 	if (v_smk == 126)
         {
@@ -664,7 +664,7 @@ void p_lvl78 () BANKED
         }
 }
 
-void p_lvl79 () BANKED
+void p_lvl79 () __banked
 {
         if (v_smk == 142)
         {
@@ -678,7 +678,7 @@ void p_lvl79 () BANKED
         }
 }
 
-void p_lvl15 () BANKED
+void p_lvl15 () __banked
 {
         p_truhe_heiltrank (43, 25);
         
@@ -691,7 +691,7 @@ void p_lvl15 () BANKED
         }
 }
 
-void p_lvl16 () BANKED
+void p_lvl16 () __banked
 {
         if (v_smk == 227)
         {
@@ -710,7 +710,7 @@ void p_lvl16 () BANKED
         }
 }
 
-void p_lvl17 () BANKED
+void p_lvl17 () __banked
 {
         if (v_smk == 54)
         {
@@ -724,7 +724,7 @@ void p_lvl17 () BANKED
         }
 }
 
-void p_lvl18 () BANKED
+void p_lvl18 () __banked
 {
         if (v_smk == 226)
         {
@@ -738,7 +738,7 @@ void p_lvl18 () BANKED
         }
 }
 
-void p_lvl80 () BANKED
+void p_lvl80 () __banked
 {
         if (v_smk == 142)
         {
@@ -752,7 +752,7 @@ void p_lvl80 () BANKED
         }
 }
 
-void p_lvl81 () BANKED
+void p_lvl81 () __banked
 {
         p_busch (110, 2);
 
@@ -775,7 +775,7 @@ void p_lvl81 () BANKED
         }
 }
 
-void p_lvl82 () BANKED
+void p_lvl82 () __banked
 {
         if (v_smk == 124)
         {
@@ -789,7 +789,7 @@ void p_lvl82 () BANKED
         }
 }
 
-void p_lvl83 () BANKED
+void p_lvl83 () __banked
 {
         if (v_smk == 124)
         {
@@ -799,7 +799,7 @@ void p_lvl83 () BANKED
         }
 }
 
-void p_lvl84 () BANKED
+void p_lvl84 () __banked
 {
         if (v_smk == 124)
         {
@@ -813,7 +813,7 @@ void p_lvl84 () BANKED
         }
 }
 
-void p_lvl85 () BANKED
+void p_lvl85 () __banked
 {
         if (v_smk == 227)
         {
@@ -827,7 +827,7 @@ void p_lvl85 () BANKED
         }
 }
 
-void p_lvl86 () BANKED
+void p_lvl86 () __banked
 {
         if (v_smk == 196)
         {
@@ -841,7 +841,7 @@ void p_lvl86 () BANKED
         }
 }
 
-void p_lvl87 () BANKED
+void p_lvl87 () __banked
 {
         if (v_smk == 8)
         {

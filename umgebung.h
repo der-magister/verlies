@@ -24,9 +24,10 @@
 #include "globals.h"
 
 extern void p_umgebung_init (void) __banked;
-void p_stein (UINT8 l_mk, UINT8 l_nr) BANKED;
-void p_stein_busch_clear (UINT8 l_xk, UINT8 l_yk) BANKED;
-void p_busch (UINT8 l_mk, UINT8 l_nr) BANKED;
-void p_umgebung_state () BANKED;
+extern void p_stein (UINT8 l_mk, UINT8 l_nr) __banked;
+extern void p_stein_busch_clear (UINT8 l_xk, UINT8 l_yk) __banked;
+extern void p_busch (UINT8 l_mk, UINT8 l_nr) __banked;
+extern void p_umgebung_state (void) __banked;
 
 #endif
+

@@ -18,11 +18,17 @@
 //
 //   Kontakt: magister@kabelmail.de
 
+#ifndef _EICHENWALD2_H_
+#define _EICHENWALD2_H_
+
 #include "globals.h"
 
-void p_lvl138 (void) BANKED;
-void p_lvl139 (void) BANKED;
-void p_lvl140 (void) BANKED;
-void p_lvl141 (void) BANKED;
-void p_lvl142 (void) BANKED;
-void p_lvl143 (void) BANKED;
+extern void p_lvl138 (void) __banked;
+extern void p_lvl139 (void) __banked;
+extern void p_lvl140 (void) __banked;
+extern void p_lvl141 (void) __banked;
+extern void p_lvl142 (void) __banked;
+extern void p_lvl143 (void) __banked;
+
+#endif
+

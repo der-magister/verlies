@@ -22,7 +22,7 @@
 #define v_lvl90Height 14
 #define v_lvl90Bank 0
 
-extern unsigned char v_lvl90[];
+extern const unsigned char v_lvl90[];
 
 /* End of V_LVL90.H */
 /*

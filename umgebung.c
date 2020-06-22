@@ -26,7 +26,7 @@
 #include "lvlstatus.h"
 #include "engine.h"
 
-void p_umgebung_init (void) BANKED
+void p_umgebung_init (void) __banked
 {
         for (v_i = 0; v_i <= 50; ++v_i)
         {
@@ -37,7 +37,7 @@ void p_umgebung_init (void) BANKED
 
 
 ///Stein zum wegschlagen, Aufruf: Kartenkoordinate, Nummer des Steines
-/*void p_stein (UINT8 l_mk, UINT8 l_nr) BANKED
+void p_stein (UINT8 l_mk, UINT8 l_nr) __banked
 {
         if ((l_mk == v_imk) && (v_keyflag == 2))
         {
@@ -51,19 +51,19 @@ void p_umgebung_init (void) BANKED
                         }
                 }
         }
-}*/
+}
 
-/*void p_stein_busch_clear (UINT8 l_xk, UINT8 l_yk) BANKED
+void p_stein_busch_clear (UINT8 l_xk, UINT8 l_yk) __banked
 {
         v_tile [0] = 38;
         p_engine_set_tile (l_xk, l_yk, LAYER_BKG);
         p_engine_set_tile (l_xk + 1, l_yk, LAYER_BKG);
         p_engine_set_tile (l_xk, l_yk + 1, LAYER_BKG);
         p_engine_set_tile (l_xk + 1, l_yk + 1, LAYER_BKG);
-}*/
+}
 
 ///Busch zum weghacken, Aufruf: Kartenkoordinate, Nummer des Busches
-/*void p_busch (UINT8 l_mk, UINT8 l_nr) BANKED
+void p_busch (UINT8 l_mk, UINT8 l_nr) __banked
 {
         if ((l_mk == v_imk) && (v_keyflag == 2) && (v_selectItem == 5))
         {
@@ -77,9 +77,9 @@ void p_umgebung_init (void) BANKED
                         }
                 }
         }
-}*/
+}
 
-/*void p_umgebung_state () BANKED
+void p_umgebung_state (void) __banked
 {
         if (v_lvl == 112)
         {
@@ -108,5 +108,5 @@ void p_umgebung_init (void) BANKED
         else if (v_lvl == 155) { if (v_busch [4] == 1) p_stein_busch_clear (14, 5); }
         else if (v_lvl == 160) { if (v_stein [24] == 1) p_stein_busch_clear (2, 6); }
 
-}*/
+}
 

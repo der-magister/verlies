@@ -1,4 +1,4 @@
-#pragma bank=8
+//#pragma bank=8
 
 //   Verlies - ein Adventure/RPG im Retrodesign
 //
@@ -25,7 +25,7 @@
 
 #include "daten/hud/v_infoscreen.h"
 
-void p_infoscreen_show () BANKED
+void p_infoscreen_show (void) __banked
 {
         set_win_tiles (0, 0, 20, 18, v_infoscreen);
         v_infoscr = TRUE;
@@ -36,7 +36,7 @@ void p_infoscreen_show () BANKED
         delay (120);
 }
 
-void p_infoscreen_hide () BANKED
+void p_infoscreen_hide (void) __banked
 {
         //HIDE_WIN;
         v_infoscr = FALSE;
@@ -47,7 +47,7 @@ void p_infoscreen_hide () BANKED
         delay (120);
 }
 
-void p_infoscreen () BANKED
+void p_infoscreen (void) __banked
 {
         if (v_infoscr == FALSE) p_infoscreen_show ();
         else if (v_infoscr == TRUE) p_infoscreen_hide ();     

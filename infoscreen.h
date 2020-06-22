@@ -23,9 +23,9 @@
 
 #include "globals.h"
 
-void p_infoscreen_show () BANKED;
-void p_infoscreen_hide () BANKED;
-void p_infoscreen () BANKED;
+extern void p_infoscreen_show (void) __banked;
+extern void p_infoscreen_hide (void) __banked;
+extern void p_infoscreen (void) __banked;
 
 
 #endif

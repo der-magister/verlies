@@ -1,4 +1,4 @@
-#pragma bank=6
+//#pragma bank=6
 
 
 const unsigned char v_lvl90[] =

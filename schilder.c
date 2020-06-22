@@ -39,7 +39,7 @@ void p_schalter_init (void) __banked
         }
 }
 
-/*void p_schalter_change (UINT8 l_xk, UINT8 l_yk) BANKED
+void p_schalter_change (UINT8 l_xk, UINT8 l_yk) __banked
 {
         ++l_xk; ++l_yk;
 
@@ -47,10 +47,10 @@ void p_schalter_init (void) __banked
         set_bkg_tiles (l_xk, l_yk, 1, 1,  v_tile);
         --v_tile [0];
         set_bkg_tiles (l_xk + 1, l_yk, 1, 1, v_tile);
-}*/
+}
 
 
-/*void p_tuer_change (UINT8 l_xk, UINT8 l_yk) BANKED
+void p_tuer_change (UINT8 l_xk, UINT8 l_yk) __banked
 {
         v_tile [0] = 42;
         p_engine_set_tile (l_xk, l_yk, 1);
@@ -60,9 +60,9 @@ void p_schalter_init (void) __banked
         p_engine_set_tile (l_xk + 1, l_yk, 1);
         --v_tile [0];
         p_engine_set_tile (l_xk, l_yk + 1, 1);
-}*/
+}
 
-/*void p_schalter_status () BANKED
+void p_schalter_status () __banked
 {
         if ((v_schalter [0] == 1) && (v_lvl == 10))
         {
@@ -101,10 +101,10 @@ void p_schalter_init (void) __banked
                 ++v_tile [0];
                 p_engine_set_tile (17, 6, LAYER_BKG);
         }
-}*/      
+}      
 
 ///setzt Schild
-/*void p_schild (UINT8 l_mk, unsigned char l_txt [72]) BANKED
+void p_schild (UINT8 l_mk, unsigned char l_txt [72]) __banked
 {
         if ((l_mk == v_smk) && (v_keyflag == 1))
         { 
@@ -113,26 +113,26 @@ void p_schalter_init (void) __banked
                 p_engine_A ();
                 p_engine_after_txt ();
         }
-}*/
+}
 
 ///verschlossene Tür
-/*void p_schluessel () BANKED
+void p_schluessel () __banked
 {
-  p_hud_hide ();
+  //p_hud_hide ();
   p_engine_set_txt (schluessel);
   p_engine_after_txt ();
-}*/
+}
 
 ///Tür zu
-/*void p_tuerzu () BANKED
+void p_tuerzu () __banked
 {
         p_engine_set_txt (schluessel);
         p_engine_A ();
         p_engine_after_txt ();
-}*/
+}
 
 ///Schalter zum öffnen einer Tür (Koordinaten Schalterlage, Koordinaten Schalteränderung, Koordinaten Türänderung, Questnummer)
-/*void p_schalter_tuer (UINT8 l_smk, UINT8 l_nr) BANKED
+void p_schalter_tuer (UINT8 l_smk, UINT8 l_nr) __banked
 {
 	if ((v_smk == l_smk) && (v_keyflag == 1))
 	{
@@ -142,5 +142,5 @@ void p_schalter_init (void) __banked
                         p_schalter_status ();
 		}
 	}
-}*/
+}
 

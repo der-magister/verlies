@@ -21,34 +21,33 @@
 #ifndef _FEENSEE_H_
 #define _FEENSEE_H_
 
-
 #include "globals.h"
 
-void p_lvl90 () BANKED;
-void p_lvl91 () BANKED;
-void p_lvl95 () BANKED;
-void p_lvl96 () BANKED;
-void p_lvl97 () BANKED;
-void p_lvl98 () BANKED;
-void p_lvl99 () BANKED;
-void p_lvl100 () BANKED;
-void p_lvl101 () BANKED;
-void p_lvl102 () BANKED;
-void p_lvl103 () BANKED;
-void p_lvl104 () BANKED;
-void p_lvl105 () BANKED;
-void p_lvl106 () BANKED;
-void p_lvl107 () BANKED;
-void p_lvl108 () BANKED;
-void p_lvl109 () BANKED;
-void p_lvl110 () BANKED;
-void p_lvl111 () BANKED;
-void p_lvl112 () BANKED;
-void p_lvl113 () BANKED;
-void p_lvl114 () BANKED;
-void p_lvl115 () BANKED;
-void p_lvl116 () BANKED;
-void p_lvl117 () BANKED;
-
+extern void p_lvl90 (void) __banked;
+extern void p_lvl91 (void) __banked;
+extern void p_lvl95 (void) __banked;
+extern void p_lvl96 (void) __banked;
+extern void p_lvl97 (void) __banked;
+extern void p_lvl98 (void) __banked;
+extern void p_lvl99 (void) __banked;
+extern void p_lvl100 (void) __banked;
+extern void p_lvl101 (void) __banked;
+extern void p_lvl102 (void) __banked;
+extern void p_lvl103 (void) __banked;
+extern void p_lvl104 (void) __banked;
+extern void p_lvl105 (void) __banked;
+extern void p_lvl106 (void) __banked;
+extern void p_lvl107 (void) __banked;
+extern void p_lvl108 (void) __banked;
+extern void p_lvl109 (void) __banked;
+extern void p_lvl110 (void) __banked;
+extern void p_lvl111 (void) __banked;
+extern void p_lvl112 (void) __banked;
+extern void p_lvl113 (void) __banked;
+extern void p_lvl114 (void) __banked;
+extern void p_lvl115 (void) __banked;
+extern void p_lvl116 (void) __banked;
+extern void p_lvl117 (void) __banked;
 
 #endif
+
