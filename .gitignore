@@ -8,5 +8,5 @@ verlies.gb
 *.sym
 *.map
 *.swp
-Dokumentatiom
-release
+./Dokumentation
+./release
