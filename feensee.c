@@ -1,4 +1,4 @@
-#pragma bank=16
+//#pragma bank=16
 
 //   Verlies - ein Adventure im Retrodesign
 //

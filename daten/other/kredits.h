@@ -22,6 +22,6 @@
 #define kreditsHeight 18
 #define kreditsBank 0
 
-extern unsigned char kredits[];
+extern const unsigned char kredits[];
 
 /* End of KREDITS.H */

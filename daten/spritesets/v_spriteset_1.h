@@ -26,6 +26,6 @@
 /* Bank of tiles. */
 #define v_spriteset_1Bank 0
 /* Start of tile array. */
-extern unsigned char v_spriteset_1[];
+extern const unsigned char v_spriteset_1[];
 
 /* End of V_SPRITESET_1.H */

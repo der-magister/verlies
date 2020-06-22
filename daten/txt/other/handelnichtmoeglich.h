@@ -22,6 +22,6 @@
 #define handelnichtmoeglichHeight 4
 #define handelnichtmoeglichBank 0
 
-extern unsigned char handelnichtmoeglich[];
+extern const unsigned char handelnichtmoeglich[];
 
 /* End of HANDELNICHTMOEGLICH.H */

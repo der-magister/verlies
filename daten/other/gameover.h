@@ -22,6 +22,6 @@
 #define gameoverHeight 18
 #define gameoverBank 0
 
-extern unsigned char gameover[];
+extern const unsigned char gameover[];
 
 /* End of GAMEOVER.H */

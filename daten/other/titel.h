@@ -22,6 +22,6 @@
 #define titelHeight 18
 #define titelBank 0
 
-extern unsigned char titel[];
+extern const unsigned char titel[];
 
 /* End of TITEL.H */

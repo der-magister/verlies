@@ -22,6 +22,6 @@
 #define oellochHeight 4
 #define oellochBank 0
 
-extern unsigned char oelloch[];
+extern const unsigned char oelloch[];
 
 /* End of OELLOCH.H */

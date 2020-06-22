@@ -22,6 +22,6 @@
 #define techendHeight 4
 #define techendBank 0
 
-extern unsigned char techend[];
+extern const unsigned char techend[];
 
 /* End of TECHEND.H */

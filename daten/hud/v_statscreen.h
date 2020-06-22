@@ -18,10 +18,6 @@
 
 */
 
-#define v_statscreenWidth 20
-#define v_statscreenHeight 18
-#define v_statscreenBank 0
-
 extern const unsigned char v_statscreen[];
 
 /* End of V_STATSCREEN.H */

@@ -22,6 +22,6 @@
 #define schildtxt1dHeight 4
 #define schildtxt1dBank 0
 
-extern unsigned char schildtxt1d[];
+extern const unsigned char schildtxt1d[];
 
 /* End of SCHILDTXT1D.H */
