@@ -22,6 +22,6 @@
 #define truheleerHeight 4
 #define truheleerBank 0
 
-extern unsigned char truheleer[];
+extern const unsigned char truheleer[];
 
 /* End of TRUHELEER.H */

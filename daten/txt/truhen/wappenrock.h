@@ -22,6 +22,6 @@
 #define wappenrockHeight 4
 #define wappenrockBank 0
 
-extern unsigned char wappenrock[];
+extern const unsigned char wappenrock[];
 
 /* End of WAPPENROCK.H */

@@ -22,6 +22,6 @@
 #define krautHeight 4
 #define krautBank 0
 
-extern unsigned char kraut[];
+extern const unsigned char kraut[];
 
 /* End of KRAUT.H */

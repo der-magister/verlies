@@ -22,6 +22,6 @@
 #define schwerttruheHeight 4
 #define schwerttruheBank 0
 
-extern unsigned char schwerttruhe[];
+extern const unsigned char schwerttruhe[];
 
 /* End of SCHWERTTRUHE.H */

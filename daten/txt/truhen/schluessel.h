@@ -22,6 +22,6 @@
 #define tschluesselHeight 4
 #define tschluesselBank 0
 
-extern unsigned char tschluessel[];
+extern const unsigned char tschluessel[];
 
 /* End of SCHLUESSEL.H */

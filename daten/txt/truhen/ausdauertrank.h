@@ -22,6 +22,6 @@
 #define ausdauertrankHeight 4
 #define ausdauertrankBank 0
 
-extern unsigned char ausdauertrank[];
+extern const unsigned char ausdauertrank[];
 
 /* End of AUSDAUERTRANK.H */

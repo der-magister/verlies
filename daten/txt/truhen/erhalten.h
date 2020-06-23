@@ -22,6 +22,6 @@
 #define erhaltenHeight 4
 #define erhaltenBank 0
 
-extern unsigned char erhalten[];
+extern const unsigned char erhalten[];
 
 /* End of ERHALTEN.H */

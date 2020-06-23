@@ -22,6 +22,6 @@
 #define brotbuechse_2Height 4
 #define brotbuechse_2Bank 0
 
-extern unsigned char brotbuechse_2[];
+extern const unsigned char brotbuechse_2[];
 
 /* End of BROTBUECHSE-2.H */

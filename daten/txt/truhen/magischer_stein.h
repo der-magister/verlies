@@ -22,6 +22,6 @@
 #define mstoneHeight 4
 #define mstoneBank 0
 
-extern unsigned char mstone[];
+extern const unsigned char mstone[];
 
 /* End of MAGISCHER_STEIN.H */

@@ -22,6 +22,6 @@
 #define heiltrankHeight 4
 #define heiltrankBank 0
 
-extern unsigned char heiltrank[];
+extern const unsigned char heiltrank[];
 
 /* End of HEILTRANK.H */

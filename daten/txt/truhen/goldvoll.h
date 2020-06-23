@@ -22,6 +22,6 @@
 #define goldvollHeight 4
 #define goldvollBank 0
 
-extern unsigned char goldvoll[];
+extern const unsigned char goldvoll[];
 
 /* End of GOLDVOLL.H */

@@ -22,6 +22,6 @@
 #define geldkatze1Height 4
 #define geldkatze1Bank 0
 
-extern unsigned char geldkatze1[];
+extern const unsigned char geldkatze1[];
 
 /* End of GELDKATZE1.H */

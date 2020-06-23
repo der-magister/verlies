@@ -22,6 +22,6 @@
 #define proviantHeight 4
 #define proviantBank 0
 
-extern unsigned char proviant[];
+extern const unsigned char proviant[];
 
 /* End of PROVIANT.H */

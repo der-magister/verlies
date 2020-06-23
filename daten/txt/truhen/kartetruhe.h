@@ -22,6 +22,6 @@
 #define kartetruheHeight 4
 #define kartetruheBank 0
 
-extern unsigned char kartetruhe[];
+extern const unsigned char kartetruhe[];
 
 /* End of KARTETRUHE.H */
