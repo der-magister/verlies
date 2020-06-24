@@ -1,4 +1,4 @@
-//#pragma bank=6
+//#pragma bank=5
 
 const unsigned char v_lvl15[] =
 {
@@ -91,7 +91,7 @@ const unsigned char v_lvl17[] =
 };
 
 /* End of V_LVL17.C */
-#pragma bank=6
+
 
 /*
 
@@ -148,7 +148,7 @@ const unsigned char v_lvl18[] =
 };
 
 /* End of V_LVL18.C */
-#pragma bank=5
+
 
 /*
 
@@ -205,7 +205,7 @@ const unsigned char v_lvl20[] =
 };
 
 /* End of V_LVL20.C */
-#pragma bank=5
+
 
 /*
 
@@ -262,7 +262,7 @@ const unsigned char v_lvl21[252] =
 };
 
 /* End of V_LVL21.C */
-#pragma bank=5
+
 
 /*
 
@@ -319,7 +319,7 @@ const unsigned char v_lvl22[252] =
 };
 
 /* End of V_LVL22.C */
-#pragma bank=5
+
 
 /*
 
@@ -376,7 +376,7 @@ const unsigned char v_lvl22b[252] =
 };
 
 /* End of V_LVL22B.C */
-#pragma bank=5
+
 
 /*
 
@@ -433,7 +433,7 @@ const unsigned char v_lvl24[252] =
 };
 
 /* End of V_LVL24.C */
-#pragma bank=5
+
 
 /*
 
@@ -490,7 +490,7 @@ const unsigned char v_lvl25[252] =
 };
 
 /* End of V_LVL25.C */
-#pragma bank=5
+
 
 /*
 
@@ -547,7 +547,7 @@ const unsigned char v_lvl26[252] =
 };
 
 /* End of V_LVL26.C */
-#pragma bank=5
+
 
 /*
 
@@ -604,7 +604,7 @@ const unsigned char v_lvl27[252] =
 };
 
 /* End of V_LVL27.C */
-#pragma bank=5
+
 
 /*
 
@@ -661,7 +661,7 @@ const unsigned char v_lvl28[] =
 };
 
 /* End of V_LVL28.C */
-#pragma bank=5
+
 
 /*
 
@@ -718,7 +718,7 @@ const unsigned char v_lvl29[] =
 };
 
 /* End of V_LVL29.C */
-#pragma bank=5
+
 
 /*
 
@@ -775,7 +775,7 @@ const unsigned char v_lvl30[] =
 };
 
 /* End of V_LVL30.C */
-#pragma bank=5
+
 
 /*
 
@@ -832,7 +832,7 @@ const unsigned char v_lvl31[] =
 };
 
 /* End of V_LVL31.C */
-#pragma bank=5
+
 
 /*
 
@@ -889,7 +889,7 @@ const unsigned char v_lvl32[] =
 };
 
 /* End of V_LVL32.C */
-#pragma bank=5
+
 
 /*
 
@@ -946,7 +946,7 @@ const unsigned char v_lvl33[] =
 };
 
 /* End of V_LVL33.C */
-#pragma bank=5
+
 
 /*
 
@@ -1003,7 +1003,7 @@ const unsigned char v_lvl34[] =
 };
 
 /* End of V_LVL34.C */
-#pragma bank=5
+
 
 /*
 
@@ -1060,7 +1060,7 @@ const unsigned char v_lvl35[] =
 };
 
 /* End of V_LVL35.C */
-#pragma bank=5
+
 
 /*
 
@@ -1117,7 +1117,7 @@ const unsigned char v_lvl36[] =
 };
 
 /* End of V_LVL36.C */
-#pragma bank=5
+
 
 /*
 
@@ -1174,7 +1174,7 @@ const unsigned char v_lvl37[] =
 };
 
 /* End of V_LVL37.C */
-#pragma bank=5
+
 
 /*
 
@@ -1231,7 +1231,7 @@ const unsigned char v_lvl38[] =
 };
 
 /* End of V_LVL38.C */
-#pragma bank=5
+
 
 /*
 
@@ -1288,7 +1288,7 @@ const unsigned char v_lvl39[] =
 };
 
 /* End of V_LVL39.C */
-#pragma bank=5
+
 
 /*
 
@@ -1345,7 +1345,7 @@ const unsigned char v_lvl70[] =
 };
 
 /* End of V_LVL70.C */
-#pragma bank=5
+
 
 /*
 
@@ -1402,7 +1402,7 @@ const unsigned char v_lvl71[] =
 };
 
 /* End of V_LVL71.C */
-#pragma bank=5
+
 
 /*
 
@@ -1459,7 +1459,7 @@ const unsigned char v_lvl72[] =
 };
 
 /* End of V_LVL72.C */
-#pragma bank=5
+
 
 /*
 
@@ -1516,7 +1516,7 @@ const unsigned char v_lvl73[] =
 };
 
 /* End of V_LVL73.C */
-#pragma bank=5
+
 
 /*
 
@@ -1573,7 +1573,7 @@ const unsigned char v_lvl74[] =
 };
 
 /* End of V_LVL74.C */
-#pragma bank=5
+
 
 /*
 
@@ -1630,7 +1630,7 @@ const unsigned char v_lvl75[] =
 };
 
 /* End of V_LVL75.C */
-#pragma bank=6
+
 
 /*
 
@@ -1687,7 +1687,7 @@ const unsigned char v_lvl76[] =
 };
 
 /* End of V_LVL76.C */
-#pragma bank=6
+
 
 /*
 
@@ -1744,7 +1744,7 @@ const unsigned char v_lvl77[] =
 };
 
 /* End of V_LVL77.C */
-#pragma bank=6
+
 
 /*
 
@@ -1801,7 +1801,7 @@ const unsigned char v_lvl78[] =
 };
 
 /* End of V_LVL78.C */
-#pragma bank=6
+
 
 /*
 
@@ -1858,7 +1858,7 @@ const unsigned char v_lvl79[] =
 };
 
 /* End of V_LVL79.C */
-#pragma bank=6
+
 
 /*
 
@@ -1915,7 +1915,7 @@ const unsigned char v_lvl80[] =
 };
 
 /* End of V_LVL80.C */
-#pragma bank=6
+
 
 /*
 
@@ -1972,7 +1972,7 @@ const unsigned char v_lvl81[] =
 };
 
 /* End of V_LVL81.C */
-#pragma bank=6
+
 
 /*
 
@@ -2029,7 +2029,7 @@ const unsigned char v_lvl82[] =
 };
 
 /* End of V_LVL82.C */
-#pragma bank=6
+
 
 /*
 
@@ -2086,7 +2086,7 @@ const unsigned char v_lvl83[] =
 };
 
 /* End of V_LVL83.C */
-#pragma bank=6
+
 
 /*
 
@@ -2143,7 +2143,7 @@ const unsigned char v_lvl84[] =
 };
 
 /* End of V_LVL84.C */
-#pragma bank=6
+
 
 /*
 
@@ -2200,7 +2200,7 @@ const unsigned char v_lvl85[] =
 };
 
 /* End of V_LVL85.C */
-#pragma bank=6
+
 
 /*
 
@@ -2257,7 +2257,7 @@ const unsigned char v_lvl86[] =
 };
 
 /* End of V_LVL86.C */
-#pragma bank=6
+
 
 /*
 

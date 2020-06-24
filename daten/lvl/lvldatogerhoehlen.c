@@ -55,7 +55,7 @@ const unsigned char v_lvl40[] =
 };
 
 /* End of V_LVL40.C */
-#pragma bank=5
+
 
 /*
 
@@ -112,7 +112,7 @@ const unsigned char v_lvl41[] =
 };
 
 /* End of V_LVL41.C */
-#pragma bank=5
+
 
 /*
 
@@ -169,7 +169,7 @@ const unsigned char v_lvl42[] =
 };
 
 /* End of V_LVL42.C */
-#pragma bank=5
+
 
 
 /*
@@ -227,7 +227,7 @@ const unsigned char v_lvl43[] =
 };
 
 /* End of V_LVL43.C */
-#pragma bank=5
+
 
 /*
 
@@ -284,7 +284,7 @@ const unsigned char v_lvl44[] =
 };
 
 /* End of V_LVL44.C */
-#pragma bank=5
+
 
 /*
 
@@ -341,7 +341,7 @@ const unsigned char v_lvl45[] =
 };
 
 /* End of V_LVL45.C */
-#pragma bank=5
+
 
 /*
 
@@ -398,7 +398,7 @@ const unsigned char v_lvl46[] =
 };
 
 /* End of V_LVL46.C */
-#pragma bank=5
+
 
 /*
 
@@ -455,7 +455,7 @@ const unsigned char v_lvl47[] =
 };
 
 /* End of V_LVL47.C */
-#pragma bank=5
+
 
 /*
 
@@ -512,7 +512,7 @@ const unsigned char v_lvl48[] =
 };
 
 /* End of V_LVL48.C */
-#pragma bank=5
+
 
 /*
 
@@ -569,7 +569,7 @@ const unsigned char v_lvl49[] =
 };
 
 /* End of V_LVL49.C */
-#pragma bank=5
+
 
 /*
 
@@ -626,7 +626,7 @@ const unsigned char v_lvl50[] =
 };
 
 /* End of V_LVL50.C */
-#pragma bank=5
+
 
 /*
 
@@ -683,7 +683,7 @@ const unsigned char v_lvl51[] =
 };
 
 /* End of V_LVL51.C */
-#pragma bank=5
+
 
 /*
 
@@ -740,7 +740,7 @@ const unsigned char v_lvl52[] =
 };
 
 /* End of V_LVL52.C */
-#pragma bank=5
+
 
 /*
 
@@ -797,7 +797,7 @@ const unsigned char v_lvl53[] =
 };
 
 /* End of V_LVL53.C */
-#pragma bank=5
+
 
 /*
 
@@ -854,7 +854,7 @@ const unsigned char v_lvl54[] =
 };
 
 /* End of V_LVL54.C */
-#pragma bank=5
+
 
 /*
 
@@ -911,7 +911,7 @@ const unsigned char v_lvl55[] =
 };
 
 /* End of V_LVL55.C */
-#pragma bank=5
+
 
 /*
 
@@ -968,7 +968,7 @@ const unsigned char v_lvl56[] =
 };
 
 /* End of V_LVL56.C */
-#pragma bank=5
+
 
 /*
 
@@ -1025,7 +1025,7 @@ const unsigned char v_lvl57[] =
 };
 
 /* End of V_LVL57.C */
-#pragma bank=5
+
 
 /*
 
@@ -1082,7 +1082,7 @@ const unsigned char v_lvl58[] =
 };
 
 /* End of V_LVL58.C */
-#pragma bank=5
+
 
 /*
 
@@ -1139,7 +1139,7 @@ const unsigned char v_lvl59[] =
 };
 
 /* End of V_LVL59.C */
-#pragma bank=5
+
 
 /*
 
@@ -1196,7 +1196,7 @@ const unsigned char v_lvl60[] =
 };
 
 /* End of V_LVL60.C */
-#pragma bank=5
+
 
 /*
 
@@ -1253,7 +1253,7 @@ const unsigned char v_lvl61[] =
 };
 
 /* End of V_LVL61.C */
-#pragma bank=5
+
 
 /*
 
@@ -1310,7 +1310,7 @@ const unsigned char v_lvl62[] =
 };
 
 /* End of V_LVL62.C */
-#pragma bank=5
+
 
 /*
 
@@ -1367,7 +1367,7 @@ const unsigned char v_lvl63[] =
 };
 
 /* End of V_LVL63.C */
-#pragma bank=5
+
 
 /*
 
@@ -1424,7 +1424,7 @@ const unsigned char v_lvl64[] =
 };
 
 /* End of V_LVL64.C */
-#pragma bank=5
+
 
 /*
 
@@ -1481,7 +1481,7 @@ const unsigned char v_lvl65[] =
 };
 
 /* End of V_LVL65.C */
-#pragma bank=5
+
 
 /*
 

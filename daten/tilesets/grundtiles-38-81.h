@@ -26,6 +26,6 @@
 /* Bank of tiles. */
 #define grundtilesBank 0
 /* Start of tile array. */
-extern unsigned char grundtiles[];
+extern const unsigned char grundtiles[];
 
 /* End of GRUNDTILES-38-81.H */

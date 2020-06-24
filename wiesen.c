@@ -464,7 +464,7 @@ void p_lvl37 () __banked
                 else if (v_smk == 108)
                 {
                         p_engine_loadTileset (BANK_2, 4, 34, ogerhoehlen, BANK_16);
-                        p_engine_loadMap (v_lvl40, BANK_5, BANK_16);
+                        p_engine_loadMap (v_lvl40, BANK_6, BANK_16);
                         p_engine_changeLvl (40, 144, 72);
                         p_gui_show_location (logerh);
                 }
@@ -630,7 +630,7 @@ void p_lvl76 () __banked
 		}
 		else if (v_smk == 52)
 		{
-			p_engine_loadMap (v_lvl77, BANK_6, BANK_16);
+			p_engine_loadMap (v_lvl77, BANK_5, BANK_16);
 			p_engine_changeLvl (77, 16, 40);
 		}
 	}
@@ -644,7 +644,7 @@ void p_lvl77 () __banked
 	{
 		if (v_smk == 36)
 		{
-			p_engine_loadMap (v_lvl76, BANK_6, BANK_16);
+			p_engine_loadMap (v_lvl76, BANK_5, BANK_16);
 			p_engine_changeLvl (76, 144, 40);
 		}
 	}

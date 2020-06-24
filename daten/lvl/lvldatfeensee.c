@@ -126,7 +126,7 @@ const unsigned char v_lvl98[] =
 };
 
 /* End of V_LVL98.C */
-#pragma bank=6
+
 
 
 

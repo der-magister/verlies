@@ -26,6 +26,6 @@
 /* Bank of tiles. */
 #define ogerhoehlenBank 0
 /* Start of tile array. */
-extern unsigned char ogerhoehlen[];
+extern const unsigned char ogerhoehlen[];
 
 /* End of OGERHOEHLEN-4-38.H */

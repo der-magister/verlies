@@ -22,6 +22,6 @@
 #define zauberstaubhaendler1Height 4
 #define zauberstaubhaendler1Bank 0
 
-extern unsigned char zauberstaubhaendler1[];
+extern const unsigned char zauberstaubhaendler1[];
 
 /* End of ZAUBERSTAUBHAENDLER1.H */

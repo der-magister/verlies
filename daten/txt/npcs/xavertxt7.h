@@ -22,6 +22,6 @@
 #define xavertxt7Height 4
 #define xavertxt7Bank 0
 
-extern unsigned char xavertxt7[];
+extern const unsigned char xavertxt7[];
 
 /* End of XAVERTXT7.H */

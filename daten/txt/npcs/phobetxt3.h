@@ -22,6 +22,6 @@
 #define phobetxt3Height 4
 #define phobetxt3Bank 0
 
-extern unsigned char phobetxt3[];
+extern const unsigned char phobetxt3[];
 
 /* End of PHOBETXT3.H */

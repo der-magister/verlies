@@ -22,6 +22,6 @@
 #define ranartxt1Height 4
 #define ranartxt1Bank 0
 
-extern unsigned char ranartxt1[];
+extern const unsigned char ranartxt1[];
 
 /* End of RANARTXT1.H */

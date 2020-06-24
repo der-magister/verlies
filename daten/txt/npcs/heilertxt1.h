@@ -22,6 +22,6 @@
 #define heilertxt1Height 4
 #define heilertxt1Bank 0
 
-extern unsigned char heilertxt1[];
+extern const unsigned char heilertxt1[];
 
 /* End of HEILERTXT1.H */

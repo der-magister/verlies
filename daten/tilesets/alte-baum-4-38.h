@@ -26,6 +26,6 @@
 /* Bank of tiles. */
 #define altebaumBank 0
 /* Start of tile array. */
-extern unsigned char altebaum[];
+extern const unsigned char altebaum[];
 
 /* End of ALTE-BAUM-4-38.H */

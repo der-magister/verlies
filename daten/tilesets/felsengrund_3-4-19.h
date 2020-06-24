@@ -26,6 +26,6 @@
 /* Bank of tiles. */
 #define felsengrund_3Bank 0
 /* Start of tile array. */
-extern unsigned char felsengrund_3[];
+extern const unsigned char felsengrund_3[];
 
 /* End of FELSENGRUND_3-4-19.H */

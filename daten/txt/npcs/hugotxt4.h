@@ -22,6 +22,6 @@
 #define hugotxt4Height 4
 #define hugotxt4Bank 0
 
-extern unsigned char hugotxt4[];
+extern const unsigned char hugotxt4[];
 
 /* End of HUGOTXT4.H */

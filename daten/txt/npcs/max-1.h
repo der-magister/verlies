@@ -22,6 +22,6 @@
 #define max1Height 4
 #define max1Bank 0
 
-extern unsigned char max1[];
+extern const unsigned char max1[];
 
 /* End of MAX-1.H */

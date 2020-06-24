@@ -22,6 +22,6 @@
 #define portaleichenwaldHeight 4
 #define portaleichenwaldBank 0
 
-extern unsigned char portaleichenwald[];
+extern const unsigned char portaleichenwald[];
 
 /* End of PORTALEICHENWALD.H */

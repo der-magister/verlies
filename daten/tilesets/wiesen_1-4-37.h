@@ -26,6 +26,6 @@
 /* Bank of tiles. */
 #define wiesen_1Bank 0
 /* Start of tile array. */
-extern unsigned char wiesen_1[];
+extern const unsigned char wiesen_1[];
 
 /* End of WIESEN_1-4-37.H */

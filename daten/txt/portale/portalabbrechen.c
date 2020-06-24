@@ -1,4 +1,4 @@
-#pragma bank=8
+//#pragma bank=8
 
 /*
 

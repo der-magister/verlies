@@ -26,6 +26,6 @@
 /* Bank of tiles. */
 #define feensee_1Bank 0
 /* Start of tile array. */
-extern unsigned char feensee_1[];
+extern const unsigned char feensee_1[];
 
 /* End of FEENSEE-4-37.H */

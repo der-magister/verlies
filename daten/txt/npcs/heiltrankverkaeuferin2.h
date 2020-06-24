@@ -22,6 +22,6 @@
 #define heiltrankverkaeuferin2Height 4
 #define heiltrankverkaeuferin2Bank 0
 
-extern unsigned char heiltrankverkaeuferin2[];
+extern const unsigned char heiltrankverkaeuferin2[];
 
 /* End of HEILTRANKVERKAEUFERIN2.H */

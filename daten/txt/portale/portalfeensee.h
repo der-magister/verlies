@@ -22,6 +22,6 @@
 #define portalfeenseeHeight 4
 #define portalfeenseeBank 0
 
-extern unsigned char portalfeensee[];
+extern const unsigned char portalfeensee[];
 
 /* End of PORTALFEENSEE.H */

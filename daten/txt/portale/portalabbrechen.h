@@ -22,6 +22,6 @@
 #define portalabbrechenHeight 1
 #define portalabbrechenBank 0
 
-extern unsigned char portalabbrechen[];
+extern const unsigned char portalabbrechen[];
 
 /* End of PORTALABBRECHEN.H */

@@ -26,6 +26,6 @@
 /* Bank of tiles. */
 #define stadtgefaengnisBank 0
 /* Start of tile array. */
-extern unsigned char stadtgefaengnis[];
+extern const unsigned char stadtgefaengnis[];
 
 /* End of STADTGEFAENGNIS-14-37.H */

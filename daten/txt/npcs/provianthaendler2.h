@@ -22,6 +22,6 @@
 #define provianthaendler2Height 4
 #define provianthaendler2Bank 0
 
-extern unsigned char provianthaendler2[];
+extern const unsigned char provianthaendler2[];
 
 /* End of PROVIANTHAENDLER2.H */

@@ -22,6 +22,6 @@
 #define hugotxt6Height 4
 #define hugotxt6Bank 0
 
-extern unsigned char hugotxt6[];
+extern const unsigned char hugotxt6[];
 
 /* End of HUGOTXT6.H */

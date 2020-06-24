@@ -22,6 +22,6 @@
 #define xavertxt16Height 4
 #define xavertxt16Bank 0
 
-extern unsigned char xavertxt16[];
+extern const unsigned char xavertxt16[];
 
 /* End of XAVERTXT16.H */

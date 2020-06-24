@@ -1,4 +1,4 @@
-#pragma bank=10
+//#pragma bank=10
 
 const unsigned char saratxt1[] =
 {

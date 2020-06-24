@@ -26,6 +26,6 @@
 /* Bank of tiles. */
 #define eichenwaldBank 0
 /* Start of tile array. */
-extern unsigned char eichenwald[];
+extern const unsigned char eichenwald[];
 
 /* End of EICHENWALD-4-42.H */

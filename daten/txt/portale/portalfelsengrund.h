@@ -22,6 +22,6 @@
 #define portalfelsengrundHeight 4
 #define portalfelsengrundBank 0
 
-extern unsigned char portalfelsengrund[];
+extern const unsigned char portalfelsengrund[];
 
 /* End of PORTALFELSENGRUND.H */

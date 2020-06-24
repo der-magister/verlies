@@ -1,4 +1,4 @@
-#pragma bank=18
+//#pragma bank=18
 
 /*
 
@@ -55,7 +55,7 @@ const unsigned char v_lvl146[] =
 };
 
 /* End of V_LVL146.C */
-#pragma bank=18
+
 
 /*
 
@@ -112,7 +112,7 @@ const unsigned char v_lvl147[] =
 };
 
 /* End of V_LVL147.C */
-#pragma bank=18
+
 
 /*
 
@@ -169,7 +169,7 @@ const unsigned char v_lvl148[] =
 };
 
 /* End of V_LVL148.C */
-#pragma bank=18
+
 
 /*
 
@@ -226,7 +226,7 @@ const unsigned char v_lvl149[] =
 };
 
 /* End of V_LVL149.C */
-#pragma bank=18
+
 
 /*
 
@@ -283,7 +283,7 @@ const unsigned char v_lvl150[] =
 };
 
 /* End of V_LVL150.C */
-#pragma bank=18
+
 
 /*
 
@@ -340,7 +340,7 @@ const unsigned char v_lvl151[] =
 };
 
 /* End of V_LVL151.C */
-#pragma bank=18
+
 
 /*
 
@@ -397,7 +397,7 @@ const unsigned char v_lvl152[] =
 };
 
 /* End of V_LVL152.C */
-#pragma bank=18
+
 
 /*
 
@@ -454,7 +454,7 @@ const unsigned char v_lvl153[] =
 };
 
 /* End of V_LVL153.C */
-#pragma bank=18
+
 
 /*
 
@@ -511,7 +511,7 @@ const unsigned char v_lvl154[] =
 };
 
 /* End of V_LVL154.C */
-#pragma bank=18
+
 
 /*
 
@@ -568,7 +568,7 @@ const unsigned char v_lvl155[] =
 };
 
 /* End of V_LVL155.C */
-#pragma bank=18
+
 
 /*
 
@@ -625,7 +625,7 @@ const unsigned char v_lvl156[] =
 };
 
 /* End of V_LVL156.C */
-#pragma bank=18
+
 
 /*
 
@@ -682,7 +682,7 @@ const unsigned char v_lvl157[] =
 };
 
 /* End of V_LVL157.C */
-#pragma bank=18
+
 
 /*
 
@@ -739,7 +739,7 @@ const unsigned char v_lvl158[] =
 };
 
 /* End of V_LVL158.C */
-#pragma bank=18
+
 
 /*
 
@@ -796,7 +796,7 @@ const unsigned char v_lvl159[] =
 };
 
 /* End of V_LVL159.C */
-#pragma bank=18
+
 
 /*
 
@@ -853,7 +853,7 @@ const unsigned char v_lvl160[] =
 };
 
 /* End of V_LVL160.C */
-#pragma bank=18
+
 
 /*
 
@@ -910,7 +910,7 @@ const unsigned char v_lvl161[] =
 };
 
 /* End of V_LVL161.C */
-#pragma bank=18
+
 
 /*
 
@@ -967,7 +967,7 @@ const unsigned char v_lvl162[] =
 };
 
 /* End of V_LVL162.C */
-#pragma bank=18 
+ 
 
 /*
 
@@ -1024,7 +1024,7 @@ const unsigned char v_lvl163[] =
 };
 
 /* End of V_LVL163.C */
-#pragma bank=18
+
 
 /*
 
@@ -1081,7 +1081,7 @@ const unsigned char v_lvl164[] =
 };
 
 /* End of V_LVL164.C */
-#pragma bank=18
+
 
 /*
 
