@@ -65,7 +65,7 @@ void p_init_game1 (void) __banked
 	DISPLAY_ON;
         SHOW_BKG;
    
-	p_intro ();
+	//p_intro ();
    
         v_info = FALSE;
 

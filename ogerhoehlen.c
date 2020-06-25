@@ -72,7 +72,7 @@ void p_lvl40 () __banked
                 else if (v_smk == 124)
                 {
                         p_engine_loadTileset (BANK_2, 4, 33, wiesen_1, BANK_16);
-                        p_engine_loadMap (v_lvl37, BANK_6, BANK_16);
+                        p_engine_loadMap (v_lvl37, BANK_5, BANK_16);
                         p_engine_changeLvl (37, 16, 72);
                         p_gui_show_location (lwiesen);
                 }

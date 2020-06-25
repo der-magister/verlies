@@ -298,6 +298,20 @@ void p_lvl_status () __banked
                         p_engine_set_tile (17, 9, 1);
                 }
         }
+	else if (v_lvl == 55)
+	{
+		if (v_tuer [2] == 1)
+		{
+			v_tile [0] = 42;
+			p_engine_set_tile (4, 12, LAYER_BKG);
+			v_tile [0] = 40;
+			p_engine_set_tile (5, 12, LAYER_BKG);
+			v_tile [0] = 39;
+			p_engine_set_tile (4, 13, LAYER_BKG);
+			v_tile [0] = 41;
+			p_engine_set_tile (5, 13, LAYER_BKG);
+		}
+	}
         else if (v_lvl == 57) { p_schalter_status (); }
         else if (v_lvl == 58) { p_schalter_status (); }
         else if (v_lvl == 59) { p_schalter_status (); }
