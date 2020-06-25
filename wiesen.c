@@ -419,7 +419,7 @@ void p_lvl35 () __banked
         }
         else if (v_smk == 11)
         {
-                p_engine_loadMap (v_lvl16, BANK_6, BANK_16);
+                p_engine_loadMap (v_lvl16, BANK_5, BANK_16);
                 p_engine_changeLvl (16, 104, 120);
         }
 }
