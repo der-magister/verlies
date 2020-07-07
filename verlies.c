@@ -16,7 +16,7 @@
 //   With this program; if not, write to the Free Software Foundation, Inc.,
 //   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 //
-//   Kontakt: heiko.wolf.mail@gmail.com
+//   Kontakt: magister@kabelmail.de
 
 #include "globals.h"
 #include "init.h"
@@ -32,7 +32,7 @@
 #include "boss.h"
 #include "items.h"
 
-void main (void) __nonbanked
+void main () NONBANKED
 {
         p_init_game1 (); v_quit = 0; 
   
@@ -61,7 +61,7 @@ void main (void) __nonbanked
                                 p_gegner_koli_player ();   
                         }              
       
-                        //if (v_kampf == TRUE) p_gegner_koli_player ();
+                        if ((v_kampf == TRUE) || (v_bosskampf == TRUE)) p_gegner_koli_player ();
       
     
                         if (v_looptime == 7)
@@ -131,6 +131,23 @@ void main (void) __nonbanked
                                         p_gegner_ogerboss ();
                                         v_bossloop = 0;
                                 }
+                                else if (v_lvl == 165)
+                                {
+                                        p_gegner_pilzwesen ();
+                                        v_bossloop = 0;
+                                }
+                        }
+
+                        if ((v_bosseffectloop > 0) && (v_bosskampf == TRUE)) 
+                        {
+                                p_boss_effect_pilzwesen ();
+                        }
+                        else if ((v_bosseffectloop == 0) && (v_bosskampf == TRUE))
+                        {
+                                move_sprite (13, 0, 0);
+                                move_sprite (14, 0, 0);
+                                move_sprite (15, 0, 0);
+                                move_sprite (16, 0, 0);
                         }
         
       
@@ -157,7 +174,7 @@ void main (void) __nonbanked
 
 			wait_vbl_done ();
 
-		}
+		}	
 	}
 
         

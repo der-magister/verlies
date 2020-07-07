@@ -171,7 +171,7 @@ extern UINT8 v_gri [3];
 extern UINT8 v_gspf [3];
 extern UINT8 v_gspl [3];
 
-extern UINT8 v_boss [5];
+extern UINT8 v_boss;
            
 ///Bewegungsgeschwindigkeit der Gegner
 extern UINT8 v_gspeed;         
@@ -324,5 +324,8 @@ extern UINT8 v_ausdauertimer;
 extern BOOLEAN v_use_portal; 
 
 extern BOOLEAN v_aspekte [3];
+
+//loop variable für boss effekte  
+extern UINT8 v_bosseffectloop;
 
 #endif

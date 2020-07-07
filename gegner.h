@@ -23,23 +23,23 @@
 
 #include "globals.h"
 
-extern void p_gegner_init () __banked;
-extern void p_gegner_move_horizontal () __banked;
-extern void p_gegner_move_vertical () __banked;
-extern void p_gegner_speer (void) __banked;
+extern void p_gegner_init () BANKED;
+extern void p_gegner_move_horizontal () BANKED;
+extern void p_gegner_move_vertical () BANKED;
+extern void p_gegner_speer (void) BANKED;
 
 /*
-extern void p_gegner_kolision () __banked;
-extern void p_gegner_stachel () __banked;*/
+extern void p_gegner_kolision () BANKED;
+extern void p_gegner_stachel () BANKED;*/
 
 //Sprite, Anfangstile, XK, YK, Richtung, LP, TP
-extern void p_gegner_set (UINT8 l_nr, UINT8 l_tile, UINT8 l_tile2, UINT8 l_xk, UINT8 l_yk, UINT8 l_ri, UINT8 l_lp, UINT8 l_tp) __banked;
-extern void p_gegner_move (UINT8 l_nr) __banked;
-extern void p_gegner_hide_1 () __banked;
-extern void p_gegner_hide_2 () __banked;
-extern void p_gegner_hide_3 () __banked;
-extern void p_gegner_koli_player () __banked;
-extern void p_gegner_stop () __banked;
-extern void p_gegner_update (UINT8 l_nr, UINT8 l_tile, UINT8 l_ri) __banked;
+extern void p_gegner_set (UINT8 l_nr, UINT8 l_tile, UINT8 l_tile2, UINT8 l_xk, UINT8 l_yk, UINT8 l_ri, UINT8 l_lp, UINT8 l_tp) BANKED;
+extern void p_gegner_move (UINT8 l_nr) BANKED;
+extern void p_gegner_hide_1 () BANKED;
+extern void p_gegner_hide_2 () BANKED;
+extern void p_gegner_hide_3 () BANKED;
+extern void p_gegner_koli_player () BANKED;
+extern void p_gegner_stop () BANKED;
+extern void p_gegner_update (UINT8 l_nr, UINT8 l_tile, UINT8 l_ri) BANKED;
                    
 #endif

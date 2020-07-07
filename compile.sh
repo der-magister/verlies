@@ -39,6 +39,7 @@ lcc  -Wf-bo3 -c -o obj/kredits.o daten/other/kredits.c
 
 #spriteset
 lcc  -Wf-bo2 -c -o obj/v_spriteset_1.o daten/spritesets/v_spriteset_1.c
+lcc  -Wf-bo2 -c -o obj/v_spriteset_2.o daten/spritesets/v_spriteset_2.c
 
 #tileset
 lcc  -Wf-bo2 -c -o obj/font-82-127.o daten/tilesets/font-82-127.c
@@ -125,6 +126,7 @@ lcc  -Wf-bo10 -c -o obj/ranartxt2.o daten/txt/npcs/ranartxt2.c
 lcc  -Wf-bo10 -c -o obj/ranartxt3.o daten/txt/npcs/ranartxt3.c
 lcc  -Wf-bo10 -c -o obj/ranartxt4.o daten/txt/npcs/ranartxt4.c
 lcc  -Wf-bo10 -c -o obj/ranartxt5.o daten/txt/npcs/ranartxt5.c
+lcc  -Wf-bo10 -c -o obj/pilzwesen1txt.o daten/txt/npcs/pilzwesen1.c
 
 # Texte Portale
 lcc  -Wf-bo8 -c -o obj/portal.o daten/txt/portale/portal.c

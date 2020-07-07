@@ -42,7 +42,7 @@ UINT8 v_gmk [4];
 UINT8 v_gri [3];   
 UINT8 v_gspf [3];
 UINT8 v_gspl [3];
-UINT8 v_boss [5];
+UINT8 v_boss;
 UINT8 v_gspeed;         
 UINT8 gloop;
 UINT8 v_bossloop;
@@ -95,3 +95,4 @@ BOOLEAN v_infoscr;
 UINT8 v_ausdauertimer;
 BOOLEAN v_use_portal; //Portale benutze 1 = ja / 0 = nein
 BOOLEAN v_aspekte [3];
+UINT8 v_bosseffectloop;

@@ -22,13 +22,14 @@
 
 #include "globals.h"
 #include "gegner.h"
+#include "boss.h"
 #include "player.h"
 #include "hud.h"
 #include "lvlstatus.h"
 #include "tiledatg.h"
 #include "tiledat.h"
 
-void p_gegner_init () __banked
+void p_gegner_init () BANKED
 {
         for (v_i = 0; v_i != 3; ++v_i)
         {
@@ -38,7 +39,7 @@ void p_gegner_init () __banked
 }
 
 ///horizontale Bewegungsroutine Gegner
-void p_gegner_move_horizontal () __banked
+void p_gegner_move_horizontal () BANKED
 {
         for (v_g = 0; v_g != 3; ++v_g)
         {
@@ -93,7 +94,7 @@ void p_gegner_move_horizontal () __banked
         }
 }
 
-void p_gegner_move_vertical () __banked
+void p_gegner_move_vertical () BANKED
 {
         for (v_g = 0; v_g != 3; ++v_g)
         {
@@ -146,7 +147,7 @@ void p_gegner_move_vertical () __banked
         }
 }
 
-void p_gegner_speer (void) __banked
+void p_gegner_speer (void) BANKED
 {
         for (v_g = 0; v_g != 3; ++v_g)
         {
@@ -162,7 +163,7 @@ void p_gegner_speer (void) __banked
 }
 
 ///Setzt Spriteverbund an Position
-void p_gegner_move (UINT8 l_nr) __banked
+void p_gegner_move (UINT8 l_nr) BANKED
 {
         if (l_nr == 0)
         {
@@ -188,7 +189,7 @@ void p_gegner_move (UINT8 l_nr) __banked
         v_gmk [l_nr] = ((v_gxk [l_nr] - 16) / 8) + 18 * ((v_gyk [l_nr] - 24) / 8);
 }
 
-void p_gegner_hide_1 () __banked
+void p_gegner_hide_1 () BANKED
 {
         move_sprite (36, 0, 0);
 	move_sprite (37, 0, 0);
@@ -196,7 +197,7 @@ void p_gegner_hide_1 () __banked
         move_sprite (39, 0, 0);
 }
 
-void p_gegner_hide_2 () __banked
+void p_gegner_hide_2 () BANKED
 {
         move_sprite (32, 0, 0);
 	move_sprite (33, 0, 0);
@@ -204,7 +205,7 @@ void p_gegner_hide_2 () __banked
         move_sprite (35, 0, 0);
 }
 
-void p_gegner_hide_3 () __banked
+void p_gegner_hide_3 () BANKED
 {
         move_sprite (28, 0, 0);
 	move_sprite (29, 0, 0);
@@ -213,7 +214,7 @@ void p_gegner_hide_3 () __banked
 }
 
 //Setz Gegner (Nr des Spriteverbundes, Starttile, XK, YK, Flag, Richtung, LP, TP)
-void p_gegner_set (UINT8 l_nr, UINT8 l_tile, UINT8 l_tile2, UINT8 l_xk, UINT8 l_yk, UINT8 l_ri, UINT8 l_lp, UINT8 l_tp) __banked
+void p_gegner_set (UINT8 l_nr, UINT8 l_tile, UINT8 l_tile2, UINT8 l_xk, UINT8 l_yk, UINT8 l_ri, UINT8 l_lp, UINT8 l_tp) BANKED
 {
         if (v_nomobs == FALSE)
         {
@@ -256,65 +257,71 @@ void p_gegner_set (UINT8 l_nr, UINT8 l_tile, UINT8 l_tile2, UINT8 l_xk, UINT8 l_
 
 
 ///Kolisionsabfrage Gegner auf Spieler
-void p_gegner_koli_player () __banked
+void p_gegner_koli_player () BANKED
 {
         for (v_kg = 0; v_kg != 3; ++v_kg)
         {
-                if (v_gri [v_kg] == MOVE_NORTH)
-                {
+              
+                //mitte
+                if (((v_sxk == v_gxk [v_kg]) && (v_syk == v_gyk [v_kg])) ||
+                            //unten
+                            ((v_sxk == v_gxk [v_kg]) && (v_syk == v_gyk [v_kg] + 8)) ||
+                            ((v_sxk == v_gxk [v_kg] + 8) && (v_syk == v_gyk [v_kg] + 8)) ||
+                            ((v_sxk + 8 == v_gxk [v_kg]) && (v_syk == v_gyk [v_kg] + 8)) ||
+                            //oben
+                            ((v_sxk == v_gxk [v_kg]) && (v_syk + 8 == v_gyk [v_kg])) ||
+                            ((v_sxk + 8 == v_gxk [v_kg]) && (v_syk + 8 == v_gyk [v_kg])) ||
+                            ((v_sxk == v_gxk [v_kg] + 8) && (v_syk + 8 == v_gyk [v_kg])) || 
+                        //links
+                       /* ((v_sxk + 8 == v_gxk [v_kg]) && (v_syk == v_gyk [v_kg])) ||
+                        ((v_sxk + 8 == v_gyk [v_kg]) && (v_syk + 8 == v_gyk [v_kg])) ||
+                        ((v_sxk + 8 == v_gxk [v_kg]) && (v_syk + 8 == v_gyk [v_kg] + 8))) // ||*/
+                        //rechts
+                        ((v_sxk == v_gxk [v_kg] + 8) && (v_syk == v_gyk [v_kg])) ||
+                        ((v_sxk == v_gxk [v_kg] + 8) && (v_syk + 8 == v_gyk [v_kg])) ||
+                        ((v_sxk == v_gxk [v_kg] + 8) && (v_syk == v_gyk [v_kg] + 8)))
+                {       
 
-                        if ((v_smk + 18 == v_gmk [v_kg]) || (v_smk + 19 == v_gmk [v_kg]) ||
-                            (v_smk + 18 == v_gmk [v_kg] + 1) || (v_smk + 19 == v_gmk [v_kg] + 1) ||
-                            (v_smk == v_gmk [v_kg]) || (v_smk == v_gmk [v_kg] + 1))
-                        {       
-                                p_spieler_blink ();
-                                p_gegner_update (v_kg, v_gspf [v_kg], MOVE_SOUTH);
-                                v_gyk [v_kg] += 8; v_slp -= v_gtp [v_kg];
-                                p_gegner_move (v_kg);
-                        }      
-                }
-                else if (v_gri [v_kg] == MOVE_SOUTH)
-                {
-                        if  ((v_smk == v_gmk [v_kg] + 18) || (v_smk == v_gmk [v_kg] + 19) ||
-                             (v_smk + 1 == v_gmk [v_kg] + 18) || (v_smk + 1 == v_gmk [v_kg] + 19) ||
-                             (v_smk == v_gmk [v_kg]) || (v_smk == v_gmk [v_kg] + 1))
-                        {
-                                p_spieler_blink ();
-                                p_gegner_update (v_kg, v_gspf [v_kg], MOVE_NORTH);
-                                v_gyk [v_kg] -= 8; v_slp -= v_gtp [v_kg];
-                                p_gegner_move (v_kg);
-                        }
-                }
-                else if (v_gri [v_kg] == MOVE_WEST)
-                {
-                        if ((v_smk == v_gmk [v_kg] - 1) ||  (v_smk + 18 == v_gmk [v_kg] - 1) ||
-                            (v_smk + 2 == v_gmk [v_kg] + 19) ||
-                            (v_smk == v_gmk [v_kg]) || (v_smk == v_gmk [v_kg] + 1))
+                        v_slp -= v_gtp [v_kg];
 
+                        if (v_slp > 0)
                         {
                                 p_spieler_blink ();
-                                p_gegner_update (v_kg, v_gspl [v_kg], MOVE_EAST);
-                                v_gxk [v_kg] += 8; v_slp -= v_gtp [v_kg];
-                                p_gegner_move (v_kg);
-                        }
+                                
+                                if (v_bosskampf == FALSE) 
+                                {
+                                        do 
+                                        {
+                                                p_spieler_move (v_sri);
+                                                p_spieler_move (v_sri);
+                                                p_spieler_move (v_sri);
+                                                
+                                                if (v_sri < 4)
+                                                { 
+                                                        ++v_sri;
+                                                }
+                                                else
+                                                {
+                                                        --v_sri;
+                                                }
+                                        }
+                                        while (v_walk == FALSE);
+                                         
+                                        /*else 
+                                        {
+                                                p_boss_treffer ();
+                                       }*/
+                                } 
+                                p_hud_showLP ();                     
+                        }    
+                                  
                 }
-                else if (v_gri [v_kg] == MOVE_EAST)
-                {
-                        if ((v_smk == v_gmk [v_kg] + 1) || (v_smk == v_gmk [v_kg] + 19) ||
-                            (v_smk + 18 == v_gmk [v_kg] + 1) ||
-                            (v_smk == v_gmk [v_kg]) || (v_smk == v_gmk [v_kg] + 1))
-                        {
-                                p_spieler_blink ();
-                                p_gegner_update (v_kg, v_gspf [v_kg], MOVE_WEST);
-                                v_gxk [v_kg] -= 8; v_slp -= v_gtp [v_kg];
-                                p_gegner_move (v_kg);
-                        }
-                }
+               
         }  
-        p_hud_showLP ();   
+         
 }
 
-void p_gegner_stop () __banked
+void p_gegner_stop () BANKED
 {
 	for (v_a = 0; v_a != 3; ++v_a)
 	{
@@ -324,7 +331,7 @@ void p_gegner_stop () __banked
 	v_kampf = FALSE;
 }
 
-void p_gegner_update (UINT8 l_nr, UINT8 l_tile, UINT8 l_ri) __banked
+void p_gegner_update (UINT8 l_nr, UINT8 l_tile, UINT8 l_ri) BANKED
 {
         if (l_nr == 0)
         {
@@ -353,4 +360,3 @@ void p_gegner_update (UINT8 l_nr, UINT8 l_tile, UINT8 l_ri) __banked
         }
         v_gri [l_nr] = l_ri; 
 }
-

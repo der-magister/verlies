@@ -23,26 +23,25 @@
 
 #include "globals.h"
 
-extern void p_lvl145 (void) __banked;
-extern void p_lvl146 (void) __banked;
-extern void p_lvl147 (void) __banked;
-extern void p_lvl148 (void) __banked;
-extern void p_lvl149 (void) __banked;
-extern void p_lvl150 (void) __banked;
-extern void p_lvl151 (void) __banked;
-extern void p_lvl152 (void) __banked;
-extern void p_lvl153 (void) __banked;
-extern void p_lvl154 (void) __banked;
-extern void p_lvl155 (void) __banked;
-extern void p_lvl156 (void) __banked;
-extern void p_lvl157 (void) __banked;
-extern void p_lvl158 (void) __banked;
-extern void p_lvl159 (void) __banked;
-extern void p_lvl160 (void) __banked;
-extern void p_lvl161 (void) __banked;
-extern void p_lvl162 (void) __banked;
-extern void p_lvl163 (void) __banked;
-extern void p_lvl164 (void) __banked;
+extern void p_lvl145 (void) BANKED;
+extern void p_lvl146 (void) BANKED;
+extern void p_lvl147 (void) BANKED;
+extern void p_lvl148 (void) BANKED;
+extern void p_lvl149 (void) BANKED;
+extern void p_lvl150 (void) BANKED;
+extern void p_lvl151 (void) BANKED;
+extern void p_lvl152 (void) BANKED;
+extern void p_lvl153 (void) BANKED;
+extern void p_lvl154 (void) BANKED;
+extern void p_lvl155 (void) BANKED;
+extern void p_lvl156 (void) BANKED;
+extern void p_lvl157 (void) BANKED;
+extern void p_lvl158 (void) BANKED;
+extern void p_lvl159 (void) BANKED;
+extern void p_lvl160 (void) BANKED;
+extern void p_lvl161 (void) BANKED;
+extern void p_lvl162 (void) BANKED;
+extern void p_lvl163 (void) BANKED;
+extern void p_lvl164 (void) BANKED;
  
 #endif
-

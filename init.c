@@ -1,5 +1,4 @@
 //#pragma bank=4
-//init.c
 
 //   Verlies - ein Adventure im Retrodesign
 //
@@ -49,7 +48,7 @@
 #include "daten/tilesets/alte-baum-4-38.h"
 #include "daten/lvl/v_lvl145.h"
 
-void p_init_game1 (void) __banked
+void p_init_game1 () NONBANKED
 {
         p_boss_init ();
         p_schalter_init ();
@@ -76,10 +75,11 @@ void p_init_game1 (void) __banked
         v_timer = 0;
 
         //tmp
-        //p_engine_loadTileset (BANK_2, 4, 33, altebaum, BANK_4);
+        p_engine_loadTileset (BANK_2, 4, 33, altebaum, BANK_4);
+        
 }
 
-void p_init_game2 (void) __banked
+void p_init_game2 () NONBANKED
 {
         for (v_i = 0; v_i != 41; ++v_i)
         {
@@ -90,7 +90,7 @@ void p_init_game2 (void) __banked
         SHOW_BKG;
        
         v_keyflag = 1;
-        p_engine_loadMap (v_lvl1a, BANK_5, BANK_4);
+        //p_engine_loadMap (v_lvl1a, BANK_5, BANK_4);
         p_engine_changeLvl (1, 112, 96);
         v_keyflag = 0;
 	p_gui_show_location (lfelsengrund);
@@ -100,19 +100,17 @@ void p_init_game2 (void) __banked
         
         //tmp für tests
         
-        /*v_keyflag = 1;
+        v_keyflag = 1;
         p_engine_loadMap (v_lvl145, BANK_18, BANK_4);
         p_engine_changeLvl (145, 16, 72);
         v_keyflag = 0;
         p_gui_show_location (laltebaum);
         
-        v_questen [0] = 9; v_sgo = 0; v_stp = 1;
-        v_spr = 4; v_slp = 3; v_questen [2] = 2;
-        v_spitzhacke = TRUE; v_sichel = TRUE; v_slp = 4; v_smlp = 4;
+        v_questen [0] = 10; v_sgo = 0; v_stp = 1;
+        v_spr = 4; ; v_questen [2] = 2;
+        v_spitzhacke = TRUE; v_sichel = TRUE; v_slp = 9; v_smlp = 4;
 
-        v_nomobs = FALSE;*/
-        //end tmp
-
+        v_nomobs = FALSE;
+        
         p_hud_show ();
 }
-

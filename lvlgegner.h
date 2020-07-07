@@ -24,6 +24,6 @@
 
 #include "globals.h"
 
-extern void p_set_gegner (void) __banked;
+extern void p_set_gegner (void) BANKED;
 
 #endif

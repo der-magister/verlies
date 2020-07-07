@@ -348,4 +348,3 @@ void p_spieler_inc_ausdauer (void) __banked
         p_hud_showAD ();
         v_ausdauertimer = 0;
 }
-

@@ -26,30 +26,16 @@
 #include "truhen.h"
 #include "umgebung.h"
 #include "schilder.h"
+#include "text.h"
+#include "other.h"
+#include "boss.h"
 
-#include "daten/lvl/v_lvl145.h"
-#include "daten/lvl/v_lvl146.h"
-#include "daten/lvl/v_lvl147.h"
-#include "daten/lvl/v_lvl148.h"
-#include "daten/lvl/v_lvl149.h"
-#include "daten/lvl/v_lvl150.h"
-#include "daten/lvl/v_lvl151.h"
-#include "daten/lvl/v_lvl152.h"
-#include "daten/lvl/v_lvl153.h"
-#include "daten/lvl/v_lvl154.h"
-#include "daten/lvl/v_lvl155.h"
-#include "daten/lvl/v_lvl156.h"
-#include "daten/lvl/v_lvl157.h"
-#include "daten/lvl/v_lvl158.h"
-#include "daten/lvl/v_lvl159.h"
-#include "daten/lvl/v_lvl160.h"
-#include "daten/lvl/v_lvl161.h"
-#include "daten/lvl/v_lvl162.h"
-#include "daten/lvl/v_lvl163.h"
-#include "daten/lvl/v_lvl164.h"
-#include "daten/lvl/v_lvl165.h"
+#include "daten/lvl/lvldatalterbaum.h"
+#include "daten/lvl/lvldateichenwald.h"
 
-void p_lvl145 (void) __banked
+#include "daten/txt/npcs/pilzwesen1.h"
+
+void p_lvl145 (void) BANKED
 {
 	if (v_smk == 124)
 	{
@@ -58,7 +44,7 @@ void p_lvl145 (void) __banked
 	}
 }
 
-void p_lvl146 (void) __banked
+void p_lvl146 (void) BANKED
 {
 	if (v_smk == 108)
 	{
@@ -72,7 +58,7 @@ void p_lvl146 (void) __banked
 	}
 }
 
-void p_lvl147 (void) __banked
+void p_lvl147 (void) BANKED
 {
 	p_truhe_proviant (195, 44, 2);
 	p_busch (186, 3);
@@ -89,7 +75,7 @@ void p_lvl147 (void) __banked
 	}
 }
 
-void p_lvl148 (void) __banked
+void p_lvl148 (void) BANKED
 {
 	if (v_smk == 6)
 	{
@@ -108,7 +94,7 @@ void p_lvl148 (void) __banked
 	}
 }
 
-void p_lvl149 (void) __banked
+void p_lvl149 (void) BANKED
 {
 	p_truhe_schluessel (188, 45);
 
@@ -119,7 +105,7 @@ void p_lvl149 (void) __banked
 	}
 }
 
-void p_lvl150 (void) __banked
+void p_lvl150 (void) BANKED
 {
 	if (v_keyflag == 1)
         {
@@ -148,7 +134,7 @@ void p_lvl150 (void) __banked
 	}
 }
 
-void p_lvl151 (void) __banked
+void p_lvl151 (void) BANKED
 {
 	p_stein (136, 23);
 
@@ -164,7 +150,7 @@ void p_lvl151 (void) __banked
 	}
 }
 
-void p_lvl152 (void) __banked
+void p_lvl152 (void) BANKED
 {
 	if (v_smk == 100)
 	{
@@ -178,7 +164,7 @@ void p_lvl152 (void) __banked
 	}
 }
 
-void p_lvl153 (void) __banked
+void p_lvl153 (void) BANKED
 {
 	if (v_smk == 52)
 	{
@@ -193,7 +179,7 @@ void p_lvl153 (void) __banked
 
 }
 
-void p_lvl154 (void) __banked
+void p_lvl154 (void) BANKED
 {
 	p_truhe_gold (37, 46, 2);
 
@@ -209,7 +195,7 @@ void p_lvl154 (void) __banked
 	}
 }
 
-void p_lvl155 (void) __banked
+void p_lvl155 (void) BANKED
 {
 	p_busch (104, 4);
 
@@ -225,7 +211,7 @@ void p_lvl155 (void) __banked
 	}
 }
 
-void p_lvl156 (void) __banked
+void p_lvl156 (void) BANKED
 {
 	p_schalter_tuer (181, 5);
 
@@ -241,7 +227,7 @@ void p_lvl156 (void) __banked
 	}
 }
 
-void p_lvl157 (void) __banked
+void p_lvl157 (void) BANKED
 {
 	if (v_smk == 90)
 	{
@@ -255,7 +241,7 @@ void p_lvl157 (void) __banked
 	}
 }
 
-void p_lvl158 (void) __banked
+void p_lvl158 (void) BANKED
 {
 	if (v_smk == 213)
 	{
@@ -269,7 +255,7 @@ void p_lvl158 (void) __banked
 	}
 }
 
-void p_lvl159 (void) __banked
+void p_lvl159 (void) BANKED
 {
 	p_truhe_ausdauertrank (51, 47);
 
@@ -285,7 +271,7 @@ void p_lvl159 (void) __banked
 	}	
 }
 
-void p_lvl160 (void) __banked
+void p_lvl160 (void) BANKED
 {
 	p_stein (110, 24);
 
@@ -306,7 +292,7 @@ void p_lvl160 (void) __banked
 	}
 }
 
-void p_lvl161 (void) __banked
+void p_lvl161 (void) BANKED
 {
 	if (v_smk == 144)
 	{
@@ -320,7 +306,7 @@ void p_lvl161 (void) __banked
 	}
 }
 
-void p_lvl162 (void) __banked
+void p_lvl162 (void) BANKED
 {
 	p_truhe_proviant (44, 48, 2);
 
@@ -331,7 +317,7 @@ void p_lvl162 (void) __banked
 	}
 }
 
-void p_lvl163 (void) __banked
+void p_lvl163 (void) BANKED
 {
 	if (v_smk == 124)
 	{
@@ -345,7 +331,7 @@ void p_lvl163 (void) __banked
 	}
 }
 
-void p_lvl164 (void) __banked
+void p_lvl164 (void) BANKED
 {
 	if (v_smk == 57)
 	{
@@ -355,6 +341,19 @@ void p_lvl164 (void) __banked
 	else if (v_smk == 124)
 	{
 		p_engine_loadMap (v_lvl165, BANK_18, BANK_17);
-		p_engine_changeLvl (165, 16, 72);
+
+		if (v_questen [0] == 10)
+		{
+			p_engine_changeLvl (165, 32, 72);
+			p_engine_set_txt (pilzwesen1);
+                        p_engine_A ();
+                        p_engine_after_txt ();
+			p_gegner_set_boss (2);
+			v_bosskampf = TRUE;
+		}
+		else if (v_questen [0] > 10)
+		{
+			p_engine_changeLvl (165, 16, 72);
+		}
 	}
 }

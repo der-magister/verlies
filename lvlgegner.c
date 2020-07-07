@@ -24,7 +24,7 @@
 #include "gegner.h"
 
 ///Gegnerinformationen
-void p_set_gegner (void) __banked
+void p_set_gegner (void) BANKED
 {
         if (v_lvl == 5)
         {
@@ -449,8 +449,38 @@ void p_set_gegner (void) __banked
         else if (v_lvl == 155)
         {
                 p_gegner_set (0, 48, 48, 120, 40, MOVE_WEST, 2, 2);
-                p_gegner_set (0, 20, 20, 56, 80, MOVE_EAST, 2, 2);
+                p_gegner_set (1, 20, 20, 56, 80, MOVE_EAST, 2, 2);
         }
-        
-}
+        else if (v_lvl == 156)
+        {
+                p_gegner_set (0, 48, 48, 24, 104, MOVE_NORTH, 2, 2);
+                p_gegner_set (1, 20, 20, 128, 64, MOVE_SOUTH, 2, 2);
+                p_gegner_set (2, 48, 48, 80, 32, MOVE_WEST, 2, 2);
+        }
+        else if (v_lvl == 157)
+        {
+                p_gegner_set (0, 60, 60, 56, 112, MOVE_NORTH, 2, 2);
+                p_gegner_set (1, 60, 60, 120, 32, MOVE_SOUTH, 2, 2);
+        }
+        else if (v_lvl == 159)
+        {
+                p_gegner_set (0, 20, 20, 136, 40, MOVE_EAST, 2, 2);     
+        }
+        else if (v_lvl == 160)
+        {
+                p_gegner_set (0, 60, 60, 32, 104, MOVE_NORTH, 2, 2);
+                p_gegner_set (1, 80, 80, 128, 32, MOVE_SOUTH, 2, 2);
+                p_gegner_set (2, 20, 20, 96, 72, MOVE_SOUTH, 2, 2);
+        }
+        else if (v_lvl == 161)
+        {
+                p_gegner_set (0, 64, 64, 72, 56, MOVE_NORTH, 2, 2);
+                p_gegner_set (1, 88, 84, 32, 80, MOVE_DOWN, 125, 1);
+                p_gegner_set (2, 48, 48, 136, 80, MOVE_WEST, 2, 2);
+        }
+        else if (v_lvl == 163)
+        {
+                p_gegner_set (0, 48, 48, 72, 72, MOVE_EAST, 2, 2);
+        }
 
+}

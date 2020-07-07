@@ -20,7 +20,7 @@
 
 //#pragma bank=11
 
-#include "lvlstatus.h"
+#include "globals.h"
 #include "engine.h"
 #include "schilder.h"
 #include "umgebung.h"
@@ -35,7 +35,7 @@
 #include "eichenwald2.h"
 #include "alte-baum.h"
 
-void p_lvl_whichLvL () __banked
+void p_lvl_whichLvL () BANKED
 {
 	if (v_lvl == 1) p_lvl1 ();
         else if (v_lvl == 2) p_lvl2 ();
@@ -189,7 +189,7 @@ void p_lvl_whichLvL () __banked
         else if (v_lvl == 164) p_lvl164 ();
 }
 
-void p_lvl_status () __banked
+void p_lvl_status () BANKED
 {
         v_tile [0] = 38;
 
@@ -298,20 +298,6 @@ void p_lvl_status () __banked
                         p_engine_set_tile (17, 9, 1);
                 }
         }
-	else if (v_lvl == 55)
-	{
-		if (v_tuer [2] == 1)
-		{
-			v_tile [0] = 42;
-			p_engine_set_tile (4, 12, LAYER_BKG);
-			v_tile [0] = 40;
-			p_engine_set_tile (5, 12, LAYER_BKG);
-			v_tile [0] = 39;
-			p_engine_set_tile (4, 13, LAYER_BKG);
-			v_tile [0] = 41;
-			p_engine_set_tile (5, 13, LAYER_BKG);
-		}
-	}
         else if (v_lvl == 57) { p_schalter_status (); }
         else if (v_lvl == 58) { p_schalter_status (); }
         else if (v_lvl == 59) { p_schalter_status (); }
@@ -329,7 +315,7 @@ void p_lvl_status () __banked
         } 
         else if (v_lvl == 65)
         {
-                if (v_boss [0] == 1)
+                if (v_questen [0] >= 2)
                 {
                         p_engine_set_tile (8, 5, LAYER_BKG);
                         p_engine_set_tile (9, 5, LAYER_BKG);
@@ -464,4 +450,3 @@ void p_lvl_status () __banked
 
         p_umgebung_state ();    
 }
-

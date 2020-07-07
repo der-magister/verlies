@@ -1,6 +1,6 @@
 /*
 
- OGERBOSS1.H
+ PILZWESEN1.H
 
  Map Include File.
 
@@ -8,7 +8,7 @@
    Section       : 
    Bank          : 0
    Map size      : 18 x 4
-   Tile set      : D:\magister\owncloud\projekte\verlies-16x16\gfx\entwuerfe\tilesets\ogerhoehlen.gbr
+   Tile set      : C:\magister\google-drive\projekte\verlies-16x16\gfx\entwuerfe\tilesets\font.gbr
    Plane count   : 1 plane (8 bits)
    Plane order   : Tiles are continues
    Tile offset   : 0
@@ -18,10 +18,10 @@
 
 */
 
-#define ogerboss1Width 18
-#define ogerboss1Height 4
-#define ogerboss1Bank 0
+#define pilzwesen1Width 18
+#define pilzwesen1Height 4
+#define pilzwesen1Bank 0
 
-extern unsigned char ogerboss1[];
+extern const unsigned char pilzwesen1[];
 
-/* End of OGERBOSS1.H */
+/* End of PILZWESEN1.H */

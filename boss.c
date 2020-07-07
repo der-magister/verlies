@@ -8,17 +8,20 @@
 #include "text.h"
 #include "other.h"
 
+#include "daten/spritesets/v_spriteset_2.h"
+
 #include "daten/txt/npcs/ogerboss2.h"
 
-void p_boss_init (void) __banked
+void p_boss_init () BANKED
 {
-        for (v_i = 0; v_i != 5; ++v_i) { v_boss [v_i] = 0; }
+        //for (v_i = 0; v_i != 5; ++v_i) { v_boss [v_i] = 0; }
 }
 
-void p_gegner_set_boss (UINT8 v_nr) __banked
+void p_gegner_set_boss (UINT8 v_nr) BANKED
 {
-        v_stage = 1; v_bossloop = 0; v_count = 0;
+        v_stage = 1; v_bossloop = 0; v_count = 0; v_gri [0] = 1;
   
+        //Ogerboss
         if (v_nr == 1)
         {
                 set_sprite_tile (36, 52);
@@ -26,15 +29,40 @@ void p_gegner_set_boss (UINT8 v_nr) __banked
                 set_sprite_tile (38, 54);
                 set_sprite_tile (39, 55);
 
-                v_gxk [0] = 80; v_gyk [0] = 112; v_gri [0] = 1;
+                v_gxk [0] = 80; v_gyk [0] = 112; v_gtp [0] = 1; 
                 p_gegner_move (0); 
-                v_glp [0] = 24; v_gspeed = 100; 
+                v_glp [0] = 24; v_gspeed = 100; v_boss = 1;
         }
+        //pilzwesen
+        else if (v_nr == 2)
+        {
+                p_engine_loadSpriteset (BANK_2, 0, 127, v_spriteset_2, BANK_14);
+                set_sprite_tile (36, 0);
+                set_sprite_tile (37, 1);
+                set_sprite_tile (38, 2);
+                set_sprite_tile (39, 3);
+
+                set_sprite_tile (13, 4);
+                set_sprite_tile (14, 5);
+                set_sprite_tile (15, 6);
+                set_sprite_tile (16, 7);
+
+                v_gxk [0] = 80; v_gyk [0] = 40; v_gtp [0] = 2;
+                p_gegner_move (0);
+                v_glp [0] = 45; v_gspeed = 90; v_boss = 2;
+        }
+
   
 }
 
+
+void p_boss_treffer (void) BANKED
+{
+        if (v_boss == 2) p_spieler_set_sprite (24, 40);
+}
+
 //Ablauf Kampf gegen Ogerboss
-void p_gegner_ogerboss () __banked
+void p_gegner_ogerboss () BANKED
 {
         if (v_stage == 1)
         {
@@ -99,9 +127,9 @@ void p_gegner_ogerboss () __banked
         }
 }
 
-void p_gegner_ogerboss_end () __banked
+void p_gegner_ogerboss_end () BANKED
 {
-        v_boss [0] = 1; v_questen [2] = 2;
+        v_questen [2] = 2;
         p_engine_set_txt (ogerboss2);
         p_engine_A ();
         p_engine_after_txt ();
@@ -115,8 +143,67 @@ void p_gegner_ogerboss_end () __banked
         p_engine_set_tile (9, 3, LAYER_BKG);
 }
 
+void p_gegner_pilzwesen (void) BANKED
+{
+        if (v_stage == 1)
+        {
+                v_gxk [0] = 80; v_gyk [0] = 104; ++v_stage; ++v_count;
+
+                if ((v_count == 2) || (v_count == 6))
+                {
+                        v_bosseffectloop = 85;
+                }
+        } 
+        else if (v_stage == 2)
+        {
+                v_gxk [0] = 80; v_gyk [0] = 72; ++v_stage;
+
+                if (v_count == 4)
+                {
+                        v_bosseffectloop= 85;
+                }
+                else if (v_count == 9)
+                {
+                        v_bosseffectloop = 85;
+                        v_count = 0;
+                }
+        }
+        else if (v_stage == 3)
+        {
+               v_gxk [0] = 136; v_gyk [0] = 40; ++v_stage;
+        }
+        else if (v_stage == 4)
+        {
+                v_gxk [0] = 24; v_gyk [0] = 96; ++v_stage;
+        }        
+        else if (v_stage == 5)
+        {
+                v_gxk [0] = 80; v_gyk [0] = 40; v_stage = 1;
+
+        }
+        p_gegner_move (0);
+}
+
+void p_boss_effect_pilzwesen (void) BANKED
+{
+        move_sprite (13, v_gxk [0] - 8, v_gyk [0]);
+        move_sprite (14, v_gxk [0] - 8, v_gyk [0] + 8);
+        move_sprite (15, v_gxk [0] + 16, v_gyk [0]);
+        move_sprite (16, v_gxk [0] + 16, v_gyk [0] + 8);
+        --v_bosseffectloop;
+        
+        if (((v_sxk + 8 == v_gxk [0] - 8 ) && (v_syk == v_gyk [0])) || 
+           ((v_sxk + 8 == v_gxk [0] - 8) && (v_syk + 8 == v_gyk [0] + 8))) 
+        {       
+                --v_slp;
+                p_spieler_blink ();
+                p_boss_treffer ();
+        }
+} 
+
+
 //Dorgan
-/* void p_gegner_bosskampf1 () __banked
+/* void p_gegner_bosskampf1 () BANKED
 {
   if (v_gflag [1] == 9)
   {
@@ -177,7 +264,7 @@ void p_gegner_ogerboss_end () __banked
 }
 
 //Zorgus
-void p_gegner_bosskampf2 () __banked
+void p_gegner_bosskampf2 () BANKED
 {
   if (v_gflag [5] == 9)
   {
@@ -227,7 +314,7 @@ void p_gegner_bosskampf2 () __banked
 }
 
 //Varos
-void p_gegner_bosskampf3 () __banked
+void p_gegner_bosskampf3 () BANKED
 {
   if (v_gflag [1] == 9)
   {
@@ -305,4 +392,3 @@ void p_gegner_bosskampf3 () __banked
     } 
   }
 }*/
-
