@@ -2,80 +2,80 @@
 
 rm -rf obj/*.o
 
-alias lcc='/opt/gbdk/bin/lcc -Wa-l -Wl-m -Wl-j'
+lcc="/opt/gbdk/bin/lcc -Wa-l -Wl-m -Wl-j"
 
 ## Daten
 
 #hud
-lcc  -Wf-bo8 -c -o obj/hudgui.o daten/hud/hudgui.c
-lcc  -Wf-bo8 -c -o obj/v_infoscreen.o daten/hud/v_infoscreen.c
-lcc  -Wf-bo8 -c -o obj/v_statscreen.o daten/hud/v_statscreen.c
-lcc  -Wf-bo10 -c -o obj/rahmen.o gfx/rahmen.c
+lcc -Wf-bo8 -c -o obj/hudgui.o daten/hud/hudgui.c
+lcc -Wf-bo8 -c -o obj/v_infoscreen.o daten/hud/v_infoscreen.c
+lcc -Wf-bo8 -c -o obj/v_statscreen.o daten/hud/v_statscreen.c
+lcc -Wf-bo10 -c -o obj/rahmen.o gfx/rahmen.c
 
 #karten
-lcc  -Wf-bo3 -c -o obj/k_felsengrund.o daten/karten/k_felsengrund.c
-lcc  -Wf-bo3 -c -o obj/k_gefaengnis.o daten/karten/k_gefaengnis.c
-lcc  -Wf-bo3 -c -o obj/k_oger.o daten/karten/k_oger.c
-lcc  -Wf-bo3 -c -o obj/k_wiesen.o daten/karten/k_wiesen.c
-lcc  -Wf-bo3 -c -o obj/k_feensee.o daten/karten/k_feensee.c
-lcc  -Wf-bo3 -c -o obj/k_dorfseefeen.o daten/karten/k_dorfseefeen.c
-lcc  -Wf-bo3 -c -o obj/k_eichenwald.o daten/karten/k_eichenwald.c
-lcc  -Wf-bo3 -c -o obj/nomap.o daten/karten/nomap.c
+lcc -Wf-bo3 -c -o obj/k_felsengrund.o daten/karten/k_felsengrund.c
+lcc -Wf-bo3 -c -o obj/k_gefaengnis.o daten/karten/k_gefaengnis.c
+lcc -Wf-bo3 -c -o obj/k_oger.o daten/karten/k_oger.c
+lcc -Wf-bo3 -c -o obj/k_wiesen.o daten/karten/k_wiesen.c
+lcc -Wf-bo3 -c -o obj/k_feensee.o daten/karten/k_feensee.c
+lcc -Wf-bo3 -c -o obj/k_dorfseefeen.o daten/karten/k_dorfseefeen.c
+lcc -Wf-bo3 -c -o obj/k_eichenwald.o daten/karten/k_eichenwald.c
+lcc -Wf-bo3 -c -o obj/nomap.o daten/karten/nomap.c
 
 #lvl
-lcc  -Wf-bo5 -c -o obj/lvldatfelsengrund.o daten/lvl/lvldatfelsengrund.c
-lcc  -Wf-bo5 -c -o obj/lvldatstadtgefaengnis.o daten/lvl/lvldatstadtgefaengnis.c
-lcc  -Wf-bo5 -c -o obj/lvldatwiesen.o daten/lvl/lvldatwiesen.c
-lcc  -Wf-bo6 -c -o obj/lvldatogerhoehlen.o daten/lvl/lvldatogerhoehlen.c
-lcc  -Wf-bo6 -c -o obj/lvldatdorfseefeen.o daten/lvl/lvldatdorfseefeen.c
-lcc  -Wf-bo6 -c -o obj/lvldatfeensee.o daten/lvl/lvldatfeensee.c
-lcc  -Wf-bo18 -c -o obj/lvldateichenwald.o daten/lvl/lvldateichenwald.c
-lcc  -Wf-bo18 -c -o obj/lvldatalterbaum.o daten/lvl/lvldatalterbaum.c
+lcc -Wf-bo5 -c -o obj/lvldatfelsengrund.o daten/lvl/lvldatfelsengrund.c
+lcc -Wf-bo5 -c -o obj/lvldatstadtgefaengnis.o daten/lvl/lvldatstadtgefaengnis.c
+lcc -Wf-bo5 -c -o obj/lvldatwiesen.o daten/lvl/lvldatwiesen.c
+lcc -Wf-bo6 -c -o obj/lvldatogerhoehlen.o daten/lvl/lvldatogerhoehlen.c
+lcc -Wf-bo6 -c -o obj/lvldatdorfseefeen.o daten/lvl/lvldatdorfseefeen.c
+lcc -Wf-bo6 -c -o obj/lvldatfeensee.o daten/lvl/lvldatfeensee.c
+lcc -Wf-bo18 -c -o obj/lvldateichenwald.o daten/lvl/lvldateichenwald.c
+lcc -Wf-bo18 -c -o obj/lvldatalterbaum.o daten/lvl/lvldatalterbaum.c
 
 #other
-lcc  -Wf-bo3 -c -o obj/gameover.o daten/other/gameover.c
-lcc  -Wf-bo3 -c -o obj/titel.o daten/other/titel.c
-lcc  -Wf-bo3 -c -o obj/kredits.o daten/other/kredits.c
+lcc -Wf-bo3 -c -o obj/gameover.o daten/other/gameover.c
+lcc -Wf-bo3 -c -o obj/titel.o daten/other/titel.c
+lcc -Wf-bo3 -c -o obj/kredits.o daten/other/kredits.c
 
 #spriteset
-lcc  -Wf-bo2 -c -o obj/v_spriteset_1.o daten/spritesets/v_spriteset_1.c
-lcc  -Wf-bo2 -c -o obj/v_spriteset_2.o daten/spritesets/v_spriteset_2.c
+lcc -Wf-bo2 -c -o obj/v_spriteset_1.o daten/spritesets/v_spriteset_1.c
+lcc -Wf-bo2 -c -o obj/v_spriteset_2.o daten/spritesets/v_spriteset_2.c
 
 #tileset
-lcc  -Wf-bo2 -c -o obj/font-82-127.o daten/tilesets/font-82-127.c
-lcc  -Wf-bo2 -c -o obj/grundtiles-38-81.o daten/tilesets/grundtiles-38-81.c
-lcc  -Wf-bo2 -c -o obj/felsengrund_1-8-37.o daten/tilesets/felsengrund_1-8-37.c
-lcc  -Wf-bo2 -c -o obj/felsengrund_2-4-19.o daten/tilesets/felsengrund_2-4-19.c
-lcc  -Wf-bo2 -c -o obj/felsengrund_3-4-19.o daten/tilesets/felsengrund_3-4-19.c
-lcc  -Wf-bo2 -c -o obj/ogerhoehlen-4-38.o daten/tilesets/ogerhoehlen-4-38.c
-lcc  -Wf-bo2 -c -o obj/stadtgefaengnis-14-37.o daten/tilesets/stadtgefaengnis-14-37.c
-lcc  -Wf-bo2 -c -o obj/wiesen_1-4-37.o daten/tilesets/wiesen_1-4-37.c
-lcc  -Wf-bo2 -c -o obj/feensee-4-37.o daten/tilesets/feensee-4-37.c
-lcc  -Wf-bo2 -c -o obj/eichenwald-4-42.o daten/tilesets/eichenwald-4-42.c
-lcc  -Wf-bo2 -c -o obj/alte-baum-4-38.o daten/tilesets/alte-baum-4-38.c
+lcc -Wf-bo2 -c -o obj/font-82-127.o daten/tilesets/font-82-127.c
+lcc -Wf-bo2 -c -o obj/grundtiles-38-81.o daten/tilesets/grundtiles-38-81.c
+lcc -Wf-bo2 -c -o obj/felsengrund_1-8-37.o daten/tilesets/felsengrund_1-8-37.c
+lcc -Wf-bo2 -c -o obj/felsengrund_2-4-19.o daten/tilesets/felsengrund_2-4-19.c
+lcc -Wf-bo2 -c -o obj/felsengrund_3-4-19.o daten/tilesets/felsengrund_3-4-19.c
+lcc -Wf-bo2 -c -o obj/ogerhoehlen-4-38.o daten/tilesets/ogerhoehlen-4-38.c
+lcc -Wf-bo2 -c -o obj/stadtgefaengnis-14-37.o daten/tilesets/stadtgefaengnis-14-37.c
+lcc -Wf-bo2 -c -o obj/wiesen_1-4-37.o daten/tilesets/wiesen_1-4-37.c
+lcc -Wf-bo2 -c -o obj/feensee-4-37.o daten/tilesets/feensee-4-37.c
+lcc -Wf-bo2 -c -o obj/eichenwald-4-42.o daten/tilesets/eichenwald-4-42.c
+lcc -Wf-bo2 -c -o obj/alte-baum-4-38.o daten/tilesets/alte-baum-4-38.c
 
 #locations
-lcc  -Wf-bo3 -c -o obj/locationstxt.o daten/txt/locations/locations.c
+lcc -Wf-bo3 -c -o obj/locationstxt.o daten/txt/locations/locations.c
 
 #Texte von Npcs und Gegnern
-lcc  -Wf-bo10 -c -o obj/ausdauerverkaeuferin1.o daten/txt/npcs/ausdauerverkaeuferin1.c
-lcc  -Wf-bo10 -c -o obj/ausdauerverkaeuferin2.o daten/txt/npcs/ausdauerverkaeuferin2.c
-lcc  -Wf-bo10 -c -o obj/fiona-1.o daten/txt/npcs/fiona-1.c
-lcc  -Wf-bo10 -c -o obj/heilertxt1.o daten/txt/npcs/heilertxt1.c
-lcc  -Wf-bo10 -c -o obj/heilertxt2.o daten/txt/npcs/heilertxt2.c
-lcc  -Wf-bo10 -c -o obj/heiltrankverkaeuferin1.o daten/txt/npcs/heiltrankverkaeuferin1.c
-lcc  -Wf-bo10 -c -o obj/heiltrankverkaeuferin2.o daten/txt/npcs/heiltrankverkaeuferin2.c
-lcc  -Wf-bo10 -c -o obj/hugotxt1.o daten/txt/npcs/hugotxt1.c
-lcc  -Wf-bo10 -c -o obj/hugotxt2.o daten/txt/npcs/hugotxt2.c
-lcc  -Wf-bo10 -c -o obj/hugotxt3.o daten/txt/npcs/hugotxt3.c
-lcc  -Wf-bo10 -c -o obj/hugotxt4.o daten/txt/npcs/hugotxt4.c
-lcc  -Wf-bo10 -c -o obj/hugotxt5.o daten/txt/npcs/hugotxt5.c
-lcc  -Wf-bo10 -c -o obj/hugotxt6.o daten/txt/npcs/hugotxt6.c
-lcc  -Wf-bo10 -c -o obj/hugotxt7.o daten/txt/npcs/hugotxt7.c
-lcc  -Wf-bo10 -c -o obj/hugotxt8.o daten/txt/npcs/hugotxt8.c
-lcc  -Wf-bo10 -c -o obj/max-1.o daten/txt/npcs/max-1.c
-lcc  -Wf-bo10 -c -o obj/ogerboss1.o daten/txt/npcs/ogerboss1.c
-lcc  -Wf-bo10 -c -o obj/ogerboss2.o daten/txt/npcs/ogerboss2.c
+lcc -Wf-bo10 -c -o obj/ausdauerverkaeuferin1.o daten/txt/npcs/ausdauerverkaeuferin1.c
+lcc -Wf-bo10 -c -o obj/ausdauerverkaeuferin2.o daten/txt/npcs/ausdauerverkaeuferin2.c
+lcc -Wf-bo10 -c -o obj/fiona-1.o daten/txt/npcs/fiona-1.c
+lcc -Wf-bo10 -c -o obj/heilertxt1.o daten/txt/npcs/heilertxt1.c
+lcc -Wf-bo10 -c -o obj/heilertxt2.o daten/txt/npcs/heilertxt2.c
+lcc -Wf-bo10 -c -o obj/heiltrankverkaeuferin1.o daten/txt/npcs/heiltrankverkaeuferin1.c
+lcc -Wf-bo10 -c -o obj/heiltrankverkaeuferin2.o daten/txt/npcs/heiltrankverkaeuferin2.c
+lcc -Wf-bo10 -c -o obj/hugotxt1.o daten/txt/npcs/hugotxt1.c
+lcc -Wf-bo10 -c -o obj/hugotxt2.o daten/txt/npcs/hugotxt2.c
+lcc -Wf-bo10 -c -o obj/hugotxt3.o daten/txt/npcs/hugotxt3.c
+lcc -Wf-bo10 -c -o obj/hugotxt4.o daten/txt/npcs/hugotxt4.c
+lcc -Wf-bo10 -c -o obj/hugotxt5.o daten/txt/npcs/hugotxt5.c
+lcc -Wf-bo10 -c -o obj/hugotxt6.o daten/txt/npcs/hugotxt6.c
+lcc -Wf-bo10 -c -o obj/hugotxt7.o daten/txt/npcs/hugotxt7.c
+lcc -Wf-bo10 -c -o obj/hugotxt8.o daten/txt/npcs/hugotxt8.c
+lcc -Wf-bo10 -c -o obj/max-1.o daten/txt/npcs/max-1.c
+lcc -Wf-bo10 -c -o obj/ogerboss1.o daten/txt/npcs/ogerboss1.c
+lcc -Wf-bo10 -c -o obj/ogerboss2.o daten/txt/npcs/ogerboss2.c
 lcc  -Wf-bo10 -c -o obj/phobetxt1.o daten/txt/npcs/phobetxt1.c
 lcc  -Wf-bo10 -c -o obj/phobetxt2.o daten/txt/npcs/phobetxt2.c
 lcc  -Wf-bo10 -c -o obj/phobetxt3.o daten/txt/npcs/phobetxt3.c
