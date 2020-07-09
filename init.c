@@ -110,7 +110,7 @@ void p_init_game2 () NONBANKED
         v_spr = 4; ; v_questen [2] = 2;
         v_spitzhacke = TRUE; v_sichel = TRUE; v_slp = 9; v_smlp = 4;
 
-        v_nomobs = FALSE;
+        v_nomobs = TRUE;
         
         p_hud_show ();
 }

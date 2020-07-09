@@ -7,6 +7,7 @@
 #include "player.h"
 #include "text.h"
 #include "other.h"
+#include "hud.h"
 
 #include "daten/spritesets/v_spriteset_2.h"
 
@@ -191,13 +192,19 @@ void p_boss_effect_pilzwesen (void) BANKED
         move_sprite (15, v_gxk [0] + 16, v_gyk [0]);
         move_sprite (16, v_gxk [0] + 16, v_gyk [0] + 8);
         --v_bosseffectloop;
-        
-        if (((v_sxk + 8 == v_gxk [0] - 8 ) && (v_syk == v_gyk [0])) || 
-           ((v_sxk + 8 == v_gxk [0] - 8) && (v_syk + 8 == v_gyk [0] + 8))) 
+       
+       	//treffereffekt sporen 
+	//mitte
+        if (((v_sxk + 8 == v_gxk [0] - 8 ) && (v_syk == v_gyk [0])) ||
+	   //oben
+           ((v_sxk + 8 == v_gxk [0] - 8) && (v_syk + 8 == v_gyk [0])) ||
+	   //unten 
+	   ((v_sxk + 8 == v_gxk [0]) && (v_syk - 8 == v_gyk [0]))) 
         {       
                 --v_slp;
                 p_spieler_blink ();
                 p_boss_treffer ();
+		p_hud_showLP ();
         }
 } 
 

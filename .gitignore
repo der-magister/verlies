@@ -1,6 +1,5 @@
 Dokumentation/
 obj/
-release/
 verlies.gb
 *.o
 *.asm
@@ -9,4 +8,6 @@ verlies.gb
 *.map
 *.swp
 ./Dokumentation
-./release
+release/techdemo/08.05.2019/src/
+release/techdemo/07.07.2019/src/
+release/techdemo/07.07.2019/verlies-mit-vba.zip
