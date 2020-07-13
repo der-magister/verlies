@@ -187,6 +187,7 @@ void p_lvl_whichLvL () BANKED
         else if (v_lvl == 162) p_lvl162 ();
         else if (v_lvl == 163) p_lvl163 ();
         else if (v_lvl == 164) p_lvl164 ();
+	else if (v_lvl == 165) p_lvl165 ();
 }
 
 void p_lvl_status () BANKED
@@ -447,6 +448,24 @@ void p_lvl_status () BANKED
                 }
         }
         else if (v_lvl == 156) { p_schalter_status (); }
+	else if (v_lvl == 165)
+	{
+		if (v_questen [0] >= 11)
+		{
+			v_tile [0] = 12;
+		        p_engine_set_tile (0, 6, LAYER_BKG);
+			p_engine_set_tile (16, 6, LAYER_BKG);
+		        ++v_tile [0];
+		        p_engine_set_tile (0, 7, LAYER_BKG);
+			p_engine_set_tile (16, 7, LAYER_BKG);
+		        ++v_tile [0];
+		        p_engine_set_tile (1, 6, LAYER_BKG);
+			p_engine_set_tile (17, 6, LAYER_BKG);
+		        ++v_tile [0];
+		        p_engine_set_tile (1, 7, LAYER_BKG);
+			p_engine_set_tile (17, 7, LAYER_BKG);
+		}
+	}
 
         p_umgebung_state ();    
 }

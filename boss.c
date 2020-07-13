@@ -12,6 +12,7 @@
 #include "daten/spritesets/v_spriteset_2.h"
 
 #include "daten/txt/npcs/ogerboss2.h"
+#include "daten/txt/npcs/pilzwesen2.h"
 
 void p_boss_init () BANKED
 {
@@ -211,6 +212,26 @@ void p_boss_effect_pilzwesen (void) BANKED
 		p_hud_showLP ();
         }
 } 
+
+void p_gegner_pilzwesen_end (void) BANKED
+{
+        v_questen [0] = 11;
+        p_engine_set_txt (pilzwesen2);
+        p_engine_A ();
+        p_engine_after_txt ();
+        v_tile [0] = 12;
+        p_engine_set_tile (0, 6, LAYER_BKG);
+	p_engine_set_tile (16, 6, LAYER_BKG);
+        ++v_tile [0];
+        p_engine_set_tile (0, 7, LAYER_BKG);
+	p_engine_set_tile (16, 7, LAYER_BKG);
+        ++v_tile [0];
+        p_engine_set_tile (1, 6, LAYER_BKG);
+	p_engine_set_tile (17, 6, LAYER_BKG);
+        ++v_tile [0];
+        p_engine_set_tile (1, 7, LAYER_BKG);
+	p_engine_set_tile (17, 7, LAYER_BKG);
+}
 
 //Dorgan
 /* void p_gegner_bosskampf1 () BANKED

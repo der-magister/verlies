@@ -106,7 +106,7 @@ void p_init_game2 () NONBANKED
         v_keyflag = 0;
         p_gui_show_location (laltebaum);
         
-        v_questen [0] = 10; v_sgo = 0; v_stp = 1;
+        v_questen [0] = 11; v_sgo = 0; v_stp = 1;
         v_spr = 4; ; v_questen [2] = 2;
         v_spitzhacke = TRUE; v_sichel = TRUE; v_slp = 9; v_smlp = 4;
 

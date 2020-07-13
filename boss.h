@@ -8,6 +8,7 @@ extern void p_gegner_ogerboss_end () BANKED;
 extern void p_gegner_pilzwesen (void) BANKED;
 extern void p_boss_effect_pilzwesen (void) BANKED;
 extern void p_boss_treffer (void) BANKED; 
+extern void p_gegner_pilzwesen_end (void) BANKED;
 /* void p_gegner_bosskampf1 () BANKED;
 void p_gegner_bosskampf2 () BANKED;
 void p_gegner_bosskampf3 () BANKED; */

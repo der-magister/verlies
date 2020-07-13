@@ -127,6 +127,7 @@ lcc  -Wf-bo10 -c -o obj/ranartxt3.o daten/txt/npcs/ranartxt3.c
 lcc  -Wf-bo10 -c -o obj/ranartxt4.o daten/txt/npcs/ranartxt4.c
 lcc  -Wf-bo10 -c -o obj/ranartxt5.o daten/txt/npcs/ranartxt5.c
 lcc  -Wf-bo10 -c -o obj/pilzwesen1txt.o daten/txt/npcs/pilzwesen1.c
+lcc  -Wf-bo10 -c -o obj/pilzwesen2txt.o daten/txt/npcs/pilzwesen2.c
 
 # Texte Portale
 lcc  -Wf-bo8 -c -o obj/portal.o daten/txt/portale/portal.c

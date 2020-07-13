@@ -313,7 +313,7 @@ void p_spieler_attack () __banked
                 {
                         v_bosskampf = FALSE;
                         if (v_lvl == 66) { p_gegner_ogerboss_end (); }
-			
+			else if (v_lvl == 165) { p_gegner_pilzwesen_end (); }
                 }
           }
           if ((v_glp [1] <= 0) && (v_gri [1] != 0))

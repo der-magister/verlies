@@ -337,7 +337,7 @@ void p_lvl164 (void) BANKED
 	{
 		p_engine_loadMap (v_lvl163, BANK_18, BANK_17);
 		p_engine_changeLvl (163, v_sxk, v_syk);
-	}
+	}	
 	else if (v_smk == 124)
 	{
 		p_engine_loadMap (v_lvl165, BANK_18, BANK_17);
@@ -355,5 +355,19 @@ void p_lvl164 (void) BANKED
 		{
 			p_engine_changeLvl (165, 16, 72);
 		}
+	}
+}
+
+void p_lvl165 (void) BANKED
+{
+	if (v_smk == 108)
+	{
+		p_engine_loadMap (v_lvl164, BANK_18, BANK_17);
+		p_engine_changeLvl (164, 144, 72);
+	}
+	else if (v_smk == 124)
+	{
+		p_engine_loadMap (v_lvl166, BANK_18, BANK_17);
+		p_engine_changeLvl (166, 16, 72);
 	}
 }

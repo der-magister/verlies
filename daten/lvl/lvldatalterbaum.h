@@ -538,3 +538,5 @@ extern unsigned char v_lvl164[];
 extern unsigned char v_lvl165[];
 
 /* End of V_LVL165.H */
+
+extern const unsigned char v_lvl166[];
