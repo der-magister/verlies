@@ -46,7 +46,7 @@
 
 //tmp
 #include "daten/tilesets/alte-baum-4-38.h"
-#include "daten/lvl/v_lvl145.h"
+#include "daten/lvl/lvldatalterbaum.h"
 
 void p_init_game1 () NONBANKED
 {
@@ -101,8 +101,8 @@ void p_init_game2 () NONBANKED
         //tmp für tests
         
         v_keyflag = 1;
-        p_engine_loadMap (v_lvl145, BANK_18, BANK_4);
-        p_engine_changeLvl (145, 16, 72);
+        p_engine_loadMap (v_lvl164, BANK_18, BANK_4);
+        p_engine_changeLvl (164, 40, 48);
         v_keyflag = 0;
         p_gui_show_location (laltebaum);
         

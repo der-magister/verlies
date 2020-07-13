@@ -312,10 +312,8 @@ void p_spieler_attack () __banked
                 if (v_bosskampf == TRUE)
                 {
                         v_bosskampf = FALSE;
-                        if (v_lvl == 66)
-                        {
-                                p_gegner_ogerboss_end ();
-                        }
+                        if (v_lvl == 66) { p_gegner_ogerboss_end (); }
+			
                 }
           }
           if ((v_glp [1] <= 0) && (v_gri [1] != 0))

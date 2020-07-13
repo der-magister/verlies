@@ -56,7 +56,6 @@ void p_gegner_set_boss (UINT8 v_nr) BANKED
   
 }
 
-
 void p_boss_treffer (void) BANKED
 {
         if (v_boss == 2) p_spieler_set_sprite (24, 40);
@@ -194,12 +193,17 @@ void p_boss_effect_pilzwesen (void) BANKED
         --v_bosseffectloop;
        
        	//treffereffekt sporen 
-	//mitte
+	//mitte links
         if (((v_sxk + 8 == v_gxk [0] - 8 ) && (v_syk == v_gyk [0])) ||
-	   //oben
+	   //oben links
            ((v_sxk + 8 == v_gxk [0] - 8) && (v_syk + 8 == v_gyk [0])) ||
-	   //unten 
-	   ((v_sxk + 8 == v_gxk [0]) && (v_syk - 8 == v_gyk [0]))) 
+	   //unten links
+	   ((v_sxk + 8 == v_gxk [0] - 8) && (v_syk == v_gyk [0] + 8)) ||
+	   //mitte rechts
+	   ((v_sxk == v_gxk [0] + 16) && (v_syk == v_gyk [0])) ||
+	   //oben rechts
+	   ((v_sxk == v_gxk [0] + 16) && (v_syk + 8 == v_gyk [0])) ||
+	   ((v_sxk == v_gxk [0] + 16) && (v_syk == v_gyk [0] + 8)))  
         {       
                 --v_slp;
                 p_spieler_blink ();
@@ -207,7 +211,6 @@ void p_boss_effect_pilzwesen (void) BANKED
 		p_hud_showLP ();
         }
 } 
-
 
 //Dorgan
 /* void p_gegner_bosskampf1 () BANKED
