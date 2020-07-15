@@ -126,6 +126,8 @@ lcc  -Wf-bo10 -c -o obj/ranartxt2.o daten/txt/npcs/ranartxt2.c
 lcc  -Wf-bo10 -c -o obj/ranartxt3.o daten/txt/npcs/ranartxt3.c
 lcc  -Wf-bo10 -c -o obj/ranartxt4.o daten/txt/npcs/ranartxt4.c
 lcc  -Wf-bo10 -c -o obj/ranartxt5.o daten/txt/npcs/ranartxt5.c
+lcc  -Wf-bo10 -c -o obj/ranartxt6.o daten/txt/npcs/ranartxt6.c
+lcc  -Wf-bo10 -c -o obj/ranartxt7.o daten/txt/npcs/ranartxt7.c
 lcc  -Wf-bo10 -c -o obj/pilzwesen1txt.o daten/txt/npcs/pilzwesen1.c
 lcc  -Wf-bo10 -c -o obj/pilzwesen2txt.o daten/txt/npcs/pilzwesen2.c
 
@@ -169,6 +171,7 @@ lcc  -Wf-bo10 -c -o obj/brotbuechse-2.o daten/txt/truhen/brotbuechse-2.c
 lcc  -Wf-bo10 -c -o obj/geldkatze1.o daten/txt/truhen/geldkatze1.c
 lcc  -Wf-bo10 -c -o obj/wappenrock.o daten/txt/truhen/wappenrock.c
 lcc  -Wf-bo10 -c -o obj/magischer_stein.o daten/txt/truhen/magischer_stein.c
+lcc  -Wf-bo10 -c -o obj/aspektwaldtxt.o daten/txt/truhen/aspektwald.c
 
 ## Daten Ende
 

@@ -8,7 +8,7 @@
    Section       : 
    Bank          : 0
    Map size      : 18 x 14
-   Tile set      : C:\magister\owncloud\projekte\verlies-16x16\gfx\entwuerfe\tilesets\alte-baum.gbr
+   Tile set      : Z:\home\magister\repos\verlies\gfx\entwuerfe\tilesets\alte-baum.gbr
    Plane count   : 1 plane (8 bits)
    Plane order   : Tiles are continues
    Tile offset   : 0

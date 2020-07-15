@@ -41,6 +41,7 @@
 #include "daten/txt/truhen/geldkatze1.h"
 #include "daten/txt/truhen/magischer_stein.h"
 #include "daten/txt/truhen/wappenrock.h"
+#include "daten/txt/truhen/aspektwald.h"
 
 void p_truhe_change (UINT8 l_xk, UINT8 l_yk) __banked
 {
@@ -188,8 +189,8 @@ void p_truhe_status () __banked
         else if (v_lvl == 123) { if (v_truhen [37] == 1) p_truhe_change (14, 2); }
         else if (v_lvl == 126) 
         { 
-                if (v_truhen [38] == 1) p_truhe_change (14, 12);
-                if (v_truhen [42] == 1) p_truhe_change (8, 4);
+                if (v_truhen [38] == 1) { p_truhe_change (14, 12); }
+                if (v_truhen [42] == 1) { p_truhe_change (8, 4); }
         }
         else if (v_lvl == 128) { if (v_truhen [39] == 1) p_truhe_change (2, 2); }
         else if (v_lvl == 133) { if (v_truhen [40] == 1) p_truhe_change (4, 2); }
@@ -200,8 +201,11 @@ void p_truhe_status () __banked
         else if (v_lvl == 154) { if (v_truhen [46] == 1) p_truhe_change (1, 1); }
         else if (v_lvl == 159) { if (v_truhen [47] == 1) p_truhe_change (15, 1); }
         else if (v_lvl == 162) { if (v_truhen [48] == 1) p_truhe_change (8, 1); }
-
-
+	else if (v_lvl == 166) 
+	{ 
+		if (v_truhen [49] == 1) { p_truhe_change (14, 1); }
+		if (v_truhen [50] == 1) { p_truhe_change (14, 12); }
+	}
 }
 
 ///Goldtruhe (XK, YK, Truhennummer, Anzahl des Goldes)
@@ -588,6 +592,29 @@ void p_truhe_lebenskristall (UINT8 l_mk, UINT8 l_nr) __banked
                 p_engine_A ();
                 p_engine_after_txt ();
                 p_hud_showLP ();
+        }
+}
+
+void p_truhe_aspekt_wald (void) __banked
+{
+        if (v_keyflag == 1)
+        {
+                if (v_smk == 194)
+                {
+                        if (v_truhen [50] == 0)
+                        {
+                                p_engine_set_txt (aspektwald);
+                                ++v_truhen [50];
+                                v_questen [0] = 12;
+                                p_truhe_status ();
+                        }
+                        else
+                        {
+	                        p_engine_set_txt (truheleer);
+	                }
+                        p_engine_A ();
+                        p_engine_after_txt ();
+                }
         }
 }
 

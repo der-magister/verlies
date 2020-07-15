@@ -697,6 +697,6 @@ extern unsigned char v_lvl143[];
 #define v_lvl145Height 14
 #define v_lvl145Bank 0
 
-extern unsigned char v_lvl145[];
+//extern unsigned char v_lvl145[];
 
 /* End of V_LVL145.H */

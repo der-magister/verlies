@@ -52,6 +52,8 @@
 #include "daten/txt/npcs/ranartxt3.h"
 #include "daten/txt/npcs/ranartxt4.h"
 #include "daten/txt/npcs/ranartxt5.h"
+#include "daten/txt/npcs/ranartxt6.h"
+#include "daten/txt/npcs/ranartxt7.h"
 
 #include "daten/tilesets/alte-baum-4-38.h"
 
@@ -79,19 +81,29 @@ void p_lvl138 (void) __banked
                         p_engine_after_txt ();
                         v_questen [0] = 10;
 		}
-		else if (v_questen [0] == 10)
+		else if ((v_questen [0] == 10) || (v_questen [0] > 12))
 		{
 			p_engine_set_txt (ranartxt5);
                         p_engine_A ();
                         p_engine_after_txt ();
 		}
-
+		else if (v_questen [0] == 12)
+		{
+			p_engine_set_txt (ranartxt6);
+                        p_engine_down ();
+			p_engine_set_txt (ranartxt7);
+			p_engine_down ();
+			p_engine_set_txt (ranartxt5);
+			p_engine_A ();
+                        p_engine_after_txt ();
+			v_questen [0] = 13;
+		}
 	}
 
 
 	if (v_smk == 6)
 	{
-		p_engine_loadMap (v_lvl136, BANK_6, BANK_17);
+		p_engine_loadMap (v_lvl136, BANK_18, BANK_17);
 		p_engine_changeLvl (136, 64, 120);
 		p_gui_show_location (leichenwald);
 	}
@@ -102,12 +114,12 @@ void p_lvl139 (void) __banked
 {
 	if (v_smk == 108)
 	{
-		p_engine_loadMap (v_lvl136, BANK_6, BANK_17);
+		p_engine_loadMap (v_lvl136, BANK_18, BANK_17);
 		p_engine_changeLvl (136, 144, 72);
 	}
 	else if (v_smk == 124)
 	{
-		p_engine_loadMap (v_lvl142, BANK_6, BANK_17);
+		p_engine_loadMap (v_lvl142, BANK_18, BANK_17);
 		p_engine_changeLvl (142, 16, 72);
 	}
 }
@@ -117,12 +129,12 @@ void p_lvl140 (void) __banked
 {
 	if (v_smk == 108)
 	{
-		p_engine_loadMap (v_lvl135, BANK_6, BANK_17);
+		p_engine_loadMap (v_lvl135, BANK_18, BANK_17);
 		p_engine_changeLvl (135, 144, 72);
 	}
 	else if (v_smk == 52)
 	{
-		p_engine_loadMap (v_lvl141, BANK_6, BANK_17);
+		p_engine_loadMap (v_lvl141, BANK_18, BANK_17);
 		p_engine_changeLvl (141, 16, 40);
 	}
 }
@@ -134,12 +146,12 @@ void p_lvl141 (void) __banked
 
 	if (v_smk == 36)
 	{
-		p_engine_loadMap (v_lvl140, BANK_6, BANK_17);
+		p_engine_loadMap (v_lvl140, BANK_18, BANK_17);
 		p_engine_changeLvl (140, 144, 40);
 	}
 	else if (v_smk == 224)
 	{
-		p_engine_loadMap (v_lvl142, BANK_6, BANK_17);
+		p_engine_loadMap (v_lvl142, BANK_18, BANK_17);
 		p_engine_changeLvl (142, 80, 24);
 	}
 }
@@ -151,17 +163,17 @@ void p_lvl142 (void) __banked
 
 	if (v_smk == 8)
 	{
-		p_engine_loadMap (v_lvl141, BANK_6, BANK_17);
+		p_engine_loadMap (v_lvl141, BANK_18, BANK_17);
 		p_engine_changeLvl (141, 80, 120);
 	}
 	else if (v_smk == 108)
 	{
-		p_engine_loadMap (v_lvl139, BANK_6, BANK_17);
+		p_engine_loadMap (v_lvl139, BANK_18, BANK_17);
 		p_engine_changeLvl (139, 144, 72);
 	}
 	else if (v_smk == 224)
 	{
-		p_engine_loadMap (v_lvl143, BANK_6, BANK_17);
+		p_engine_loadMap (v_lvl143, BANK_18, BANK_17);
 		p_engine_changeLvl (143, 80, 24);
 
 	}
@@ -181,7 +193,7 @@ void p_lvl143 (void) __banked
 
 	if (v_smk == 8)
 	{
-		p_engine_loadMap (v_lvl142, BANK_6, BANK_17);
+		p_engine_loadMap (v_lvl142, BANK_18, BANK_17);
 		p_engine_changeLvl (142, 80, 120);
 	}
 }

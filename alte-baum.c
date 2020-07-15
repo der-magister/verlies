@@ -29,11 +29,16 @@
 #include "text.h"
 #include "other.h"
 #include "boss.h"
+#include "locations.h"
 
 #include "daten/lvl/lvldatalterbaum.h"
 #include "daten/lvl/lvldateichenwald.h"
 
+#include "daten/tilesets/eichenwald-4-42.h"
+
 #include "daten/txt/npcs/pilzwesen1.h"
+
+#include "daten/txt/locations/locations.h"
 
 void p_lvl145 (void) BANKED
 {
@@ -41,6 +46,13 @@ void p_lvl145 (void) BANKED
 	{
 		p_engine_loadMap (v_lvl146, BANK_18, BANK_17);
 		p_engine_changeLvl (146, 16, 72);
+	}
+	else if (v_smk == 108)
+	{	
+		p_engine_loadTileset (BANK_2, 4, 38, eichenwald, BANK_17);
+		p_engine_loadMap (v_lvl142, BANK_18, BANK_17);
+		p_engine_changeLvl (142, 144, 72);
+		p_gui_show_location (leichenwald);
 	}
 }
 
@@ -369,5 +381,23 @@ void p_lvl165 (void) BANKED
 	{
 		p_engine_loadMap (v_lvl166, BANK_18, BANK_17);
 		p_engine_changeLvl (166, 16, 72);
+	}
+}
+
+void p_lvl166 (void) BANKED
+{
+	p_truhe_lebenskristall (50, 49);
+	
+	p_truhe_aspekt_wald ();
+	
+	if (v_smk == 108)
+	{
+		p_engine_loadMap (v_lvl165, BANK_18, BANK_17);
+		p_engine_changeLvl (165, 144, 72);
+	}
+	else if (v_smk == 123)
+	{
+		p_engine_loadMap (v_lvl145, BANK_18, BANK_17);
+		p_engine_changeLvl (145, 16, 72);
 	}
 }

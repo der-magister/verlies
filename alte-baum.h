@@ -44,5 +44,6 @@ extern void p_lvl162 (void) BANKED;
 extern void p_lvl163 (void) BANKED;
 extern void p_lvl164 (void) BANKED;
 extern void p_lvl165 (void) BANKED;
+extern void p_lvl166 (void) BANKED;
  
 #endif

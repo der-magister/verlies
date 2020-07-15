@@ -1,6 +1,6 @@
 /*
 
- PILZWESEN1.H
+ RANARTXT6.H
 
  Map Include File.
 
@@ -8,7 +8,7 @@
    Section       : 
    Bank          : 0
    Map size      : 18 x 4
-   Tile set      : C:\magister\google-drive\projekte\verlies-16x16\gfx\entwuerfe\tilesets\font.gbr
+   Tile set      : Z:\home\magister\repos\verlies\gfx\entwuerfe\tilesets\eichenwald.gbr
    Plane count   : 1 plane (8 bits)
    Plane order   : Tiles are continues
    Tile offset   : 0
@@ -18,10 +18,10 @@
 
 */
 
-#define pilzwesen1Width 18
-#define pilzwesen1Height 4
-#define pilzwesen1Bank 0
+#define ranartxt6Width 18
+#define ranartxt6Height 4
+#define ranartxt6Bank 0
 
-extern const unsigned char pilzwesen1[];
+extern unsigned char ranartxt6[];
 
-/* End of PILZWESEN1.H */
+/* End of RANARTXT6.H */

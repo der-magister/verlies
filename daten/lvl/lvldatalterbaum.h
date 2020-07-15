@@ -1,3 +1,5 @@
+extern const unsigned char v_lvl145[];
+
 /*
 
  V_LVL146.H
