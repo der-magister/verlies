@@ -31,6 +31,7 @@ lcc -Wf-bo6 -c -o obj/lvldatdorfseefeen.o daten/lvl/lvldatdorfseefeen.c
 lcc -Wf-bo6 -c -o obj/lvldatfeensee.o daten/lvl/lvldatfeensee.c
 lcc -Wf-bo18 -c -o obj/lvldateichenwald.o daten/lvl/lvldateichenwald.c
 lcc -Wf-bo18 -c -o obj/lvldatalterbaum.o daten/lvl/lvldatalterbaum.c
+lcc -Wf-bo18 -c -o obj/lvldatgebirgspfad.o daten/lvl/lvldatgebirgspfad.c
 
 #other
 lcc -Wf-bo3 -c -o obj/gameover.o daten/other/gameover.c
@@ -53,6 +54,7 @@ lcc -Wf-bo2 -c -o obj/wiesen_1-4-37.o daten/tilesets/wiesen_1-4-37.c
 lcc -Wf-bo2 -c -o obj/feensee-4-37.o daten/tilesets/feensee-4-37.c
 lcc -Wf-bo2 -c -o obj/eichenwald-4-42.o daten/tilesets/eichenwald-4-42.c
 lcc -Wf-bo2 -c -o obj/alte-baum-4-38.o daten/tilesets/alte-baum-4-38.c
+lcc -Wf-bo2 -c -o obj/gebirgspfad-3-38.o daten/tilesets/gebirgspfad-3-38.c
 
 #locations
 lcc -Wf-bo3 -c -o obj/locationstxt.o daten/txt/locations/locations.c
@@ -184,6 +186,7 @@ lcc  -Wf-bo16 -c -o obj/feensee.o feensee.c
 lcc  -Wf-bo16 -c -o obj/eichenwald.o eichenwald.c
 lcc  -Wf-bo17 -c -o obj/eichenwald2.o eichenwald2.c
 lcc  -Wf-bo17 -c -o obj/alte-baum.o alte-baum.c
+lcc  -Wf-bo17 -c -o obj/gebirgspfad.o gebirgspfad.c
 
 #main
 lcc  -c -o obj/verlies.o verlies.c
@@ -215,4 +218,3 @@ cd obj/
 obj=$(ls | grep [.][o])
 
 lcc  -Wl-yt0x019 -Wl-yo128 -o ../verlies.gb $obj 
-
