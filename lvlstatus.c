@@ -34,6 +34,7 @@
 #include "eichenwald.h"
 #include "eichenwald2.h"
 #include "alte-baum.h"
+#include "gebirgspfad.h"
 
 void p_lvl_whichLvL () BANKED
 {
@@ -189,6 +190,13 @@ void p_lvl_whichLvL () BANKED
         else if (v_lvl == 164) p_lvl164 ();
 	else if (v_lvl == 165) p_lvl165 ();
 	else if (v_lvl == 166) p_lvl166 ();
+        else if (v_lvl == 168) p_lvl168 ();
+        else if (v_lvl == 169) p_lvl169 ();
+        else if (v_lvl == 170) p_lvl170 ();
+        else if (v_lvl == 170) p_lvl170 ();
+        else if (v_lvl == 171) p_lvl171 ();
+        else if (v_lvl == 172) p_lvl172 ();
+        else if (v_lvl == 173) p_lvl173 ();
 }
 
 void p_lvl_status () BANKED

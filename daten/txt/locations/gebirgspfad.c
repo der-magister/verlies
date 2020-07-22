@@ -1,13 +1,13 @@
 /*
 
- V_LVL172.H
+ GEBIRGSPFAD.C
 
- Map Include File.
+ Map Source File.
 
  Info:
    Section       : 
    Bank          : 0
-   Map size      : 18 x 14
+   Map size      : 18 x 1
    Tile set      : Z:\home\magister\repos\verlies\gfx\entwuerfe\tilesets\gebirgspfad.gbr
    Plane count   : 1 plane (8 bits)
    Plane order   : Tiles are continues
@@ -18,10 +18,14 @@
 
 */
 
-#define v_lvl172Width 18
-#define v_lvl172Height 14
-#define v_lvl172Bank 0
+#define lgebirgspfadWidth 18
+#define lgebirgspfadHeight 1
+#define lgebirgspfadBank 0
 
-extern unsigned char v_lvl172[];
+unsigned char lgebirgspfad[] =
+{
+  0x4A,0x4A,0x4A,0x78,0x7A,0x7D,0x76,0x6D,0x78,0x6C,
+  0x6F,0x79,0x7E,0x7B,0x4A,0x4A,0x4A,0x4A
+};
 
-/* End of V_LVL172.H */
+/* End of GEBIRGSPFAD.C */

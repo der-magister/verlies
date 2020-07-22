@@ -22,7 +22,7 @@
 #define v_lvl168Height 14
 #define v_lvl168Bank 0
 
-extern unsigned char v_lvl168[];
+extern const unsigned char v_lvl168[];
 
 /* End of V_LVL168.H */
 /*

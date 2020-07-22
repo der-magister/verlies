@@ -78,7 +78,7 @@
 
 #include "daten/lvl/lvldatfelsengrund.h"
 #include "daten/lvl/lvldatstadtgefaengnis.h"
-#include "daten/lvl/v_lvl20.h"
+#include "daten/lvl/lvldatwiesen.h"
 
 #include "daten/tilesets/felsengrund_1-8-37.h"
 #include "daten/tilesets/felsengrund_2-4-19.h"

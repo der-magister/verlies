@@ -7,3 +7,4 @@ extern const unsigned char lwiesen[];
 extern const unsigned char lfelsengrund[];
 extern const unsigned char lelfenhain[];
 extern const unsigned char laltebaum[];
+extern const unsigned char lgebirgspfad[];

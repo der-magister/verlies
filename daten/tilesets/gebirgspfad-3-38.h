@@ -26,6 +26,6 @@
 /* Bank of tiles. */
 #define gebirgspfadBank 0
 /* Start of tile array. */
-extern unsigned char gebirgspfad[];
+extern const unsigned char gebirgspfad[];
 
 /* End of GEBIRGSPFAD-3-38.H */

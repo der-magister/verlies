@@ -33,12 +33,14 @@
 #include "daten/lvl/lvldatogerhoehlen.h"
 #include "daten/lvl/lvldatdorfseefeen.h"
 #include "daten/lvl/lvldateichenwald.h"
+#include "daten/lvl/lvldatgebirgspfad.h"
 
 #include "daten/tilesets/felsengrund_1-8-37.h"
 #include "daten/tilesets/felsengrund_3-4-19.h"
 #include "daten/tilesets/ogerhoehlen-4-38.h"
 #include "daten/tilesets/feensee-4-37.h"
 #include "daten/tilesets/eichenwald-4-42.h"
+#include "daten/tilesets/gebirgspfad-3-38.h"
 
 #include "daten/txt/locations/locations.h"
 
@@ -796,6 +798,13 @@ void p_lvl86 () __banked
         {
                 p_engine_loadMap (v_lvl87, BANK_5, BANK_16);
                 p_engine_changeLvl (87, 80, 24);
+        }
+        else if (v_smk == 108)
+        {
+                p_engine_loadTileset (BANK_2, 3, 34, gebirgspfad, BANK_16);
+                p_gui_show_location (lgebirgspfad);
+                p_engine_loadMap (v_lvl168, BANK_18, BANK_16);
+                p_engine_changeLvl (168, 144, 72);   
         }
 }
 
