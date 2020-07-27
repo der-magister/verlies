@@ -29,5 +29,11 @@ extern void p_lvl170 (void) BANKED;
 extern void p_lvl171 (void) BANKED;
 extern void p_lvl172 (void) BANKED;
 extern void p_lvl173 (void) BANKED;
+extern void p_lvl174 (void) BANKED;
+extern void p_lvl175 (void) BANKED;
+extern void p_lvl176 (void) BANKED;
+extern void p_lvl177 (void) BANKED;
+extern void p_lvl178 (void) BANKED;
+extern void p_lvl179 (void) BANKED;
 
 #endif

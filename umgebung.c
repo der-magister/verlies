@@ -107,6 +107,16 @@ void p_umgebung_state (void) __banked
         else if (v_lvl == 151) { if (v_stein [23] == 1) p_stein_busch_clear (10, 7); }
         else if (v_lvl == 155) { if (v_busch [4] == 1) p_stein_busch_clear (14, 5); }
         else if (v_lvl == 160) { if (v_stein [24] == 1) p_stein_busch_clear (2, 6); }
-
+        else if (v_lvl == 171) { if (v_stein [25] == 1) p_stein_busch_clear (5, 2); }
+        else if (v_lvl == 173) { if (v_stein [26] == 1) p_stein_busch_clear (8, 10); }
+        else if (v_lvl == 174)
+        { 
+                if (v_stein [27] == 1) p_stein_busch_clear (10, 2);
+                if (v_stein [28] == 1) p_stein_busch_clear (13, 1); 
+                if (v_stein [29] == 1) p_stein_busch_clear (15, 9); 
+                if (v_stein [30] == 1) p_stein_busch_clear (8, 11); 
+                if (v_stein [31] == 1) p_stein_busch_clear (8, 5); 
+                if (v_stein [32] == 1) p_stein_busch_clear (1, 2); 
+        }
+        else if (v_lvl == 178) { if (v_stein [33] == 1) p_stein_busch_clear (2, 5); }
 }
-

@@ -197,6 +197,12 @@ void p_lvl_whichLvL () BANKED
         else if (v_lvl == 171) p_lvl171 ();
         else if (v_lvl == 172) p_lvl172 ();
         else if (v_lvl == 173) p_lvl173 ();
+        else if (v_lvl == 174) p_lvl174 ();
+        else if (v_lvl == 175) p_lvl175 ();
+        else if (v_lvl == 176) p_lvl176 ();
+        else if (v_lvl == 177) p_lvl177 ();
+        else if (v_lvl == 178) p_lvl178 ();
+        else if (v_lvl == 179) p_lvl179 ();
 }
 
 void p_lvl_status () BANKED

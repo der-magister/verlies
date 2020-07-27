@@ -1,13 +1,13 @@
 /*
 
- V_LVL179.H
+ SCHILDTXT9.H
 
  Map Include File.
 
  Info:
    Section       : 
    Bank          : 0
-   Map size      : 18 x 14
+   Map size      : 18 x 4
    Tile set      : Z:\home\magister\repos\verlies\gfx\entwuerfe\tilesets\gebirgspfad.gbr
    Plane count   : 1 plane (8 bits)
    Plane order   : Tiles are continues
@@ -18,10 +18,10 @@
 
 */
 
-#define v_lvl179Width 18
-#define v_lvl179Height 14
-#define v_lvl179Bank 0
+#define schildtxt9Width 18
+#define schildtxt9Height 4
+#define schildtxt9Bank 0
 
-extern unsigned char v_lvl179[];
+extern const unsigned char schildtxt9[];
 
-/* End of V_LVL179.H */
+/* End of SCHILDTXT9.H */
