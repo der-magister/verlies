@@ -26,6 +26,7 @@
 #include "locations.h"
 #include "umgebung.h"
 #include "schilder.h"
+#include "truhen.h"
 
 #include "daten/tilesets/wiesen_1-4-37.h"
 
@@ -57,6 +58,8 @@ void p_lvl168 (void) __banked
 
 void p_lvl169 (void) __banked
 {
+	p_truhe_proviant (195, 51, 2);
+
 	if (v_smk == 124)
 	{
 		p_engine_loadMap (v_lvl168, BANK_18, BANK_17);
@@ -86,6 +89,8 @@ void p_lvl170 (void) __banked
 void p_lvl171 (void) __banked
 {
 	p_stein (41, 25);
+	p_truhe_gold (41, 52, 2);
+
 
 	if (v_smk == 221)
 	{
@@ -142,6 +147,8 @@ void p_lvl174 (void) __banked
 	p_stein (206, 30);
 	p_stein (98, 31);
 	p_stein (37, 32);
+
+	if (v_smk == 37) { p_truhe_geldkatze2 (); }
 
 	if (v_smk == 8)
 	{

@@ -39,6 +39,7 @@ extern void p_truhe_lebenskristall (UINT8 l_mk, UINT8 l_nr) __banked;
 extern void p_truhe_magischer_stein (void) __banked;
 extern void p_truhe_wappenrock (void) __banked;
 extern void p_truhe_aspekt_wald (void) __banked;
+extern void p_truhe_geldkatze2 (void) __banked;
 
 
 /**Truhe die Runen beinhaltet

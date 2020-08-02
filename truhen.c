@@ -39,6 +39,7 @@
 #include "daten/txt/truhen/brotbuechse-2.h"
 #include "daten/txt/truhen/schluessel.h"
 #include "daten/txt/truhen/geldkatze1.h"
+#include "daten/txt/truhen/geldkatze2.h"
 #include "daten/txt/truhen/magischer_stein.h"
 #include "daten/txt/truhen/wappenrock.h"
 #include "daten/txt/truhen/aspektwald.h"
@@ -206,6 +207,10 @@ void p_truhe_status () __banked
 		if (v_truhen [49] == 1) { p_truhe_change (14, 1); }
 		if (v_truhen [50] == 1) { p_truhe_change (14, 12); }
 	}
+        else if (v_lvl == 169) { if (v_truhen [51] == 1) p_truhe_change (15, 12); }
+        else if (v_lvl == 171) { if (v_truhen [52] == 1) p_truhe_change (5, 1); }
+        else if (v_lvl == 174) { if (v_truhen [53] == 1) p_truhe_change (1, 1); }
+
 }
 
 ///Goldtruhe (XK, YK, Truhennummer, Anzahl des Goldes)
@@ -516,6 +521,23 @@ void p_truhe_geldkatze1 () __banked
         {
 	        p_engine_set_txt (truheleer);
 	}
+        p_engine_A ();
+        p_engine_after_txt ();
+}
+
+void p_truhe_geldkatze2 () __banked
+{
+        if (v_truhen [53] == 0)
+        {
+                p_engine_set_txt (geldkatze2);
+                ++v_truhen [53];
+                v_smgo = 75;
+                p_truhe_status ();
+        }
+        else
+        {
+                p_engine_set_txt (truheleer);
+        }
         p_engine_A ();
         p_engine_after_txt ();
 }

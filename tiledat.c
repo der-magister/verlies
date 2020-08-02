@@ -42,9 +42,11 @@ const unsigned char v_kdat_feensee [28] = { 5, 16, 17, 18, 19, 20, 22, 21, 28, 2
 //Kolisionsdate Eichenwald
 const unsigned char v_kdat_eichenwald [28] = { 37, 36, 35, 34, 33, 32, 31, 30, 29, 28, 27, 26, 25, 24, 22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 6, 4, 5 };
 
+//Kolisionsdaten Alte Baum
 const unsigned char v_kdat_alte_baum [28] = { 46, 45, 44, 43, 37, 36, 22, 21, 20, 7, 5, 4, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
 
-//Kolisionsdaten Alte Baum
+//Kolisionsdaten Gebirgspfad
+const unsigned char v_kdat_gebirgspfad [28] = { 3, 8, 9, 10, 11, 20, 21, 22, 24, 25, 28, 29, 30, 31, 36, 37, 45, 46, 23, 0,0,0,0,0,0,0,0,0 };
 
 
 
@@ -78,6 +80,9 @@ UINT8 p_spieler_koli () __banked
 
                 //Alte Baum
                 else if ((v_lvl >= 145) && (v_lvl <= 166) && (v_tile [1] == v_kdat_alte_baum [v_a])) return FALSE;
+
+                //Gebirgspfad
+                else if ((v_lvl >= 168) && (v_lvl <= 179) && (v_tile [1] == v_kdat_gebirgspfad [v_a])) return FALSE; 
         }
         return TRUE;
 }

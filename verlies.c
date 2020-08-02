@@ -109,7 +109,6 @@ void main () NONBANKED
                                 if ((v_info == FALSE) && (v_win == FALSE)) p_lvl_whichLvL ();
                         }
                          
-
                         if (v_kampflooptime == 8) 
                         {
 				p_spieler_hideAttack ();
@@ -150,10 +149,8 @@ void main () NONBANKED
                                 move_sprite (16, 0, 0);
                         }
         
-      
 			if (v_bossloop < 255) ++v_bossloop;
       
-        
 			if (v_kampflooptime < 255) ++v_kampflooptime;
 
 			if (v_itemlooptime < 255) ++v_itemlooptime;
