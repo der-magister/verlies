@@ -22,13 +22,14 @@
 
 #include "tiledatg.h"
 
-///beinhaltet Tile die eine Kolision beim Spieler/Gegner auslösen
+///beinhaltet Tile die eine Kolision beim Gegner auslösen
 const unsigned char v_kdatg_1 [25] = { 22, 23, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
 const unsigned char v_kdatg_2 [25] = { 5, 6, 9, 10, 11, 22, 24, 25, 26, 27, 28, 29, 30, 31, 36, 37, 39, 49, 41, 42 };
 const unsigned char v_kdatg_3 [25] = { 8, 9, 10, 11, 20, 21, 25, 26, 27, 32, 33, 34, 35, 39, 40, 41, 42, 43, 44 };
 const unsigned char v_kdatg_4 [25] = { 5, 20, 21, 32, 33, 34, 36, 36, 37 };
 const unsigned char v_kdatg_5 [25] = { 4, 5, 6, 8, 9, 10, 11, 20, 21, 22, 24, 25, 26, 27, 28, 29, 30, 31, 36, 37};
 const unsigned char v_kdatg_alte_baum [25] = { 46, 45, 44, 43, 37, 36, 22, 21, 20, 7, 5, 4, 12 , 13 ,14 ,15 ,0,0,0,0,0,0,0,0,0 };
+const unsigned char v_kdatg_gebirgspfad [25] = { 3, 4, 5, 6, 7, 20, 21, 22, 25, 28, 29, 30, 31, 36, 37, 0,0,0,0,0,0,0,0,0,0 };
 
 
 UINT8 p_gegner_koli (void) __banked
@@ -55,7 +56,11 @@ UINT8 p_gegner_koli (void) __banked
                 else if ((v_lvl >= 120) && (v_lvl <= 143) && (v_tile [2] == v_kdatg_5 [v_a])) return FALSE;
 
                 //Alte Baum
-                else if ((v_lvl >= 145) && (v_lvl <= 166) && (v_tile [2] == v_kdatg_alte_baum [v_a])) return FALSE;        
+                else if ((v_lvl >= 145) && (v_lvl <= 166) && (v_tile [2] == v_kdatg_alte_baum [v_a])) return FALSE;
+
+                //Gebirgspfad
+                else if ((v_lvl >= 168) && (v_lvl <= 179) && (v_tile [2] == v_kdatg_gebirgspfad [v_a])) return FALSE;        
+
         }
         return TRUE;
 }

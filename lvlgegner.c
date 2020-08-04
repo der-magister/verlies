@@ -482,5 +482,45 @@ void p_set_gegner (void) BANKED
         {
                 p_gegner_set (0, 48, 48, 72, 72, MOVE_EAST, 2, 2);
         }
-
+        else if (v_lvl == 168)
+        {
+                v_gspeed = 75;
+                p_gegner_set (0, 92, 92, 40, 112, MOVE_NORTH, 2, 2);
+                p_gegner_set (1, 92, 92, 112, 32, MOVE_SOUTH, 2, 2);
+        }
+        else if (v_lvl == 169)
+        {
+                p_gegner_set (0, 96, 96, 88, 72, MOVE_EAST, 2, 1);
+                p_gegner_set (1, 92, 92, 56, 40, MOVE_SOUTH, 1, 2);
+                p_gegner_set (2, 96, 96, 96, 96, MOVE_EAST, 2, 2);
+        }
+        else if (v_lvl == 170)
+        {
+                p_gegner_set (0, 44, 44, 136, 64, MOVE_WEST, 2, 2);
+                p_gegner_set (1, 20, 20, 24, 104, MOVE_EAST, 1, 2);
+        }
+        else if (v_lvl == 171) { p_gegner_set (0, 92, 92, 104, 40, MOVE_WEST, 2, 2); }
+        else if (v_lvl == 172)
+        {
+                p_gegner_set (0, 96, 96, 32, 112, MOVE_NORTH, 2, 1);
+                p_gegner_set (1, 44, 44, 80, 72, MOVE_SOUTH, 1, 1);
+                p_gegner_set (2, 96, 96, 120, 32, MOVE_SOUTH, 2, 1);
+        }
+        else if (v_lvl == 173) { p_gegner_set (0, 44, 44, 32, 72, MOVE_EAST, 2, 1); }
+        else if (v_lvl == 174) {
+                p_gegner_set (0, 48, 48, 136, 80, MOVE_NORTH, 2, 1);
+                p_gegner_set (1, 48, 48, 80, 80, MOVE_SOUTH, 2, 2);
+                p_gegner_set (2, 48, 48, 5, 50, MOVE_WEST, 1, 2);
+        }
+        else if (v_lvl == 175) {
+                p_gegner_set (0, 92, 92, 136, 96, MOVE_WEST, 2, 2);
+                p_gegner_set (1, 96, 96, 32, 56, MOVE_EAST, 2, 1);
+                p_gegner_set (2, 96, 96, 96, 32, MOVE_SOUTH, 2, 2);
+        }
+        else if (v_lvl == 176) { p_gegner_set (0, 44, 44, 56, 56, MOVE_EAST, 1, 2); }
+        else if (v_lvl == 177) {
+                p_gegner_set (0, 20, 20, 104, 32, MOVE_SOUTH, 1, 1);
+                p_gegner_set (1, 44, 44, 40, 88, MOVE_NORTH, 2, 2);
+        }
+        else if (v_lvl == 178) { p_gegner_set (0, 96, 96, 32, 32, MOVE_SOUTH, 2,2); }
 }

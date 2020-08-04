@@ -88,6 +88,8 @@ void p_init_game2 () NONBANKED
         }
         p_hud_init ();
 
+        v_selectItem = 0;
+
         SHOW_BKG;
        
         v_keyflag = 1;
@@ -111,7 +113,7 @@ void p_init_game2 () NONBANKED
         v_spr = 4; ; v_questen [2] = 2;
         v_spitzhacke = TRUE; v_sichel = TRUE; v_slp = 5; v_smlp = 5;
 
-        v_nomobs = TRUE;
+        v_nomobs = FALSE;
         
         p_hud_show ();
 }

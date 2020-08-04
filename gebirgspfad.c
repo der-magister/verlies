@@ -41,6 +41,7 @@
 void p_lvl168 (void) __banked
 {
 	p_schild (49, schildtxt9);
+	p_truhe_karte (44, 7, 54);
 
         if (v_smk == 108)
         {

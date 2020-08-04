@@ -83,7 +83,7 @@ void p_changeItem () __banked
                 else if (v_sht != 0) v_selectItem = 1;
                 else v_selectItem = 0;
         }
-        //Krau zu Null
+        //Kraut zu Null
         else if (v_selectItem == 6)
         {
                 v_selectItem = 0;

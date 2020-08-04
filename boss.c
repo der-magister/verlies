@@ -9,6 +9,7 @@
 #include "other.h"
 #include "hud.h"
 
+#include "daten/spritesets/v_spriteset_1.h"
 #include "daten/spritesets/v_spriteset_2.h"
 
 #include "daten/txt/npcs/ogerboss2.h"
@@ -231,6 +232,7 @@ void p_gegner_pilzwesen_end (void) BANKED
         ++v_tile [0];
         p_engine_set_tile (1, 7, LAYER_BKG);
 	p_engine_set_tile (17, 7, LAYER_BKG);
+        p_engine_loadSpriteset (BANK_2, 0, 127, v_spriteset_1, BANK_14);
 }
 
 //Dorgan
