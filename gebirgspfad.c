@@ -205,6 +205,7 @@ void p_lvl177 (void) __banked
 void p_lvl178 (void) __banked
 {
 	p_stein (92, 33);
+	
 	if (v_smk == 219)
 	{
 		p_engine_loadMap (v_lvl177, BANK_18, BANK_17);
