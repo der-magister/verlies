@@ -14,19 +14,13 @@
 #include "daten/txt/portale/portaleichenwald.h"
 #include "daten/txt/portale/portal.h"
 
-#include "daten/tilesets/felsengrund_1-8-37.h"
-#include "daten/tilesets/felsengrund_2-4-19.h"
-#include "daten/tilesets/feensee-4-37.h"
-#include "daten/tilesets/eichenwald-4-42.h"
+#include "daten/tilesets/tilesets.h"
 
 #include "daten/txt/locations/locations.h"
 
 #include "daten/lvl/lvldatfelsengrund.h"
 #include "daten/lvl/lvldatdorfseefeen.h"
-
-#include "daten/lvl/v_lvl138.h"
-
-#include "daten/tilesets/eichenwald-4-42.h"
+#include "daten/lvl/lvldateichenwald.h"
 
 void p_portal_setup (void) __banked
 {

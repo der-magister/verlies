@@ -31,11 +31,11 @@
 #include "other.h"
 #include "umgebung.h"
 
-#include "daten/tilesets/wiesen_1-4-37.h"
+#include "daten/tilesets/tilesets.h"
 
 #include "daten/txt/locations/locations.h"
 
-#include "daten/lvl/v_lvl37.h"
+#include "daten/lvl/lvldatwiesen.h"
 #include "daten/lvl/lvldatogerhoehlen.h"
 
 #include "daten/txt/npcs/ogerboss1.h"

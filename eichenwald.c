@@ -35,8 +35,9 @@
 #include "lvlstatus.h"
 #include "portale.h"
 
-#include "daten/lvl/v_lvl81.h"
-#include "daten/lvl/v_lvl120.h"
+#include "daten/lvl/lvldatwiesen.h"
+#include "daten/lvl/lvldateichenwald.h"
+/*#include "daten/lvl/v_lvl120.h"
 #include "daten/lvl/v_lvl121.h"
 #include "daten/lvl/v_lvl122.h"
 #include "daten/lvl/v_lvl123.h"
@@ -56,14 +57,15 @@
 #include "daten/lvl/v_lvl137.h"
 #include "daten/lvl/v_lvl138.h"
 #include "daten/lvl/v_lvl139.h"
-#include "daten/lvl/v_lvl140.h"
+#include "daten/lvl/v_lvl140.h"*/
 
 #include "daten/txt/locations/locations.h"
 
 #include "daten/txt/schilder/schildtxt6.h"
 #include "daten/txt/schilder/schildtxt8.h"
 
-#include "daten/tilesets/wiesen_1-4-37.h"
+#include "daten/tilesets/tilesets.h"
+
 
 ///Ablauf Raum 120
 void p_lvl120 (void) __banked

@@ -34,7 +34,7 @@
 #include "daten/lvl/lvldatalterbaum.h"
 #include "daten/lvl/lvldateichenwald.h"
 
-#include "daten/tilesets/eichenwald-4-42.h"
+#include "daten/tilesets/tilesets.h"
 
 #include "daten/txt/npcs/pilzwesen1.h"
 

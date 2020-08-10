@@ -1,5 +1,7 @@
 #!/bin/bash
 
+date
+
 echo "Lösche alte Objektdateien..."
 
 rm -rf obj/*.o
@@ -34,6 +36,8 @@ echo "Kompiliere..."
 /opt/gbdk/bin/lcc -Wa-l -Wl-m -Wl-j -Wf-bo18 -c -o obj/lvldateichenwald.o daten/lvl/lvldateichenwald.c
 /opt/gbdk/bin/lcc -Wa-l -Wl-m -Wl-j -Wf-bo18 -c -o obj/lvldatalterbaum.o daten/lvl/lvldatalterbaum.c
 /opt/gbdk/bin/lcc -Wa-l -Wl-m -Wl-j -Wf-bo18 -c -o obj/lvldatgebirgspfad.o daten/lvl/lvldatgebirgspfad.c
+/opt/gbdk/bin/lcc -Wa-l -Wl-m -Wl-j -Wf-bo18 -c -o obj/lvldatzwergenheim.o daten/lvl/lvldatzwergenheim.c
+
 
 #other
 /opt/gbdk/bin/lcc -Wa-l -Wl-m -Wl-j -Wf-bo3 -c -o obj/gameover.o daten/other/gameover.c
@@ -45,18 +49,7 @@ echo "Kompiliere..."
 /opt/gbdk/bin/lcc -Wa-l -Wl-m -Wl-j -Wf-bo2 -c -o obj/v_spriteset_2.o daten/spritesets/v_spriteset_2.c
 
 #tileset
-/opt/gbdk/bin/lcc -Wa-l -Wl-m -Wl-j -Wf-bo2 -c -o obj/font-82-127.o daten/tilesets/font-82-127.c
-/opt/gbdk/bin/lcc -Wa-l -Wl-m -Wl-j -Wf-bo2 -c -o obj/grundtiles-38-81.o daten/tilesets/grundtiles-38-81.c
-/opt/gbdk/bin/lcc -Wa-l -Wl-m -Wl-j -Wf-bo2 -c -o obj/felsengrund_1-8-37.o daten/tilesets/felsengrund_1-8-37.c
-/opt/gbdk/bin/lcc -Wa-l -Wl-m -Wl-j -Wf-bo2 -c -o obj/felsengrund_2-4-19.o daten/tilesets/felsengrund_2-4-19.c
-/opt/gbdk/bin/lcc -Wa-l -Wl-m -Wl-j -Wf-bo2 -c -o obj/felsengrund_3-4-19.o daten/tilesets/felsengrund_3-4-19.c
-/opt/gbdk/bin/lcc -Wa-l -Wl-m -Wl-j -Wf-bo2 -c -o obj/ogerhoehlen-4-38.o daten/tilesets/ogerhoehlen-4-38.c
-/opt/gbdk/bin/lcc -Wa-l -Wl-m -Wl-j -Wf-bo2 -c -o obj/stadtgefaengnis-14-37.o daten/tilesets/stadtgefaengnis-14-37.c
-/opt/gbdk/bin/lcc -Wa-l -Wl-m -Wl-j -Wf-bo2 -c -o obj/wiesen_1-4-37.o daten/tilesets/wiesen_1-4-37.c
-/opt/gbdk/bin/lcc -Wa-l -Wl-m -Wl-j -Wf-bo2 -c -o obj/feensee-4-37.o daten/tilesets/feensee-4-37.c
-/opt/gbdk/bin/lcc -Wa-l -Wl-m -Wl-j -Wf-bo2 -c -o obj/eichenwald-4-42.o daten/tilesets/eichenwald-4-42.c
-/opt/gbdk/bin/lcc -Wa-l -Wl-m -Wl-j -Wf-bo2 -c -o obj/alte-baum-4-38.o daten/tilesets/alte-baum-4-38.c
-/opt/gbdk/bin/lcc -Wa-l -Wl-m -Wl-j -Wf-bo2 -c -o obj/gebirgspfad-3-38.o daten/tilesets/gebirgspfad-3-38.c
+/opt/gbdk/bin/lcc -Wa-l -Wl-m -Wl-j -Wf-bo2 -c -o obj/tilesets.o daten/tilesets/tilesets.c
 
 #locations
 /opt/gbdk/bin/lcc -Wa-l -Wl-m -Wl-j -Wf-bo3 -c -o obj/locationstxt.o daten/txt/locations/locations.c
@@ -69,14 +62,7 @@ echo "Kompiliere..."
 /opt/gbdk/bin/lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/heilertxt2.o daten/txt/npcs/heilertxt2.c
 /opt/gbdk/bin/lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/heiltrankverkaeuferin1.o daten/txt/npcs/heiltrankverkaeuferin1.c
 /opt/gbdk/bin/lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/heiltrankverkaeuferin2.o daten/txt/npcs/heiltrankverkaeuferin2.c
-/opt/gbdk/bin/lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/hugotxt1.o daten/txt/npcs/hugotxt1.c
-/opt/gbdk/bin/lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/hugotxt2.o daten/txt/npcs/hugotxt2.c
-/opt/gbdk/bin/lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/hugotxt3.o daten/txt/npcs/hugotxt3.c
-/opt/gbdk/bin/lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/hugotxt4.o daten/txt/npcs/hugotxt4.c
-/opt/gbdk/bin/lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/hugotxt5.o daten/txt/npcs/hugotxt5.c
-/opt/gbdk/bin/lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/hugotxt6.o daten/txt/npcs/hugotxt6.c
-/opt/gbdk/bin/lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/hugotxt7.o daten/txt/npcs/hugotxt7.c
-/opt/gbdk/bin/lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/hugotxt8.o daten/txt/npcs/hugotxt8.c
+/opt/gbdk/bin/lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/hugotxt.o daten/txt/npcs/hugo.c
 /opt/gbdk/bin/lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/max-1.o daten/txt/npcs/max-1.c
 /opt/gbdk/bin/lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/ogerboss1.o daten/txt/npcs/ogerboss1.c
 /opt/gbdk/bin/lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/ogerboss2.o daten/txt/npcs/ogerboss2.c
@@ -224,6 +210,7 @@ obj=$(ls | grep [.][o])
 
 echo "Erstelle Rom..."
 
-/opt/gbdk/bin/lcc -Wa-l -Wl-m -Wl-j -Wl-yt0x019 -Wl-yo128 -o ../verlies.gb $obj 
+/opt/gbdk/bin/lcc -Wa-l -Wl-m -Wl-j -Wl-yt0x019 -Wl-yo128 -o ../verlies.gb $obj
 
-echo "Ende"
+date
+

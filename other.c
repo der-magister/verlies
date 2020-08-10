@@ -27,7 +27,7 @@
 #include "daten/other/kredits.h"
 #include "daten/other/titel.h"
 
-#include "daten/tilesets/felsengrund_1-8-37.h"
+#include "daten/tilesets/tilesets.h"
 #include "daten/spritesets/v_spriteset_1.h"
 
 const UINT8 v_timerdat [35] = 
