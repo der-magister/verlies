@@ -18,8 +18,8 @@
 //
 //   Kontakt: magister@kabelmail.de
 
-#include <rand.h>
-#include <gb/hardware.h>
+//#include <rand.h>
+//#include <gb/hardware.h>
 
 #include "globals.h"
 #include "truhen.h" 

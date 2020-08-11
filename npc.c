@@ -40,6 +40,8 @@
 #include "daten/txt/npcs/zauberstaubhaendler2.h"
 
 #include "daten/txt/other/handelnichtmoeglich.h"
+#include "daten/txt/npcs/vanyra.h"
+#include "daten/txt/npcs/others.h"
 
 
 /*void p_nicht_genug_gold () __banked
@@ -265,7 +267,31 @@ void p_zauberstaubhaendler () __banked
         }
 }
 
+void p_vanyra (void) BANKED {
+        if (v_questen [0] == 13) {
+                p_engine_set_txt (vanyratxt1);
+                p_engine_down ();
+                p_engine_set_txt (vanyratxt2);
+                p_engine_down ();
+                p_engine_set_txt (vanyratxt3);
+                p_engine_down ();
+                p_engine_set_txt (vanyratxt4);
+                v_questen [0] = 14;
+        }
+        else if (v_questen [0] == 14) {
+                p_engine_set_txt (vanyratxt4);
+        }
+        p_engine_A ();
+        p_engine_after_txt ();
+}
 
+void p_waechter_zwergenheim (void) BANKED {
+        if (v_questen [0] == 13) {
+                p_engine_set_txt (waechtertxt1);
+        }
+        p_engine_A ();
+        p_engine_after_txt ();
+}
 
 ///NPC Helfer XK, YK, Typ: 1 Heiltrank x 1, 2 Proviant x 2, 3 Gold x 5, Questnr
 /*void p_npc_helfer (UINT8 v_nxk, UINT8 v_nyk, UINT8 v_ntyp, UINT8 v_nqnr) __banked

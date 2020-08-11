@@ -119,6 +119,8 @@ echo "Kompiliere..."
 /opt/gbdk/bin/lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/ranartxt7.o daten/txt/npcs/ranartxt7.c
 /opt/gbdk/bin/lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/pilzwesen1txt.o daten/txt/npcs/pilzwesen1.c
 /opt/gbdk/bin/lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/pilzwesen2txt.o daten/txt/npcs/pilzwesen2.c
+/opt/gbdk/bin/lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/vanyratxt.o daten/txt/npcs/vanyra.c
+/opt/gbdk/bin/lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/othertxt.o daten/txt/npcs/others.c
 
 # Texte Portale
 /opt/gbdk/bin/lcc -Wa-l -Wl-m -Wl-j -Wf-bo8 -c -o obj/portal.o daten/txt/portale/portal.c
