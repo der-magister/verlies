@@ -66,25 +66,13 @@
 #include "daten/txt/npcs/xavertxt22.h"
 
 #include "daten/txt/npcs/sara.h"
-
-#include "daten/txt/npcs/hugotxt1.h"
-#include "daten/txt/npcs/hugotxt2.h"
-#include "daten/txt/npcs/hugotxt3.h"
-#include "daten/txt/npcs/hugotxt4.h"
-#include "daten/txt/npcs/hugotxt5.h"
-#include "daten/txt/npcs/hugotxt6.h"
-#include "daten/txt/npcs/hugotxt7.h"
-#include "daten/txt/npcs/hugotxt8.h"
+#include "daten/txt/npcs/hugo.h"
 
 #include "daten/lvl/lvldatfelsengrund.h"
 #include "daten/lvl/lvldatstadtgefaengnis.h"
 #include "daten/lvl/lvldatwiesen.h"
 
-#include "daten/tilesets/felsengrund_1-8-37.h"
-#include "daten/tilesets/felsengrund_2-4-19.h"
-#include "daten/tilesets/felsengrund_3-4-19.h"
-#include "daten/tilesets/stadtgefaengnis-14-37.h"
-#include "daten/tilesets/wiesen_1-4-37.h"
+#include "daten/tilesets/tilesets.h"
 
 #include "daten/txt/locations/locations.h"
 

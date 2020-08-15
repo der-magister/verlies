@@ -35,12 +35,7 @@
 #include "daten/lvl/lvldateichenwald.h"
 #include "daten/lvl/lvldatgebirgspfad.h"
 
-#include "daten/tilesets/felsengrund_1-8-37.h"
-#include "daten/tilesets/felsengrund_3-4-19.h"
-#include "daten/tilesets/ogerhoehlen-4-38.h"
-#include "daten/tilesets/feensee-4-37.h"
-#include "daten/tilesets/eichenwald-4-42.h"
-#include "daten/tilesets/gebirgspfad-3-38.h"
+#include "daten/tilesets/tilesets.h"
 
 #include "daten/txt/locations/locations.h"
 

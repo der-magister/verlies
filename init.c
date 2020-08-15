@@ -34,9 +34,7 @@
 //tmp
 #include "items.h"
 
-#include "daten/tilesets/felsengrund_1-8-37.h"
-#include "daten/tilesets/grundtiles-38-81.h"
-#include "daten/tilesets/font-82-127.h"
+#include "daten/tilesets/tilesets.h"
 #include "daten/spritesets/v_spriteset_1.h"
 
 #include "daten/txt/locations/locations.h"
@@ -45,8 +43,7 @@
 
 
 //tmp
-#include "daten/tilesets/wiesen_1-4-37.h"
-#include "daten/lvl/lvldatwiesen.h"
+#include "daten/lvl/lvldatzwergenheim.h"
 
 void p_init_game1 () NONBANKED
 {
@@ -75,7 +72,8 @@ void p_init_game1 () NONBANKED
         v_timer = 0;
 
         //tmp
-        p_engine_loadTileset (2, 4, 33, wiesen_1, 15);
+        //p_engine_loadTileset (2, 4, 33, wiesen_1, 15);
+        p_engine_loadTileset (BANK_2, 3, 34, zwergenheim, BANK_4);
 
         
 }
@@ -104,10 +102,10 @@ void p_init_game2 () NONBANKED
         //tmp für tests
         
         v_keyflag = 1;
-        p_engine_loadMap (v_lvl86, 5, 15);
-        p_engine_changeLvl (86, 144, 104);
+        p_engine_loadMap (v_lvl185, BANK_18, BANK_4);
+        p_engine_changeLvl (185, 144, 64);   
         v_keyflag = 0;
-        p_gui_show_location (lwiesen);
+        p_gui_show_location (lzwergenheim);
 
         v_questen [0] = 13; v_sgo = 0; v_stp = 1;
         v_spr = 4; ; v_questen [2] = 2;

@@ -32,11 +32,11 @@
 #include "lvlstatus.h"
 #include "portale.h"
 
-#include "daten/lvl/v_lvl70.h"
+#include "daten/lvl/lvldatwiesen.h"
 #include "daten/lvl/lvldatdorfseefeen.h"
 #include "daten/lvl/lvldatfeensee.h"
 
-#include "daten/tilesets/wiesen_1-4-37.h"
+#include "daten/tilesets/tilesets.h"
 
 #include "daten/txt/locations/locations.h"
 

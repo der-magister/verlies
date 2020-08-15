@@ -24,12 +24,14 @@
 #include "globals.h"
 
 extern void p_npc_heiler (UINT8 l_mk) __banked;
-extern void p_fiona () __banked;
-extern void p_max () __banked;
-extern void p_provianthaendler () __banked;
-extern void p_ausdauerhandlerin () __banked;
-extern void p_heiltrankhaendlerin () __banked;
-extern void p_zauberstaubhaendler () __banked;
+extern void p_fiona (void) __banked;
+extern void p_max (void) __banked;
+extern void p_provianthaendler (void) __banked;
+extern void p_ausdauerhandlerin (void) __banked;
+extern void p_heiltrankhaendlerin (void) __banked;
+extern void p_zauberstaubhaendler (void) __banked;
+extern void p_vanyra (void) BANKED;
+extern void p_waechter_zwergenheim (void) BANKED;
 
 /*extern void p_npc_helfer (UINT8 v_nxk, UINT8 v_nyk, UINT8 v_ntyp, UINT8 v_nqnr) __banked;
 extern void p_npc_questgeber1 (UINT8 v_nxk, UINT8 v_nyk, UINT8 v_qnr) __banked;

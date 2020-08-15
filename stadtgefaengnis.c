@@ -30,7 +30,7 @@
 #include "text.h"
 #include "other.h"
 
-#include "daten/tilesets/felsengrund_1-8-37.h"
+#include "daten/tilesets/tilesets.h"
 #include "daten/txt/locations/locations.h"
 
 #include "daten/lvl/lvldatfelsengrund.h"

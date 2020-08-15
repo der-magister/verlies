@@ -28,10 +28,11 @@
 #include "schilder.h"
 #include "truhen.h"
 
-#include "daten/tilesets/wiesen_1-4-37.h"
+#include "daten/tilesets/tilesets.h"
 
 #include "daten/lvl/lvldatgebirgspfad.h"
 #include "daten/lvl/lvldatwiesen.h"
+#include "daten/lvl/lvldatzwergenheim.h"
 
 #include "daten/txt/locations/locations.h"
 
@@ -204,6 +205,7 @@ void p_lvl177 (void) __banked
 void p_lvl178 (void) __banked
 {
 	p_stein (92, 33);
+	
 	if (v_smk == 219)
 	{
 		p_engine_loadMap (v_lvl177, BANK_18, BANK_17);
@@ -219,9 +221,17 @@ void p_lvl178 (void) __banked
 void p_lvl179 (void) __banked
 {
 	p_schild (39, schildtxt10);
+
 	if (v_smk == 106)
 	{
 		p_engine_loadMap (v_lvl178, BANK_18, BANK_17);
 		p_engine_changeLvl (178, 16, 64);
+	}
+	else if (v_smk == 90)
+	{
+		p_engine_loadTileset (BANK_2, 3, 34, zwergenheim, BANK_17);
+                p_gui_show_location (lzwergenheim);
+                p_engine_loadMap (v_lvl185, BANK_18, BANK_17);
+                p_engine_changeLvl (185, 144, 64);   
 	}
 }

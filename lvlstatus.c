@@ -35,6 +35,7 @@
 #include "eichenwald2.h"
 #include "alte-baum.h"
 #include "gebirgspfad.h"
+#include "zwergenheim.h"
 
 void p_lvl_whichLvL () BANKED
 {
@@ -203,6 +204,9 @@ void p_lvl_whichLvL () BANKED
         else if (v_lvl == 177) p_lvl177 ();
         else if (v_lvl == 178) p_lvl178 ();
         else if (v_lvl == 179) p_lvl179 ();
+        else if (v_lvl == 185) p_lvl185 ();
+        else if (v_lvl == 186) p_lvl186 ();
+        else if (v_lvl == 187) p_lvl187 ();
 }
 
 void p_lvl_status () BANKED
@@ -495,6 +499,15 @@ void p_lvl_status () BANKED
 			p_engine_set_tile (1, 7, LAYER_BKG);
 		}
 	}
+        else if (v_lvl == 187) {
+                if (v_questen [0] == 14) {
+                        v_tile [0] = 38;
+                        p_engine_set_tile (8, 2, LAYER_BKG);
+                        p_engine_set_tile (9, 2, LAYER_BKG);
+                        p_engine_set_tile (8, 3, LAYER_BKG);
+                        p_engine_set_tile (9, 3, LAYER_BKG);       
+                }
+        }
 			
 
         p_umgebung_state ();    
