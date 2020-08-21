@@ -32,6 +32,7 @@ extern void p_heiltrankhaendlerin (void) __banked;
 extern void p_zauberstaubhaendler (void) __banked;
 extern void p_vanyra (void) BANKED;
 extern void p_waechter_zwergenheim (void) BANKED;
+extern void p_zylra (void) BANKED;
 
 /*extern void p_npc_helfer (UINT8 v_nxk, UINT8 v_nyk, UINT8 v_ntyp, UINT8 v_nqnr) __banked;
 extern void p_npc_questgeber1 (UINT8 v_nxk, UINT8 v_nyk, UINT8 v_qnr) __banked;

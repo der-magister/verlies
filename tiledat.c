@@ -48,6 +48,8 @@ const unsigned char v_kdat_alte_baum [28] = { 46, 45, 44, 43, 37, 36, 22, 21, 20
 //Kolisionsdaten Gebirgspfad
 const unsigned char v_kdat_gebirgspfad [28] = { 3, 8, 9, 10, 11, 20, 21, 22, 24, 25, 28, 29, 30, 31, 36, 37, 45, 46, 23, 0,0,0,0,0,0,0,0,0 };
 
+//Kolisionsdaten Zwergenheim
+const unsigned char v_kdat_zwergenheim [28] = {3, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 24, 37, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
 
 
 UINT8 p_spieler_koli () __banked
@@ -82,7 +84,9 @@ UINT8 p_spieler_koli () __banked
                 else if ((v_lvl >= 145) && (v_lvl <= 166) && (v_tile [1] == v_kdat_alte_baum [v_a])) return FALSE;
 
                 //Gebirgspfad
-                else if ((v_lvl >= 168) && (v_lvl <= 179) && (v_tile [1] == v_kdat_gebirgspfad [v_a])) return FALSE; 
+                else if ((v_lvl >= 168) && (v_lvl <= 179) && (v_tile [1] == v_kdat_gebirgspfad [v_a])) return FALSE;
+
+                else if ((v_lvl >= 185) && (v_lvl <= 187) && (v_tile [1] == v_kdat_zwergenheim [v_a])) return FALSE; 
         }
         return TRUE;
 }

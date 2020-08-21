@@ -41,8 +41,8 @@
 
 #include "daten/txt/other/handelnichtmoeglich.h"
 #include "daten/txt/npcs/vanyra.h"
+#include "daten/txt/npcs/zylra-1.h"
 #include "daten/txt/npcs/others.h"
-
 
 /*void p_nicht_genug_gold () __banked
 {
@@ -76,7 +76,7 @@ void p_npc_heiler (UINT8 l_mk) __banked
 	}
 }
 
-void p_fiona () __banked
+void p_fiona (void) __banked
 {
         if (v_keyflag == 1)
         {
@@ -85,6 +85,17 @@ void p_fiona () __banked
                 p_engine_after_txt ();
         }
 }
+
+void p_zylra (void) __banked
+{
+        if (v_keyflag == 1)
+        {
+                p_engine_set_txt (zylratxt1);
+                p_engine_A ();
+                p_engine_after_txt ();
+        }
+}
+
 
 void p_max () __banked
 {

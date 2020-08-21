@@ -61,6 +61,15 @@ void p_portal (UINT8 l_smk) __banked
                         v_portal [2] = 1;
                         return;
 		}
+                else if ((v_portal [3] == 0) && (v_lvl == 187))
+                {
+                        p_engine_set_txt (portalzwergenheim);
+                        p_engine_A ();
+                        p_engine_after_txt ();
+                        v_portal [3] = 1;
+                        return;
+                }
+
 
 		p_portal_setup ();
 		
