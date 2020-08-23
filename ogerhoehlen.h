@@ -23,32 +23,32 @@
 
 #include "globals.h"
 
-extern void p_lvl40 () BANKED;
-extern void p_lvl41 () BANKED;
-extern void p_lvl42 () BANKED;
-extern void p_lvl43 () BANKED;
-extern void p_lvl44 () BANKED;
-extern void p_lvl45 () BANKED;
-extern void p_lvl46 () BANKED;
-extern void p_lvl47 () BANKED;
-extern void p_lvl48 () BANKED;
-extern void p_lvl49 () BANKED;
-extern void p_lvl50 () BANKED;
-extern void p_lvl51 () BANKED;
-extern void p_lvl52 () BANKED;
-extern void p_lvl53 () BANKED;
-extern void p_lvl54 () BANKED;
-extern void p_lvl55 () BANKED;
-extern void p_lvl56 () BANKED;
-extern void p_lvl57 () BANKED;
-extern void p_lvl58 () BANKED;
-extern void p_lvl59 () BANKED;
-extern void p_lvl60 () BANKED;
-extern void p_lvl61 () BANKED;
-extern void p_lvl62 () BANKED;
-extern void p_lvl63 () BANKED;
-extern void p_lvl64 () BANKED;
-extern void p_lvl65 () BANKED;
-extern void p_lvl66 () BANKED;
+extern void p_lvl40 (void) BANKED;
+extern void p_lvl41 (void) BANKED;
+extern void p_lvl42 (void) BANKED;
+extern void p_lvl43 (void) BANKED;
+extern void p_lvl44 (void) BANKED;
+extern void p_lvl45 (void) BANKED;
+extern void p_lvl46 (void) BANKED;
+extern void p_lvl47 (void) BANKED;
+extern void p_lvl48 (void) BANKED;
+extern void p_lvl49 (void) BANKED;
+extern void p_lvl50 (void) BANKED;
+extern void p_lvl51 (void) BANKED;
+extern void p_lvl52 (void) BANKED;
+extern void p_lvl53 (void) BANKED;
+extern void p_lvl54 (void) BANKED;
+extern void p_lvl55 (void) BANKED;
+extern void p_lvl56 (void) BANKED;
+extern void p_lvl57 (void) BANKED;
+extern void p_lvl58 (void) BANKED;
+extern void p_lvl59 (void) BANKED;
+extern void p_lvl60 (void) BANKED;
+extern void p_lvl61 (void) BANKED;
+extern void p_lvl62 (void) BANKED;
+extern void p_lvl63 (void) BANKED;
+extern void p_lvl64 (void) BANKED;
+extern void p_lvl65 (void) BANKED;
+extern void p_lvl66 (void) BANKED;
 
 #endif

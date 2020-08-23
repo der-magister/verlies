@@ -41,7 +41,7 @@
 #include "daten/txt/npcs/ogerboss1.h"
 
 ///Ablauf Raum 40
-void p_lvl40 () BANKED
+void p_lvl40 (void) BANKED
 {
         if (v_keyflag == 1)
         {
@@ -85,7 +85,7 @@ void p_lvl40 () BANKED
 }
 
 ///Ablauf Raum 41
-void p_lvl41 () BANKED
+void p_lvl41 (void) BANKED
 {
         p_truhe_proviant (188, 11, 2);
         
@@ -100,7 +100,7 @@ void p_lvl41 () BANKED
 }
 
 ///Ablauf Raum 42
-void p_lvl42 () BANKED
+void p_lvl42 (void) BANKED
 {
         if (v_keyflag == 1)
         {
@@ -118,7 +118,7 @@ void p_lvl42 () BANKED
 }
 
 ///Ablauf Raum 43
-void p_lvl43 () BANKED
+void p_lvl43 (void) BANKED
 {
         p_schalter_tuer (51, 1);
 
@@ -146,7 +146,7 @@ void p_lvl43 () BANKED
 }
 
 ///Ablauf Raum 44
-void p_lvl44 () BANKED
+void p_lvl44 (void) BANKED
 {
         p_truhe_schluessel (44, 12);
         
@@ -161,7 +161,7 @@ void p_lvl44 () BANKED
 }
 
 ///Ablauf Raum 45
-void p_lvl45 () BANKED
+void p_lvl45 (void) BANKED
 {
         p_truhe_karte (188, 3, 17);
 
@@ -181,7 +181,7 @@ void p_lvl45 () BANKED
         } 
 }
 
-void p_lvl46 () BANKED
+void p_lvl46 (void) BANKED
 {
         if (v_keyflag == 1)
         {
@@ -199,7 +199,7 @@ void p_lvl46 () BANKED
 
 }
 
-void p_lvl47 () BANKED
+void p_lvl47 (void) BANKED
 {
         if (v_keyflag == 1)
         {
@@ -226,7 +226,7 @@ void p_lvl47 () BANKED
         }
 }
 
-void p_lvl48 () BANKED
+void p_lvl48 (void) BANKED
 {
         if (v_keyflag == 1)
         {
@@ -244,7 +244,7 @@ void p_lvl48 () BANKED
 }
 
 ///Ablauf Raum 49
-void p_lvl49 () BANKED
+void p_lvl49 (void) BANKED
 {
         if (v_keyflag == 1)
         {
@@ -261,7 +261,7 @@ void p_lvl49 () BANKED
         }
 }
 
-void p_lvl50 () BANKED
+void p_lvl50 (void) BANKED
 {
         p_truhe_proviant (42, 13, 1);
         p_truhe_schluessel (45, 14);
@@ -277,7 +277,7 @@ void p_lvl50 () BANKED
 }
 
 ///Ablauf Raum 51
-void p_lvl51 () BANKED
+void p_lvl51 (void) BANKED
 {
         if (v_keyflag == 1)
         {
@@ -308,7 +308,7 @@ void p_lvl51 () BANKED
 }
 
 ///Ablauf Raum 52
-void p_lvl52 () BANKED
+void p_lvl52 (void) BANKED
 {
         if (v_keyflag == 1)
         {
@@ -326,7 +326,7 @@ void p_lvl52 () BANKED
 }
 
 ///Ablauf Raum 53
-void p_lvl53 () BANKED
+void p_lvl53 (void) BANKED
 {
         p_truhe_ausdauertrank (42, 15);
         p_truhe_heiltrank (159, 16);
@@ -343,7 +343,7 @@ void p_lvl53 () BANKED
 
 }
 
-void p_lvl54 () BANKED
+void p_lvl54 (void) BANKED
 {
         if (v_keyflag == 1)
         {
@@ -360,7 +360,7 @@ void p_lvl54 () BANKED
         }
 }
 
-void p_lvl55 () BANKED
+void p_lvl55 (void) BANKED
 {
         if (v_keyflag == 1)
         {
@@ -395,7 +395,7 @@ void p_lvl55 () BANKED
         }
 }
 
-void p_lvl56 () BANKED
+void p_lvl56 (void) BANKED
 {
         if (v_keyflag == 1)
         {
@@ -412,7 +412,7 @@ void p_lvl56 () BANKED
         }
 }
 
-void p_lvl57 () BANKED
+void p_lvl57 (void) BANKED
 {
         p_schalter_tuer (37, 2);
 
@@ -438,7 +438,7 @@ void p_lvl57 () BANKED
         }
 }
 
-void p_lvl58 () BANKED
+void p_lvl58 (void) BANKED
 {
         p_schalter_tuer (51, 3);
 
@@ -464,7 +464,7 @@ void p_lvl58 () BANKED
         }
 }
 
-void p_lvl59 () BANKED
+void p_lvl59 (void) BANKED
 {
         p_schalter_tuer (195, 4);
 
@@ -490,7 +490,7 @@ void p_lvl59 () BANKED
         }
 }
 
-void p_lvl60 () BANKED
+void p_lvl60 (void) BANKED
 {
         p_truhe_schluessel (188, 18);
         p_truhe_proviant (37, 19, 1);
@@ -507,7 +507,7 @@ void p_lvl60 () BANKED
         }
 }
 
-void p_lvl61 () BANKED
+void p_lvl61 (void) BANKED
 {
         if (v_keyflag == 1)
         {
@@ -524,7 +524,7 @@ void p_lvl61 () BANKED
         }
 }
 
-void p_lvl62 () BANKED
+void p_lvl62 (void) BANKED
 {
         if (v_keyflag == 1)
         {
@@ -541,7 +541,7 @@ void p_lvl62 () BANKED
         }
 }
 
-void p_lvl63 () BANKED
+void p_lvl63 (void) BANKED
 {
         if (v_keyflag == 1)
         {
@@ -558,7 +558,7 @@ void p_lvl63 () BANKED
         }
 }
 
-void p_lvl64 () BANKED
+void p_lvl64 (void) BANKED
 {
         if (v_keyflag == 1)
         {

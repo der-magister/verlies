@@ -522,5 +522,8 @@ void p_set_gegner (void) BANKED
                 p_gegner_set (0, 20, 20, 104, 32, MOVE_SOUTH, 1, 1);
                 p_gegner_set (1, 44, 44, 40, 88, MOVE_NORTH, 2, 2);
         }
-        else if (v_lvl == 178) { p_gegner_set (0, 96, 96, 32, 32, MOVE_SOUTH, 2,2); }
+        else if (v_lvl == 178) {
+                v_gspeed = 75; 
+                p_gegner_set (0, 96, 96, 32, 32, MOVE_SOUTH, 2,2); 
+        }
 }
