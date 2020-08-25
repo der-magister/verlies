@@ -181,6 +181,7 @@ echo "Kompiliere..."
 /opt/gbdk/bin/lcc -Wa-l -Wl-m -Wl-j -Wf-bo17 -c -o obj/alte-baum.o alte-baum.c
 /opt/gbdk/bin/lcc -Wa-l -Wl-m -Wl-j -Wf-bo17 -c -o obj/gebirgspfad.o gebirgspfad.c
 /opt/gbdk/bin/lcc -Wa-l -Wl-m -Wl-j -Wf-bo17 -c -o obj/zwergenheim.o zwergenheim.c
+/opt/gbdk/bin/lcc -Wa-l -Wl-m -Wl-j -Wf-bo17 -c -o obj/rotgebirge.o rotgebirge.c
 
 #main
 /opt/gbdk/bin/lcc -Wa-l -Wl-m -Wl-j -Wa-l -Wl-m -Wl-j -c -o obj/verlies.o verlies.c
