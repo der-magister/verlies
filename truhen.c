@@ -212,6 +212,7 @@ void p_truhe_status () __banked
         else if (v_lvl == 174) { if (v_truhen [53] == 1) p_truhe_change (1, 1); }
         else if (v_lvl == 168) { if (v_truhen [54] == 1) p_truhe_change (8, 1); }
         else if (v_lvl == 185) { if (v_truhen [55] == 1) p_truhe_change (8, 12); }
+        else if (v_lvl == 191) { if (v_truhen [56] == 1) p_truhe_change (15, 1); }
 
 }
 

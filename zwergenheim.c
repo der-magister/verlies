@@ -9,6 +9,7 @@
 
 #include "daten/lvl/lvldatzwergenheim.h"
 #include "daten/lvl/lvldatgebirgspfad.h"
+#include "daten/lvl/lvldatrotgebirge.h"
 
 #include "daten/tilesets/tilesets.h"
 #include "daten/txt/locations/locations.h"
@@ -69,5 +70,11 @@ void p_lvl187 (void) BANKED {
 	if (v_smk == 221) {
 		p_engine_loadMap (v_lvl186, BANK_18, BANK_17);
 		p_engine_changeLvl (186, 56, 24);
+	}
+	else if (v_smk == 8) {
+		p_engine_loadTileset (BANK_2, 3, 34, gebirgspfad, BANK_17);
+		p_engine_loadMap (v_lvl190, BANK_19, BANK_17);
+		p_engine_changeLvl (190, 56, 120);
+		p_gui_show_location (lrotgebirge);
 	}
 }

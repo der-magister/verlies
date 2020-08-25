@@ -37,6 +37,7 @@ echo "Kompiliere..."
 /opt/gbdk/bin/lcc -Wa-l -Wl-m -Wl-j -Wf-bo18 -c -o obj/lvldatalterbaum.o daten/lvl/lvldatalterbaum.c
 /opt/gbdk/bin/lcc -Wa-l -Wl-m -Wl-j -Wf-bo18 -c -o obj/lvldatgebirgspfad.o daten/lvl/lvldatgebirgspfad.c
 /opt/gbdk/bin/lcc -Wa-l -Wl-m -Wl-j -Wf-bo18 -c -o obj/lvldatzwergenheim.o daten/lvl/lvldatzwergenheim.c
+/opt/gbdk/bin/lcc -Wa-l -Wl-m -Wl-j -Wf-bo19 -c -o obj/lvldatrotgebirge.o daten/lvl/lvldatrotgebirge.c
 
 #other
 /opt/gbdk/bin/lcc -Wa-l -Wl-m -Wl-j -Wf-bo3 -c -o obj/gameover.o daten/other/gameover.c

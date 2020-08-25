@@ -36,6 +36,7 @@
 #include "alte-baum.h"
 #include "gebirgspfad.h"
 #include "zwergenheim.h"
+#include "rotgebirge.h"
 
 void p_lvl_whichLvL () BANKED
 {
@@ -207,6 +208,10 @@ void p_lvl_whichLvL () BANKED
         else if (v_lvl == 185) p_lvl185 ();
         else if (v_lvl == 186) p_lvl186 ();
         else if (v_lvl == 187) p_lvl187 ();
+        else if (v_lvl == 190) p_lvl190 ();
+        else if (v_lvl == 191) p_lvl191 ();
+        else if (v_lvl == 192) p_lvl192 ();
+        else if (v_lvl == 193) p_lvl193 ();
 }
 
 void p_lvl_status () BANKED
