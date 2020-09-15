@@ -36,11 +36,7 @@
 
 #include "stadtgefaengnis.h"
 
-#include "daten/txt/schilder/schildtxt1.h"
-#include "daten/txt/schilder/schildtxt1b.h"
-#include "daten/txt/schilder/schildtxt1c.h"
-#include "daten/txt/schilder/schildtxt1d.h"
-#include "daten/txt/schilder/schildtxt1e.h"
+#include "daten/txt/schilder/schildertxt.h"
 
 #include "daten/txt/npcs/xavertxt1.h"
 #include "daten/txt/npcs/xavertxt2.h"

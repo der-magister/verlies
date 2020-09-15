@@ -131,20 +131,7 @@ echo "Kompiliere..."
 /opt/gbdk/bin/lcc -Wa-l -Wl-m -Wl-j -Wf-bo8 -c -o obj/portaleichenwald.o daten/txt/portale/portaleichenwald.c
 
 #Texte Schilder
-/opt/gbdk/bin/lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/schildtxt1.o daten/txt/schilder/schildtxt1.c
-/opt/gbdk/bin/lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/schildtxt1b.o daten/txt/schilder/schildtxt1b.c
-/opt/gbdk/bin/lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/schildtxt1c.o daten/txt/schilder/schildtxt1c.c
-/opt/gbdk/bin/lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/schildtxt1d.o daten/txt/schilder/schildtxt1d.c
-/opt/gbdk/bin/lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/schildtxt1e.o daten/txt/schilder/schildtxt1e.c
-/opt/gbdk/bin/lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/schildtxt2.o daten/txt/schilder/schildtxt2.c
-/opt/gbdk/bin/lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/schildtxt3.o daten/txt/schilder/schildtxt3.c
-/opt/gbdk/bin/lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/schildtxt4.o daten/txt/schilder/schildtxt4.c
-/opt/gbdk/bin/lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/schildtxt5.o daten/txt/schilder/schildtxt5.c
-/opt/gbdk/bin/lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/schildtxt6.o daten/txt/schilder/schildtxt6.c
-/opt/gbdk/bin/lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/schildtxt7.o daten/txt/schilder/schildtxt7.c
-/opt/gbdk/bin/lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/schildtxt8.o daten/txt/schilder/schildtxt8.c
-/opt/gbdk/bin/lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/schildtxt9.o daten/txt/schilder/schildtxt9.c
-/opt/gbdk/bin/lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/schildtxt10.o daten/txt/schilder/schildtxt10.c
+/opt/gbdk/bin/lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/schildtxt1.o daten/txt/schilder/schildertxt.c
 
 #andere Texte
 /opt/gbdk/bin/lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/schluessel.o daten/txt/schilder/schluessel.c

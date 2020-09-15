@@ -11,12 +11,12 @@
 #include "daten/lvl/lvldatzwergenheim.h"
 #include "daten/lvl/lvldatrotgebirge.h"
 
-#include "daten/txt/schilder/schildtxt10.h"
+#include "daten/txt/schilder/schildertxt.h"
 
 void p_lvl190 (void) BANKED
 {
 	p_schild (164, schildtxt10);
-	
+	p_schild (55, schildtxt11);
 
 	if (v_smk == 124) {
 		p_engine_loadMap (v_lvl191, BANK_19, BANK_17);
@@ -42,10 +42,12 @@ void p_lvl191 (void) BANKED
 
 void p_lvl192 (void) BANKED
 {
-	if (v_smk == 221)
+	p_busch (195, 5);
+
+	if (v_smk == 220)
 	{
 		p_engine_loadMap (v_lvl190, BANK_19, BANK_17);
-		p_engine_changeLvl (190, 56, 24);
+		p_engine_changeLvl (190, 48, 24);
 	}
 	else if (v_smk == 90)
 	{
@@ -72,6 +74,12 @@ void p_lvl193 (void) BANKED
 
 void p_lvl194 (void) BANKED
 {
+	p_stein (110, 35);
+	p_stein (83, 36);
+	p_stein (45, 37);
+	p_stein (47, 38);
+	p_stein (49, 39);
+
 	if (v_smk == 227) {
 		p_engine_loadMap (v_lvl193, BANK_19, BANK_17);
 		p_engine_changeLvl (193, 104, 24);
@@ -88,6 +96,9 @@ void p_lvl194 (void) BANKED
 
 void p_lvl195 (void) BANKED
 {
+	p_stein (120, 41);
+	p_stein (112, 42);
+
 	if (v_smk == 124) {
 		p_engine_loadMap (v_lvl194, BANK_19, BANK_17);
 		p_engine_changeLvl (194, 16, 72);
@@ -120,6 +131,8 @@ void p_lvl197 (void) BANKED
 
 void p_lvl198 (void) BANKED
 {
+	p_schild (65, schildtxt12);
+
 	if (v_smk == 72) {
 		p_engine_loadMap (v_lvl197, BANK_19, BANK_17);
 		p_engine_changeLvl (197, 144, 56);
@@ -144,6 +157,8 @@ void p_lvl199 (void) BANKED
 
 void p_lvl200 (void) BANKED
 {
+	p_busch (110, 6);
+
 	if (v_smk == 8) {
 		p_engine_loadMap (v_lvl199, BANK_19, BANK_17);
 		p_engine_changeLvl (199, 80, 120);
@@ -160,6 +175,8 @@ void p_lvl200 (void) BANKED
 
 void p_lvl201 (void) BANKED
 {
+	p_stein (187, 40);
+
 	if (v_smk == 124) {
 		p_engine_loadMap (v_lvl200, BANK_19, BANK_17);
 		p_engine_changeLvl (200, 16, 72);

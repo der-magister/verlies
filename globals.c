@@ -81,7 +81,7 @@ UINT8 v_sat;
 UINT8 v_smat;
 UINT8 v_smobs;	
 UINT8 v_selectItem;
-UINT8 v_stein [80];
+UINT8 v_stein [60];
 UINT8 v_busch [40];
 BOOLEAN v_sused;
 UINT8 v_keyflag;

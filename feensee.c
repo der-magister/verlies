@@ -58,7 +58,7 @@
 #include "daten/txt/other/oelloch.h"
 #include "daten/txt/other/oelloch2.h"
 
-#include "daten/txt/schilder/schildtxt5.h"
+#include "daten/txt/schilder/schildertxt.h"
 
 ///Ablauf Raum 90
 void p_lvl90 () __banked

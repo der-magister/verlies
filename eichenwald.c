@@ -37,32 +37,10 @@
 
 #include "daten/lvl/lvldatwiesen.h"
 #include "daten/lvl/lvldateichenwald.h"
-/*#include "daten/lvl/v_lvl120.h"
-#include "daten/lvl/v_lvl121.h"
-#include "daten/lvl/v_lvl122.h"
-#include "daten/lvl/v_lvl123.h"
-#include "daten/lvl/v_lvl124.h"
-#include "daten/lvl/v_lvl125.h"
-#include "daten/lvl/v_lvl126.h"
-#include "daten/lvl/v_lvl127.h"
-#include "daten/lvl/v_lvl128.h"
-#include "daten/lvl/v_lvl129.h"
-#include "daten/lvl/v_lvl130.h"
-#include "daten/lvl/v_lvl131.h"
-#include "daten/lvl/v_lvl132.h"
-#include "daten/lvl/v_lvl133.h"
-#include "daten/lvl/v_lvl134.h"
-#include "daten/lvl/v_lvl135.h"
-#include "daten/lvl/v_lvl136.h"
-#include "daten/lvl/v_lvl137.h"
-#include "daten/lvl/v_lvl138.h"
-#include "daten/lvl/v_lvl139.h"
-#include "daten/lvl/v_lvl140.h"*/
 
 #include "daten/txt/locations/locations.h"
 
-#include "daten/txt/schilder/schildtxt6.h"
-#include "daten/txt/schilder/schildtxt8.h"
+#include "daten/txt/schilder/schildertxt.h"
 
 #include "daten/tilesets/tilesets.h"
 

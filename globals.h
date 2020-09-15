@@ -292,7 +292,7 @@ extern UINT8 v_smobs;
 extern UINT8 v_selectItem;
 
 ///Stein- und Buschstatus
-extern UINT8 v_stein [80];
+extern UINT8 v_stein [60];
 extern UINT8 v_busch [40];
 
 ///Item in Benutzung

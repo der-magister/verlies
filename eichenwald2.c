@@ -36,17 +36,11 @@
 
 #include "daten/lvl/lvldateichenwald.h"
 #include "daten/lvl/lvldatalterbaum.h"
-/*#include "daten/lvl/v_lvl136.h"
-#include "daten/lvl/v_lvl139.h"
-#include "daten/lvl/v_lvl140.h"
-#include "daten/lvl/v_lvl141.h"
-#include "daten/lvl/v_lvl142.h"
-#include "daten/lvl/v_lvl143.h"
-#include "daten/lvl/v_lvl145.h"*/
+
 
 #include "daten/txt/locations/locations.h"
 
-#include "daten/txt/schilder/schildtxt7.h"
+#include "daten/txt/schilder/schildertxt.h"
 
 #include "daten/txt/npcs/ranartxt1.h"
 #include "daten/txt/npcs/ranartxt2.h"

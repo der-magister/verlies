@@ -1,0 +1,16 @@
+extern const unsigned char schildtxt10[];
+extern const unsigned char schildtxt11[];
+extern const unsigned char schildtxt12[];
+extern const unsigned char schildtxt1b[];
+extern const unsigned char schildtxt1c[];
+extern const unsigned char schildtxt1d[];
+extern const unsigned char schildtxt1e[];
+extern const unsigned char schildtxt1[];
+extern const unsigned char schildtxt2[];
+extern const unsigned char schildtxt3[];
+extern const unsigned char schildtxt4[];
+extern const unsigned char schildtxt5[];
+extern const unsigned char schildtxt6[];
+extern const unsigned char schildtxt7[];
+extern const unsigned char schildtxt8[];
+extern const unsigned char schildtxt9[];

@@ -120,4 +120,22 @@ void p_umgebung_state (void) __banked
         }
         else if (v_lvl == 178) { if (v_stein [33] == 1) p_stein_busch_clear (2, 5); }
         else if (v_lvl == 185) { if (v_stein [34] == 1) p_stein_busch_clear (8, 10); }
+        else if (v_lvl == 192) { if (v_busch [5] == 1) p_stein_busch_clear (15, 10); }
+        else if (v_lvl == 200) { if (v_busch [6] == 1) p_stein_busch_clear (2, 6); }
+        else if (v_lvl == 194) 
+        { 
+            if (v_stein [35] == 1) p_stein_busch_clear (2, 6); 
+            if (v_stein [36] == 1) p_stein_busch_clear (11, 4); 
+            if (v_stein [37] == 1) p_stein_busch_clear (9, 2);
+            if (v_stein [38] == 1) p_stein_busch_clear (11, 2);
+            if (v_stein [39] == 1) p_stein_busch_clear (13, 2);
+        }
+        else if (v_lvl == 201) { if (v_stein [40] == 1) p_stein_busch_clear (7, 10); }
+        else if (v_lvl == 195)
+        {
+            if (v_stein [41] == 1) p_stein_busch_clear (12, 6);
+            if (v_stein [42] == 1) p_stein_busch_clear (4, 6);
+
+        }
+
 }

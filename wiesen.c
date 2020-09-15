@@ -39,9 +39,7 @@
 
 #include "daten/txt/locations/locations.h"
 
-#include "daten/txt/schilder/schildtxt2.h"
-#include "daten/txt/schilder/schildtxt3.h"
-#include "daten/txt/schilder/schildtxt4.h"
+#include "daten/txt/schilder/schildertxt.h"
 
 ///Ablauf Raum 20
 void p_lvl20 () __banked

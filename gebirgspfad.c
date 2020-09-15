@@ -36,8 +36,7 @@
 
 #include "daten/txt/locations/locations.h"
 
-#include "daten/txt/schilder/schildtxt9.h"
-#include "daten/txt/schilder/schildtxt10.h"
+#include "daten/txt/schilder/schildertxt.h"
 
 void p_lvl168 (void) __banked
 {
