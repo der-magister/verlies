@@ -43,6 +43,7 @@ void p_lvl191 (void) BANKED
 void p_lvl192 (void) BANKED
 {
 	p_busch (195, 5);
+	p_truhe_karte (195, 9, 60); 
 
 	if (v_smk == 220)
 	{
@@ -96,6 +97,8 @@ void p_lvl194 (void) BANKED
 
 void p_lvl195 (void) BANKED
 {
+	p_truhe_heiltrank (181, 57);
+
 	p_stein (120, 41);
 	p_stein (112, 42);
 
@@ -119,6 +122,8 @@ void p_lvl196 (void) BANKED
 
 void p_lvl197 (void) BANKED
 {
+	p_truhe_gold (39, 58, 2);
+
 	if (v_smk == 221) {
 		p_engine_loadMap (v_lvl196, BANK_19, BANK_17);
 		p_engine_changeLvl (196, 56, 24);
@@ -177,6 +182,11 @@ void p_lvl201 (void) BANKED
 {
 	p_stein (187, 40);
 
+	if ((v_keyflag == 1) && (v_smk == 187))
+	{
+		p_truhe_kraeuterbeutel ();
+	} 
+
 	if (v_smk == 124) {
 		p_engine_loadMap (v_lvl200, BANK_19, BANK_17);
 		p_engine_changeLvl (200, 16, 72);
@@ -185,6 +195,8 @@ void p_lvl201 (void) BANKED
 
 void p_lvl202 (void) BANKED
 {
+	p_truhe_gold (181, 59, 1);
+
 	if (v_smk == 4) {
 		p_engine_loadMap (v_lvl200, BANK_19, BANK_17);
 		p_engine_changeLvl (200, 48, 120);

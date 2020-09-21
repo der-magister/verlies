@@ -86,7 +86,12 @@ UINT8 p_spieler_koli () __banked
                 //Gebirgspfad
                 else if ((v_lvl >= 168) && (v_lvl <= 179) && (v_tile [1] == v_kdat_gebirgspfad [v_a])) return FALSE;
 
+                //Zwergenheim
                 else if ((v_lvl >= 185) && (v_lvl <= 187) && (v_tile [1] == v_kdat_zwergenheim [v_a])) return FALSE; 
+
+                //Rotgebirge
+                else if ((v_lvl >= 190) && (v_lvl <= 203) && (v_tile [1] == v_kdat_gebirgspfad [v_a])) return FALSE;
+
         }
         return TRUE;
 }

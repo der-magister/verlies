@@ -61,6 +61,8 @@ UINT8 p_gegner_koli (void) __banked
                 //Gebirgspfad
                 else if ((v_lvl >= 168) && (v_lvl <= 179) && (v_tile [2] == v_kdatg_gebirgspfad [v_a])) return FALSE;        
 
+                //Rotgebirge
+                else if ((v_lvl >= 190) && (v_lvl <= 203) && (v_tile [2] == v_kdatg_gebirgspfad [v_a])) return FALSE;
         }
         return TRUE;
 }

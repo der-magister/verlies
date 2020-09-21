@@ -43,6 +43,7 @@
 #include "daten/txt/truhen/magischer_stein.h"
 #include "daten/txt/truhen/wappenrock.h"
 #include "daten/txt/truhen/aspektwald.h"
+#include "daten/txt/truhen/kraeuterbeutel.h"
 
 void p_truhe_change (UINT8 l_xk, UINT8 l_yk) __banked
 {
@@ -207,13 +208,17 @@ void p_truhe_status () __banked
 		if (v_truhen [49] == 1) { p_truhe_change (14, 1); }
 		if (v_truhen [50] == 1) { p_truhe_change (14, 12); }
 	}
-        else if (v_lvl == 169) { if (v_truhen [51] == 1) p_truhe_change (15, 12); }
-        else if (v_lvl == 171) { if (v_truhen [52] == 1) p_truhe_change (5, 1); }
-        else if (v_lvl == 174) { if (v_truhen [53] == 1) p_truhe_change (1, 1); }
-        else if (v_lvl == 168) { if (v_truhen [54] == 1) p_truhe_change (8, 1); }
-        else if (v_lvl == 185) { if (v_truhen [55] == 1) p_truhe_change (8, 12); }
-        else if (v_lvl == 191) { if (v_truhen [56] == 1) p_truhe_change (15, 1); }
-
+    else if (v_lvl == 169) { if (v_truhen [51] == 1) p_truhe_change (15, 12); }
+    else if (v_lvl == 171) { if (v_truhen [52] == 1) p_truhe_change (5, 1); }
+    else if (v_lvl == 174) { if (v_truhen [53] == 1) p_truhe_change (1, 1); }
+    else if (v_lvl == 168) { if (v_truhen [54] == 1) p_truhe_change (8, 1); }
+    else if (v_lvl == 185) { if (v_truhen [55] == 1) p_truhe_change (8, 12); }
+    else if (v_lvl == 191) { if (v_truhen [56] == 1) p_truhe_change (15, 1); }
+    else if (v_lvl == 195) { if (v_truhen [57] == 1) p_truhe_change (1, 12); }
+    else if (v_lvl == 197) { if (v_truhen [58] == 1) p_truhe_change (3, 1); }
+    else if (v_lvl == 202) { if (v_truhen [59] == 1) p_truhe_change (1, 12); }
+    else if (v_lvl == 192) { if (v_truhen [60] == 1) p_truhe_change (15, 12); }
+    else if (v_lvl == 201) { if (v_truhen [61] == 1) p_truhe_change (7, 12); }
 }
 
 ///Goldtruhe (XK, YK, Truhennummer, Anzahl des Goldes)
@@ -535,6 +540,23 @@ void p_truhe_geldkatze2 () __banked
                 p_engine_set_txt (geldkatze2);
                 ++v_truhen [53];
                 v_smgo = 75;
+                p_truhe_status ();
+        }
+        else
+        {
+                p_engine_set_txt (truheleer);
+        }
+        p_engine_A ();
+        p_engine_after_txt ();
+}
+
+void p_truhe_kraeuterbeutel (void) BANKED
+{
+    if (v_truhen [61] == 0)
+        {
+                p_engine_set_txt (kraeuterbeutel);
+                ++v_truhen [61];
+                v_smhk = 4;
                 p_truhe_status ();
         }
         else
