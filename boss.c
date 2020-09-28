@@ -60,7 +60,10 @@ void p_gegner_set_boss (UINT8 v_nr) BANKED
 
 void p_boss_treffer (void) BANKED
 {
-        if (v_boss == 2) p_spieler_set_sprite (24, 40);
+        if (v_boss == 2) { 
+                v_sxk = 24; v_syk = 40;
+                p_spieler_set_sprite ();
+        }
 }
 
 //Ablauf Kampf gegen Ogerboss
@@ -104,7 +107,7 @@ void p_gegner_ogerboss () BANKED
                         if ((v_smk == 112) || (v_smk == 130))
                         {
                                 --v_slp; v_syk += 16;
-                                p_spieler_set_sprite (v_sxk,  v_syk);
+                                p_spieler_set_sprite ();
                         }
                 }
                 else if (v_count == 18)
@@ -122,7 +125,7 @@ void p_gegner_ogerboss () BANKED
                                 if ((v_smk == 120) || (v_smk == 138))
                                 {
                                         --v_slp; v_syk += 16;
-                                        p_spieler_set_sprite (v_sxk,  v_syk);
+                                        p_spieler_set_sprite ();
                                 }
                         }
                 }

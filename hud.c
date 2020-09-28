@@ -42,7 +42,7 @@ void p_hud_umwandlung (UINT8 v_wert, UINT8 l_xk, UINT8 l_yk, UINT8 l_layer) __ba
                 if (v_wert == v_a) v_tile [0] = 0x65 - v_a;
         }
         if (l_layer == 1) set_bkg_tiles (l_xk, l_yk, 1, 1, v_tile); 
-        if (l_layer == 2) set_win_tiles (l_xk, l_yk, 1, 1, v_tile);
+        else if (l_layer == 2) set_win_tiles (l_xk, l_yk, 1, 1, v_tile);
 }
 
 ///zeigt aktuelles Level an
@@ -103,7 +103,7 @@ void p_hud_showTP () __banked
 ///zeigt aktuelle Spielerrüstungsschutz an
 void p_hud_showRS () __banked
 {
-  p_hud_umwandlung (v_srs, 13, 9, 2);
+        p_hud_umwandlung (v_srs, 13, 9, 2);
 }
 
 ///zeigt aktiven Status an
@@ -235,7 +235,7 @@ void p_hud_init () __banked
 ///Zeigt Infoscreen an
 void p_gui_show_infoscreen () __banked
 {
-        v_info = TRUE;
+        v_info = TRUE; v_walk = FALSE;
         set_win_tiles (0, 0, 20, 18, v_infoscreen);
            
         p_hud_showLP (); 
@@ -270,7 +270,7 @@ void p_gui_hide_infoscreen () __banked
         HIDE_WIN;
         SHOW_BKG;
         SHOW_SPRITES;
-        v_info = FALSE;
+        v_info = FALSE; v_walk = TRUE;
         delay (150);
         p_hud_show ();
 }

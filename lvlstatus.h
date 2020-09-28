@@ -21,7 +21,7 @@
 #ifndef _LVLSTATUS_H_
 #define _LVLSTATUS_H_
 
-extern void p_lvl_status () BANKED;
-extern void p_lvl_whichLvL () BANKED;
+extern void p_lvl_status (void) BANKED;
+extern void p_lvl_whichLvL (void) BANKED;
 
 #endif

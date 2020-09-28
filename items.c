@@ -95,7 +95,7 @@ void p_changeItem () __banked
 ///Anwendung des Proviant (automatisch)
 void p_proviant () __banked
 {
-        if (v_ssc >= 255)
+        if (v_ssc == 255)
         {
                 if (v_spr > 0)
                 {

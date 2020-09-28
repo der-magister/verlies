@@ -38,7 +38,7 @@
 #include "zwergenheim.h"
 #include "rotgebirge.h"
 
-void p_lvl_whichLvL () BANKED
+void p_lvl_whichLvL (void) BANKED
 {
 	if (v_lvl == 1) p_lvl1 ();
         else if (v_lvl == 2) p_lvl2 ();
@@ -224,7 +224,7 @@ void p_lvl_whichLvL () BANKED
         else if (v_lvl == 203) p_lvl203 ();
 }
 
-void p_lvl_status () BANKED
+void p_lvl_status (void) BANKED
 {
         v_tile [0] = 38;
 

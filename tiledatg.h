@@ -23,12 +23,12 @@
 
 #include "globals.h"
 
-extern const unsigned char v_kdatg_1 [25];
+/*extern const unsigned char v_kdatg_1 [25];
 extern const unsigned char v_kdatg_2 [25];
 extern const unsigned char v_kdatg_3 [25];
 extern const unsigned char v_kdatg_4 [25];
 extern const unsigned char v_kdatg_5 [25];
-extern const unsigned char v_kdatg_alte_baum [25];
+extern const unsigned char v_kdatg_alte_baum [25];*/
 
 extern UINT8 p_gegner_koli (void) __banked;
 

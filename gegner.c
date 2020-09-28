@@ -34,7 +34,6 @@ void p_gegner_init () BANKED
         for (v_i = 0; v_i != 3; ++v_i)
         {
                 v_gmk [v_i] = 0; v_glp [v_i] = 0; v_gtp [v_i] = 0;
-
         }   
 }
 

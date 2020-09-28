@@ -72,7 +72,6 @@ void p_init_game1 () NONBANKED
         v_timer = 0;
 
         //tmp
-        //p_engine_loadTileset (2, 4, 33, wiesen_1, 15);
         p_engine_loadTileset (BANK_2, 3, 34, zwergenheim, BANK_4);
 
         

@@ -25,9 +25,8 @@
 
 extern void p_spieler_init (void) __banked;
 extern void p_spieler_setSprite (UINT8 l_set) __banked;
-extern void p_spieler_set_sprite (UINT8 l_xk, UINT8 l_yk) BANKED;
+extern void p_spieler_set_sprite (void) BANKED;
 extern void p_spieler_blink () BANKED;
-//extern UINT8 p_spieler_koli () BANKED;
 extern void p_spieler_move  (UINT8 v_ri) BANKED;
 extern void p_spieler_attack (void) BANKED;
 extern void p_spieler_hideAttack (void) BANKED;

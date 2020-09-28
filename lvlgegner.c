@@ -28,7 +28,7 @@ void p_set_gegner (void) BANKED
 {
         if (v_lvl == 5)
         {
-                v_gspeed = 75;
+            v_gspeed = 75;
 		p_gegner_set (0, 0, 4, 120, 72, MOVE_NORTH, 1, 1);
 	        p_gegner_set (1, 16, 16, 40, 48, MOVE_SOUTH, 1, 1);
         }
@@ -526,4 +526,65 @@ void p_set_gegner (void) BANKED
                 v_gspeed = 75; 
                 p_gegner_set (0, 96, 96, 32, 32, MOVE_SOUTH, 2,2); 
         }
+        else if (v_lvl == 190) {
+                v_gspeed = 70;
+                p_gegner_set (0, 92, 92, 136, 96, MOVE_WEST, 2, 2);
+                p_gegner_set (1, 92, 92, 24, 48, MOVE_EAST, 2, 2); 
+        }
+        else if (v_lvl == 191) {
+                p_gegner_set (0, 76, 76, 136, 40, MOVE_WEST, 2, 2);
+                p_gegner_set (1, 96, 96, 24, 96, MOVE_EAST, 2, 2);
+                p_gegner_set (2, 92, 92, 136, 96, MOVE_NORTH, 2, 2);
+        }
+        else if (v_lvl == 192) {
+                p_gegner_set (0, 20, 20, 136, 88, MOVE_WEST, 2, 1);
+                p_gegner_set (1, 24, 24, 32, 64, MOVE_EAST, 2, 2);
+        }
+        else if (v_lvl == 193) {
+                p_gegner_set (0, 28, 28, 128, 112, MOVE_NORTH, 2, 2);
+                p_gegner_set (1, 60, 60, 128, 48, MOVE_WEST, 2, 2);
+                p_gegner_set (2, 96, 96, 24, 64, MOVE_EAST, 2, 2);
+        }
+        else if (v_lvl == 194) {
+                p_gegner_set (0, 92, 92, 24, 40, MOVE_EAST, 2, 2);
+                p_gegner_set (1, 96, 96, 136, 96, MOVE_WEST, 2, 2);
+        }
+        else if (v_lvl == 195) {
+                p_gegner_set (0, 48, 48, 24, 72, MOVE_EAST, 2, 2);
+        }
+        else if (v_lvl == 196) {
+                p_gegner_set (0, 60, 60, 24, 40, MOVE_EAST, 2, 2);
+                p_gegner_set (1, 96, 96, 136, 104, MOVE_WEST, 2, 2);
+        }
+        else if (v_lvl == 197) {
+                p_gegner_set (0, 64, 64, 40, 40, MOVE_SOUTH, 2, 2);
+                p_gegner_set (2, 92, 92, 128, 96, MOVE_NORTH, 2, 2);
+        }
+        else if (v_lvl == 198) {
+                p_gegner_set (0, 96, 96, 80, 40, MOVE_WEST, 2, 2);
+                p_gegner_set (1, 60, 60, 128, 48, MOVE_SOUTH, 2, 2);
+                p_gegner_set (2, 92, 92, 64, 112, MOVE_NORTH, 2, 2);
+        }
+        else if (v_lvl == 199) {
+                p_gegner_set (0, 76, 76, 64, 56, MOVE_WEST, 2, 2);
+                p_gegner_set (1, 28, 28, 112, 56, MOVE_EAST, 2, 2);
+                p_gegner_set (2, 92, 92, 80, 104, MOVE_NORTH, 2, 2);
+        }
+        else if (v_lvl == 200) {
+                p_gegner_set (0, 96, 96, 48, 72, MOVE_EAST, 2, 3);
+        }
+        else if (v_lvl == 201) {
+                p_gegner_set (0, 48, 48, 72, 88, MOVE_NORTH, 2, 2);
+                p_gegner_set (1, 48, 48, 32, 40, MOVE_SOUTH, 2, 2);
+                p_gegner_set (2, 48, 48, 120, 112, MOVE_NORTH, 2, 2);
+        }
+        else if (v_lvl == 202) {
+                p_gegner_set (0, 96, 96, 80, 104, MOVE_NORTH, 3, 3);
+        }
+        else if (v_lvl == 203) {
+                p_gegner_set (0, 92, 92, 24, 40, MOVE_EAST, 2, 2);
+                p_gegner_set (1, 96, 96, 136, 64, MOVE_WEST,  2, 2);
+                p_gegner_set (2, 92, 92, 80, 104, MOVE_EAST, 2, 2);
+        }
+
 }

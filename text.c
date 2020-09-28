@@ -48,16 +48,16 @@ void p_engine_set_txt (unsigned char l_txt [81]) __banked
         p_engine_rahmen ();
         set_win_tiles (1, 1, 18, 4, l_txt);
         move_win (7, 96);
-        v_win = TRUE;
+        v_win = TRUE; v_walk = FALSE;
         SHOW_WIN;
         delay (160);
 }
 
 void p_engine_after_txt () __banked
 {
-	v_aktion = TRUE; v_win = FALSE;
+	v_aktion = TRUE; v_win = FALSE; v_walk = TRUE;
 	HIDE_WIN;
-	if (v_syk >= 104) p_spieler_set_sprite (v_sxk, v_syk);
+	if (v_syk >= 104) p_spieler_set_sprite ();
 
         if (v_kampf == TRUE) 
         {

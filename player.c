@@ -26,21 +26,20 @@
 #include "gegner.h"
 #include "tiledat.h"
 #include "boss.h"
+#include "engine.h"
 
 ///setzt das Spielersprite an angegebene Position
-void p_spieler_set_sprite (UINT8 l_xk,  UINT8 l_yk) __banked
+void p_spieler_set_sprite (void) __banked
 {
-        v_sxk = l_xk;
-        v_syk = l_yk;
-
-        //Mapkoordinate setzen
-        v_smk = ((v_sxk - 16) / 8) + 18 * ((v_syk - 24) / 8);
-
         //Sprites bewegen
         move_sprite (0, v_sxk, v_syk);
         move_sprite (1, v_sxk, v_syk + 8);
         move_sprite (2, v_sxk + 8, v_syk);
         move_sprite (3, v_sxk + 8, v_syk + 8);
+
+        //Mapkoordinate setzen
+        //v_smk = ((v_sxk - 16) / 8) + 18 * ((v_syk - 24) / 8);
+        v_smk = p_calcMap (v_sxk, v_syk);
 }
 
 ///Init der Spielerdaten am Start des Spieles
@@ -56,9 +55,9 @@ void p_spieler_init (void) __banked
 
         v_smlp = 3; v_slp = v_smlp; v_srs = 0; v_stp = 0; v_smaus = 3; v_saus = v_smaus; v_sat = 0; v_smat = 3;
         v_sht = 0; v_smht = 5; v_sgo = 0; v_smgo = 15; v_spr = 5; v_smpr = 5; v_ske = 0; v_shk = 0; v_smhk = 2;
-        v_ssc = 0; v_sstaub = 0; v_smstaub = 0; v_portalrune = FALSE; v_sused = FALSE;
-        v_spitzhacke = FALSE;
+        v_ssc = 0; v_sstaub = 0; v_smstaub = 0; v_portalrune = FALSE; v_sused = FALSE; v_spitzhacke = FALSE;
         v_walk = TRUE;
+
 }
 
 //Spritenummerwechsel fuer Trefferanimation
@@ -90,7 +89,7 @@ void p_spieler_setSprite (UINT8 l_set) __banked
 
 void p_spieler_blink (void) __banked
 {
-	p_spieler_setSprite (2);
+        p_spieler_setSprite (2);
         delay (60);
         p_spieler_setSprite (1);
 }
@@ -98,7 +97,7 @@ void p_spieler_blink (void) __banked
 ///Bewegungroutine des Spielersprites
 void p_spieler_move  (UINT8 l_ri) __banked
 {
-        v_sri = l_ri; v_walk = TRUE;
+        v_sri = l_ri;
 
         //Nord
         if ((l_ri == MOVE_NORTH) && (v_syk != 24))
@@ -110,11 +109,24 @@ void p_spieler_move  (UINT8 l_ri) __banked
                 {
                         v_tile [1] = v_leveldaten [v_smk - 17];
                         v_walk = p_spieler_koli ();
+
+                        if (v_walk == TRUE) v_syk -= 8;
                 }
-
-                if (v_walk == TRUE) v_syk -= 8; ++v_ssc;
         }
+        //Sued
+        else if ((l_ri == MOVE_SOUTH) && (v_syk != 120))
+        {
+                v_tile [1] = v_leveldaten [v_smk + 36];
+                v_walk = p_spieler_koli ();
 
+                if (v_walk == TRUE)
+                {
+                        v_tile [1] = v_leveldaten [v_smk + 37];
+                        v_walk = p_spieler_koli ();
+
+                        if (v_walk == TRUE) v_syk += 8;
+                }
+        }
         //Ost
         else if ((l_ri == MOVE_EAST) && (v_sxk != 144))
         {
@@ -125,25 +137,10 @@ void p_spieler_move  (UINT8 l_ri) __banked
                 {
                         v_tile [1] = v_leveldaten [v_smk + 20];
                         v_walk = p_spieler_koli ();
+
+                        if (v_walk == TRUE) v_sxk += 8;
                 }
-
-                if (v_walk == TRUE) v_sxk += 8; ++v_ssc;
         }
-        //Süd
-        else if ((l_ri == MOVE_SOUTH) && (v_syk != 120))
-        {
-                v_tile [1] = v_leveldaten [v_smk + 36];
-                v_walk = p_spieler_koli ();
-
-                if (v_walk == TRUE)
-                {
-                        v_tile [1] = v_leveldaten [v_smk + 37];
-                        v_walk = p_spieler_koli ();
-                }
-
-                if (v_walk != FALSE) v_syk += 8; ++v_ssc;
-        }
-
 	//West
         else if ((l_ri == MOVE_WEST) && (v_sxk != 16))
         {
@@ -154,14 +151,15 @@ void p_spieler_move  (UINT8 l_ri) __banked
                 {
                         v_tile [1] = v_leveldaten [v_smk + 17];
                         v_walk = p_spieler_koli ();
-                }
 
-                if (v_walk != FALSE) v_sxk -= 8; ++v_ssc;
+                        if (v_walk == TRUE) v_sxk -= 8;
+                }
         }
 
         if (v_walk == TRUE)
         { 
-                p_spieler_set_sprite (v_sxk, v_syk);
+                p_spieler_set_sprite ();
+                ++v_ssc;
                 p_proviant ();
                 p_hud_showMK ();
                 p_hud_showXYK ();

@@ -423,16 +423,16 @@ void p_truhe_heiltrank (UINT8 l_smk, UINT8 v_tnr) __banked
                 {
                         if (v_sht < v_smht)
                         {
-                                v_tile[0] = 100;
-                                ++v_sht;
-                                ++v_truhen [v_tnr];
-                                HIDE_WIN;
+                                v_tile [0] = 100;
+                                //HIDE_WIN;
                                 p_engine_set_txt (erhalten);
                                 p_engine_set_tile (1, 1, 2);
                                 v_tile [0] = 62;
                                 p_engine_set_tile (3, 1, 2);
-                                SHOW_WIN;
+                                //SHOW_WIN;
                                 p_truhe_status ();
+                                ++v_sht;
+                                ++v_truhen [v_tnr];
                         }
                         else
                         {

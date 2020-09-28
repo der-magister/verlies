@@ -67,12 +67,13 @@ void p_engine_changeLvl (UINT8 l_lvl, UINT8 l_xk, UINT8 l_yk) __nonbanked
         {
                 v_keyflag = 0;
                 if (v_kampf == TRUE) p_gegner_stop ();
-                delay (115);
+                delay (120);
                 v_aktion = TRUE;
                 v_lvl = l_lvl;
                 set_bkg_tiles (1, 1, 18, 14, v_leveldaten);
                 p_truhe_status ();
-                p_spieler_set_sprite (l_xk, l_yk);
+                v_sxk = l_xk, v_syk = l_yk;
+                p_spieler_set_sprite ();
                 p_lvl_status ();
                 p_hud_showLvl ();
                 p_set_gegner ();
@@ -83,16 +84,14 @@ void p_engine_changeLvl (UINT8 l_lvl, UINT8 l_xk, UINT8 l_yk) __nonbanked
 ///setzt in v_tile angegebenes Hintergrundtile an übergebene Position und Layer
 void p_engine_set_tile (UINT8 l_xk, UINT8 l_yk, UINT8 l_layer) NONBANKED
 {
-        ++l_xk; ++l_yk;
-
         if (l_layer == 1)
         {
-                set_bkg_tiles (l_xk, l_yk, 1, 1, v_tile);
-                if (v_info == FALSE) v_leveldaten [(l_xk - 1) + 18 * (l_yk - 1)] = v_tile [0];
+                set_bkg_tiles (l_xk + 1, l_yk + 1, 1, 1, v_tile);
+                if (v_info == FALSE) v_leveldaten [l_xk + 18 * l_yk] = v_tile [0];
         }
         else if (l_layer == 2)
         {
-                set_win_tiles (l_xk - 1, l_yk - 1, 1, 1, v_tile);
+                set_win_tiles (l_xk, l_yk, 1, 1, v_tile);
         }
 }
 
@@ -117,3 +116,7 @@ void p_engine_set_tile (UINT8 l_xk, UINT8 l_yk, UINT8 l_layer) NONBANKED
         return (l_wert);
 }*/
 
+UINT8 p_calcMap (UINT8 w1, UINT8 w2) NONBANKED
+{
+        return ((w1 - 16) / 8) + 18 * ((w2 - 24) / 8);
+}

@@ -32,7 +32,7 @@
 #include "boss.h"
 #include "items.h"
 
-void main () NONBANKED
+void main (void) NONBANKED
 {
         p_init_game1 (); v_quit = 0; 
   
@@ -66,17 +66,18 @@ void main () NONBANKED
     
                         if (v_looptime == 7)
                         {
-                                if ((joypad () & J_UP) && (v_info == FALSE) && (v_win == FALSE)) p_spieler_move (MOVE_NORTH);
-                                else if ((joypad () & J_RIGHT) && (v_info == FALSE) && (v_win == FALSE)) p_spieler_move (MOVE_EAST);
-                                else if ((joypad () & J_DOWN) && (v_info == FALSE) && (v_win == FALSE)) p_spieler_move (MOVE_SOUTH);
-                                else if ((joypad () & J_LEFT) && (v_info == FALSE) && (v_win == FALSE)) p_spieler_move (MOVE_WEST);
-
-                                else if ((joypad () & J_SELECT) && (v_info == FALSE) && (v_win == FALSE)) p_changeItem ();
-    
+                                if (v_walk == TRUE) {
+                                        if ((joypad () & J_UP)) p_spieler_move (MOVE_NORTH);
+                                        else if ((joypad () & J_RIGHT)) p_spieler_move (MOVE_EAST);
+                                        else if ((joypad () & J_DOWN)) p_spieler_move (MOVE_SOUTH);
+                                        else if ((joypad () & J_LEFT)) p_spieler_move (MOVE_WEST);
+                                        else if ((joypad () & J_SELECT) && (v_info == FALSE) && (v_win == FALSE)) p_changeItem ();
+                                }
                                 if ((v_slp == 1) || (v_spr == 1)) p_hud_blink ();
-                                v_looptime = 0;
-
+                                
                                 if (v_kampf == TRUE) p_gegner_koli_player ();
+
+                                v_looptime = 0;
                         }
                         
                         if (joypad () & J_START) 
@@ -168,6 +169,8 @@ void main () NONBANKED
 			++v_looptime; ++v_timer;
 
 			if (v_slp <= 0) { p_gameover (); }
+
+                        v_walk = TRUE;
 
 			wait_vbl_done ();
 
