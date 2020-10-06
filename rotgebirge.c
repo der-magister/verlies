@@ -28,6 +28,10 @@
 #include "locations.h"
 #include "schilder.h"
 
+#include "daten/tilesets/tilesets.h"
+
+#include "daten/txt/locations/locations.h"
+
 #include "daten/lvl/lvldatzwergenheim.h"
 #include "daten/lvl/lvldatrotgebirge.h"
 
@@ -46,6 +50,12 @@ void p_lvl190 (void) BANKED
 	{
 		p_engine_loadMap (v_lvl192, BANK_19, BANK_17);
 		p_engine_changeLvl (192, 48, 120);
+	}
+	else if (v_smk == 221) {
+		p_engine_loadTileset (BANK_2, 3, 34, zwergenheim, BANK_17);
+                p_gui_show_location (lzwergenheim);
+                p_engine_loadMap (v_lvl187, BANK_18, BANK_17);
+                p_engine_changeLvl (187, 56, 24);
 	}
 
 }
