@@ -7,6 +7,8 @@ verlies.gb
 *.sym
 *.map
 *.swp
+*.ihx
+*.noi
 ./Dokumentation
 release/techdemo/08.05.2019/src/
 release/techdemo/07.07.2019/src/
