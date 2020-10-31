@@ -37,6 +37,7 @@
 #include "gebirgspfad.h"
 #include "zwergenheim.h"
 #include "rotgebirge.h"
+#include "minen.h"
 
 void p_lvl_whichLvL (void) BANKED
 {
@@ -222,6 +223,7 @@ void p_lvl_whichLvL (void) BANKED
         else if (v_lvl == 201) p_lvl201 ();
         else if (v_lvl == 202) p_lvl202 ();
         else if (v_lvl == 203) p_lvl203 ();
+        else if (v_lvl == 206) p_lvl206 (); //minen eg start
 }
 
 void p_lvl_status (void) BANKED

@@ -20,11 +20,11 @@
 #ifndef __v_lvl208_h_INCLUDE
 #define __v_lvl208_h_INCLUDE
 
-#define v_lvl217Width 18
-#define v_lvl217Height 14
-#define v_lvl217Bank 0
+#define v_lvl208Width 18
+#define v_lvl208Height 14
+#define v_lvl208Bank 0
 
-extern const unsigned char v_lvl217[];
+extern const unsigned char v_lvl208[];
 
 #endif
 

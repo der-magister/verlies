@@ -10,3 +10,4 @@ extern const unsigned char laltebaum[];
 extern const unsigned char lgebirgspfad[];
 extern const unsigned char lzwergenheim[];
 extern const unsigned char lrotgebirge[];
+extern const unsigned char lmine[];
