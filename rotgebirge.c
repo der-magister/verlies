@@ -181,8 +181,8 @@ void p_lvl198 (void) BANKED
         {
                 p_engine_loadTileset (BANK_2, 2, 34, mine, BANK_17);
                 p_gui_show_location (lmine);
-                p_engine_loadMap (v_lvl206, BANK_19, BANK_17);
-                p_engine_changeLvl (206, 80, 120);      
+                p_engine_loadMap (v_lvl205, BANK_19, BANK_17);
+                p_engine_changeLvl (205, 80, 120);      
         }
 }
 

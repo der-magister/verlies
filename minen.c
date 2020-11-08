@@ -22,6 +22,6 @@
 
 void p_lvl206 (void) BANKED
 {
-
+	if (v_smk == )
 
 }

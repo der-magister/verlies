@@ -24,6 +24,8 @@
 #define v_lvl206Height 14
 #define v_lvl206Bank 0
 
+extern const unsigned char v_lvl205[];
+
 extern const unsigned char v_lvl206[];
 
 #endif
