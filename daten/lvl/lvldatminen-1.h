@@ -88,7 +88,7 @@ extern const unsigned char v_lvl207[];
 #define v_lvl217Height 14
 #define v_lvl217Bank 0
 
-extern const unsigned char v_lvl217[];
+extern const unsigned char v_lvl208[];
 
 #endif
 

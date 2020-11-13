@@ -20,8 +20,67 @@
 
 #include "minen.h"
 
+#include "engine.h"
+
+#include "daten/lvl/lvldatminen-1.h"
+
+void p_lvl205 (void) BANKED
+{
+	if (v_smk == 72) {
+		p_engine_loadMap (v_lvl206, BANK_19, BANK_17);  
+        	p_engine_changeLvl (206, 144, 56);
+	}
+	else if (v_smk == 8) {
+		p_engine_loadMap (v_lvl207, BANK_19, BANK_17);
+		p_engine_changeLvl (207, 80, 120);
+	}
+}
+
 void p_lvl206 (void) BANKED
 {
-	if (v_smk == )
+	if (v_smk == 88) {
+		p_engine_loadMap (v_lvl205, BANK_19, BANK_17);
+		p_engine_changeLvl (205, 16, 56);
+	}
+}
 
+void p_lvl207 (void) BANKED
+{
+	if (v_smk == 224) {
+		p_engine_loadMap (v_lvl205, BANK_19, BANK_17);
+		p_engine_changeLvl (205, 80, 24);
+	}
+	else if (v_smk == 8) {
+		p_engine_loadMap (v_lvl208, BANK_19, BANK_17);
+		p_engine_changeLvl (208, 80, 120);
+	}
+}
+
+void p_lvl208 (void) BANKED
+{
+	if (v_smk == 108) {
+		p_engine_loadMap (v_lvl209, BANK_19, BANK_17);
+		p_engine_changeLvl (209, 144, 72);
+	}
+	else if (v_smk == 224) {
+		p_engine_loadMap (v_lvl207, BANK_19, BANK_17);
+		p_engine_changeLvl (207, 80, 24);
+	}
+	else if (v_smk == 160) {
+		p_engine_loadMap (v_lvl210, BANK_19, BANK_17);
+		p_engine_changeLvl (210, 16, 88);
+	}
+}
+
+void p_lvl209 (void) BANKED
+{
+	if (v_smk == 124) {
+		p_engine_loadMap (v_lvl208, BANK_19, BANK_17);
+		p_engine_changeLvl (208, 16, 72);
+	}
+}
+
+void p_lvl210 (void) BANKED
+{
+	
 }
