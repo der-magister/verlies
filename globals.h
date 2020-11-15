@@ -100,7 +100,7 @@ extern UINT8 v_truhen [80];
 extern UINT8 v_schalter [20];           
 
 ///erhaltende Karten
-extern UINT8 v_knr [8];
+extern UINT8 v_knr [10];
 
 ///beinhaltet Queststand
 extern UINT8 v_questen [100];   

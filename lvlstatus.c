@@ -229,6 +229,13 @@ void p_lvl_whichLvL (void) BANKED
         else if (v_lvl == 208) p_lvl208 ();
         else if (v_lvl == 209) p_lvl209 ();
         else if (v_lvl == 210) p_lvl210 ();
+        else if (v_lvl == 211) p_lvl211 ();
+        else if (v_lvl == 212) p_lvl212 ();
+        else if (v_lvl == 213) p_lvl213 ();
+        else if (v_lvl == 214) p_lvl214 ();
+        else if (v_lvl == 215) p_lvl215 ();
+        else if (v_lvl == 216) p_lvl216 ();
+        else if (v_lvl == 217) p_lvl217 ();
 }
 
 void p_lvl_status (void) BANKED

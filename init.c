@@ -30,6 +30,7 @@
 #include "boss.h"
 #include "umgebung.h"
 #include "schilder.h"
+#include "truhen.h"
 
 //tmp
 #include "items.h"
@@ -84,6 +85,7 @@ void p_init_game2 () NONBANKED
                 move_sprite (v_i, 0, 0);
         }
         p_hud_init ();
+        p_truhe_init ();
 
         v_selectItem = 0;
 

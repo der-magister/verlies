@@ -21,11 +21,17 @@
 #include "minen.h"
 
 #include "engine.h"
+#include "truhen.h"
+#include "schilder.h"
 
 #include "daten/lvl/lvldatminen-1.h"
 
+#include "daten/txt/schilder/schildertxt.h"
+
 void p_lvl205 (void) BANKED
 {
+	p_schild (173, schildtxt13);
+
 	if (v_smk == 72) {
 		p_engine_loadMap (v_lvl206, BANK_19, BANK_17);  
         	p_engine_changeLvl (206, 144, 56);
@@ -38,6 +44,8 @@ void p_lvl205 (void) BANKED
 
 void p_lvl206 (void) BANKED
 {
+	p_truhe_karte (181, 10, 62);
+
 	if (v_smk == 88) {
 		p_engine_loadMap (v_lvl205, BANK_19, BANK_17);
 		p_engine_changeLvl (205, 16, 56);
@@ -58,6 +66,8 @@ void p_lvl207 (void) BANKED
 
 void p_lvl208 (void) BANKED
 {
+	p_truhe_proviant (176, 63, 2);
+
 	if (v_smk == 108) {
 		p_engine_loadMap (v_lvl209, BANK_19, BANK_17);
 		p_engine_changeLvl (209, 144, 72);
@@ -69,6 +79,10 @@ void p_lvl208 (void) BANKED
 	else if (v_smk == 160) {
 		p_engine_loadMap (v_lvl210, BANK_19, BANK_17);
 		p_engine_changeLvl (210, 16, 88);
+	}
+	else if (v_smk == 8) {
+		p_engine_loadMap (v_lvl212, BANK_19, BANK_17);
+		p_engine_changeLvl (212, 80, 120);
 	}
 }
 
@@ -82,5 +96,93 @@ void p_lvl209 (void) BANKED
 
 void p_lvl210 (void) BANKED
 {
-	
+	if (v_smk == 144) {
+		p_engine_loadMap (v_lvl208, BANK_19, BANK_17);
+		p_engine_changeLvl (208, 144, 88);
+	}
+	else if (v_smk == 124) {
+		p_engine_loadMap (v_lvl211, BANK_19, BANK_17);
+		p_engine_changeLvl (211, 16, 72);
+	}
 }
+
+void p_lvl211 (void) BANKED
+{
+	if (v_smk == 108) {
+		p_engine_loadMap (v_lvl210, BANK_19, BANK_17);
+		p_engine_changeLvl (210, 144, 72);
+	}
+
+}
+
+void p_lvl212 (void) BANKED
+{
+	if (v_smk == 224) {
+		p_engine_loadMap (v_lvl208, BANK_19, BANK_17);
+		p_engine_changeLvl (208, 80, 24);
+	}
+	else if (v_smk == 8) {
+		p_engine_loadMap (v_lvl213, BANK_19, BANK_17);
+		p_engine_changeLvl (213, 80, 120);
+	}
+}
+
+void p_lvl213 (void) BANKED
+{
+	p_truhe_gold (193, 64, 2);
+
+	if (v_smk == 90) {
+		p_engine_loadMap (v_lvl214, BANK_19, BANK_17);
+		p_engine_changeLvl (214, 144, 64);
+	}
+	else if (v_smk == 224) {
+		p_engine_loadMap (v_lvl212, BANK_19, BANK_17);
+		p_engine_changeLvl (212, 80, 24);
+	}
+	else if (v_smk == 34) {
+		p_engine_loadMap (v_lvl217, BANK_19, BANK_17);
+		p_engine_changeLvl (217, 16, 32);
+	}
+
+}
+
+void p_lvl214 (void) BANKED
+{
+	if (v_smk == 106) {
+		p_engine_loadMap (v_lvl213, BANK_19, BANK_17);
+		p_engine_changeLvl (213, 16, 64);
+	}
+	else if (v_smk == 224) {
+		p_engine_loadMap (v_lvl215, BANK_19, BANK_17);
+		p_engine_changeLvl (215, 80, 24);
+	}
+}
+
+void p_lvl215 (void) BANKED
+{
+	if (v_smk == 8) {
+		p_engine_loadMap (v_lvl214, BANK_19, BANK_17);
+		p_engine_changeLvl (214, 80, 120);
+	}
+	else if (v_smk == 198) {
+		p_engine_loadMap (v_lvl216, BANK_19, BANK_17);
+		p_engine_changeLvl (216, 144, 112);
+	}
+}
+
+void p_lvl216 (void) BANKED
+{
+	if (v_smk == 214) {
+		p_engine_loadMap (v_lvl215, BANK_19, BANK_17);
+		p_engine_changeLvl (215, 16, 112);
+	}
+}
+
+void p_lvl217 (void) BANKED
+{
+	if (v_smk == 18) {
+		p_engine_loadMap (v_lvl213, BANK_19, BANK_17);
+		p_engine_changeLvl (213, 144, 32);
+	}	
+}
+

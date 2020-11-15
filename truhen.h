@@ -23,6 +23,7 @@
 
 #include "globals.h"
 
+extern void p_truhe_init (void) BANKED;
 extern void p_truhe_gold (UINT8 l_smk, UINT8 l_tnr, UINT8 l_anz) __banked;
 extern void p_truhe_proviant (UINT8 l_smk, UINT8 l_tnr, UINT8 l_anz) __banked;
 extern void p_truhe_status (void) __banked;

@@ -45,6 +45,14 @@
 #include "daten/txt/truhen/aspektwald.h"
 #include "daten/txt/truhen/kraeuterbeutel.h"
 
+void p_truhe_init (void) BANKED
+{
+        for (v_i = 0; v_i < 81; ++v_i)
+        {
+                v_truhen [v_i] = 0;
+        }
+}
+
 void p_truhe_change (UINT8 l_xk, UINT8 l_yk) __banked
 {
 	v_tile [0] = 45;
@@ -219,6 +227,9 @@ void p_truhe_status () __banked
     else if (v_lvl == 202) { if (v_truhen [59] == 1) p_truhe_change (1, 12); }
     else if (v_lvl == 192) { if (v_truhen [60] == 1) p_truhe_change (15, 12); }
     else if (v_lvl == 201) { if (v_truhen [61] == 1) p_truhe_change (7, 12); }
+    else if (v_lvl == 206) { if (v_truhen [62] == 1) p_truhe_change (1, 12); }
+    else if (v_lvl == 208) { if (v_truhen [63] == 1) p_truhe_change (14, 11); }
+    else if (v_lvl == 213) { if (v_truhen [64] == 1) p_truhe_change (13, 12); }
 }
 
 ///Goldtruhe (XK, YK, Truhennummer, Anzahl des Goldes)
@@ -377,7 +388,7 @@ void p_truhe_karte (UINT8 l_smk, UINT8 l_knr, UINT8 l_tnr) __banked
 			p_engine_set_txt (truheleer);
 		}
                 p_engine_A ();
-		      p_engine_after_txt ();
+		p_engine_after_txt ();
         }
 }
 

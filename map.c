@@ -1,6 +1,6 @@
 //   Verlies - ein Adventure im Retrodesign
 //
-//   Copyright (C) 2018-2019 Heiko Wolf
+//   Copyright (C) 2018-2020 Heiko Wolf
 //
 //   This program is free software; you can redistribute it and/or modify
 //   it under the terms of the GNU General Public License As published by
@@ -36,13 +36,13 @@
 #include "daten/karten/nomap.h"
 
 ///Zeichnet aktuelle Position (Raum) auf der Karte ein
-void p_map_draw_mark (UINT8 l_xk, UINT8 l_yk) __banked
+void p_map_draw_mark (UINT8 l_xk, UINT8 l_yk) BANKED
 {
 	set_win_tiles (l_xk, l_yk, 1, 1, v_tile);
 }
 
 ///zeigt aktuelle Levelkarte an
-void p_showMap (void) __banked
+void p_showMap (void) BANKED
 {
 	v_tile [0] = 52;
 

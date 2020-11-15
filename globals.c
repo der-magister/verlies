@@ -12,7 +12,7 @@ unsigned char v_txt [81];
 UINT8 v_lvl;
 UINT8 v_truhen [80];    
 UINT8 v_schalter [20];           
-UINT8 v_knr [8];
+UINT8 v_knr [10];
 UINT8 v_questen [100];   
 UINT8 v_aktion;
 UINT8 v_bosskampf;                
