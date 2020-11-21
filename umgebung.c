@@ -137,5 +137,8 @@ void p_umgebung_state (void) __banked
             if (v_stein [42] == 1) p_stein_busch_clear (4, 6);
 
         }
+        else if (v_lvl == 205) { if (v_stein [43] == 1) p_stein_busch_clear (2, 4); }
+        else if (v_lvl == 211) { if (v_stein [44] == 1) p_stein_busch_clear (15, 8); }
+        else if (v_lvl == 213) { if (v_stein [45] == 1) p_stein_busch_clear (2, 5); }
 
 }

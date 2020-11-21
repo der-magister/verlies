@@ -23,6 +23,7 @@
 #include "engine.h"
 #include "truhen.h"
 #include "schilder.h"
+#include "umgebung.h"
 
 #include "daten/lvl/lvldatminen-1.h"
 
@@ -31,6 +32,7 @@
 void p_lvl205 (void) BANKED
 {
 	p_schild (173, schildtxt13);
+	p_stein (74, 43);
 
 	if (v_smk == 72) {
 		p_engine_loadMap (v_lvl206, BANK_19, BANK_17);  
@@ -108,6 +110,9 @@ void p_lvl210 (void) BANKED
 
 void p_lvl211 (void) BANKED
 {
+	p_stein (159, 44);
+	p_schalter_tuer (195, 6);
+
 	if (v_smk == 108) {
 		p_engine_loadMap (v_lvl210, BANK_19, BANK_17);
 		p_engine_changeLvl (210, 144, 72);
@@ -130,6 +135,7 @@ void p_lvl212 (void) BANKED
 void p_lvl213 (void) BANKED
 {
 	p_truhe_gold (193, 64, 2);
+	p_stein (92, 45);
 
 	if (v_smk == 90) {
 		p_engine_loadMap (v_lvl214, BANK_19, BANK_17);

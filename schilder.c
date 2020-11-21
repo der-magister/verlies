@@ -101,6 +101,10 @@ void p_schalter_status () __banked
                 ++v_tile [0];
                 p_engine_set_tile (17, 6, LAYER_BKG);
         }
+        else if ((v_schalter [6] == 1) && (v_lvl == 211))
+        {
+                p_schalter_change (15, 12);
+        }
 }      
 
 ///setzt Schild
