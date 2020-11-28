@@ -206,6 +206,12 @@ void p_hud_showSichel () __banked
 	if (v_sichel == TRUE) set_win_tiles (9, 4, 1, 1, v_tile);
 }
 
+void p_hud_showSchaufel (void) BANKED
+{
+        v_tile [0] = 48;
+        if (v_schaufel == TRUE) set_win_tiles (10, 4, 1, 1, v_tile);       
+}
+
 ///zeigt aktuelle XK/YK des Spielersprites an
 void p_hud_showXYK () __banked
 {
@@ -227,9 +233,9 @@ void p_hud_hide () __banked
 ///Hud init
 void p_hud_init () __banked
 {
-  set_bkg_tiles (0, 0, 20, 18, v_statscreen);
-  set_win_tiles (0, 0, 20, 18, v_infoscreen);
-  v_info = FALSE; v_blink = 0;
+        set_bkg_tiles (0, 0, 20, 18, v_statscreen);
+        set_win_tiles (0, 0, 20, 18, v_infoscreen);
+        v_info = FALSE; v_blink = 0;
 }
 
 ///Zeigt Infoscreen an
@@ -256,6 +262,7 @@ void p_gui_show_infoscreen () __banked
         p_hud_showKey ();
         p_hud_showSpitzhacke ();
         p_hud_showSichel ();
+        p_hud_showSchaufel ();
         p_showMap ();
         
         move_win (7, 0);
@@ -335,4 +342,3 @@ void p_hud_blink () __banked
                 }
         }	
 }
-

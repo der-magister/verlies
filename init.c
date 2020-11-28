@@ -31,6 +31,7 @@
 #include "umgebung.h"
 #include "schilder.h"
 #include "truhen.h"
+#include "items.h"
 
 //tmp
 #include "items.h"
@@ -86,6 +87,8 @@ void p_init_game2 () NONBANKED
         }
         p_hud_init ();
         p_truhe_init ();
+        p_schalter_init ();
+        p_items_init ();
 
         v_selectItem = 0;
 

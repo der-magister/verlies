@@ -22,6 +22,7 @@
 
 //#pragma bank=12
 
+
 #include "globals.h"
 #include "lvlstatus.h"
 #include "engine.h"
@@ -33,6 +34,7 @@ void p_umgebung_init (void) __banked
                 v_stein [v_i] = 0;
                 v_busch [v_i] = 0;
         } 
+        for (v_i = 0; v_i <= 10; ++v_i) { v_loch [v_i] = 0; }
 }
 
 
@@ -46,6 +48,20 @@ void p_stein (UINT8 l_mk, UINT8 l_nr) __banked
                         if (v_stein [l_nr] == 0)
                         {
                                 ++v_stein [l_nr];
+                                p_lvl_status ();
+                                v_sused = FALSE;
+                        }
+                }
+        }
+}
+
+//für Schaufel
+void p_umgebung_schaufel (UINT8 l_mk, UINT8 l_nr) BANKED
+{
+        if ((l_mk == v_smk) && (v_keyflag == 2)) {
+                if ((v_sused == TRUE) && (v_selectItem == 7)) {
+                        if (v_loch [l_nr] == 0) {
+                                ++v_loch [l_nr];
                                 p_lvl_status ();
                                 v_sused = FALSE;
                         }

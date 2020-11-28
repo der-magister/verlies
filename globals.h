@@ -264,7 +264,7 @@ extern BOOLEAN v_sichel;
 ///Portale
 extern UINT8 v_portal [4];
 
-extern UINT8 v_tuer [20];
+extern UINT8 v_tuer [15];
 
 ///Heilkräuter
 extern UINT8 v_shk;
@@ -328,5 +328,8 @@ extern BOOLEAN v_aspekte [3];
 
 //loop variable für boss effekte  
 extern UINT8 v_bosseffectloop;
+
+extern UINT8 v_schaufel;
+extern UINT8 v_loch [10]; //für Schaufel
 
 #endif

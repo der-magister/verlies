@@ -10,7 +10,7 @@
   Compression          : None.
   Counter              : None.
   Tile size            : 8 x 8
-  Tiles                : 0 to 127
+  Tiles                : 0 to 0
 
   Palette colors       : None.
   SGB Palette          : None.
@@ -22,10 +22,14 @@
 
 */
 
+#ifndef __v_spriteset_1_h_INCLUDE
+#define __v_spriteset_1_h_INCLUDE
 
 /* Bank of tiles. */
 #define v_spriteset_1Bank 0
 /* Start of tile array. */
 extern const unsigned char v_spriteset_1[];
+
+#endif
 
 /* End of V_SPRITESET_1.H */

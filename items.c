@@ -1,6 +1,6 @@
 //   Verlies - ein Adventure im Retrodesign
 //
-//   Copyright (C) 2018-2019 Heiko Wolf
+//   Copyright (C) 2018-2020 Heiko Wolf
 //
 //   This program is free software; you can redistribute it and/or modify
 //   it under the terms of the GNU General Public License As published by
@@ -27,14 +27,20 @@
 #include "player.h"
 #include "other.h"
 
-void p_drawSelectItem () __banked
+void p_items_init (void) BANKED
+{
+        v_selectItem == 0;
+}
+
+void p_drawSelectItem (void) __banked
 {
         if (v_selectItem == 0) {v_tile [0] = 1; }
-        if (v_selectItem == 1) { v_tile [0] = 62; } //Heiltrank
-        if (v_selectItem == 2) { v_tile [0] = 61; } //Ausdauertrank
-        if (v_selectItem == 4) { v_tile [0] = 51; } //spitzhacke
-        if (v_selectItem == 5) { v_tile [0] = 50; } //Sichel
-        if (v_selectItem == 6) { v_tile [0] = 60; } //Kraut
+        else if (v_selectItem == 1) { v_tile [0] = 62; } //Heiltrank
+        else if (v_selectItem == 2) { v_tile [0] = 61; } //Ausdauertrank
+        else if (v_selectItem == 4) { v_tile [0] = 51; } //spitzhacke
+        else if (v_selectItem == 5) { v_tile [0] = 50; } //Sichel
+        else if (v_selectItem == 6) { v_tile [0] = 60; } //Kraut
+        else if (v_selectItem == 7) { v_tile [0] = 48; } //Schaufel
 
         set_bkg_tiles (9, 16, 1, 1, v_tile); 
 }
@@ -46,7 +52,7 @@ void p_calc_mapK () __banked
 }
 
 ///Itemauswahl
-void p_changeItem () __banked
+void p_changeItem (void) BANKED
 {
         //Null
         if (v_selectItem == 0)
@@ -80,16 +86,24 @@ void p_changeItem () __banked
         else if (v_selectItem == 5)
         {
                 if (v_shk != 0) v_selectItem = 6;
+                else if (v_schaufel == TRUE) v_selectItem = 7;
                 else if (v_sht != 0) v_selectItem = 1;
                 else v_selectItem = 0;
         }
-        //Kraut zu Null
+        //Kraut zu Schaufel
         else if (v_selectItem == 6)
         {
+                if (v_schaufel == TRUE) v_selectItem = 7;
+                else if (v_sht != 0) v_selectItem = 1;
+                else v_selectItem = 0;
+        }
+        //Schaufel zu null
+        else if (v_selectItem == 7) {
                 v_selectItem = 0;
+
         }
         p_drawSelectItem ();
-        delay (200);
+        delay (210);
 }
 
 ///Anwendung des Proviant (automatisch)
@@ -174,6 +188,14 @@ void p_select_sichel () __banked
         set_sprite_tile (12, 103);
 }
 
+void p_select_schaufel (void) BANKED
+{
+        set_sprite_tile (9, 112);
+        set_sprite_tile (10, 113);
+        set_sprite_tile (11, 114);
+        set_sprite_tile (12, 115);
+}
+
 ///Benutzung der Spitzhacke
 void p_use_item () __banked
 {
@@ -181,6 +203,7 @@ void p_use_item () __banked
         {
                 if (v_selectItem == 4) p_select_spitzhacke ();
                 else if (v_selectItem == 5) p_select_sichel ();
+                else if (v_selectItem == 7) p_select_schaufel ();
 
                 if ((v_sri == MOVE_NORTH) && (v_saus != 0) && (v_syk != 24))
                 {

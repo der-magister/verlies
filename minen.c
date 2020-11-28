@@ -68,6 +68,12 @@ void p_lvl207 (void) BANKED
 
 void p_lvl208 (void) BANKED
 {
+	if ((v_smk == 8) && (v_keyflag == 1)) {
+		if (v_schalter [6] == 0) {
+			p_tuerzu ();
+		}
+	}
+
 	p_truhe_proviant (176, 63, 2);
 
 	if (v_smk == 108) {
@@ -82,7 +88,7 @@ void p_lvl208 (void) BANKED
 		p_engine_loadMap (v_lvl210, BANK_19, BANK_17);
 		p_engine_changeLvl (210, 16, 88);
 	}
-	else if (v_smk == 8) {
+	else if ((v_smk == 8) && (v_schalter [6] == 1)) {
 		p_engine_loadMap (v_lvl212, BANK_19, BANK_17);
 		p_engine_changeLvl (212, 80, 120);
 	}
@@ -178,6 +184,8 @@ void p_lvl215 (void) BANKED
 
 void p_lvl216 (void) BANKED
 {
+	p_truhe_schaufel ();
+
 	if (v_smk == 214) {
 		p_engine_loadMap (v_lvl215, BANK_19, BANK_17);
 		p_engine_changeLvl (215, 16, 112);

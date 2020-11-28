@@ -44,6 +44,7 @@
 #include "daten/txt/truhen/wappenrock.h"
 #include "daten/txt/truhen/aspektwald.h"
 #include "daten/txt/truhen/kraeuterbeutel.h"
+#include "daten/txt/truhen/schaufel.h"
 
 void p_truhe_init (void) BANKED
 {
@@ -230,6 +231,7 @@ void p_truhe_status () __banked
     else if (v_lvl == 206) { if (v_truhen [62] == 1) p_truhe_change (1, 12); }
     else if (v_lvl == 208) { if (v_truhen [63] == 1) p_truhe_change (14, 11); }
     else if (v_lvl == 213) { if (v_truhen [64] == 1) p_truhe_change (13, 12); }
+    else if (v_lvl == 216) { if (v_truhen [65] == 1) p_truhe_change (1, 12); }
 }
 
 ///Goldtruhe (XK, YK, Truhennummer, Anzahl des Goldes)
@@ -788,4 +790,22 @@ void p_truhe_schluessel (UINT8 l_mk, UINT8 l_nr) __banked
                 p_engine_A ();
                 p_engine_after_txt (); 
         }
+}
+
+void p_truhe_schaufel (void) BANKED
+{
+    if ((v_keyflag == 1) && (v_smk == 181)) {
+        if (v_truhen [65] == 0) {
+            p_engine_set_txt (schaufel);
+            ++v_truhen [65];
+            p_truhe_status ();
+            v_schaufel = TRUE;
+            
+        }
+        else {
+            p_engine_set_txt (truheleer);
+        }
+        p_engine_A ();
+        p_engine_after_txt ();
+    }
 }

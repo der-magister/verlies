@@ -42,6 +42,7 @@ extern void p_truhe_wappenrock (void) __banked;
 extern void p_truhe_aspekt_wald (void) __banked;
 extern void p_truhe_geldkatze2 (void) __banked;
 extern void p_truhe_kraeuterbeutel (void) BANKED;
+extern void p_truhe_schaufel (void) BANKED;
 
 
 /**Truhe die Runen beinhaltet

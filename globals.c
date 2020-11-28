@@ -74,7 +74,7 @@ UINT8 v_portalrune;
 BOOLEAN v_spitzhacke;
 BOOLEAN v_sichel;
 UINT8 v_portal [4];
-UINT8 v_tuer [20];
+UINT8 v_tuer [15];
 UINT8 v_shk;
 UINT8 v_smhk;
 UINT8 v_sat;
@@ -96,3 +96,5 @@ UINT8 v_ausdauertimer;
 BOOLEAN v_use_portal; //Portale benutze 1 = ja / 0 = nein
 BOOLEAN v_aspekte [3];
 UINT8 v_bosseffectloop;
+UINT8 v_schaufel;
+UINT8 v_loch [10];

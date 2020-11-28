@@ -28,6 +28,7 @@ extern void p_stein (UINT8 l_mk, UINT8 l_nr) __banked;
 extern void p_stein_busch_clear (UINT8 l_xk, UINT8 l_yk) __banked;
 extern void p_busch (UINT8 l_mk, UINT8 l_nr) __banked;
 extern void p_umgebung_state (void) __banked;
+extern void p_umgebung_schaufel (UINT8 l_mk, UINT8 l_nr) BANKED;
 
 #endif
 

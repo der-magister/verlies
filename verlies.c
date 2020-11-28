@@ -106,6 +106,7 @@ void main (void) NONBANKED
                                 else if (v_selectItem == 2) { p_use_ausdauertrank (); }
                                 else if (v_selectItem == 4) { p_use_item (); }
                                 else if (v_selectItem == 5) { p_use_item (); }
+                                else if (v_selectItem == 7) { p_use_item (); }
 
                                 if ((v_info == FALSE) && (v_win == FALSE)) p_lvl_whichLvL ();
                         }

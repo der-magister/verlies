@@ -1,6 +1,6 @@
 //   Verlies - ein Adventure im Retrodesign
 //
-//   Copyright (C) 2018-2019 Heiko Wolf
+//   Copyright (C) 2018-2020 Heiko Wolf
 //
 //   This program is free software; you can redistribute it and/or modify
 //   it under the terms of the GNU General Public License As published by
@@ -23,9 +23,10 @@
 
 #include "globals.h"
 
+extern void p_items_init (void) BANKED;
 extern void p_calc_mapK () __banked;
 extern void p_drawSelectItem () __banked;
-extern void p_changeItem () __banked;
+extern void p_changeItem (void) __banked;
 extern void p_proviant () __banked;
 extern void p_use_heiltrank () __banked;
 extern void p_use_ausdauertrank () __banked;
@@ -34,6 +35,7 @@ extern void p_use_item () __banked;
 extern void p_hide_item () __banked;
 extern void p_use_sichel () __banked;
 extern void p_collectGold () __banked;
+extern void p_select_schaufel (void) BANKED;
 
 #endif
 

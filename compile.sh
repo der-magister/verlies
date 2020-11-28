@@ -157,6 +157,7 @@ lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/wappenrock.o daten/txt/truhen/wappenroc
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/magischer_stein.o daten/txt/truhen/magischer_stein.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/aspektwaldtxt.o daten/txt/truhen/aspektwald.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/kraeuterbeuteltxt.o daten/txt/truhen/kraeuterbeutel.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/schaufeltxt.o daten/txt/truhen/schaufel.c
 
 ## Daten Ende
 

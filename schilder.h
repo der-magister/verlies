@@ -23,14 +23,14 @@
 
 #include "globals.h"
 
-extern void p_schalter_init (void) __banked;
-extern void p_schild (UINT8 l_mk, unsigned char l_txt [72]) __banked;
-//extern void p_schluessel (void) __banked;
-extern void p_tuerzu (void) __banked;
-extern void p_schalter_tuer (UINT8 l_smk, UINT8 l_nr) __banked;
-extern void p_schalter_change (UINT8 l_xk, UINT8 l_yk) __banked;
-extern void p_schalter_status (void) __banked;
-extern void p_tuer_change (UINT8 l_xk, UINT8 l_yk) __banked;
+extern void p_schalter_init (void) BANKED;
+extern void p_schild (UINT8 l_mk, unsigned char l_txt [72]) BANKED;
+//extern void p_schluessel (void) BANKED;
+extern void p_tuerzu (void) BANKED;
+extern void p_schalter_tuer (UINT8 l_smk, UINT8 l_nr) BANKED;
+extern void p_schalter_change (UINT8 l_xk, UINT8 l_yk) BANKED;
+extern void p_schalter_status (void) BANKED;
+extern void p_tuer_change (UINT8 l_xk, UINT8 l_yk) BANKED;
 
 #endif
 
