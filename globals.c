@@ -98,3 +98,4 @@ BOOLEAN v_aspekte [3];
 UINT8 v_bosseffectloop;
 UINT8 v_schaufel;
 UINT8 v_loch [10];
+UINT8 v_sflimmtm;

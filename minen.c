@@ -194,6 +194,8 @@ void p_lvl216 (void) BANKED
 
 void p_lvl217 (void) BANKED
 {
+	p_umgebung_loch (85, 1);
+
 	if (v_smk == 18) {
 		p_engine_loadMap (v_lvl213, BANK_19, BANK_17);
 		p_engine_changeLvl (213, 144, 32);

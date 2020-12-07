@@ -332,4 +332,6 @@ extern UINT8 v_bosseffectloop;
 extern UINT8 v_schaufel;
 extern UINT8 v_loch [10]; //für Schaufel
 
+extern UINT8 v_sflimmtm; //timer für flimmer Spieler
+
 #endif

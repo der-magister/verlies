@@ -41,7 +41,7 @@ void main (void) NONBANKED
                 p_init_game2 ();
                 v_looptime = 7;  v_gameover = FALSE; v_attack = 0; v_bossloop = 255;
                 v_win = 0; gloop = 0;  v_itemlooptime = 255; v_kampflooptime = 255; v_aktion = FALSE;
-                p_lvl_status (); v_ausdauertimer = 0;
+                p_lvl_status (); v_ausdauertimer = 0; v_sflimmtm = 255;
                 
     
                 //game loop
@@ -124,6 +124,10 @@ void main (void) NONBANKED
                                 v_itemlooptime = 255;
                                 v_sused = FALSE;
                         }
+
+                        if (v_sflimmtm == 5) {
+                                p_spieler_blink_off ();
+                        }
     
                         if ((v_bossloop == v_gspeed) && (v_bosskampf == TRUE))
                         {
@@ -157,6 +161,8 @@ void main (void) NONBANKED
 
 			if (v_itemlooptime < 255) ++v_itemlooptime;
 
+                        if (v_sflimmtm < 255) ++v_sflimmtm;
+
 			if (v_timer == 255) 
 			{   
 				v_timer = 0; ++v_ausdauertimer;
@@ -177,8 +183,6 @@ void main (void) NONBANKED
 
 		}	
 	}
-
-        
 
 	while (v_quit == 0); 
 }

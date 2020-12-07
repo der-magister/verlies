@@ -260,66 +260,66 @@ void p_gegner_koli_player () BANKED
 {
         for (v_kg = 0; v_kg != 3; ++v_kg)
         {
+                if (v_sflimmtm == 255) {
               
-                //mitte
-                if (((v_sxk == v_gxk [v_kg]) && (v_syk == v_gyk [v_kg])) ||
-                //unten
-                    ((v_sxk == v_gxk [v_kg]) && (v_syk - 8 == v_gyk [v_kg])) ||
-                    ((v_sxk - 8 == v_gxk [v_kg]) && (v_syk - 8 == v_gyk [v_kg])) ||
-                    ((v_sxk + 8 == v_gxk [v_kg]) && (v_syk - 8 == v_gyk [v_kg])) ||
-                    //oben
-                    ((v_sxk == v_gxk [v_kg]) && (v_syk + 8 == v_gyk [v_kg])) ||
-                    ((v_sxk + 8 == v_gxk [v_kg]) && (v_syk + 8 == v_gyk [v_kg])) ||
-                    ((v_sxk == v_gxk [v_kg] + 8) && (v_syk + 8 == v_gyk [v_kg])) || 
-                    //links
-                    ((v_sxk + 8 == v_gxk [v_kg]) && (v_syk == v_gyk [v_kg])) ||
-                    ((v_sxk + 8 == v_gxk [v_kg]) && (v_syk + 8 == v_gyk [v_kg])) ||
-                    ((v_sxk + 8 == v_gxk [v_kg]) && (v_syk - 8 == v_gyk [v_kg])) ||
-                    //rechts
-                    ((v_sxk - 8 == v_gxk [v_kg]) && (v_syk == v_gyk [v_kg])) ||
-                    ((v_sxk - 8 == v_gxk [v_kg]) && (v_syk + 8 == v_gyk [v_kg])) ||
-                    ((v_sxk - 8 == v_gxk [v_kg]) && (v_syk - 8 == v_gyk [v_kg])))
-                {       
-			if (v_gri [v_kg] != MOVE_DOWN)
-			{
-				v_slp -= v_gtp [v_kg];
+                        //mitte
+                        if (((v_sxk == v_gxk [v_kg]) && (v_syk == v_gyk [v_kg])) ||
+                            //unten
+                            ((v_sxk == v_gxk [v_kg]) && (v_syk - 8 == v_gyk [v_kg])) ||
+                            ((v_sxk - 8 == v_gxk [v_kg]) && (v_syk - 8 == v_gyk [v_kg])) ||
+                            ((v_sxk + 8 == v_gxk [v_kg]) && (v_syk - 8 == v_gyk [v_kg])) ||
+                            //oben
+                            ((v_sxk == v_gxk [v_kg]) && (v_syk + 8 == v_gyk [v_kg])) ||
+                            ((v_sxk + 8 == v_gxk [v_kg]) && (v_syk + 8 == v_gyk [v_kg])) ||
+                            ((v_sxk == v_gxk [v_kg] + 8) && (v_syk + 8 == v_gyk [v_kg])) || 
+                            //links
+                            ((v_sxk + 8 == v_gxk [v_kg]) && (v_syk == v_gyk [v_kg])) ||
+                            ((v_sxk + 8 == v_gxk [v_kg]) && (v_syk + 8 == v_gyk [v_kg])) ||
+                            ((v_sxk + 8 == v_gxk [v_kg]) && (v_syk - 8 == v_gyk [v_kg])) ||
+                            //rechts
+                            ((v_sxk - 8 == v_gxk [v_kg]) && (v_syk == v_gyk [v_kg])) ||
+                            ((v_sxk - 8 == v_gxk [v_kg]) && (v_syk + 8 == v_gyk [v_kg])) ||
+                            ((v_sxk - 8 == v_gxk [v_kg]) && (v_syk - 8 == v_gyk [v_kg])))
+                        {       
+        			if (v_gri [v_kg] != MOVE_DOWN)
+        			{
+        				v_slp -= v_gtp [v_kg];
 
-				if (v_slp > 0)
-				{
-					p_spieler_blink ();
-                                
-					if (v_bosskampf == FALSE) 
-					{
-						do 
-						{
-							p_spieler_move (v_sri);
-							p_spieler_move (v_sri);
-							p_spieler_move (v_sri);
-							
-							if (v_sri < 4)
-							{ 
-								++v_sri;
-							}
-							else
-							{
-								--v_sri;
-							}
-						}
-						while (v_walk == FALSE);
-						 
-						/*else 
-						{
-							p_boss_treffer ();
-					       }*/
-					} 
-					p_hud_showLP ();                     
-				}
-			}	    
-                                  
-                }
-               
+        				if (v_slp > 0)
+        				{
+        					p_spieler_blink ();
+                                        
+        					if (v_bosskampf == FALSE) 
+        					{
+        						do 
+        						{
+        							p_spieler_move (v_sri);
+        							p_spieler_move (v_sri);
+        							p_spieler_move (v_sri);
+        							
+        							if (v_sri < 4)
+        							{ 
+        								++v_sri;
+        							}
+        							else
+        							{
+        								--v_sri;
+        							}
+        						}
+        						while (v_walk == FALSE);
+        						 
+        						/*else 
+        						{
+        							p_boss_treffer ();
+        					       }*/
+        					} 
+        					p_hud_showLP ();                     
+        				}
+        			}	    
+                                          
+                        }
+                }            
         }  
-         
 }
 
 void p_gegner_stop () BANKED

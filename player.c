@@ -90,8 +90,13 @@ void p_spieler_setSprite (UINT8 l_set) __banked
 void p_spieler_blink (void) __banked
 {
         p_spieler_setSprite (2);
-        delay (60);
+        v_sflimmtm = 0;
+}
+
+void p_spieler_blink_off (void) __banked
+{
         p_spieler_setSprite (1);
+        v_sflimmtm = 255;
 }
 	
 ///Bewegungroutine des Spielersprites

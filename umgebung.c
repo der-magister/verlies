@@ -47,7 +47,7 @@ void p_stein (UINT8 l_mk, UINT8 l_nr) __banked
                 {
                         if (v_stein [l_nr] == 0)
                         {
-                                ++v_stein [l_nr];
+                                v_stein [l_nr] = 1;
                                 p_lvl_status ();
                                 v_sused = FALSE;
                         }
@@ -56,12 +56,12 @@ void p_stein (UINT8 l_mk, UINT8 l_nr) __banked
 }
 
 //für Schaufel
-void p_umgebung_schaufel (UINT8 l_mk, UINT8 l_nr) BANKED
+void p_umgebung_loch (UINT8 l_mk, UINT8 l_nr) BANKED
 {
-        if ((l_mk == v_smk) && (v_keyflag == 2)) {
+        if ((l_mk == v_imk) && (v_keyflag == 2)) {
                 if ((v_sused == TRUE) && (v_selectItem == 7)) {
                         if (v_loch [l_nr] == 0) {
-                                ++v_loch [l_nr];
+                                v_loch [l_nr] = 1
                                 p_lvl_status ();
                                 v_sused = FALSE;
                         }
@@ -87,12 +87,24 @@ void p_busch (UINT8 l_mk, UINT8 l_nr) __banked
                 {
                         if (v_busch [l_nr] == 0)
                         {
-                                ++v_busch [l_nr];
+                                v_busch [l_nr] = 1;
                                 p_lvl_status ();
                                 v_sused = FALSE;
                         }
                 }
         }
+}
+
+void p_loch_auf (UINT8 l_xk, UINT8 l_yk) BANKED 
+{
+        v_tile [0] = 12;
+        p_engine_set_tile (l_xk, l_yk, LAYER_BKG);
+        ++v_tile [0];
+        p_engine_set_tile (l_xk, l_yk + 1, LAYER_BKG);
+        ++v_tile [0];
+        p_engine_set_tile (l_xk + 1, l_yk, LAYER_BKG);
+        ++v_tile [0];
+        p_engine_set_tile (l_xk + 1, l_yk + 1, LAYER_BKG);
 }
 
 void p_umgebung_state (void) __banked
@@ -156,5 +168,6 @@ void p_umgebung_state (void) __banked
         else if (v_lvl == 205) { if (v_stein [43] == 1) p_stein_busch_clear (2, 4); }
         else if (v_lvl == 211) { if (v_stein [44] == 1) p_stein_busch_clear (15, 8); }
         else if (v_lvl == 213) { if (v_stein [45] == 1) p_stein_busch_clear (2, 5); }
+        else if (v_lvl == 217) { if (v_loch [1] == 1) p_loch_auf (13, 4); }
 
 }
