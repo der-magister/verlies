@@ -61,7 +61,7 @@ void p_umgebung_loch (UINT8 l_mk, UINT8 l_nr) BANKED
         if ((l_mk == v_imk) && (v_keyflag == 2)) {
                 if ((v_sused == TRUE) && (v_selectItem == 7)) {
                         if (v_loch [l_nr] == 0) {
-                                v_loch [l_nr] = 1
+                                v_loch [l_nr] = 1;
                                 p_lvl_status ();
                                 v_sused = FALSE;
                         }

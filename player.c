@@ -47,7 +47,7 @@ void p_spieler_init (void) __banked
 {
         p_spieler_setSprite (1);
 	
-	//Attackspriteverbund
+        //Attackspriteverbund
         set_sprite_tile (5, 108);
         set_sprite_tile (6, 109);
         set_sprite_tile (7, 110);
@@ -98,11 +98,117 @@ void p_spieler_blink_off (void) __banked
         p_spieler_setSprite (1);
         v_sflimmtm = 255;
 }
-	
+
+
+//Bewegung des Spielersprites Richtung Norden
+void p_spieler_move_north (void) BANKED 
+{
+        v_sri = MOVE_NORTH;
+
+        if (v_syk != 24)
+        {
+                v_tile [1] = v_leveldaten [v_smk - 18];
+                v_walk = p_spieler_koli ();
+
+                if (v_walk == TRUE)
+                {
+                        v_tile [1] = v_leveldaten [v_smk - 17];
+                        v_walk = p_spieler_koli ();
+
+                        if (v_walk == TRUE) { 
+                                v_syk -= 8;
+                                p_spieler_after_move ();
+                        }       
+                }
+        }
+}
+
+//Bewegung des Spielersprites Richtung Süden
+void p_spieler_move_south (void) BANKED
+{
+        v_sri = MOVE_SOUTH;
+
+        if (v_syk != 120)
+        {
+                v_tile [1] = v_leveldaten [v_smk + 36];
+                v_walk = p_spieler_koli ();
+
+                if (v_walk == TRUE)
+                {
+                        v_tile [1] = v_leveldaten [v_smk + 37];
+                        v_walk = p_spieler_koli ();
+
+                        if (v_walk == TRUE) { 
+                                v_syk += 8;
+                                p_spieler_after_move ();
+                        }
+                }
+        }
+}
+
+//Bewegung des Spielersprites Richtung Westen
+void p_spieler_move_west (void) BANKED
+{
+        v_sri = MOVE_WEST;
+
+        if (v_sxk != 16)
+        {
+                v_tile [1] = v_leveldaten [v_smk - 1];
+                v_walk = p_spieler_koli ();
+
+                if (v_walk == TRUE)
+                {
+                        v_tile [1] = v_leveldaten [v_smk + 17];
+                        v_walk = p_spieler_koli ();
+
+                        if (v_walk == TRUE) { 
+                                v_sxk -= 8;
+                                p_spieler_after_move ();
+                        }
+                }
+        }
+}
+
+//Bewegung des Spielersprites Richtung Osten
+void p_spieler_move_east (void) BANKED
+{
+        v_sri = MOVE_EAST;
+
+        if (v_sxk != 144)
+        {
+                v_tile [1] = v_leveldaten [v_smk + 2];
+                v_walk = p_spieler_koli ();
+
+                if (v_walk == TRUE)
+                {
+                        v_tile [1] = v_leveldaten [v_smk + 20];
+                        v_walk = p_spieler_koli ();
+
+                        if (v_walk == TRUE) { 
+                                v_sxk += 8;
+                                p_spieler_after_move ();
+                        }
+                }
+        }
+}
+
+void p_spieler_after_move (void) BANKED
+{
+        p_spieler_set_sprite ();
+        ++v_ssc;
+        p_proviant ();
+        p_hud_showMK ();
+        p_hud_showXYK ();
+}
+
+
+
+
 ///Bewegungroutine des Spielersprites
-void p_spieler_move  (UINT8 l_ri) __banked
+/*void p_spieler_move  (UINT8 l_ri) __banked
 {
         v_sri = l_ri;
+        v_walk = TRUE; 
 
         //Nord
         if ((l_ri == MOVE_NORTH) && (v_syk != 24))
@@ -146,7 +252,7 @@ void p_spieler_move  (UINT8 l_ri) __banked
                         if (v_walk == TRUE) v_sxk += 8;
                 }
         }
-	//West
+        //West
         else if ((l_ri == MOVE_WEST) && (v_sxk != 16))
         {
                 v_tile [1] = v_leveldaten [v_smk - 1];
@@ -169,7 +275,7 @@ void p_spieler_move  (UINT8 l_ri) __banked
                 p_hud_showMK ();
                 p_hud_showXYK ();
         }
-}
+}*/
 
 ///Angriff des Spielers
 void p_spieler_attack () __banked
@@ -337,7 +443,7 @@ void p_spieler_attack () __banked
 ///Versteckt Attackesprites 
 void p_spieler_hideAttack (void) __banked
 {
-	move_sprite (5, 0, 0);
+        move_sprite (5, 0, 0);
         move_sprite (6, 0, 0);
         move_sprite (7, 0, 0);
         move_sprite (8, 0, 0);

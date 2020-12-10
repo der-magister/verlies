@@ -75,10 +75,10 @@ void p_intro (void) __banked
 ///"zufällige" Zahl ermitteln
 UINT8 p_zahl (void) __banked
 {
-        //for (v_a = 0; v_a != 36; ++v_a)
-	//{
-		if (v_timer == v_timerdat [v_a]) return 1;
-                else return 0;
-        //}       
+        for (v_a = 0; v_a <= 36; ++v_a)
+	{
+	       if (v_timer == v_timerdat [v_a]) return 1;
+        }    
+        return 0;  
 }
 

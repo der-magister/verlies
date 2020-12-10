@@ -47,7 +47,7 @@
 //tmp
 #include "daten/lvl/lvldatminen-1.h"
 
-void p_init_game1 () NONBANKED
+void p_init_game1 (void) NONBANKED
 {
         p_boss_init ();
         p_schalter_init ();
@@ -79,7 +79,7 @@ void p_init_game1 () NONBANKED
         
 }
 
-void p_init_game2 () NONBANKED
+void p_init_game2 (void) NONBANKED
 {
         for (v_i = 0; v_i != 41; ++v_i)
         {
@@ -96,6 +96,9 @@ void p_init_game2 () NONBANKED
        
         v_keyflag = 1;
         //p_engine_loadMap (v_lvl1a, BANK_5, BANK_4);
+        //tmp für tests
+        v_nomobs = FALSE;
+        //
         p_engine_changeLvl (1, 112, 96);
         v_keyflag = 0;
 	p_gui_show_location (lfelsengrund);
@@ -114,8 +117,6 @@ void p_init_game2 () NONBANKED
         v_questen [0] = 13; v_sgo = 0; v_stp = 1;
         v_spr = 4; ; v_questen [2] = 2;
         v_spitzhacke = TRUE; v_sichel = TRUE; v_slp = 5; v_smlp = 5;
-
-        v_nomobs = FALSE;
         
         p_hud_show ();
 }

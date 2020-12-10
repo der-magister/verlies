@@ -23,18 +23,19 @@
 #include "tiledatg.h"
 
 ///beinhaltet Tile die eine Kolision beim Gegner auslösen
-const unsigned char v_kdatg_1 [25] = { 22, 23, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
-const unsigned char v_kdatg_2 [25] = { 5, 6, 9, 10, 11, 22, 24, 25, 26, 27, 28, 29, 30, 31, 36, 37, 39, 49, 41, 42 };
-const unsigned char v_kdatg_3 [25] = { 8, 9, 10, 11, 20, 21, 25, 26, 27, 32, 33, 34, 35, 39, 40, 41, 42, 43, 44 };
-const unsigned char v_kdatg_4 [25] = { 5, 20, 21, 32, 33, 34, 36, 36, 37 };
-const unsigned char v_kdatg_5 [25] = { 4, 5, 6, 8, 9, 10, 11, 20, 21, 22, 24, 25, 26, 27, 28, 29, 30, 31, 36, 37};
-const unsigned char v_kdatg_alte_baum [25] = { 46, 45, 44, 43, 37, 36, 22, 21, 20, 7, 5, 4, 12 , 13 ,14 ,15 ,0,0,0,0,0,0,0,0,0 };
-const unsigned char v_kdatg_gebirgspfad [25] = { 3, 4, 5, 6, 7, 20, 21, 22, 25, 28, 29, 30, 31, 36, 37, 0,0,0,0,0,0,0,0,0,0 };
+const unsigned char v_kdatg_1 [30] = { 22, 23, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
+const unsigned char v_kdatg_2 [30] = { 5, 6, 9, 10, 11, 22, 24, 25, 26, 27, 28, 29, 30, 31, 36, 37, 39, 49, 41, 42,0,0,0,0,0 };
+const unsigned char v_kdatg_3 [30] = { 8, 9, 10, 11, 20, 21, 25, 26, 27, 32, 33, 34, 35, 39, 40, 41, 42, 43, 44,0,0,0,0,0 };
+const unsigned char v_kdatg_4 [30] = { 5, 20, 21, 32, 33, 34, 36, 36, 37, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
+const unsigned char v_kdatg_5 [30] = { 4, 5, 6, 8, 9, 10, 11, 20, 21, 22, 24, 25, 26, 27, 28, 29, 30, 31, 36, 37, 0,0,0,0,0};
+const unsigned char v_kdatg_alte_baum [30] = { 46, 45, 44, 43, 37, 36, 22, 21, 20, 7, 5, 4, 12 , 13 ,14 ,15 ,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
+const unsigned char v_kdatg_gebirgspfad [30] = { 3, 4, 5, 6, 7, 20, 21, 22, 25, 28, 29, 30, 31, 36, 37, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
+const unsigned char v_kdatg_mine_1 [28] = { 3, 8, 9, 10, 11, 12, 13, 14, 15, 20, 21, 25, 26, 27, 28, 29, 39, 31, 32, 33, 34, 35, 36, 37, 43, 44, 45, 46 };
 
 
 UINT8 p_gegner_koli (void) __banked
 {
-        for (v_a = 0; v_a != 25; ++v_a)
+        for (v_a = 0; v_a <= 28; ++v_a)
 	{
 		//Stadtgefängnis
                 if ((v_lvl >= 5) && (v_lvl <= 13) && (v_tile [2] == v_kdatg_1 [v_a])) return FALSE;
@@ -63,6 +64,9 @@ UINT8 p_gegner_koli (void) __banked
 
                 //Rotgebirge
                 else if ((v_lvl >= 190) && (v_lvl <= 203) && (v_tile [2] == v_kdatg_gebirgspfad [v_a])) return FALSE;
+
+                //Mine EG 
+                else if ((v_lvl >= 205) && (v_lvl <= 217) && (v_tile [2] == v_kdatg_mine_1 [v_a])) return FALSE;
         }
         return TRUE;
 }

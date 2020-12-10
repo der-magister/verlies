@@ -1,3 +1,23 @@
+//   Verlies - ein Adventure im Retrodesign
+//
+//   Copyright (C) 2018-2020 Heiko Wolf
+//
+//   This program is free software; you can redistribute it and/or modify
+//   it under the terms of the GNU General Public License As published by
+//   the Free Software Foundation; either version 2 of the License, or
+//   (at your option) any later version.
+//
+//   This program is distributed in the hope that it will be useful,
+//   but WITHOUT ANY WARRANTY; without even the implied warranty of
+//   MERCHANTABILITY Or FITNESS For A PARTICULAR PURPOSE.  See the
+//   GNU General Public License For more details.
+//
+//   You should have received a copy of the GNU General Public License along
+//   With this program; if not, write to the Free Software Foundation, Inc.,
+//   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+//
+//   Kontakt: magister@kabelmail.de
+
 #include "globals.h"
 
 volatile UINT8 v_quit;
@@ -9,12 +29,12 @@ UINT8 gwalk;
 BOOLEAN v_info;
 BOOLEAN v_win;
 unsigned char v_txt [81];
-UINT8 v_lvl;
+UINT8 v_lvl=1;
 UINT8 v_truhen [80];    
 UINT8 v_schalter [20];           
 UINT8 v_knr [10];
-UINT8 v_questen [100];   
-UINT8 v_aktion;
+UINT8 v_questen [10];   
+UINT8 v_aktion=0;
 UINT8 v_bosskampf;                
 UINT8 v_kampf;                     
 UINT8 v_kampflooptime;
@@ -38,7 +58,7 @@ UINT8 v_gxk [3];
 UINT8 v_gyk [3];   
 INT8 v_glp [3];         
 UINT8 v_gtp [3];
-UINT8 v_gmk [4];        
+UINT8 v_gmk [3];        
 UINT8 v_gri [3];   
 UINT8 v_gspf [3];
 UINT8 v_gspl [3];
@@ -99,3 +119,4 @@ UINT8 v_bosseffectloop;
 UINT8 v_schaufel;
 UINT8 v_loch [10];
 UINT8 v_sflimmtm;
+

@@ -195,8 +195,8 @@ lcc -Wa-l -Wl-m -Wl-j -Wf-bo12 -c -o obj/items.o items.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo12 -c -o obj/npc.o npc.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo12 -c -o obj/schilder.o schilder.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo13 -c -o obj/gegner.o gegner.c
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo13 -c -o obj/lvlgegner.o lvlgegner.c
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo13 -c -o obj/tiledatg.o tiledatg.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo20 -c -o obj/lvlgegner.o lvlgegner.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo20 -c -o obj/tiledatg.o tiledatg.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo14 -c -o obj/boss.o boss.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo17 -c -o obj/umgebung.o umgebung.c
 
@@ -206,7 +206,11 @@ obj=$(ls | grep [.][o])
 
 echo "Erstelle Rom..."
 
-lcc -Wa-l -Wl-m -Wl-j -Wl-yt0x019 -Wl-yo128 -o ../verlies.gb $obj
+lcc -Wa-l -Wl-m -Wl-j -Wl-yt0x019 -Wl-yo256 -o ../verlies.gb $obj
 
 date
+
+echo "Starte Emulation"
+
+mgba-qt ../verlies.gb &>/dev/null
 

@@ -23,9 +23,6 @@
 #ifndef _GLOBALS_H_
 #define _GLOBALS_H_
 
-//#include "c:\apps\gbdk\include\asm\gbz80\types.h"
-//#include "c:\apps\gbdk\include\gb\gb.h"
-
 #include "/opt/gbdk/include/asm/gbz80/types.h"
 #include "/opt/gbdk/include/gb/gb.h"
 
@@ -63,11 +60,11 @@
 #define LAYER_BKG 1
 #define LAYER_WIN 2
 
-extern BOOLEAN v_nomobs;
-
 ///Koordinaten der HUDGui 
 #define HUDXPOS 0
 #define HUDYPOS 0
+
+extern BOOLEAN v_nomobs;
 
 ///in main () verwendet
 extern volatile UINT8 v_quit;
@@ -103,7 +100,7 @@ extern UINT8 v_schalter [20];
 extern UINT8 v_knr [10];
 
 ///beinhaltet Queststand
-extern UINT8 v_questen [100];   
+extern UINT8 v_questen [10];   
 
 ///Flag, ob Spieler eine Aktion ausgeführt hat (TRUE = ja, FALSE = nein)
 extern UINT8 v_aktion;
@@ -163,7 +160,7 @@ extern INT8 v_glp [3];
 extern UINT8 v_gtp [3];
 
 ///Koordinate der Gegner auf Karte
-extern UINT8 v_gmk [4];        
+extern UINT8 v_gmk [3];        
 
 ///Bewegungsrichtung der Gegner
 extern UINT8 v_gri [3];   
@@ -333,5 +330,7 @@ extern UINT8 v_schaufel;
 extern UINT8 v_loch [10]; //für Schaufel
 
 extern UINT8 v_sflimmtm; //timer für flimmer Spieler
+
+
 
 #endif

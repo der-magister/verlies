@@ -29,18 +29,20 @@
 #include "tiledatg.h"
 #include "tiledat.h"
 
-void p_gegner_init () BANKED
+
+void p_gegner_init (void) BANKED
 {
         for (v_i = 0; v_i != 3; ++v_i)
         {
                 v_gmk [v_i] = 0; v_glp [v_i] = 0; v_gtp [v_i] = 0;
         }   
+        p_gegner_stop ();
 }
 
 ///horizontale Bewegungsroutine Gegner
-void p_gegner_move_horizontal () BANKED
+void p_gegner_move_horizontal (void) BANKED
 {
-        for (v_g = 0; v_g != 3; ++v_g)
+        for (v_g = 0; v_g < 3; ++v_g)
         {
                 //Nord
                 if (v_gri [v_g] == MOVE_NORTH)
@@ -93,9 +95,9 @@ void p_gegner_move_horizontal () BANKED
         }
 }
 
-void p_gegner_move_vertical () BANKED
+void p_gegner_move_vertical (void) BANKED
 {
-        for (v_g = 0; v_g != 3; ++v_g)
+        for (v_g = 0; v_g < 3; ++v_g)
         {
                 //West
                 if (v_gri [v_g] == MOVE_WEST)
@@ -124,14 +126,14 @@ void p_gegner_move_vertical () BANKED
                 {
                         v_tile [2] = v_leveldaten [v_gmk [v_g] + 2]; 
                         gwalk = p_gegner_koli ();
-                        if ((v_gmk [1] == v_gmk [v_g] + 2) || (v_gmk [2] == v_gmk [v_g] + 2)  || (v_gmk [3] == v_gmk [v_g] + 2)) gwalk = FALSE;
+                        if ((v_gmk [0] == v_gmk [v_g] + 2) || (v_gmk [1] == v_gmk [v_g] + 2)  || (v_gmk [2] == v_gmk [v_g] + 2)) gwalk = FALSE;
 
                                 
                         if (gwalk == 1)
                         {
                                 v_tile [2] = v_leveldaten [v_gmk [v_g] + 20];
                                 gwalk = p_gegner_koli ();
-                                if ((v_gmk [1] == v_gmk [v_g] + 20) || (v_gmk [2] == v_gmk [v_g] + 20)  || (v_gmk [3] == v_gmk [v_g] + 20)) gwalk = FALSE;
+                                if ((v_gmk [0] == v_gmk [v_g] + 20) || (v_gmk [1] == v_gmk [v_g] + 20)  || (v_gmk [2] == v_gmk [v_g] + 20)) gwalk = FALSE;
                         }
                         if (gwalk == 1)
                         {
@@ -148,7 +150,7 @@ void p_gegner_move_vertical () BANKED
 
 void p_gegner_speer (void) BANKED
 {
-        for (v_g = 0; v_g != 3; ++v_g)
+        for (v_g = 0; v_g < 3; ++v_g)
         {
                 if (v_gri [v_g] == MOVE_DOWN)
                 {
@@ -188,27 +190,27 @@ void p_gegner_move (UINT8 l_nr) BANKED
         v_gmk [l_nr] = ((v_gxk [l_nr] - 16) / 8) + 18 * ((v_gyk [l_nr] - 24) / 8);
 }
 
-void p_gegner_hide_1 () BANKED
+void p_gegner_hide_1 (void) BANKED
 {
         move_sprite (36, 0, 0);
-	move_sprite (37, 0, 0);
-	move_sprite (38, 0, 0);
+        move_sprite (37, 0, 0);
+        move_sprite (38, 0, 0);
         move_sprite (39, 0, 0);
 }
 
-void p_gegner_hide_2 () BANKED
+void p_gegner_hide_2 (void) BANKED
 {
-        move_sprite (32, 0, 0);
-	move_sprite (33, 0, 0);
-	move_sprite (34, 0, 0);
+        move_sprite (32, 0, 0); 
+        move_sprite (33, 0, 0);
+        move_sprite (34, 0, 0);
         move_sprite (35, 0, 0);
 }
 
-void p_gegner_hide_3 () BANKED
+void p_gegner_hide_3 (void) BANKED
 {
         move_sprite (28, 0, 0);
-	move_sprite (29, 0, 0);
-	move_sprite (30, 0, 0);
+        move_sprite (29, 0, 0);
+        move_sprite (30, 0, 0);
         move_sprite (31, 0, 0);
 }
 
@@ -256,11 +258,10 @@ void p_gegner_set (UINT8 l_nr, UINT8 l_tile, UINT8 l_tile2, UINT8 l_xk, UINT8 l_
 
 
 ///Kolisionsabfrage Gegner auf Spieler
-void p_gegner_koli_player () BANKED
+void p_gegner_koli_player (void) BANKED
 {
-        for (v_kg = 0; v_kg != 3; ++v_kg)
+        for (v_kg = 0; v_kg < 3; ++v_kg)
         {
-                if (v_sflimmtm == 255) {
               
                         //mitte
                         if (((v_sxk == v_gxk [v_kg]) && (v_syk == v_gyk [v_kg])) ||
@@ -281,50 +282,30 @@ void p_gegner_koli_player () BANKED
                             ((v_sxk - 8 == v_gxk [v_kg]) && (v_syk + 8 == v_gyk [v_kg])) ||
                             ((v_sxk - 8 == v_gxk [v_kg]) && (v_syk - 8 == v_gyk [v_kg])))
                         {       
-        			if (v_gri [v_kg] != MOVE_DOWN)
-        			{
-        				v_slp -= v_gtp [v_kg];
+        		      if (v_gri [v_kg] != MOVE_DOWN)
+        		      {
+        		              if (v_sflimmtm == 255) { v_slp -= v_gtp [v_kg]; }
+
+                                        if (v_gri [v_kg] == MOVE_NORTH) {v_gri [v_kg] = MOVE_SOUTH; }
+                                        else if (v_gri [v_kg] == MOVE_SOUTH) {v_gri [v_kg] = MOVE_NORTH; }
 
         				if (v_slp > 0)
         				{
         					p_spieler_blink ();
-                                        
-        					if (v_bosskampf == FALSE) 
-        					{
-        						do 
-        						{
-        							p_spieler_move (v_sri);
-        							p_spieler_move (v_sri);
-        							p_spieler_move (v_sri);
-        							
-        							if (v_sri < 4)
-        							{ 
-        								++v_sri;
-        							}
-        							else
-        							{
-        								--v_sri;
-        							}
-        						}
-        						while (v_walk == FALSE);
-        						 
-        						/*else 
-        						{
-        							p_boss_treffer ();
-        					       }*/
-        					} 
         					p_hud_showLP ();                     
         				}
-        			}	    
-                                          
-                        }
-                }            
-        }  
+        			}                        
+                }
+
+            
+
+        }
+
 }
 
-void p_gegner_stop () BANKED
+void p_gegner_stop (void) BANKED
 {
-	for (v_a = 0; v_a != 3; ++v_a)
+	for (v_a = 0; v_a <= 3; ++v_a)
 	{
 		v_gxk [v_a] = 0; v_gyk [v_a] = 0; v_gri [v_a] = 0;
 		p_gegner_move (v_a);

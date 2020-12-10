@@ -24,6 +24,9 @@
 
 #include "globals.h"
 
+extern const UINT8 v_ganz [255];
+
+//void p_gegner_set_table (void) BANKED;
 extern void p_set_gegner (void) BANKED;
 
 #endif

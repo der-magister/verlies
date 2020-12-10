@@ -41,7 +41,7 @@ void main (void) NONBANKED
                 p_init_game2 ();
                 v_looptime = 7;  v_gameover = FALSE; v_attack = 0; v_bossloop = 255;
                 v_win = 0; gloop = 0;  v_itemlooptime = 255; v_kampflooptime = 255; v_aktion = FALSE;
-                p_lvl_status (); v_ausdauertimer = 0; v_sflimmtm = 255;
+                p_lvl_status (); v_ausdauertimer = 0; v_sflimmtm = 255; v_quit = 1;
                 
     
                 //game loop
@@ -53,7 +53,7 @@ void main (void) NONBANKED
                                 {
                                         p_gegner_move_horizontal ();
                                         p_gegner_move_vertical ();
-                                        //p_gegner_stachel ();
+                                        
                                         p_gegner_speer ();
                                                
                                         gloop = 0;
@@ -61,21 +61,22 @@ void main (void) NONBANKED
                                 p_gegner_koli_player ();   
                         }              
       
-                        if ((v_kampf == TRUE) || (v_bosskampf == TRUE)) p_gegner_koli_player ();
+                        //if ((v_kampf == TRUE) || (v_bosskampf == TRUE)) p_gegner_koli_player ();
       
     
                         if (v_looptime == 7)
                         {
                                 if (v_walk == TRUE) {
-                                        if ((joypad () & J_UP)) p_spieler_move (MOVE_NORTH);
-                                        else if ((joypad () & J_RIGHT)) p_spieler_move (MOVE_EAST);
-                                        else if ((joypad () & J_DOWN)) p_spieler_move (MOVE_SOUTH);
-                                        else if ((joypad () & J_LEFT)) p_spieler_move (MOVE_WEST);
+                                        if ((joypad () & J_UP)) p_spieler_move_north (); //p_spieler_move (MOVE_NORTH);
+                                        else if ((joypad () & J_DOWN)) p_spieler_move_south (); //p_spieler_move (MOVE_EAST);
+                                        else if ((joypad () & J_RIGHT)) p_spieler_move_east (); //p_spieler_move (MOVE_SOUTH);
+                                        else if ((joypad () & J_LEFT)) p_spieler_move_west (); //p_spieler_move (MOVE_WEST);
                                         else if ((joypad () & J_SELECT) && (v_info == FALSE) && (v_win == FALSE)) p_changeItem ();
+
                                 }
                                 if ((v_slp == 1) || (v_spr == 1)) p_hud_blink ();
                                 
-                                if (v_kampf == TRUE) p_gegner_koli_player ();
+                                
 
                                 v_looptime = 0;
                         }
@@ -125,7 +126,7 @@ void main (void) NONBANKED
                                 v_sused = FALSE;
                         }
 
-                        if (v_sflimmtm == 5) {
+                        if (v_sflimmtm == 40) {
                                 p_spieler_blink_off ();
                         }
     
@@ -180,9 +181,7 @@ void main (void) NONBANKED
                         v_walk = TRUE;
 
 			wait_vbl_done ();
-
 		}	
 	}
-
 	while (v_quit == 0); 
 }

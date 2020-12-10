@@ -18,14 +18,40 @@
 //
 //   Kontakt: magister@kabelmail.de
 
-//#pragma bank=13
+//#pragma bank=20
 
 #include "lvlgegner.h"
 #include "gegner.h"
 
+//lvl, anzahl, position
+/*const UINT8 table_gegner [1][2] = {
+        { 2, 0 },
+};
+
+const UINT8 table_gegner_dat [2][7] = {
+
+        { 48, 48, 104, 96, MOVE_NORTH, 2, 2 }, //lvl 205
+        { 48, 48, 80, 40, MOVE_NORTH, 2, 2}
+
+}; 
+
+void p_gegner_set_table (void) BANKED
+{
+        UINT8 l_anzahl, l_pos;
+
+        l_anzahl = table_gegner [0][0]; l_pos = table_gegner [0][1];
+
+        for (v_i = 0; v_i <= l_anzahl + 1; ++v_i) { 
+                p_gegner_set (v_i, table_gegner_dat [l_pos + v_i][0], table_gegner_dat [l_pos + v_i][1], table_gegner_dat [l_pos + v_i][2], table_gegner_dat [l_pos + v_i][3], 
+                              table_gegner_dat [l_pos + v_i][4], table_gegner_dat [l_pos + v_i][5], table_gegner_dat [l_pos + v_i][6]);
+        }
+}*/
+
 ///Gegnerinformationen
 void p_set_gegner (void) BANKED
 {
+        v_gspeed = 65;
+
         if (v_lvl == 5)
         {
             v_gspeed = 75;
@@ -586,5 +612,54 @@ void p_set_gegner (void) BANKED
                 p_gegner_set (1, 96, 96, 136, 64, MOVE_WEST,  2, 2);
                 p_gegner_set (2, 92, 92, 80, 104, MOVE_EAST, 2, 2);
         }
+        
+        else if (v_lvl == 205) {
+                p_gegner_set (0, 48, 48, 104, 96, MOVE_NORTH, 2, 2 );
+                p_gegner_set (1, 48, 48, 80, 40, MOVE_SOUTH, 2, 2);
+        }
+        else if (v_lvl == 206) {
+                p_gegner_set (0, 92, 92, 88, 56, MOVE_EAST, 2, 2);
+                p_gegner_set (1, 92, 92, 24, 104, MOVE_NORTH, 2, 2);
+                p_gegner_set (2, 48, 48, 136, 80, MOVE_WEST, 2, 2);
+        }
+        else if (v_lvl == 207) {
+                p_gegner_set (0, 80, 80, 80, 40, MOVE_SOUTH, 2, 2);
+        }
+        else if (v_lvl == 208) {
+                p_gegner_set (0, 48, 48, 128, 64, MOVE_SOUTH, 2, 2);
+                p_gegner_set (1, 48, 48, 80, 88, MOVE_SOUTH, 2, 2);
+                //p_gegner_set (2, 80, 80, 56, 71, MOVE_WEST, 2, 2);    
+        }
+        else if (v_lvl == 210) {
+                p_gegner_set (0, 92, 92, 72, 88, MOVE_WEST, 2, 2);
+                p_gegner_set (1, 92, 92, 96, 72, MOVE_EAST, 2, 2);
+                p_gegner_set (2, 80, 80, 88, 96, MOVE_SOUTH, 2, 2);
+        }
+        else if (v_lvl == 211) {
+                p_gegner_set (0, 48, 48, 136, 48, MOVE_SOUTH, 2, 2);
+                p_gegner_set (1, 88, 84, 32, 64, MOVE_DOWN, 127, 3);
+                p_gegner_set (2, 80, 80, 112, 96, MOVE_WEST, 2, 2);
+        }
+        else if (v_lvl == 212) {
+                p_gegner_set (0, 92, 92, 80, 72, MOVE_SOUTH, 2, 2);   
+        }
+        else if (v_lvl == 213) {
+                p_gegner_set (0, 88, 84, 104, 88, MOVE_DOWN, 127, 3);
+                p_gegner_set (1, 80, 80, 80, 64, MOVE_SOUTH, 2, 2);       
+        }
+        else if (v_lvl == 215) {
+                p_gegner_set (0, 48, 48, 24, 64, MOVE_EAST, 2, 2);
+                p_gegner_set (1, 88, 84, 32, 104, MOVE_DOWN, 127, 3);
+                p_gegner_set (2, 92, 92, 112, 32, MOVE_SOUTH, 2, 2);      
+        }
+        else if (v_lvl == 216) {
+                p_gegner_set (0, 80, 80, 24, 72, MOVE_SOUTH, 2, 2);
+        }
+        else if (v_lvl == 217) {
+                p_gegner_set (0, 48, 48, 80, 72, MOVE_WEST, 2, 2);
+        }
 
+
+
+        //p_gegner_set_table ();
 }
