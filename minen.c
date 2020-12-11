@@ -29,6 +29,7 @@
 #include "daten/tilesets/tilesets.h"
 
 #include "daten/lvl/lvldatminen-1.h"
+#include "daten/lvl/lvldatminen-2.h"
 #include "daten/lvl/lvldatrotgebirge.h"
 
 #include "daten/txt/schilder/schildertxt.h"
@@ -210,6 +211,13 @@ void p_lvl217 (void) BANKED
 	if (v_smk == 18) {
 		p_engine_loadMap (v_lvl213, BANK_19, BANK_17);
 		p_engine_changeLvl (213, 144, 32);
+	}
+	else if (v_smk == 85) {
+		if (v_loch [1] == 1) {
+			p_engine_loadTileset (BANK_2, 2, 34, mine2, BANK_17);
+			p_engine_loadMap (v_lvl220, BANK_19, BANK_17);
+			p_engine_changeLvl (220, v_sxk, v_syk);
+			//p_gui_show_location (lrotgebirge);
+		}
 	}	
 }
-

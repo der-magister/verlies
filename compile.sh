@@ -39,6 +39,7 @@ lcc -Wa-l -Wl-m -Wl-j -Wf-bo18 -c -o obj/lvldatgebirgspfad.o daten/lvl/lvldatgeb
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo18 -c -o obj/lvldatzwergenheim.o daten/lvl/lvldatzwergenheim.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo19 -c -o obj/lvldatrotgebirge.o daten/lvl/lvldatrotgebirge.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo19 -c -o obj/lvldatminen-1.o daten/lvl/lvldatminen-1.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo19 -c -o obj/lvldatminen-2.o daten/lvl/lvldatminen-2.c
 
 #other
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo3 -c -o obj/gameover.o daten/other/gameover.c
