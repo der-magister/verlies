@@ -214,10 +214,10 @@ void p_lvl217 (void) BANKED
 	}
 	else if (v_smk == 85) {
 		if (v_loch [1] == 1) {
-			p_engine_loadTileset (BANK_2, 2, 34, mine2, BANK_17);
+			p_engine_loadTileset (BANK_2, 1, 37, mine2, BANK_17);
 			p_engine_loadMap (v_lvl220, BANK_19, BANK_17);
 			p_engine_changeLvl (220, v_sxk, v_syk);
-			//p_gui_show_location (lrotgebirge);
+			p_gui_show_location (lmine2);
 		}
 	}	
 }

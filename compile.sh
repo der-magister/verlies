@@ -1,10 +1,17 @@
 #!/bin/bash
 
+kill -9 $(ps aux | grep bgb.exe | cut -d ' ' -f 2)
+
 date
 
-echo "Lösche alte Objektdateien..."
+echo "Lösche alte Dateien..."
 
 rm -rf obj/*.o
+
+if [ -f verlies.gb ]
+then 
+	rm -rf verlies.gb
+fi
 
 ## Daten
 
@@ -175,6 +182,7 @@ lcc -Wa-l -Wl-m -Wl-j -Wf-bo17 -c -o obj/gebirgspfad.o gebirgspfad.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo17 -c -o obj/zwergenheim.o zwergenheim.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo17 -c -o obj/rotgebirge.o rotgebirge.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo17 -c -o obj/minen.o minen.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo17 -c -o obj/minen2.o minen2.c
 
 #main
 lcc -Wa-l -Wl-m -Wl-j -Wa-l -Wl-m -Wl-j -c -o obj/verlies.o verlies.c
@@ -213,5 +221,11 @@ date
 
 echo "Starte Emulation"
 
-mgba-qt ../verlies.gb &>/dev/null
+if [ -f ../verlies.gb ]
+then
+	#mgba-qt ../verlies.gb &>/dev/null
 
+	bgb ../verlies.gb &>/dev/null
+fi
+
+exit 0

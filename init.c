@@ -45,7 +45,7 @@
 
 
 //tmp
-#include "daten/lvl/lvldatminen-1.h"
+#include "daten/lvl/lvldatminen-2.h"
 
 void p_init_game1 (void) NONBANKED
 {
@@ -74,7 +74,7 @@ void p_init_game1 (void) NONBANKED
         v_timer = 0;
 
         //tmp
-        p_engine_loadTileset (BANK_2, 2, 34, mine, BANK_17);
+        p_engine_loadTileset (BANK_2, 1, 37, mine2, BANK_17);
 
         
 }
@@ -109,10 +109,10 @@ void p_init_game2 (void) NONBANKED
         //tmp für tests
         
         v_keyflag = 1;
-        p_engine_loadMap (v_lvl205, BANK_19, BANK_17);
-        p_engine_changeLvl (205, 80, 120);      
+        p_engine_loadMap (v_lvl220, BANK_19, BANK_17);
+        p_engine_changeLvl (220, 80, 56);      
         v_keyflag = 0;
-        p_gui_show_location (lmine);
+        p_gui_show_location (lmine2);
 
         v_questen [0] = 13; v_sgo = 0; v_stp = 1;
         v_spr = 4; ; v_questen [2] = 2;

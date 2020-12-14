@@ -38,6 +38,7 @@
 #include "zwergenheim.h"
 #include "rotgebirge.h"
 #include "minen.h"
+#include "minen2.h"
 
 void p_lvl_whichLvL (void) BANKED
 {
@@ -236,6 +237,18 @@ void p_lvl_whichLvL (void) BANKED
         else if (v_lvl == 215) p_lvl215 ();
         else if (v_lvl == 216) p_lvl216 ();
         else if (v_lvl == 217) p_lvl217 ();
+        else if (v_lvl == 220) p_lvl220 (); //minen tg1 start
+        else if (v_lvl == 221) p_lvl221 ();
+        else if (v_lvl == 222) p_lvl222 ();
+        else if (v_lvl == 223) p_lvl223 ();
+        else if (v_lvl == 224) p_lvl224 ();
+        else if (v_lvl == 225) p_lvl225 ();
+        else if (v_lvl == 226) p_lvl226 ();
+        else if (v_lvl == 227) p_lvl227 ();
+        else if (v_lvl == 228) p_lvl228 ();
+        else if (v_lvl == 229) p_lvl229 ();
+        else if (v_lvl == 230) p_lvl230 ();
+        else if (v_lvl == 231) p_lvl231 (); 
 }
 
 void p_lvl_status (void) BANKED

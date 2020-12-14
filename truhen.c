@@ -217,21 +217,36 @@ void p_truhe_status () __banked
 		if (v_truhen [49] == 1) { p_truhe_change (14, 1); }
 		if (v_truhen [50] == 1) { p_truhe_change (14, 12); }
 	}
-    else if (v_lvl == 169) { if (v_truhen [51] == 1) p_truhe_change (15, 12); }
-    else if (v_lvl == 171) { if (v_truhen [52] == 1) p_truhe_change (5, 1); }
-    else if (v_lvl == 174) { if (v_truhen [53] == 1) p_truhe_change (1, 1); }
-    else if (v_lvl == 168) { if (v_truhen [54] == 1) p_truhe_change (8, 1); }
-    else if (v_lvl == 185) { if (v_truhen [55] == 1) p_truhe_change (8, 12); }
-    else if (v_lvl == 191) { if (v_truhen [56] == 1) p_truhe_change (15, 1); }
-    else if (v_lvl == 195) { if (v_truhen [57] == 1) p_truhe_change (1, 12); }
-    else if (v_lvl == 197) { if (v_truhen [58] == 1) p_truhe_change (3, 1); }
-    else if (v_lvl == 202) { if (v_truhen [59] == 1) p_truhe_change (1, 12); }
-    else if (v_lvl == 192) { if (v_truhen [60] == 1) p_truhe_change (15, 12); }
-    else if (v_lvl == 201) { if (v_truhen [61] == 1) p_truhe_change (7, 12); }
-    else if (v_lvl == 206) { if (v_truhen [62] == 1) p_truhe_change (1, 12); }
-    else if (v_lvl == 208) { if (v_truhen [63] == 1) p_truhe_change (14, 11); }
-    else if (v_lvl == 213) { if (v_truhen [64] == 1) p_truhe_change (13, 12); }
-    else if (v_lvl == 216) { if (v_truhen [65] == 1) p_truhe_change (1, 12); }
+            else if (v_lvl == 169) { if (v_truhen [51] == 1) p_truhe_change (15, 12); }
+            else if (v_lvl == 171) { if (v_truhen [52] == 1) p_truhe_change (5, 1); }
+            else if (v_lvl == 174) { if (v_truhen [53] == 1) p_truhe_change (1, 1); }
+            else if (v_lvl == 168) { if (v_truhen [54] == 1) p_truhe_change (8, 1); }
+            else if (v_lvl == 185) { if (v_truhen [55] == 1) p_truhe_change (8, 12); }
+            else if (v_lvl == 191) { if (v_truhen [56] == 1) p_truhe_change (15, 1); }
+            else if (v_lvl == 195) { if (v_truhen [57] == 1) p_truhe_change (1, 12); }
+            else if (v_lvl == 197) { if (v_truhen [58] == 1) p_truhe_change (3, 1); }
+            else if (v_lvl == 202) { if (v_truhen [59] == 1) p_truhe_change (1, 12); }
+            else if (v_lvl == 192) { if (v_truhen [60] == 1) p_truhe_change (15, 12); }
+            else if (v_lvl == 201) { if (v_truhen [61] == 1) p_truhe_change (7, 12); }
+            else if (v_lvl == 206) { if (v_truhen [62] == 1) p_truhe_change (1, 12); }
+            else if (v_lvl == 208) { if (v_truhen [63] == 1) p_truhe_change (14, 11); }
+            else if (v_lvl == 213) { if (v_truhen [64] == 1) p_truhe_change (13, 12); }
+            else if (v_lvl == 216) { if (v_truhen [65] == 1) p_truhe_change (1, 12); }
+            else if (v_lvl == 221) { if (v_truhen [66] == 1) p_truhe_change (15, 12); }
+            else if (v_lvl == 222) { if (v_truhen [67] == 1) p_truhe_change (2, 12); }
+            else if (v_lvl == 224) { 
+                if (v_truhen [68] == 1) p_truhe_change (3, 12); 
+               if (v_truhen [69] == 1) p_truhe_change (15, 12); 
+                if (v_truhen [70] == 1) p_truhe_change (1, 1); 
+        }
+        else if (v_lvl == 225) { 
+                if (v_truhen [71] == 1) p_truhe_change (1, 1);
+                if (v_truhen [72] == 1) p_truhe_change (15, 2);
+        }
+
+
+
+
 }
 
 ///Goldtruhe (XK, YK, Truhennummer, Anzahl des Goldes)
