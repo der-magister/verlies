@@ -1,6 +1,6 @@
 #!/bin/bash
 
-kill -9 $(ps aux | grep bgb.exe | cut -d ' ' -f 2)
+kill -9 $(ps aux | grep mgba-qt | grep -v grep | cut -d ' ' -f 2)
 
 date
 
@@ -223,9 +223,9 @@ echo "Starte Emulation"
 
 if [ -f ../verlies.gb ]
 then
-	#mgba-qt ../verlies.gb &>/dev/null
+	mgba-qt ../verlies.gb &>/dev/null &
 
-	bgb ../verlies.gb &>/dev/null
+	#bgb ../verlies.gb &>/dev/null
 fi
 
 exit 0

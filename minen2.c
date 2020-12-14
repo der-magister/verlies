@@ -118,6 +118,8 @@ void p_lvl225 (void) BANKED
 
 void p_lvl226 (void) BANKED
 {
+	p_truhe_ausdauertrank (184, 73);
+
 	if (v_smk == 8) {
 		p_engine_loadMap (v_lvl224, BANK_19, BANK_17);
 		p_engine_changeLvl (224, 80, 120);
