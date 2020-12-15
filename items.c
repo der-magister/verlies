@@ -34,7 +34,7 @@ void p_items_init (void) BANKED
 
 void p_drawSelectItem (void) __banked
 {
-        if (v_selectItem == 0) {v_tile [0] = 1; }
+        if (v_selectItem == 0) {v_tile [0] = 127; }
         else if (v_selectItem == 1) { v_tile [0] = 62; } //Heiltrank
         else if (v_selectItem == 2) { v_tile [0] = 61; } //Ausdauertrank
         else if (v_selectItem == 4) { v_tile [0] = 51; } //spitzhacke

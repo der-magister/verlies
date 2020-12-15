@@ -18,4 +18,4 @@
 //
 //   Kontakt: magister@skywave-2000.de
 
-#pragma bank=
+//#pragma bank=

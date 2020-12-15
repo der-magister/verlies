@@ -54,6 +54,9 @@ const unsigned char v_kdat_zwergenheim [28] = {3, 12, 13, 14, 15, 16, 17, 18, 19
 //Kolisionsdaten Mine EG
 const unsigned char v_kdat_mine_eg [28] = { 3, 20, 21, 25, 26, 27, 28, 29, 30, 31, 36, 37, 43, 44, 45, 46, 0,0,0,0,0,0,0,0,0,0,0,0 };
 
+//Mine TG1
+const unsigned char v_kdat_mine_tg1 [28] = { 1, 3, 8, 9, 10, 11, 20, 21, 24, 25, 28, 29, 30, 31, 36, 37, 0,0,0,0,0,0,0,0,0,0,0,0 };
+
 UINT8 p_spieler_koli (void) __banked
 {
 	for (v_a = 0; v_a != 28; ++v_a)
@@ -99,7 +102,10 @@ UINT8 p_spieler_koli (void) __banked
                 else if ((v_lvl >= 205) && (v_lvl <= 217)) {
                         if (v_tile [1] == v_kdat_mine_eg [v_a]) return FALSE;
                 }
-
+                //Mine TG1
+                else if ((v_lvl >= 220) && (v_lvl <= 231)) {
+                        if (v_tile [1] == v_kdat_mine_eg [v_a]) return FALSE;
+                }
         }
         return TRUE;
 }

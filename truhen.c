@@ -241,7 +241,11 @@ void p_truhe_status () __banked
         }
         else if (v_lvl == 225) { 
                 if (v_truhen [71] == 1) p_truhe_change (1, 1);
-                if (v_truhen [72] == 1) p_truhe_change (15, 2);
+                if (v_truhen [72] == 1) p_truhe_change (15, 1);
+        }
+        else if (v_lvl == 226) {
+                if (v_truhen [73] == 1) p_truhe_change (4, 12);
+                if (v_truhen [74] == 1) p_truhe_change (11, 12);
         }
 
 
@@ -458,9 +462,9 @@ void p_truhe_heiltrank (UINT8 l_smk, UINT8 v_tnr) __banked
                                 v_tile [0] = 62;
                                 p_engine_set_tile (3, 1, 2);
                                 //SHOW_WIN;
-                                p_truhe_status ();
                                 ++v_sht;
                                 ++v_truhen [v_tnr];
+                                 p_truhe_status ();
                         }
                         else
                         {
