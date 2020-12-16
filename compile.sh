@@ -215,17 +215,17 @@ obj=$(ls | grep [.][o])
 
 echo "Erstelle Rom..."
 
-lcc -Wa-l -Wl-m -Wl-j -Wl-yt0x019 -Wl-yo256 -o ../verlies.gb $obj
+lcc -Wa-l -Wl-m -Wl-j -Wl-yt0x019 -Wl-yo256 -Wm-yn"VERLIES" -o ../verlies.gb $obj
 
 date
 
 echo "Starte Emulation"
 
-if [ -f ../verlies.gb ]
-then
-	#mgba-qt ../verlies.gb &>/dev/null &
-
-	bgb ../verlies.gb &>/dev/null
-fi
+#if [ -f ../verlies.gb ]
+#then
+#	#mgba-qt ../verlies.gb &>/dev/null &
+#
+#	bgb ../verlies.gb &>/dev/null
+#fi
 
 exit 0

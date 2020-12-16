@@ -104,7 +104,7 @@ UINT8 p_spieler_koli (void) __banked
                 }
                 //Mine TG1
                 else if ((v_lvl >= 220) && (v_lvl <= 231)) {
-                        if (v_tile [1] == v_kdat_mine_eg [v_a]) return FALSE;
+                        if (v_tile [1] == v_kdat_mine_tg1 [v_a]) return FALSE;
                 }
         }
         return TRUE;
