@@ -92,6 +92,7 @@ void p_lvl224 (void) BANKED
 	p_truhe_gold (183, 68, 2);
 	p_truhe_gold (195, 69, 2);
 	p_truhe_gold (37, 70, 1);
+	p_truhe_erz (49, 75);
 
 	if (v_smk == 144) {
 		p_engine_loadMap (v_lvl223, BANK_19, BANK_17);

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-kill -9 $(ps a | grep bgb.exe | grep -v grep | cut -d ' ' -f1)
+#kill -9 $(ps a | grep bgb.exe | grep -v grep | cut -d ' ' -f1)
 
 date
 
@@ -166,6 +166,7 @@ lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/magischer_stein.o daten/txt/truhen/magi
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/aspektwaldtxt.o daten/txt/truhen/aspektwald.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/kraeuterbeuteltxt.o daten/txt/truhen/kraeuterbeutel.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/schaufeltxt.o daten/txt/truhen/schaufel.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/erztxt.o daten/txt/truhen/erz.c
 
 ## Daten Ende
 

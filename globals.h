@@ -251,6 +251,8 @@ extern UINT8 v_sri;
 ///Flag, o Spieler getroffen wurden (TRUE = ja, FALSE = nein)
 extern UINT8 v_stref;
 
+extern UINT8 v_serz;
+
 ///Portalrune
 extern UINT8 v_portalrune;
 
