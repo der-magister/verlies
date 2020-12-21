@@ -12,3 +12,4 @@ extern const unsigned char lzwergenheim[];
 extern const unsigned char lrotgebirge[];
 extern const unsigned char lmine[];
 extern const unsigned char lmine2[];
+extern const unsigned char lmine3[];

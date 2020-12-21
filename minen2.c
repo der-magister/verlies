@@ -24,11 +24,16 @@
 #include "schilder.h"
 #include "truhen.h"
 #include "umgebung.h"
+#include "locations.h"
 
 #include "daten/lvl/lvldatminen-1.h"
 #include "daten/lvl/lvldatminen-2.h"
+#include "daten/lvl/lvldatminen-3.h"
+
+#include "daten/tilesets/tilesets.h"
 
 #include "daten/txt/schilder/schildertxt.h"
+#include "daten/txt/locations/locations.h"
 
 void p_lvl220 (void) BANKED
 {
@@ -188,5 +193,13 @@ void p_lvl231 (void) BANKED
 	if (v_smk == 106) {
 		p_engine_loadMap (v_lvl229, BANK_19, BANK_17);
 		p_engine_changeLvl (229, 16, 64);
+	}
+	else if (v_smk == 57) {
+		if (v_loch [2] == 1) {
+			p_engine_loadTileset (BANK_2, 1, 37, mine3, BANK_17);
+			p_engine_loadMap (v_lvl233, BANK_19, BANK_17);
+			p_engine_changeLvl (233, v_sxk, v_syk);
+			p_gui_show_location (lmine3);
+		}
 	}
 }

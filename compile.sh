@@ -18,7 +18,7 @@ fi
 echo "Kompiliere..."
 
 #hud
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo8 -c -o obj/hudgui.o daten/hud/hudgui.c
+/opt/gbdk/bin/lcc -Wa-l -Wl-m -Wl-j -Wf-bo8 -c -o obj/hudgui.o daten/hud/hudgui.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo8 -c -o obj/v_infoscreen.o daten/hud/v_infoscreen.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo8 -c -o obj/v_statscreen.o daten/hud/v_statscreen.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/rahmen.o gfx/rahmen.c
@@ -47,6 +47,7 @@ lcc -Wa-l -Wl-m -Wl-j -Wf-bo18 -c -o obj/lvldatzwergenheim.o daten/lvl/lvldatzwe
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo19 -c -o obj/lvldatrotgebirge.o daten/lvl/lvldatrotgebirge.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo19 -c -o obj/lvldatminen-1.o daten/lvl/lvldatminen-1.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo19 -c -o obj/lvldatminen-2.o daten/lvl/lvldatminen-2.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo19 -c -o obj/lvldatminen-3.o daten/lvl/lvldatminen-3.c
 
 #other
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo3 -c -o obj/gameover.o daten/other/gameover.c
@@ -184,6 +185,8 @@ lcc -Wa-l -Wl-m -Wl-j -Wf-bo17 -c -o obj/zwergenheim.o zwergenheim.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo17 -c -o obj/rotgebirge.o rotgebirge.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo17 -c -o obj/minen.o minen.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo17 -c -o obj/minen2.o minen2.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo17 -c -o obj/minen3.o minen3.c
+
 
 #main
 lcc -Wa-l -Wl-m -Wl-j -Wa-l -Wl-m -Wl-j -c -o obj/verlies.o verlies.c
@@ -220,7 +223,7 @@ lcc -Wa-l -Wl-m -Wl-j -Wl-yt0x019 -Wl-yo256 -Wm-yn"VERLIES" -o ../verlies.gb $ob
 
 date
 
-echo "Starte Emulation"
+#echo "Starte Emulation"
 
 #if [ -f ../verlies.gb ]
 #then

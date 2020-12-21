@@ -39,6 +39,7 @@
 #include "rotgebirge.h"
 #include "minen.h"
 #include "minen2.h"
+#include "minen3.h"
 
 void p_lvl_whichLvL (void) BANKED
 {
@@ -249,6 +250,10 @@ void p_lvl_whichLvL (void) BANKED
         else if (v_lvl == 229) p_lvl229 ();
         else if (v_lvl == 230) p_lvl230 ();
         else if (v_lvl == 231) p_lvl231 (); 
+        else if (v_lvl == 233) p_lvl233 (); //minen tg2 start
+        else if (v_lvl == 234) p_lvl234 (); 
+        else if (v_lvl == 235) p_lvl235 (); 
+        else if (v_lvl == 236) p_lvl236 (); 
 }
 
 void p_lvl_status (void) BANKED

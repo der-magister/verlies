@@ -14,3 +14,4 @@ extern const unsigned char gebirgspfad[];
 extern const unsigned char zwergenheim[];
 extern const unsigned char mine[];
 extern const unsigned char mine2[];
+extern const unsigned char mine3[];
