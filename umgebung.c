@@ -172,4 +172,5 @@ void p_umgebung_state (void) __banked
         else if (v_lvl == 221) { if (v_stein [46] == 1) p_stein_busch_clear (7, 10); }
         else if (v_lvl == 229) { if (v_stein [47] == 1) p_stein_busch_clear (14, 5); }
         else if (v_lvl == 231) { if (v_loch [2] == 1) p_loch_auf (3, 3); }
+        else if (v_lvl == 233) { if (v_stein [48] == 1) p_stein_busch_clear (14, 5); } 
 }

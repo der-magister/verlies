@@ -46,6 +46,7 @@
 #include "daten/txt/truhen/kraeuterbeutel.h"
 #include "daten/txt/truhen/schaufel.h"
 #include "daten/txt/truhen/erz.h"
+#include "daten/txt/truhen/zauberstaub.h"
 
 void p_truhe_init (void) BANKED
 {
@@ -839,6 +840,24 @@ void p_truhe_erz (UINT8 l_mk, UINT8 l_tnr) BANKED
                 ++v_truhen [l_tnr];
                 p_truhe_status ();
                 ++v_serz;
+            
+        }
+        else {
+            p_engine_set_txt (truheleer);
+        }
+        p_engine_A ();
+        p_engine_after_txt ();
+    }               
+}
+
+void p_truhe_zauberstaub (UINT8 l_mk, UINT8 l_tnr) BANKED
+{
+        if ((v_keyflag == 1) && (v_smk == l_mk)) {
+                if (v_truhen [l_tnr] == 0) {
+                p_engine_set_txt (zauberstaub);
+                ++v_truhen [l_tnr];
+                p_truhe_status ();
+                ++v_sstaub;
             
         }
         else {

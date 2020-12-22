@@ -21,10 +21,14 @@
 #include "minen3.h"
 
 #include "engine.h"
+#include "truhen.h"
+#include "umgebung.h"
 
 #include "daten/lvl/lvldatminen-3.h"
 
 void p_lvl233 (void) BANKED {
+	p_stein (104, 48);
+
 	if (v_smk == 106) {
 		p_engine_loadMap (v_lvl234, BANK_19, BANK_17);
 		p_engine_changeLvl (234, 16, 64);
