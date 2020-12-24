@@ -304,6 +304,10 @@ void p_waechter_zwergenheim (void) BANKED {
         p_engine_after_txt ();
 }
 
+void p_hueterin (void) BANKED {
+        
+} 
+
 ///NPC Helfer XK, YK, Typ: 1 Heiltrank x 1, 2 Proviant x 2, 3 Gold x 5, Questnr
 /*void p_npc_helfer (UINT8 v_nxk, UINT8 v_nyk, UINT8 v_ntyp, UINT8 v_nqnr) __banked
 {
