@@ -47,6 +47,7 @@
 #include "daten/txt/truhen/schaufel.h"
 #include "daten/txt/truhen/erz.h"
 #include "daten/txt/truhen/zauberstaub.h"
+#include "daten/txt/truhen/portalrune.h"
 
 void p_truhe_init (void) BANKED
 {
@@ -238,7 +239,7 @@ void p_truhe_status () __banked
             else if (v_lvl == 222) { if (v_truhen [67] == 1) p_truhe_change (2, 12); }
             else if (v_lvl == 224) { 
                 if (v_truhen [68] == 1) p_truhe_change (3, 12); 
-               if (v_truhen [69] == 1) p_truhe_change (15, 12); 
+                if (v_truhen [69] == 1) p_truhe_change (15, 12); 
                 if (v_truhen [70] == 1) p_truhe_change (1, 1); 
                 if (v_truhen [75] == 1) p_truhe_change (13, 1);
         }
@@ -252,11 +253,8 @@ void p_truhe_status () __banked
         }
         else if (v_lvl == 235) {
                 if (v_truhen [75] == 1) p_truhe_change (13, 1);
+                if (v_truhen [76] == 1) p_truhe_change (6, 12);
         }
-
-
-
-
 }
 
 ///Goldtruhe (XK, YK, Truhennummer, Anzahl des Goldes)
@@ -880,4 +878,22 @@ void p_truhe_zauberstaub (UINT8 l_mk, UINT8 l_tnr) BANKED
                 p_engine_A ();
                 p_engine_after_txt ();
         }               
+}
+
+void p_truhe_portalrune (UINT8 l_mk, UINT8 l_tnr) BANKED
+{
+    if ((v_keyflag == 1) && (v_smk == l_mk)) {
+                if (v_truhen [l_tnr] == 0) {
+                p_engine_set_txt (portalrune);
+                ++v_truhen [l_tnr];
+                p_truhe_status ();
+                ++v_serz;
+            
+        }
+        else {
+            p_engine_set_txt (truheleer);
+        }
+        p_engine_A ();
+        p_engine_after_txt ();
+    }                  
 }

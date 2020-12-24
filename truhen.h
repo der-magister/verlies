@@ -45,6 +45,7 @@ extern void p_truhe_kraeuterbeutel (void) BANKED;
 extern void p_truhe_schaufel (void) BANKED;
 extern void p_truhe_erz (UINT8 l_mk, UINT8 l_tnr) BANKED;
 extern void p_truhe_zauberstaub (UINT8 l_mk, UINT8 l_tnr) BANKED;
+extern void p_truhe_portalrune (UINT8 l_mk, UINT8 l_tnr) BANKED;
 
 /**Truhe die Runen beinhaltet
    XK, YK der Truhe, Truhennummer**/

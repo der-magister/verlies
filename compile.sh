@@ -169,6 +169,7 @@ lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/kraeuterbeuteltxt.o daten/txt/truhen/kr
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/schaufeltxt.o daten/txt/truhen/schaufel.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/erztxt.o daten/txt/truhen/erz.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/zauberstaubtxt.o daten/txt/truhen/zauberstaub.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/portalrunetxt.o daten/txt/truhen/portalrune.c
 
 ## Daten Ende
 
