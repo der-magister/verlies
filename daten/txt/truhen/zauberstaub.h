@@ -8,7 +8,7 @@
    Section       : 
    Bank          : 0
    Map size      : 18 x 4
-   Tile set      : Z:\home\magister\repos\verlies\gfx\entwuerfe\tilesets\mine.gbr
+   Tile set      : Z:\home\magister\repos\verlies\gfx\entwuerfe\tilesets\font.gbr
    Plane count   : 1 plane (8 bits)
    Plane order   : Tiles are continues
    Tile offset   : 0

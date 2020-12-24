@@ -52,6 +52,8 @@ void p_lvl234 (void) BANKED {
 }
 
 void p_lvl235 (void) BANKED {
+	p_truhe_zauberstaub (49, 75);
+
 	if (v_smk == 4) {
 		p_engine_loadMap (v_lvl234, BANK_19, BANK_17);
 		p_engine_changeLvl (234, 48, 120);

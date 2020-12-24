@@ -86,7 +86,6 @@ void p_truhe_status () __banked
 	{
 		if (v_truhen [2] == 1)
 		{
-                        p_truhe_change (15, 1);
 		}
 	}
         else if (v_lvl == 9)
@@ -94,6 +93,7 @@ void p_truhe_status () __banked
                 if (v_truhen [3] == 1)
                 {
                         p_truhe_change (15, 12);
+                        p_truhe_change (15, 1);
                 }
         }
         else if (v_lvl == 12)
@@ -249,6 +249,9 @@ void p_truhe_status () __banked
         else if (v_lvl == 226) {
                 if (v_truhen [73] == 1) p_truhe_change (4, 12);
                 if (v_truhen [74] == 1) p_truhe_change (11, 12);
+        }
+        else if (v_lvl == 235) {
+                if (v_truhen [75] == 1) p_truhe_change (13, 1);
         }
 
 
@@ -854,16 +857,27 @@ void p_truhe_zauberstaub (UINT8 l_mk, UINT8 l_tnr) BANKED
 {
         if ((v_keyflag == 1) && (v_smk == l_mk)) {
                 if (v_truhen [l_tnr] == 0) {
-                p_engine_set_txt (zauberstaub);
-                ++v_truhen [l_tnr];
-                p_truhe_status ();
-                ++v_sstaub;
+                        if (v_sstaub < v_smstaub ) { 
+                                v_tile[0] = 100;
+                                ++v_sstaub;
+                                ++v_truhen [l_tnr];
+                                HIDE_WIN;
+                                p_engine_set_txt (erhalten);
+                                p_engine_set_tile (1, 1, 2);
+                                v_tile [0] = 63;
+                                p_engine_set_tile (3, 1, 2);
+                                SHOW_WIN;
+                                p_truhe_status ();
+                   }
+                   else {
+                        p_engine_set_txt (zauberstaub);
+                   }  
             
-        }
-        else {
-            p_engine_set_txt (truheleer);
-        }
-        p_engine_A ();
-        p_engine_after_txt ();
-    }               
+                }
+                else {
+                        p_engine_set_txt (truheleer);
+                }
+                p_engine_A ();
+                p_engine_after_txt ();
+        }               
 }
