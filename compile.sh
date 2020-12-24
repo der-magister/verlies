@@ -133,6 +133,7 @@ lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/pilzwesen2txt.o daten/txt/npcs/pilzwese
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/vanyratxt.o daten/txt/npcs/vanyra.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/othertxt.o daten/txt/npcs/others.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/zylratxt1.o daten/txt/npcs/zylra-1.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/hueterintxt.o daten/txt/npcs/hueterin.c
 
 # Texte Portale
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo8 -c -o obj/portal.o daten/txt/portale/portal.c
@@ -170,6 +171,7 @@ lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/schaufeltxt.o daten/txt/truhen/schaufel
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/erztxt.o daten/txt/truhen/erz.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/zauberstaubtxt.o daten/txt/truhen/zauberstaub.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/portalrunetxt.o daten/txt/truhen/portalrune.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/aspektbergtxt.o daten/txt/truhen/aspektberg.c
 
 ## Daten Ende
 

@@ -48,6 +48,8 @@
 #include "daten/txt/truhen/erz.h"
 #include "daten/txt/truhen/zauberstaub.h"
 #include "daten/txt/truhen/portalrune.h"
+#include "daten/txt/truhen/aspektberg.h"
+
 
 void p_truhe_init (void) BANKED
 {
@@ -255,6 +257,7 @@ void p_truhe_status () __banked
                 if (v_truhen [75] == 1) p_truhe_change (13, 1);
                 if (v_truhen [76] == 1) p_truhe_change (6, 12);
         }
+        else if (v_lvl == 236) { if (v_truhen [77] == 1) p_truhe_change (8, 12); }
 }
 
 ///Goldtruhe (XK, YK, Truhennummer, Anzahl des Goldes)
@@ -896,4 +899,27 @@ void p_truhe_portalrune (UINT8 l_mk, UINT8 l_tnr) BANKED
         p_engine_A ();
         p_engine_after_txt ();
     }                  
+}
+
+void p_truhe_aspekt_berg (void) __banked
+{
+        if (v_keyflag == 1)
+        {
+                if (v_smk == 188)
+                {
+                        if (v_truhen [77] == 0)
+                        {
+                                p_engine_set_txt (aspektberg);
+                                ++v_truhen [77];
+                                v_questen [0] = 16;
+                                p_truhe_status ();
+                        }
+                        else
+                        {
+                            p_engine_set_txt (truheleer);
+                    }
+                        p_engine_A ();
+                        p_engine_after_txt ();
+                }
+        }
 }

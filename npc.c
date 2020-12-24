@@ -42,6 +42,7 @@
 #include "daten/txt/other/handelnichtmoeglich.h"
 #include "daten/txt/npcs/vanyra.h"
 #include "daten/txt/npcs/zylra-1.h"
+#include "daten/txt/npcs/hueterin.h"
 #include "daten/txt/npcs/others.h"
 
 /*void p_nicht_genug_gold () __banked
@@ -305,7 +306,18 @@ void p_waechter_zwergenheim (void) BANKED {
 }
 
 void p_hueterin (void) BANKED {
-        
+        if (v_smk == 152)
+        {
+                if (v_questen [0] == 14) {
+                        p_engine_set_txt (hueterintxt);
+                        p_engine_A ();
+                        p_engine_after_txt ();
+                        v_questen [0] = 15;
+                        p_lvl_status ();
+                }
+               
+               
+        }
 } 
 
 ///NPC Helfer XK, YK, Typ: 1 Heiltrank x 1, 2 Proviant x 2, 3 Gold x 5, Questnr

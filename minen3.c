@@ -23,6 +23,7 @@
 #include "engine.h"
 #include "truhen.h"
 #include "umgebung.h"
+#include "npc.h"
 
 #include "daten/lvl/lvldatminen-3.h"
 
@@ -63,6 +64,9 @@ void p_lvl235 (void) BANKED {
 }
 
 void p_lvl236 (void) BANKED {
+	p_hueterin ();
+	p_truhe_aspekt_berg ();
+
 	if (v_smk == 90) {
 		p_engine_loadMap (v_lvl234, BANK_19, BANK_17);
 		p_engine_changeLvl (234, 144, 64);

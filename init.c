@@ -114,9 +114,11 @@ void p_init_game2 (void) NONBANKED
         v_keyflag = 0;
         p_gui_show_location (lmine3);
 
-        v_questen [0] = 13; v_sgo = 0; v_stp = 1;
+        v_questen [0] = 14; v_sgo = 0; v_stp = 1;
         v_spr = 4; ; v_questen [2] = 2;
         v_spitzhacke = TRUE; v_sichel = TRUE; v_schaufel = TRUE; v_slp = 5; v_smlp = 5;
+
+        //tmp ende
         
         p_hud_show ();
 }
