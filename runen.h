@@ -4,6 +4,7 @@
 
 #include "globals.h"
 
+extern void p_portalrune (void) BANKED;
 
 
 

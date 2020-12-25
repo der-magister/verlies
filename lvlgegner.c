@@ -587,14 +587,16 @@ void p_set_gegner (void) BANKED
                 p_gegner_set (2, 92, 92, 128, 96, MOVE_NORTH, 2, 2);
         }
         else if (v_lvl == 198) {
-                p_gegner_set (0, 96, 96, 80, 40, MOVE_WEST, 2, 2);
-                p_gegner_set (1, 60, 60, 128, 48, MOVE_SOUTH, 2, 2);
-                p_gegner_set (2, 92, 92, 64, 112, MOVE_NORTH, 2, 2);
+                if (v_questen [0] != 16) {
+                        p_gegner_set (0, 96, 96, 80, 40, MOVE_WEST, 2, 2);
+                        p_gegner_set (1, 60, 60, 128, 48, MOVE_SOUTH, 2, 2);
+                        p_gegner_set (2, 92, 92, 64, 112, MOVE_NORTH, 2, 2);
+                }
         }
         else if (v_lvl == 199) {
-                p_gegner_set (0, 76, 76, 64, 56, MOVE_WEST, 2, 2);
-                p_gegner_set (1, 28, 28, 112, 56, MOVE_EAST, 2, 2);
-                p_gegner_set (2, 92, 92, 80, 104, MOVE_NORTH, 2, 2);
+                    p_gegner_set (0, 76, 76, 64, 56, MOVE_WEST, 2, 2);
+                    p_gegner_set (1, 28, 28, 112, 56, MOVE_EAST, 2, 2);
+                    p_gegner_set (2, 92, 92, 80, 104, MOVE_NORTH, 2, 2);
         }
         else if (v_lvl == 200) {
                 p_gegner_set (0, 96, 96, 48, 72, MOVE_EAST, 2, 3);

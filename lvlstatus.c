@@ -555,6 +555,18 @@ void p_lvl_status (void) BANKED
                         p_engine_set_tile (9, 3, LAYER_BKG);       
                 }
         }
+        else if (v_lvl == 198) {
+                if (v_questen [0] == 16) {
+                        v_tile [0] = 8;
+                        p_engine_set_tile (5, 1, LAYER_BKG);
+                        ++v_tile [0];
+                        p_engine_set_tile (5, 2, LAYER_BKG);
+                        ++v_tile [0];
+                        p_engine_set_tile (6, 1, LAYER_BKG);
+                        ++v_tile [0];
+                        p_engine_set_tile (6, 2, LAYER_BKG);
+                }
+        }
         else if (v_lvl == 208) {
                 if (v_schalter [6] == 1) {
                       v_tile [0] = 32;

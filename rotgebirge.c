@@ -169,6 +169,8 @@ void p_lvl198 (void) BANKED
 {
 	p_schild (65, schildtxt12);
 
+	p_xaver_rotgebirge ();
+
 	if (v_smk == 72) {
 		p_engine_loadMap (v_lvl197, BANK_19, BANK_17);
 		p_engine_changeLvl (197, 144, 56);

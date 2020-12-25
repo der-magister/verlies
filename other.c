@@ -48,6 +48,7 @@ void p_gameover (void) __banked
         v_gameover = TRUE; v_slp = v_smlp;
         v_lvl = 1; v_info = FALSE; v_bosskampf = FALSE; v_kampf = FALSE;
         if (v_spr == 0) ++v_spr;
+        DISPLAY_ON;
 }
 
 ///wartet auf Steuerung unten

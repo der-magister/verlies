@@ -44,6 +44,7 @@
 #include "daten/txt/npcs/zylra-1.h"
 #include "daten/txt/npcs/hueterin.h"
 #include "daten/txt/npcs/others.h"
+#include "daten/txt/npcs/xaver.h"
 
 /*void p_nicht_genug_gold () __banked
 {
@@ -319,6 +320,24 @@ void p_hueterin (void) BANKED {
                
         }
 } 
+
+void p_xaver_rotgebirge (void) BANKED
+{
+        if (v_questen [0] == 16) { 
+                if ((v_smk == 59) || (v_smk == 21)) {
+                        p_engine_set_txt (xavertxt23);
+                        p_engine_down ();
+                        p_engine_set_txt (xavertxt24);
+                        p_engine_down ();
+                        p_engine_set_txt (xavertxt25);
+                        p_engine_down ();
+                        p_engine_set_txt (xavertxt26);
+                        p_engine_A ();
+                        v_questen [0] = 17;
+                        
+                }
+        }
+}
 
 ///NPC Helfer XK, YK, Typ: 1 Heiltrank x 1, 2 Proviant x 2, 3 Gold x 5, Questnr
 /*void p_npc_helfer (UINT8 v_nxk, UINT8 v_nyk, UINT8 v_ntyp, UINT8 v_nqnr) __banked

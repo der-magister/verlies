@@ -134,6 +134,7 @@ lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/vanyratxt.o daten/txt/npcs/vanyra.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/othertxt.o daten/txt/npcs/others.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/zylratxt1.o daten/txt/npcs/zylra-1.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/hueterintxt.o daten/txt/npcs/hueterin.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/xavertxt.o daten/txt/npcs/xaver.c
 
 # Texte Portale
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo8 -c -o obj/portal.o daten/txt/portale/portal.c
@@ -211,6 +212,7 @@ lcc -Wa-l -Wl-m -Wl-j -Wf-bo11 -c -o obj/lvlstatus.o lvlstatus.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo12 -c -o obj/items.o items.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo12 -c -o obj/npc.o npc.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo12 -c -o obj/schilder.o schilder.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo12 -c -o obj/runen.o runen.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo13 -c -o obj/gegner.o gegner.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo20 -c -o obj/lvlgegner.o lvlgegner.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo20 -c -o obj/tiledatg.o tiledatg.c

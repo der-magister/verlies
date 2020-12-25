@@ -101,7 +101,7 @@ void p_changeItem (void) BANKED
         //Schaufel zu Portalrune
         else if (v_selectItem == 7)
         {
-                if (v_portalrune == TRUE) v_selectItem = 8;
+                if ((v_portalrune == TRUE) && (v_sstaub > 0)) v_selectItem = 8;
                 else if (v_sht != 0) v_selectItem = 1;
                 else v_selectItem = 0;
         }

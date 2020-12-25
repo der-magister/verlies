@@ -26,6 +26,7 @@
 #include "lvlstatus.h"
 #include "other.h"
 #include "engine.h"
+#include "runen.h"                                                                                                                                                                                                                                          
 
 #include "felsengrund.h"
 #include "gegner.h"
@@ -108,6 +109,7 @@ void main (void) NONBANKED
                                 else if (v_selectItem == 4) { p_use_item (); }
                                 else if (v_selectItem == 5) { p_use_item (); }
                                 else if (v_selectItem == 7) { p_use_item (); }
+                                else if (v_selectItem == 8) { p_portalrune (); }
 
                                 if ((v_info == FALSE) && (v_win == FALSE)) p_lvl_whichLvL ();
                         }
