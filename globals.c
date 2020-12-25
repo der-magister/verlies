@@ -90,7 +90,7 @@ UINT8 v_ske;
 UINT8 v_ssc;
 UINT8 v_sri;
 UINT8 v_stref;
-UINT8 v_portalrune;
+BOOLEAN v_portalrune;
 UINT8 v_serz;
 BOOLEAN v_spitzhacke;
 BOOLEAN v_sichel;

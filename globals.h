@@ -254,7 +254,7 @@ extern UINT8 v_stref;
 extern UINT8 v_serz;
 
 ///Portalrune
-extern UINT8 v_portalrune;
+extern BOOLEAN v_portalrune;
 
 ///Spitzhacke
 extern BOOLEAN v_spitzhacke;

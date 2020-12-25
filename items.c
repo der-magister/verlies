@@ -41,6 +41,7 @@ void p_drawSelectItem (void) __banked
         else if (v_selectItem == 5) { v_tile [0] = 50; } //Sichel
         else if (v_selectItem == 6) { v_tile [0] = 60; } //Kraut
         else if (v_selectItem == 7) { v_tile [0] = 48; } //Schaufel
+        else if (v_selectItem == 8) { v_tile [0] = 49; } //Portalrune
 
         set_bkg_tiles (9, 16, 1, 1, v_tile); 
 }
@@ -97,8 +98,15 @@ void p_changeItem (void) BANKED
                 else if (v_sht != 0) v_selectItem = 1;
                 else v_selectItem = 0;
         }
-        //Schaufel zu null
-        else if (v_selectItem == 7) {
+        //Schaufel zu Portalrune
+        else if (v_selectItem == 7)
+        {
+                if (v_portalrune == TRUE) v_selectItem = 8;
+                else if (v_sht != 0) v_selectItem = 1;
+                else v_selectItem = 0;
+        }
+        //Portalrune zu null
+        else if (v_selectItem == 8) {
                 v_selectItem = 0;
 
         }

@@ -212,6 +212,12 @@ void p_hud_showSchaufel (void) BANKED
         if (v_schaufel == TRUE) set_win_tiles (10, 4, 1, 1, v_tile);       
 }
 
+void p_hud_showPortalrune (void) BANKED
+{
+        v_tile [0] = 49;
+        if (v_portalrune == TRUE) set_win_tiles (11, 4, 1, 1, v_tile);
+}
+
 ///zeigt aktuelle XK/YK des Spielersprites an
 void p_hud_showXYK () __banked
 {
@@ -252,7 +258,7 @@ void p_gui_show_infoscreen () __banked
         p_hud_showMPR ();
         p_gui_showHK ();
         p_gui_showMHK ();
-	p_hud_showTP ();
+        p_hud_showTP ();
         p_hud_showRS ();
         p_hud_showGO ();
         p_hud_showHT ();
@@ -263,6 +269,7 @@ void p_gui_show_infoscreen () __banked
         p_hud_showSpitzhacke ();
         p_hud_showSichel ();
         p_hud_showSchaufel ();
+        p_hud_showPortalrune ();
         p_showMap ();
         
         move_win (7, 0);

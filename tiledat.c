@@ -16,7 +16,7 @@
 //   With this program; if not, write to the Free Software Foundation, Inc.,
 //   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 //
-//   Kontakt: magister@skywave-2000.de
+//   Kontakt: magister@kabelmail.de
 
 //#pragma bank=9
 
@@ -56,6 +56,8 @@ const unsigned char v_kdat_mine_eg [28] = { 3, 20, 21, 25, 26, 27, 28, 29, 30, 3
 
 //Mine TG1
 const unsigned char v_kdat_mine_tg1 [28] = { 1, 3, 8, 9, 10, 11, 20, 21, 24, 25, 28, 29, 30, 31, 36, 37, 0,0,0,0,0,0,0,0,0,0,0,0 };
+
+const unsigned char v_kdat_mine_tg2 [28] = { 3, 4, 5, 6, 7, 20, 21, 24, 25, 45, 46, 37, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
 
 UINT8 p_spieler_koli (void) __banked
 {
@@ -105,6 +107,10 @@ UINT8 p_spieler_koli (void) __banked
                 //Mine TG1
                 else if ((v_lvl >= 220) && (v_lvl <= 231)) {
                         if (v_tile [1] == v_kdat_mine_tg1 [v_a]) return FALSE;
+                }
+                //Mine TG2
+                else if ((v_lvl >= 233) && (v_lvl <= 236)) {
+                        if (v_tile [1] == v_kdat_mine_tg2 [v_a]) return FALSE;
                 }
         }
         return TRUE;

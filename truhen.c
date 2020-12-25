@@ -890,11 +890,11 @@ void p_truhe_portalrune (UINT8 l_mk, UINT8 l_tnr) BANKED
                 p_engine_set_txt (portalrune);
                 ++v_truhen [l_tnr];
                 p_truhe_status ();
-                ++v_serz;
+                v_portalrune = TRUE;
             
         }
         else {
-            p_engine_set_txt (truheleer);
+                p_engine_set_txt (truheleer);
         }
         p_engine_A ();
         p_engine_after_txt ();
