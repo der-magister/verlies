@@ -254,7 +254,11 @@ void p_lvl_whichLvL (void) BANKED
         else if (v_lvl == 233) p_lvl233 (); //minen tg2 start
         else if (v_lvl == 234) p_lvl234 (); 
         else if (v_lvl == 235) p_lvl235 (); 
-        else if (v_lvl == 236) p_lvl236 (); 
+        else if (v_lvl == 236) p_lvl236 ();
+        else if (v_lvl == 238) p_lvl238 (); //Gipfelpfad start
+        else if (v_lvl == 239) p_lvl239 ();
+        else if (v_lvl == 240) p_lvl240 ();
+        else if (v_lvl == 241) p_lvl241 (); 
 }
 
 void p_lvl_status (void) BANKED

@@ -192,6 +192,7 @@ lcc -Wa-l -Wl-m -Wl-j -Wf-bo17 -c -o obj/rotgebirge.o rotgebirge.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo17 -c -o obj/minen.o minen.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo17 -c -o obj/minen2.o minen2.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo17 -c -o obj/minen3.o minen3.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo17 -c -o obj/gipfelpfad.o gipfelpfad.c
 
 
 #main

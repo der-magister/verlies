@@ -23,23 +23,56 @@
 #include "gipfelpfad.h"
 
 #include "engine.h"
+#include "truhen.h"
+#include "umgebung.h"
+#include "schilder.h"
+
+#include "daten/lvl/lvldatgipfelpfad.h"
+#include "daten/txt/schilder/schildertxt.h"
 
 void p_lvl238 (void) BANKED
 {
-
+	if (v_smk == 8) {
+		p_engine_loadMap (v_lvl239, BANK_19, BANK_17);
+		p_engine_changeLvl (239, 80, 120);
+	}
 }
 
-void p_lvl241 (void) BANKED
+void p_lvl239 (void) BANKED
 {
-	
+	p_truhe_proviant (51, 78, 2);
+
+	if (v_smk == 224) {
+		p_engine_loadMap (v_lvl238, BANK_19, BANK_17);
+		p_engine_changeLvl (238, 80, 24);
+	}
+	else if (v_smk == 8) {
+		p_engine_loadMap (v_lvl240, BANK_19, BANK_17);
+		p_engine_changeLvl (240, 80, 120);
+	}
+
 }
 
 void p_lvl240 (void) BANKED
 {
-	
+	p_stein (44, 49);
+
+	if (v_smk == 224) {
+		p_engine_loadMap (v_lvl239, BANK_19, BANK_17);
+		p_engine_changeLvl (239, 80, 24);
+	}
+	else if (v_smk == 8) {
+		p_engine_loadMap (v_lvl241, BANK_19, BANK_17);
+		p_engine_changeLvl (241, 80, 120);
+	}		
 }
 
 void p_lvl241 (void) BANKED
 {
-	
+	p_schild (59, schildtxt16);
+
+	if (v_smk == 224) {
+		p_engine_loadMap (v_lvl240, BANK_19, BANK_17);
+		p_engine_changeLvl (240, 80, 24);
+	}
 }
