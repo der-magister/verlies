@@ -35,6 +35,7 @@
 #include "daten/lvl/lvldatzwergenheim.h"
 #include "daten/lvl/lvldatrotgebirge.h"
 #include "daten/lvl/lvldatminen-1.h"
+#include "daten/lvl/lvldatgipfelpfad.h"
 
 #include "daten/txt/schilder/schildertxt.h"
 
@@ -197,6 +198,12 @@ void p_lvl199 (void) BANKED
 	else if (v_smk == 224) {
 		p_engine_loadMap (v_lvl200, BANK_19, BANK_17);
 		p_engine_changeLvl (200, 80, 24);
+	}
+	else if (v_smk == 8) {
+		p_engine_loadTileset (BANK_2, 3, 34, gebirgspfad, BANK_17);
+                p_gui_show_location (lgipfelpfad);
+                p_engine_loadMap (v_lvl238, BANK_19, BANK_17);
+                p_engine_changeLvl (238, 80, 120);      
 	}
 }
 

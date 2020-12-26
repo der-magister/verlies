@@ -13,3 +13,4 @@ extern const unsigned char lrotgebirge[];
 extern const unsigned char lmine[];
 extern const unsigned char lmine2[];
 extern const unsigned char lmine3[];
+extern const unsigned char lgipfelpfad[];

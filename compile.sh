@@ -48,6 +48,7 @@ lcc -Wa-l -Wl-m -Wl-j -Wf-bo19 -c -o obj/lvldatrotgebirge.o daten/lvl/lvldatrotg
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo19 -c -o obj/lvldatminen-1.o daten/lvl/lvldatminen-1.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo19 -c -o obj/lvldatminen-2.o daten/lvl/lvldatminen-2.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo19 -c -o obj/lvldatminen-3.o daten/lvl/lvldatminen-3.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo19 -c -o obj/lvldatgipfelpfad.o daten/lvl/lvldatgipfelpfad.c
 
 #other
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo3 -c -o obj/gameover.o daten/other/gameover.c

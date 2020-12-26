@@ -45,7 +45,7 @@
 
 
 //tmp
-#include "daten/lvl/lvldatminen-3.h"
+#include "daten/lvl/lvldatgipfelpfad.h"
 
 void p_init_game1 (void) NONBANKED
 {
@@ -74,7 +74,7 @@ void p_init_game1 (void) NONBANKED
         v_timer = 0;
 
         //tmp
-        p_engine_loadTileset (BANK_2, 1, 37, mine3, BANK_17);
+        p_engine_loadTileset (BANK_2, 3, 34, gebirgspfad, BANK_17);
 
         
 }
@@ -109,14 +109,14 @@ void p_init_game2 (void) NONBANKED
         //tmp für tests
         
         v_keyflag = 1;
-        p_engine_loadMap (v_lvl233, BANK_19, BANK_17);
-        p_engine_changeLvl (233, 80, 56);      
+        p_engine_loadMap (v_lvl238, BANK_19, BANK_17);
+        p_engine_changeLvl (238, 80, 120);            
         v_keyflag = 0;
-        p_gui_show_location (lmine3);
+        p_gui_show_location (lgipfelpfad);
 
-        v_questen [0] = 14; v_sgo = 0; v_stp = 1;
+        v_questen [0] = 17; v_sgo = 0; v_stp = 1;
         v_spr = 4; ; v_questen [2] = 2;
-        v_spitzhacke = TRUE; v_sichel = TRUE; v_schaufel = TRUE; v_slp = 5; v_smlp = 5;
+        v_spitzhacke = TRUE; v_sichel = TRUE; v_schaufel = TRUE; v_portalrune = TRUE; v_slp = 5; v_smlp = 5;
 
         //tmp ende
         

@@ -100,7 +100,7 @@ extern UINT8 v_schalter [20];
 extern UINT8 v_knr [10];
 
 ///beinhaltet Queststand
-extern volatile UINT8 v_questen [10];   
+extern UINT8 v_questen [10];   
 
 ///Flag, ob Spieler eine Aktion ausgeführt hat (TRUE = ja, FALSE = nein)
 extern UINT8 v_aktion;
@@ -207,7 +207,7 @@ extern UINT8 v_syk;
 extern UINT8 v_sprnr;     
 
 ///Koordinate des Spielers auf Karte
-extern volatile UINT8 v_smk;
+extern UINT8 v_smk;
 
 ///Rüstungsschutz des Spielers
 extern UINT8 v_srs;

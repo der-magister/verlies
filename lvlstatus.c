@@ -40,6 +40,7 @@
 #include "minen.h"
 #include "minen2.h"
 #include "minen3.h"
+#include "gipfelpfad.h"
 
 void p_lvl_whichLvL (void) BANKED
 {
@@ -565,6 +566,27 @@ void p_lvl_status (void) BANKED
                         p_engine_set_tile (6, 1, LAYER_BKG);
                         ++v_tile [0];
                         p_engine_set_tile (6, 2, LAYER_BKG);
+                }
+                else if (v_questen [0] == 17) {
+                        p_engine_set_tile (5, 1, LAYER_BKG);
+                        p_engine_set_tile (5, 2, LAYER_BKG);
+                        p_engine_set_tile (6, 1, LAYER_BKG);
+                        p_engine_set_tile (6, 2, LAYER_BKG);       
+                }
+        }
+        else if (v_lvl == 199) {
+                if (v_questen [0] >= 17) {
+                        v_tile [0] = 3;
+                        p_engine_set_tile (7, 1, LAYER_BKG);
+                        p_engine_set_tile (10, 1, LAYER_BKG);
+                        v_tile [0] = 4;
+                        p_engine_set_tile (8, 0, LAYER_BKG);
+                        ++v_tile [0];
+                        p_engine_set_tile (8, 1, LAYER_BKG);
+                        ++v_tile [0];
+                        p_engine_set_tile (9, 0, LAYER_BKG);
+                        ++v_tile [0];
+                        p_engine_set_tile (9, 1, LAYER_BKG);
                 }
         }
         else if (v_lvl == 208) {
