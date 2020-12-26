@@ -332,7 +332,7 @@ extern UINT8 v_schaufel;
 extern UINT8 v_loch [10]; //für Schaufel
 
 extern UINT8 v_sflimmtm; //timer für flimmer Spieler
-
+extern UINT8 v_ks; //Zählwert Kolision Spieler
 
 
 #endif

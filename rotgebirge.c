@@ -203,7 +203,8 @@ void p_lvl199 (void) BANKED
 		p_engine_loadTileset (BANK_2, 3, 34, gebirgspfad, BANK_17);
                 p_gui_show_location (lgipfelpfad);
                 p_engine_loadMap (v_lvl238, BANK_19, BANK_17);
-                p_engine_changeLvl (238, 80, 120);      
+                p_engine_changeLvl (238, 80, 120);  
+                v_ks = 19;    
 	}
 }
 

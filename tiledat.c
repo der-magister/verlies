@@ -46,7 +46,7 @@ const unsigned char v_kdat_eichenwald [28] = {37, 36, 35, 34, 33, 32, 31, 30, 29
 const unsigned char v_kdat_alte_baum [28] = { 46, 45, 44, 43, 37, 36, 22, 21, 20, 7, 5, 4, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
 
 //Kolisionsdaten Gebirgspfad
-const unsigned char v_kdat_gebirgspfad [28] = {3, 8, 9, 10, 11, 20, 21, 22, 24, 25, 28, 29, 30, 31, 36, 37, 45, 46, 23, 0,0,0,0,0,0,0,0,0};
+const unsigned char v_kdat_gebirgspfad [19] = {3, 8, 9, 10, 11, 20, 21, 22, 24, 25, 28, 29, 30, 31, 36, 37, 45, 46, 23 };
 
 //Kolisionsdaten Zwergenheim
 const unsigned char v_kdat_zwergenheim [28] = {3, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 24, 37, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
@@ -61,7 +61,7 @@ const unsigned char v_kdat_mine_tg2 [28] = { 3, 4, 5, 6, 7, 20, 21, 24, 25, 45, 
 
 UINT8 p_spieler_koli (void) __banked
 {
-	for (v_a = 0; v_a != 28; ++v_a)
+	for (v_a = 0; v_a != v_ks; ++v_a)
 	{
                 //felsengrund
 		if ((v_lvl == 1) && (v_tile [1] == v_kdat_1 [v_a])) return FALSE;
@@ -111,6 +111,10 @@ UINT8 p_spieler_koli (void) __banked
                 //Mine TG2
                 else if ((v_lvl >= 233) && (v_lvl <= 236)) {
                         if (v_tile [1] == v_kdat_mine_tg2 [v_a]) return FALSE;
+                }
+                //Gipfelpfad
+                else if ((v_lvl >= 238) && (v_lvl <= 241)) {
+                        if (v_tile [1] == v_kdat_gebirgspfad [v_a]) return FALSE;
                 }
         }
         return TRUE;

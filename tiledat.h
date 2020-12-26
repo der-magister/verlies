@@ -23,15 +23,6 @@
 
 #include "globals.h"
 
-/*extern const unsigned char v_kdat_1 [28];
-extern const unsigned char v_kdat_2 [28];
-extern const unsigned char v_kdat_3 [28];
-extern const unsigned char v_kdat_4 [28];
-extern const unsigned char v_kdat_5 [28];
-extern const unsigned char v_kdat_6 [28];
-extern const unsigned char v_kdat_feensee [28];
-extern const unsigned char v_kdat_alte_baum [28];
-extern const unsigned char v_kdat_gebirgspfad [28];*/
 
 extern UINT8 p_spieler_koli (void) __banked;
 
