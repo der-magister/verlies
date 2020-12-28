@@ -26,15 +26,26 @@
 #include "truhen.h"
 #include "umgebung.h"
 #include "schilder.h"
+#include "locations.h"
 
+#include "daten/tilesets/tilesets.h"
 #include "daten/lvl/lvldatgipfelpfad.h"
+#include "daten/lvl/lvldatrotgebirge.h"
 #include "daten/txt/schilder/schildertxt.h"
+#include "daten/txt/locations/locations.h"
 
 void p_lvl238 (void) BANKED
 {
 	if (v_smk == 8) {
 		p_engine_loadMap (v_lvl239, BANK_19, BANK_17);
 		p_engine_changeLvl (239, 80, 120);
+	}
+	else if (v_smk == 224) {
+		p_engine_loadTileset (BANK_2, 3, 34, gebirgspfad, BANK_17);
+		p_engine_loadMap (v_lvl199, BANK_19, BANK_17);
+		p_engine_changeLvl (199, 80, 24);
+		p_gui_show_location (lrotgebirge);
+		v_ks = 28;
 	}
 }
 

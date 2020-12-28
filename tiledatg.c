@@ -71,6 +71,10 @@ UINT8 p_gegner_koli (void) __banked
                 else if ((v_lvl >= 220) && (v_lvl <= 231)) {
                         if (v_tile [2] == v_kdatg_mine_2 [v_a]) return FALSE;
                 }
+                //Gipfelpfad
+                else if ((v_lvl >= 238) && (v_lvl <= 241)) {
+                        if (v_tile [2] == v_kdatg_gebirgspfad [v_a]) return FALSE;
+                }
         }
         return TRUE;
 }
