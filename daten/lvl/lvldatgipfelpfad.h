@@ -122,3 +122,5 @@ extern const unsigned char v_lvl241[];
 #endif
 
 /* End of V_LVL241.H */
+
+extern const unsigned char test_map_data[];

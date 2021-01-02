@@ -41,7 +41,7 @@ void p_engine_loadTileset (UINT8 l_bank, UINT8 l_ftile, UINT8 l_ltile, unsigned 
 
 ///aktiviert Spritelayer
 ///Bank wo die Spritedaten liegen, erste Spritenummer, letzte Spritenummer, Spriteset, Rückkehrbank (wovon Funktion aufgerufen wurde)
-void p_engine_loadSpriteset (UINT8 l_bank, UINT8 v_fsprite, UINT8 v_lsprite, unsigned char v_spriteset [127], UINT8 l_bnk) __nonbanked
+void p_engine_loadSpriteset (UINT8 l_bank, UINT8 v_fsprite, UINT8 v_lsprite, unsigned char v_spriteset [], UINT8 l_bnk) __nonbanked
 {
         SWITCH_ROM_MBC5 (l_bank);
         set_sprite_data (v_fsprite, v_lsprite + 1, v_spriteset);
@@ -57,11 +57,12 @@ void p_engine_loadMap (unsigned char l_lvldat [252], UINT8 l_bnk, UINT8 l_bank) 
                 SWITCH_ROM_MBC5 (l_bnk);
                 for (v_i = 0; v_i != 253; ++v_i) v_leveldaten [v_i] = l_lvldat [v_i];
                 SWITCH_ROM_MBC5 (l_bank);
+                delay (10);
         }
 }
 
 ///Levelwechsel, Level, XK-Spieler, YK-Spieler
-void p_engine_changeLvl (UINT8 l_lvl, UINT8 l_xk, UINT8 l_yk) __nonbanked
+void p_engine_changeLvl (UINT16 l_lvl, UINT8 l_xk, UINT8 l_yk) __nonbanked
 {	
         if (v_keyflag == 1)
         {

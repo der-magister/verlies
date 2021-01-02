@@ -89,7 +89,7 @@ extern BOOLEAN v_win;
 extern unsigned char v_txt [81];
 
 ///aktuelles Level
-extern UINT8 v_lvl;
+extern UINT16 v_lvl;
 
 ///beinhaltet Zustand der Truhen
 extern UINT8 v_truhen [80];    
@@ -136,7 +136,7 @@ extern UINT8 v_looptime;
 extern UINT8 v_gameover;         
 
 ///beinhaltet Tile für dynamische Leveländerungen
-extern unsigned char v_tile [3];
+extern unsigned char v_tile [4];
 
 ///Flag, ob Spieler gerade angreift
 extern UINT8 v_attack;

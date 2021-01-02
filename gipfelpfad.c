@@ -31,6 +31,7 @@
 #include "daten/tilesets/tilesets.h"
 #include "daten/lvl/lvldatgipfelpfad.h"
 #include "daten/lvl/lvldatrotgebirge.h"
+#include "daten/lvl/lvldattempel.h"
 #include "daten/txt/schilder/schildertxt.h"
 #include "daten/txt/locations/locations.h"
 
@@ -85,5 +86,10 @@ void p_lvl241 (void) BANKED
 	if (v_smk == 224) {
 		p_engine_loadMap (v_lvl240, BANK_19, BANK_17);
 		p_engine_changeLvl (240, 80, 24);
+	}
+	else if (v_smk == 8) {
+		p_engine_loadTileset (BANK_19, 0, 5, v_tiles_lvl245, BANK_17);
+		p_engine_loadMap (v_lvl245, BANK_19, BANK_17);
+		p_engine_changeLvl (245, 80, 120);
 	}
 }

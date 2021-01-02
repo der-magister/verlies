@@ -45,7 +45,7 @@
 
 
 //tmp
-#include "daten/lvl/lvldatgipfelpfad.h"
+#include "daten/lvl/lvldattempel.h"
 
 void p_init_game1 (void) NONBANKED
 {
@@ -74,7 +74,7 @@ void p_init_game1 (void) NONBANKED
         v_timer = 0;
 
         //tmp
-        p_engine_loadTileset (BANK_2, 3, 34, gebirgspfad, BANK_17);
+        p_engine_loadTileset (BANK_19, 0, 10, v_tiles_lvl245, BANK_4);
 
         
 }
@@ -109,8 +109,8 @@ void p_init_game2 (void) NONBANKED
         //tmp für tests
         
         v_keyflag = 1;
-        p_engine_loadMap (v_lvl238, BANK_19, BANK_17);
-        p_engine_changeLvl (238, 80, 120);            
+        p_engine_loadMap (v_lvl245, BANK_19, BANK_4);
+        p_engine_changeLvl (245, 80, 120); 
         v_keyflag = 0;
         p_gui_show_location (lgipfelpfad);
 

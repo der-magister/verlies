@@ -1,6 +1,6 @@
 //   Verlies - ein Adventure/RPG im Retrodesign
 //
-//   Copyright (C) 2018-2020 Heiko Wolf
+//   Copyright (C) 2018-2021 Heiko Wolf
 //
 //   This program is free software; you can redistribute it and/or modify
 //   it under the terms of the GNU General Public License As published by
@@ -77,6 +77,16 @@ void p_stein_busch_clear (UINT8 l_xk, UINT8 l_yk) __banked
         p_engine_set_tile (l_xk, l_yk + 1, LAYER_BKG);
         p_engine_set_tile (l_xk + 1, l_yk + 1, LAYER_BKG);
 }
+
+void p_stein_busch_clear2 (UINT8 l_xk, UINT8 l_yk) __banked
+{
+        v_tile [0] = v_tile [3];
+        p_engine_set_tile (l_xk, l_yk, LAYER_BKG);
+        p_engine_set_tile (l_xk + 1, l_yk, LAYER_BKG);
+        p_engine_set_tile (l_xk, l_yk + 1, LAYER_BKG);
+        p_engine_set_tile (l_xk + 1, l_yk + 1, LAYER_BKG);
+}
+
 
 ///Busch zum weghacken, Aufruf: Kartenkoordinate, Nummer des Busches
 void p_busch (UINT8 l_mk, UINT8 l_nr) __banked
@@ -174,4 +184,16 @@ void p_umgebung_state (void) __banked
         else if (v_lvl == 231) { if (v_loch [2] == 1) p_loch_auf (3, 3); }
         else if (v_lvl == 233) { if (v_stein [48] == 1) p_stein_busch_clear (14, 5); } 
         else if (v_lvl == 240) { if (v_stein [49] == 1) p_stein_busch_clear (8, 2); }
+        else if (v_lvl == 245) {
+                if (v_stein [50] == 1) {
+                        v_tile [3] = 3;
+                        p_stein_busch_clear2 (8, 2);
+                }
+        }
+        else if (v_lvl == 253) {
+                if (v_stein [51] == 1) {
+                        v_tile [3] = 1;
+                        p_stein_busch_clear2 (14, 9);
+                }
+        }
 }

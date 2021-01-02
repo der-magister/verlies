@@ -1,6 +1,5 @@
 extern const unsigned char grundtiles[];
 extern const unsigned char font[];
-
 extern const unsigned char felsengrund_1[];
 extern const unsigned char felsengrund_2[];
 extern const unsigned char felsengrund_3[];
@@ -15,3 +14,5 @@ extern const unsigned char zwergenheim[];
 extern const unsigned char mine[];
 extern const unsigned char mine2[];
 extern const unsigned char mine3[];
+
+extern const unsigned char tile_leere_truhe [];

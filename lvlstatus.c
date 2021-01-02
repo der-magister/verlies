@@ -1,6 +1,6 @@
 //   Verlies - ein Adventure im Retrodesign
 //
-//   Copyright (C) 2018-2020 Heiko Wolf
+//   Copyright (C) 2018-2021 Heiko Wolf
 //
 //   This program is free software; you can redistribute it and/or modify
 //   it under the terms of the GNU General Public License As published by
@@ -16,7 +16,7 @@
 //   With this program; if not, write to the Free Software Foundation, Inc.,
 //   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 //
-//   Kontakt: magister@kabelmail.de
+//   Kontakt: projekte@kabelmail.de
 
 //#pragma bank=11
 
@@ -41,6 +41,7 @@
 #include "minen2.h"
 #include "minen3.h"
 #include "gipfelpfad.h"
+#include "tempel.h"
 
 void p_lvl_whichLvL (void) BANKED
 {
@@ -259,6 +260,18 @@ void p_lvl_whichLvL (void) BANKED
         else if (v_lvl == 239) p_lvl239 ();
         else if (v_lvl == 240) p_lvl240 ();
         else if (v_lvl == 241) p_lvl241 (); 
+        else if (v_lvl == 245) p_lvl245 (); //Tempel EG start
+        else if (v_lvl == 246) p_lvl246 (); 
+        else if (v_lvl == 247) p_lvl247 ();
+        else if (v_lvl == 248) p_lvl248 ();
+        else if (v_lvl == 249) p_lvl249 ();
+        else if (v_lvl == 250) p_lvl250 ();
+        else if (v_lvl == 251) p_lvl251 (); 
+        else if (v_lvl == 252) p_lvl252 ();
+        else if (v_lvl == 253) p_lvl253 ();
+        else if (v_lvl == 254) p_lvl254 ();
+        else if (v_lvl == 255) p_lvl255 ();
+        else if (v_lvl == 256) p_lvl256 ();
 }
 
 void p_lvl_status (void) BANKED

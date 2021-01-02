@@ -1,6 +1,6 @@
 //   Verlies - ein Adventure im Retrodesign
 //
-//   Copyright (C) 2018-2020 Heiko Wolf
+//   Copyright (C) 2018-2021 Heiko Wolf
 //
 //   This program is free software; you can redistribute it and/or modify
 //   it under the terms of the GNU General Public License As published by
@@ -24,10 +24,11 @@
 #include "globals.h"
 
 extern void p_engine_loadTileset (UINT8 l_bank, UINT8 v_ftile, UINT8 v_ltile, unsigned char v_tileset [100], UINT8 v_bnk) __nonbanked;
-extern void p_engine_loadSpriteset (UINT8 l_bank, UINT8 l_fsprite, UINT8 l_lsprite, unsigned char l_spriteset [127], UINT8 l_bnk) __nonbanked;
+extern void p_engine_loadSpriteset (UINT8 l_bank, UINT8 l_fsprite, UINT8 l_lsprite, unsigned char l_spriteset [], UINT8 l_bnk) __nonbanked;
 extern void p_engine_loadMap (unsigned char l_lvldat [252], UINT8 l_bnk, UINT8 l_bank) __nonbanked;
-extern void p_engine_changeLvl (UINT8 l_lvl, UINT8 l_xk, UINT8 l_yk) __nonbanked;
+extern void p_engine_changeLvl (UINT16 l_lvl, UINT8 l_xk, UINT8 l_yk) __nonbanked;
 extern void p_engine_set_tile (UINT8 l_xk, UINT8 l_yk, UINT8 l_layer) __nonbanked;
+extern void p_engine_set_tile2 (unsigned char l_tile [1], UINT8 l_xk, UINT8 l_yk, UINT8 l_layer) NONBANKED;
 //UINT8 p_genzufallszahl (void) NONBANKED;
 extern UINT8 p_calcMap (UINT8 w1, UINT8 w2) NONBANKED;
 

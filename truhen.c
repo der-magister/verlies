@@ -50,6 +50,8 @@
 #include "daten/txt/truhen/portalrune.h"
 #include "daten/txt/truhen/aspektberg.h"
 
+#include "daten/tilesets/tilesets.h"
+
 
 void p_truhe_init (void) BANKED
 {
@@ -259,6 +261,7 @@ void p_truhe_status () __banked
         }
         else if (v_lvl == 236) { if (v_truhen [77] == 1) p_truhe_change (8, 12); }
         else if (v_lvl == 239) { if (v_truhen [78] == 1) p_truhe_change (15, 1); }
+        else if (v_lvl == 248) { if (v_truhen [79] == 1) p_truhe_change (15, 12);}
 }
 
 ///Goldtruhe (XK, YK, Truhennummer, Anzahl des Goldes)
