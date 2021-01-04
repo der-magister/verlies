@@ -92,12 +92,12 @@ extern unsigned char v_txt [81];
 extern UINT16 v_lvl;
 
 ///beinhaltet Zustand der Truhen
-extern UINT8 v_truhen [80];    
+extern UINT8 v_truhen [90];    
 
 extern UINT8 v_schalter [20];           
 
 ///erhaltende Karten
-extern UINT8 v_knr [10];
+extern UINT8 v_knr [20];
 
 ///beinhaltet Queststand
 extern UINT8 v_questen [10];   

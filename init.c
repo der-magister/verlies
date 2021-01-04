@@ -112,7 +112,7 @@ void p_init_game2 (void) NONBANKED
         p_engine_loadMap (v_lvl245, BANK_19, BANK_4);
         p_engine_changeLvl (245, 80, 120); 
         v_keyflag = 0;
-        p_gui_show_location (lgipfelpfad);
+        p_gui_show_location (ltempel);
 
         v_questen [0] = 17; v_sgo = 0; v_stp = 1;
         v_spr = 4; ; v_questen [2] = 2;

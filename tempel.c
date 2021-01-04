@@ -4,8 +4,10 @@
 #include "umgebung.h"
 #include "schilder.h"
 #include "truhen.h"
+#include "locations.h"
 
 #include "daten/lvl/lvldattempel.h"
+
 
 void p_lvl245 (void) BANKED
 {
@@ -15,6 +17,7 @@ void p_lvl245 (void) BANKED
 		p_engine_loadTileset (BANK_19, 0, 5, v_tiles_lvl246, BANK_17);
 		p_engine_loadMap (v_lvl246, BANK_19, BANK_17);
 		p_engine_changeLvl (246, 16, 72);
+		v_ks = 1;
 	}
 	else if (v_smk == 8) {
 		p_engine_loadTileset (BANK_19, 0, 5, v_tiles_lvl249, BANK_17);
@@ -35,6 +38,7 @@ void p_lvl246 (void) BANKED
 		p_engine_loadTileset (BANK_19, 0, 5, v_tiles_lvl245, BANK_17);
 		p_engine_loadMap (v_lvl245, BANK_19, BANK_17);
 		p_engine_changeLvl (245, 144, 72);
+		v_ks=3;
 	}
 }
 
@@ -55,6 +59,7 @@ void p_lvl247 (void) BANKED
 void p_lvl248 (void) BANKED
 {
 	p_truhe_proviant (195, 79, 2);
+	p_truhe_karte (37, 12, 80);
 	
 	if (v_smk == 108) {
 		p_engine_loadTileset (BANK_19, 0, 4, v_tiles_lvl247, BANK_17);
@@ -147,6 +152,8 @@ void p_lvl253 (void) BANKED
 
 void p_lvl254 (void) BANKED
 {
+	p_truhe_schluessel (195, 81);
+	
 	if (v_smk == 162) {
 		p_engine_loadTileset (BANK_19, 0, 9, v_tiles_lvl253, BANK_17);
 		p_engine_loadMap (v_lvl253, BANK_19, BANK_17);

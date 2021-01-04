@@ -1,6 +1,6 @@
 //   Verlies - ein Adventure im Retrodesign
 //
-//   Copyright (C) 2018-2020 Heiko Wolf
+//   Copyright (C) 2018-2021 Heiko Wolf
 //
 //   This program is free software; you can redistribute it and/or modify
 //   it under the terms of the GNU General Public License As published by
@@ -61,6 +61,10 @@ const unsigned char v_kdat_mine_tg2 [28] = { 3, 4, 5, 6, 7, 20, 21, 24, 25, 45, 
 
 const unsigned char v_kdat_gipfelpfad [9] = { 3, 20, 21, 24, 28, 29, 30, 31, 37 };
 
+const unsigned char v_kdat_tempel_x1 [2] = { 0, 5 };
+//const unsigned char v_kdat_tempel_246 = 0;
+const unsigned char v_dat1 [3] = { 0, 1, 2 };
+
 UINT8 p_spieler_koli (void) __banked
 {
 	for (v_a = 0; v_a != v_ks; ++v_a)
@@ -118,6 +122,13 @@ UINT8 p_spieler_koli (void) __banked
                 else if ((v_lvl >= 238) && (v_lvl <= 241)) {
                         if (v_tile [1] == v_kdat_gipfelpfad [v_a]) return FALSE;
                 }
+                //Tempel EG
+                else if (v_lvl == 245) { 
+                        if (v_tile [1] == v_kdat_tempel_x1 [v_a]) return FALSE; 
+                }
+                /*else if ((v_lvl == 246) || (v_lvl == 247)) { if (v_tile [1] == v_klvl246 [v_a]) return FALSE; }
+                else if (v_lvl == 248) { if (v_tile [1] == v_klvl248 [v_a]) return FALSE; }*/
+                
         }
         return TRUE;
 }

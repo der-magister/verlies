@@ -27,7 +27,7 @@
 #include "text.h"
 #include "other.h"
 
-#include "daten/txt/truhen/truheleer.h"
+//#include "daten/txt/truhen/truheleer.h"
 #include "daten/txt/truhen/schwerttruhe.h"
 #include "daten/txt/truhen/kartetruhe.h"
 #include "daten/txt/truhen/erhalten.h"
@@ -37,7 +37,6 @@
 #include "daten/txt/truhen/heiltrank.h"
 #include "daten/txt/truhen/brotbuechse-1.h"
 #include "daten/txt/truhen/brotbuechse-2.h"
-#include "daten/txt/truhen/schluessel.h"
 #include "daten/txt/truhen/geldkatze1.h"
 #include "daten/txt/truhen/geldkatze2.h"
 #include "daten/txt/truhen/magischer_stein.h"
@@ -49,6 +48,7 @@
 #include "daten/txt/truhen/zauberstaub.h"
 #include "daten/txt/truhen/portalrune.h"
 #include "daten/txt/truhen/aspektberg.h"
+#include "daten/txt/truhen/truhentxt.h"
 
 #include "daten/tilesets/tilesets.h"
 
@@ -261,7 +261,11 @@ void p_truhe_status () __banked
         }
         else if (v_lvl == 236) { if (v_truhen [77] == 1) p_truhe_change (8, 12); }
         else if (v_lvl == 239) { if (v_truhen [78] == 1) p_truhe_change (15, 1); }
-        else if (v_lvl == 248) { if (v_truhen [79] == 1) p_truhe_change (15, 12);}
+        else if (v_lvl == 248) { 
+                if (v_truhen [79] == 1) p_truhe_change (15, 12);
+                if (v_truhen [80] == 1) p_truhe_change (1, 1);
+        }
+        else if (v_lvl == 254) { if (v_truhen [81] == 1) p_truhe_change (15, 12); }
 }
 
 ///Goldtruhe (XK, YK, Truhennummer, Anzahl des Goldes)

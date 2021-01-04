@@ -162,9 +162,8 @@ lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/goldvoll.o daten/txt/truhen/goldvoll.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/heiltrank.o daten/txt/truhen/heiltrank.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/kartetruhe.o daten/txt/truhen/kartetruhe.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/proviant.o daten/txt/truhen/proviant.c
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/schluesselt.o daten/txt/truhen/schluessel.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/schwerttruhe.o daten/txt/truhen/schwerttruhe.c
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/truheleer.o daten/txt/truhen/truheleer.c
+#lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/truheleer.o daten/txt/truhen/truheleer.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/brotbuechse-1.o daten/txt/truhen/brotbuechse-1.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/brotbuechse-2.o daten/txt/truhen/brotbuechse-2.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/geldkatze1.o daten/txt/truhen/geldkatze1.c
@@ -178,6 +177,7 @@ lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/erztxt.o daten/txt/truhen/erz.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/zauberstaubtxt.o daten/txt/truhen/zauberstaub.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/portalrunetxt.o daten/txt/truhen/portalrune.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/aspektbergtxt.o daten/txt/truhen/aspektberg.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/truhentxt.o daten/txt/truhen/truhentxt.c
 
 ## Daten Ende
 
