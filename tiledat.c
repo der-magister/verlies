@@ -18,7 +18,7 @@
 //
 //   Kontakt: magister@kabelmail.de
 
-//#pragma bank=9
+//#pragma bank=21
 
 #include "tiledat.h"
 
@@ -62,12 +62,12 @@ const unsigned char v_kdat_mine_tg2 [28] = { 3, 4, 5, 6, 7, 20, 21, 24, 25, 45, 
 const unsigned char v_kdat_gipfelpfad [9] = { 3, 20, 21, 24, 28, 29, 30, 31, 37 };
 
 const unsigned char v_kdat_tempel_x1 [2] = { 0, 5 };
-//const unsigned char v_kdat_tempel_246 = 0;
-const unsigned char v_dat1 [3] = { 0, 1, 2 };
+const unsigned char v_kdat_tempel_246 = 1;
+//const unsigned char v_dat1 [3] = { 0, 1, 2 };
 
 UINT8 p_spieler_koli (void) __banked
 {
-	for (v_a = 0; v_a != v_ks; ++v_a)
+	for (v_a = 0; v_a <= v_ks; ++v_a)
 	{
                 //felsengrund
 		if ((v_lvl == 1) && (v_tile [1] == v_kdat_1 [v_a])) return FALSE;
