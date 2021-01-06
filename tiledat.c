@@ -61,13 +61,16 @@ const unsigned char v_kdat_mine_tg2 [28] = { 3, 4, 5, 6, 7, 20, 21, 24, 25, 45, 
 
 const unsigned char v_kdat_gipfelpfad [9] = { 3, 20, 21, 24, 28, 29, 30, 31, 37 };
 
-const unsigned char v_kdat_tempel_x1 [2] = { 0, 5 };
-const unsigned char v_kdat_tempel_246 = 1;
-//const unsigned char v_dat1 [3] = { 0, 1, 2 };
+
+//außer der reihe, da ein anderes tool testweise verwendet wurde
+const unsigned char v_kdat_tempel_245 [28] = { 0, 5, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
+const unsigned char v_kdat_tempel_246 [28] = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
+const unsigned char v_kdat_tempel_248 [28] = { 0, 1, 2, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
+const unsigned char v_kdat_tempel_254 [28] = { 0, 5, 6, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
 
 UINT8 p_spieler_koli (void) __banked
 {
-	for (v_a = 0; v_a <= v_ks; ++v_a)
+	for (v_a = 0; v_a <= 28; ++v_a)
 	{
                 //felsengrund
 		if ((v_lvl == 1) && (v_tile [1] == v_kdat_1 [v_a])) return FALSE;
@@ -122,13 +125,16 @@ UINT8 p_spieler_koli (void) __banked
                 else if ((v_lvl >= 238) && (v_lvl <= 241)) {
                         if (v_tile [1] == v_kdat_gipfelpfad [v_a]) return FALSE;
                 }
-                //Tempel EG
-                else if (v_lvl == 245) { 
-                        if (v_tile [1] == v_kdat_tempel_x1 [v_a]) return FALSE; 
+                //Tempel EG (außer der reihe, da ein anderes tool testweise verwendet wurde)
+                else if ((v_lvl == 245) || (v_lvl ==  253)) {
+                        if (v_tile [1] == v_kdat_tempel_245 [v_a]) return FALSE;
                 }
-                /*else if ((v_lvl == 246) || (v_lvl == 247)) { if (v_tile [1] == v_klvl246 [v_a]) return FALSE; }
-                else if (v_lvl == 248) { if (v_tile [1] == v_klvl248 [v_a]) return FALSE; }*/
-                
+                else if ((v_lvl == 246) || (v_lvl == 247) || (v_lvl == 249) || (v_lvl == 250) ||
+                         (v_lvl == 251) || (v_lvl == 252) || (v_lvl == 255) || (v_lvl == 256)) { 
+                                 if (v_tile [1] == v_kdat_tempel_246 [v_a]) return FALSE; 
+                }
+                else if (v_lvl == 248) { if (v_tile [1] == v_kdat_tempel_248 [v_a]) return FALSE; }
+                else if (v_lvl == 254) { if (v_tile [1] == v_kdat_tempel_254 [v_a]) return FALSE; }
         }
         return TRUE;
 }

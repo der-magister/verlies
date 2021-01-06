@@ -21,7 +21,7 @@ fi
 echo "Kompiliere..."
 
 #hud
-/opt/gbdk/bin/lcc -Wa-l -Wl-m -Wl-j -Wf-bo8 -c -o /tmp/hudgui.o daten/hud/hudgui.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo8 -c -o /tmp/hudgui.o daten/hud/hudgui.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo8 -c -o /tmp/v_infoscreen.o daten/hud/v_infoscreen.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo8 -c -o /tmp/v_statscreen.o daten/hud/v_statscreen.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/rahmen.o gfx/rahmen.c
@@ -156,27 +156,14 @@ lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/oelloch.o daten/txt/other/oelloch.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/oelloch2.o daten/txt/other/oelloch2.c
 
 #Texte Truhen
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/ausdauertrank.o daten/txt/truhen/ausdauertrank.c
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/erhalten.o daten/txt/truhen/erhalten.c
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/goldvoll.o daten/txt/truhen/goldvoll.c
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/heiltrank.o daten/txt/truhen/heiltrank.c
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/kartetruhe.o daten/txt/truhen/kartetruhe.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/proviant.o daten/txt/truhen/proviant.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/schwerttruhe.o daten/txt/truhen/schwerttruhe.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/truheleer.o daten/txt/truhen/truheleer.c
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/brotbuechse-1.o daten/txt/truhen/brotbuechse-1.c
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/brotbuechse-2.o daten/txt/truhen/brotbuechse-2.c
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/geldkatze1.o daten/txt/truhen/geldkatze1.c
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/geldkatze2.o daten/txt/truhen/geldkatze2.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/wappenrock.o daten/txt/truhen/wappenrock.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/magischer_stein.o daten/txt/truhen/magischer_stein.c
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/aspektwaldtxt.o daten/txt/truhen/aspektwald.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/kraeuterbeuteltxt.o daten/txt/truhen/kraeuterbeutel.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/schaufeltxt.o daten/txt/truhen/schaufel.c
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/erztxt.o daten/txt/truhen/erz.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/zauberstaubtxt.o daten/txt/truhen/zauberstaub.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/portalrunetxt.o daten/txt/truhen/portalrune.c
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/aspektbergtxt.o daten/txt/truhen/aspektberg.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/truhentxt.o daten/txt/truhen/truhentxt.c
 
 ## Daten Ende
@@ -232,7 +219,7 @@ obj=$(ls | grep [.][o])
 
 echo "Erstelle Rom..."
 
-lcc -Wa-l -Wl-m -Wl-j -Wl-yt0x019 -Wl-yo64 -Wm-yn"VERLIES" -o verlies.gb $obj
+lcc -Wa-l -Wl-m -Wl-j -Wl-yt0x019 -Wl-yo32 -Wm-yn"VERLIES" -o verlies.gb $obj
 
 date
 

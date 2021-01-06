@@ -1,6 +1,6 @@
 //   Verlies - ein Adventure im Retrodesign
 //
-//   Copyright (C) 2018-2020 Heiko Wolf
+//   Copyright (C) 2018-2021 Heiko Wolf
 //
 //   This program is free software; you can redistribute it and/or modify
 //   it under the terms of the GNU General Public License As published by
@@ -32,6 +32,12 @@ const unsigned char v_kdatg_alte_baum [30] = { 46, 45, 44, 43, 37, 36, 22, 21, 2
 const unsigned char v_kdatg_gebirgspfad [30] = { 3, 4, 5, 6, 7, 20, 21, 22, 25, 28, 29, 30, 31, 36, 37, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
 const unsigned char v_kdatg_mine_1 [28] = { 3, 8, 9, 10, 11, 12, 13, 14, 15, 20, 21, 25, 26, 27, 28, 29, 39, 31, 32, 33, 34, 35, 36, 37, 43, 44, 45, 46 };
 const unsigned char v_kdatg_mine_2 [28] = { 1, 3, 8, 9, 10, 11, 12, 13, 14, 15, 20, 21, 25, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 24, 0,0,0,0 };
+
+//außer der reihe, da ein anderes tool testweise verwendet wurde
+const unsigned char v_kdatg_tempel_245 [28] = { 0, 5, 1, 2, 4, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
+const unsigned char v_kdatg_tempel_246 [28] = { 0, 2, 3, 4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
+const unsigned char v_kdatg_tempel_248 [28] = { 0, 1, 2, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
+const unsigned char v_kdatg_tempel_254 [28] = { 0, 5, 6, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
 
 
 UINT8 p_gegner_koli (void) __banked
@@ -75,6 +81,16 @@ UINT8 p_gegner_koli (void) __banked
                 else if ((v_lvl >= 238) && (v_lvl <= 241)) {
                         if (v_tile [2] == v_kdatg_gebirgspfad [v_a]) return FALSE;
                 }
+                //Tempel EG (außer der reihe, da ein anderes tool testweise verwendet wurde)
+                else if ((v_lvl == 245) || (v_lvl ==  253)) {
+                        if (v_tile [2] == v_kdatg_tempel_245 [v_a]) return FALSE;
+                }
+                else if ((v_lvl == 246) || (v_lvl == 247) || (v_lvl == 249) || (v_lvl == 250) ||
+                         (v_lvl == 251) || (v_lvl == 252) || (v_lvl == 255) || (v_lvl == 256)) { 
+                                 if (v_tile [2] == v_kdatg_tempel_246 [v_a]) return FALSE; 
+                }
+                else if (v_lvl == 248) { if (v_tile [2] == v_kdatg_tempel_248 [v_a]) return FALSE; }
+                else if (v_lvl == 254) { if (v_tile [2] == v_kdatg_tempel_254 [v_a]) return FALSE; }
         }
         return TRUE;
 }
