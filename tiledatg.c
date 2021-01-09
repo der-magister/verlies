@@ -35,9 +35,12 @@ const unsigned char v_kdatg_mine_2 [28] = { 1, 3, 8, 9, 10, 11, 12, 13, 14, 15, 
 
 //außer der reihe, da ein anderes tool testweise verwendet wurde
 const unsigned char v_kdatg_tempel_245 [28] = { 0, 5, 1, 2, 4, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
-const unsigned char v_kdatg_tempel_246 [28] = { 0, 2, 3, 4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
+const unsigned char v_kdatg_tempel_246 [28] = { 0, 2, 4, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
 const unsigned char v_kdatg_tempel_248 [28] = { 0, 1, 2, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
-const unsigned char v_kdatg_tempel_254 [28] = { 0, 5, 6, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
+const unsigned char v_kdatg_tempel_249 [28] = { 0, 1, 2, 4, 5, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }; 
+const unsigned char v_kdatg_tempel_250 [28] = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
+const unsigned char v_kdatg_tempel_254 [28] = { 0, 5, 6, 45, 46 ,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
+
 
 
 UINT8 p_gegner_koli (void) __banked
@@ -85,11 +88,13 @@ UINT8 p_gegner_koli (void) __banked
                 else if ((v_lvl == 245) || (v_lvl ==  253)) {
                         if (v_tile [2] == v_kdatg_tempel_245 [v_a]) return FALSE;
                 }
-                else if ((v_lvl == 246) || (v_lvl == 247) || (v_lvl == 249) || (v_lvl == 250) ||
+                else if ((v_lvl == 246) || (v_lvl == 247) ||
                          (v_lvl == 251) || (v_lvl == 252) || (v_lvl == 255) || (v_lvl == 256)) { 
                                  if (v_tile [2] == v_kdatg_tempel_246 [v_a]) return FALSE; 
                 }
                 else if (v_lvl == 248) { if (v_tile [2] == v_kdatg_tempel_248 [v_a]) return FALSE; }
+                else if (v_lvl == 249) { if (v_tile [2] == v_kdatg_tempel_249 [v_a]) return FALSE; }
+                else if (v_lvl == 250) { if (v_tile [2] == v_kdatg_tempel_249 [v_a]) return FALSE; }
                 else if (v_lvl == 254) { if (v_tile [2] == v_kdatg_tempel_254 [v_a]) return FALSE; }
         }
         return TRUE;
