@@ -52,7 +52,8 @@ lcc -Wa-l -Wl-m -Wl-j -Wf-bo19 -c -o /tmp/lvldatminen-1.o daten/lvl/lvldatminen-
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo19 -c -o /tmp/lvldatminen-2.o daten/lvl/lvldatminen-2.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo19 -c -o /tmp/lvldatminen-3.o daten/lvl/lvldatminen-3.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo19 -c -o /tmp/lvldatgipfelpfad.o daten/lvl/lvldatgipfelpfad.c
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo19 -c -o /tmp/lvldattempel.o daten/lvl/lvldattempel.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo19 -c -o /tmp/lvldattempel-tg.o daten/lvl/lvldattempel-tg.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo20 -c -o /tmp/lvldattempel-kg.o daten/lvl/lvldattempel-kg.c
 
 #other
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo3 -c -o /tmp/gameover.o daten/other/gameover.c
@@ -185,6 +186,7 @@ lcc -Wa-l -Wl-m -Wl-j -Wf-bo17 -c -o /tmp/minen2.o minen2.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo17 -c -o /tmp/minen3.o minen3.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo17 -c -o /tmp/gipfelpfad.o gipfelpfad.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo17 -c -o /tmp/tempel.o tempel.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo17 -c -o /tmp/tempel-kg.o tempel-kg.c
 
 
 #main
@@ -219,17 +221,23 @@ obj=$(ls | grep [.][o])
 
 echo "Erstelle Rom..."
 
-lcc -Wa-l -Wl-m -Wl-j -Wl-yt0x019 -Wl-yo32 -Wm-yn"VERLIES" -o verlies.gb $obj
+lcc -Wa-l -Wl-m -Wl-j -Wl-yt0x019 -Wl-yo16 -Wm-yn"VERLIES" -o verlies.gb $obj
 
 date
 
 #echo "Starte Emulation"
 
-#if [ -f ../verlies.gb ]
-#then
+if [ -f /tmp/verlies.gb ]
+then
 #	#mgba-qt ../verlies.gb &>/dev/null &
-#
+
 #	bgb ../verlies.gb &>/dev/null
-#fi
+	
+	#https://github.com/bbbbbr/romusage
+	romusage verlies.map
+
+	#better performance on raspberry pi 400
+	/usr/games/mednafen -psx.dbg_level 0 -video.fs 0 -cheats 1 /tmp/verlies.gb &>/dev/null &
+fi
 
 exit 0

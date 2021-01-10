@@ -42,6 +42,7 @@
 #include "minen3.h"
 #include "gipfelpfad.h"
 #include "tempel.h"
+#include "tempel-kg.h"
 
 void p_lvl_whichLvL (void) BANKED
 {
@@ -272,6 +273,12 @@ void p_lvl_whichLvL (void) BANKED
         else if (v_lvl == 254) p_lvl254 ();
         else if (v_lvl == 255) p_lvl255 ();
         else if (v_lvl == 256) p_lvl256 ();
+        else if (v_lvl == 260) p_lvl260 (); //Tempel KG start
+        else if (v_lvl == 261) p_lvl261 ();
+        else if (v_lvl == 262) p_lvl262 ();
+        else if (v_lvl == 263) p_lvl263 ();
+        else if (v_lvl == 264) p_lvl264 ();
+        else if (v_lvl == 265) p_lvl265 ();
 }
 
 void p_lvl_status (void) BANKED

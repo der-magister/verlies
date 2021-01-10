@@ -31,7 +31,7 @@
 #include "daten/tilesets/tilesets.h"
 #include "daten/lvl/lvldatgipfelpfad.h"
 #include "daten/lvl/lvldatrotgebirge.h"
-#include "daten/lvl/lvldattempel.h"
+#include "daten/lvl/lvldattempel-tg.h"
 #include "daten/txt/schilder/schildertxt.h"
 #include "daten/txt/locations/locations.h"
 

@@ -15,4 +15,8 @@ extern const unsigned char mine[];
 extern const unsigned char mine2[];
 extern const unsigned char mine3[];
 
+//test
 extern const unsigned char tile_leere_truhe [];
+//
+
+extern const unsigned char tempel_kg[];

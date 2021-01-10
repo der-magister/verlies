@@ -27,10 +27,10 @@
 #include "locations.h"
 
 #include "daten/tilesets/tilesets.h"
-#include "daten/lvl/lvldattempel.h"
+#include "daten/lvl/lvldattempel-tg.h"
 #include "daten/txt/locations/locations.h"
 #include "daten/lvl/lvldatgipfelpfad.h"
-
+#include "daten/lvl/lvldattempel-kg.h"
 
 void p_lvl245 (void) BANKED
 {
@@ -145,6 +145,12 @@ void p_lvl251 (void) BANKED
 		p_engine_loadTileset (BANK_19, 0, 9, v_tiles_lvl250, BANK_17);
 		p_engine_loadMap (v_lvl250, BANK_19, BANK_17);
 		p_engine_changeLvl (250, 16, 72);
+	}
+	else if (v_smk == 113) {
+		p_engine_loadTileset (BANK_2, 3, 46, tempel_kg, BANK_17);
+                p_gui_show_location (ltempelkg);
+                p_engine_loadMap (v_lvl260, BANK_20, BANK_17);
+                p_engine_changeLvl (260, v_sxk, v_syk);
 	}
 }
 

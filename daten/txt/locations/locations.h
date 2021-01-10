@@ -15,3 +15,4 @@ extern const unsigned char lmine2[];
 extern const unsigned char lmine3[];
 extern const unsigned char lgipfelpfad[];
 extern const unsigned char ltempel [];
+extern const unsigned char ltempelkg[];

@@ -253,6 +253,9 @@ void p_truhe_status () __banked
                 if (v_truhen [80] == 1) p_truhe_change (1, 1);
         }
         else if (v_lvl == 254) { if (v_truhen [81] == 1) p_truhe_change (15, 12); }
+        else if (v_lvl == 260) { if (v_truhen [82] == 1) p_truhe_change (15, 1); }
+        else if (v_lvl == 262) { if (v_truhen [83] == 1) p_truhe_change (1, 12); }
+        else if (v_lvl == 264) { if (v_truhen [84] == 1) p_truhe_change (2, 5); }
 }
 
 ///Goldtruhe (XK, YK, Truhennummer, Anzahl des Goldes)
@@ -328,7 +331,7 @@ void p_truhe_proviant (UINT8 l_smk, UINT8 l_tnr, UINT8 l_anz) __banked
                         if (l_anz == 1)
                         {
                                 
-                                if (v_spr + l_anz <= v_smpr)
+                                if (v_spr + l_anz > v_smpr)
                                 {
 					v_tile [0] = 100;
                                         ++v_spr;

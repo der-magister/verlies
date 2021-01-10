@@ -56,6 +56,7 @@
 #define BANK_17 17
 #define BANK_18 18 
 #define BANK_19 19 
+#define BANK_20 20 
 
 #define LAYER_BKG 1
 #define LAYER_WIN 2
