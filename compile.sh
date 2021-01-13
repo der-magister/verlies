@@ -221,7 +221,7 @@ obj=$(ls | grep [.][o])
 
 echo "Erstelle Rom..."
 
-lcc -Wa-l -Wl-m -Wl-j -Wl-yt0x019 -Wl-yo16 -Wm-yn"VERLIES" -o verlies.gb $obj
+lcc -Wa-l -Wl-m -Wl-j -Wl-yt0x019 -Wl-yo32 -Wm-yn"VERLIES" -o verlies.gb $obj
 
 date
 
@@ -235,6 +235,8 @@ then
 	
 	#https://github.com/bbbbbr/romusage
 	romusage verlies.map
+
+	killall -15 mednafen
 
 	#better performance on raspberry pi 400
 	/usr/games/mednafen -psx.dbg_level 0 -video.fs 0 -cheats 1 /tmp/verlies.gb &>/dev/null &

@@ -28,5 +28,11 @@ extern void p_lvl261 (void) BANKED;
 extern void p_lvl262 (void) BANKED;
 extern void p_lvl263 (void) BANKED;
 extern void p_lvl264 (void) BANKED;
+extern void p_lvl265 (void) BANKED;
+extern void p_lvl266 (void) BANKED;
+extern void p_lvl267 (void) BANKED;
+extern void p_lvl268 (void) BANKED;
+extern void p_lvl269 (void) BANKED;
+extern void p_lvl270 (void) BANKED;
 
 #endif
