@@ -4,6 +4,8 @@
 
 date
 
+# /tmp ist mounted as tmpfs
+
 echo "Lösche alte Dateien..."
 
 rm -rf /tmp/*.o
@@ -231,7 +233,7 @@ if [ -f /tmp/verlies.gb ]
 then
 #	#mgba-qt ../verlies.gb &>/dev/null &
 
-#	bgb ../verlies.gb &>/dev/null
+	bgb /tmp/verlies.gb &>/dev/null
 	
 	#https://github.com/bbbbbr/romusage
 	romusage verlies.map
@@ -239,7 +241,7 @@ then
 	killall -15 mednafen
 
 	#better performance on raspberry pi 400
-	/usr/games/mednafen -psx.dbg_level 0 -video.fs 0 -cheats 1 /tmp/verlies.gb &>/dev/null &
+	#/usr/games/mednafen -psx.dbg_level 0 -video.fs 0 -cheats 1 /tmp/verlies.gb &>/dev/null &
 fi
 
 exit 0
