@@ -30,6 +30,7 @@
 #include "daten/lvl/lvldattempel-tg.h"
 #include "daten/txt/locations/locations.h"
 #include "daten/lvl/lvldattempel-kg.h"
+#include "daten/txt/schilder/schildertxt.h"
 
 void p_lvl260 (void) BANKED
 {
@@ -120,13 +121,20 @@ void p_lvl266 (void) BANKED
 	}
 	
 	else if (v_smk == 90) {
-		p_engine_loadMap (v_lvl267, BANK_20, BANK_17);
-		p_engine_changeLvl (267, 144, 64);
+		if (v_schalter [7] == 0) {
+			p_tuerzu ();
+		}
+		else if (v_schalter [7] == 1) {
+			p_engine_loadMap (v_lvl267, BANK_20, BANK_17);
+			p_engine_changeLvl (267, 144, 64);
+		}
 	}
 }
 
 void p_lvl267 (void) BANKED
 {
+	p_truhe_stoff (133, 85);
+	
 	if (v_smk == 106) {
 		p_engine_loadMap (v_lvl266, BANK_20, BANK_17);
 		p_engine_changeLvl (266, 16, 64);
@@ -135,6 +143,8 @@ void p_lvl267 (void) BANKED
 
 void p_lvl268 (void) BANKED
 {
+	p_schalter_tuer (181, 7);
+	
 	if (v_smk == 106) {
 		p_engine_loadMap (v_lvl261, BANK_20, BANK_17);
 		p_engine_changeLvl (261, 16, 64); 
@@ -152,15 +162,31 @@ void p_lvl269 (void) BANKED
 		p_engine_changeLvl (268, 16, 64);
 	}
 	else if (v_smk == 90) {
-		p_engine_loadMap (v_lvl270, BANK_20, BANK_17);
-		p_engine_changeLvl (270, 144, 64); 
+		if ((v_tuer [5] == 0) && (v_ske == 0)) {
+			p_tuerzu ();
+                }
+                else if ((v_tuer [5] == 0) && (v_ske == 1)) {
+			v_tuer [5] = 1;
+                        --v_ske;
+                } 
+                if (v_tuer [5] == 1)
+                {
+			p_engine_loadMap (v_lvl270, BANK_20, BANK_17);
+			p_engine_changeLvl (270, 144, 64);
+		} 
 	}
 }
 
 void p_lvl270 (void) BANKED
 {
+	p_schild (134, schildtxt17);
+	p_schild (65, schildtxt18);
+	p_schild (173, schildtxt19);
+	p_schild (91, schildtxt20);
+	p_schild (127, schildtxt21);
+	
 	if (v_smk == 106) {
 		p_engine_loadMap (v_lvl269, BANK_20, BANK_17);
-		p_engine_changeLvl (269, 144, 64);
+		p_engine_changeLvl (269, 24, 64);
 	}
 }

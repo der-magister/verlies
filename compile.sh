@@ -13,9 +13,9 @@ rm -rf /tmp/*.asm
 rm -rf /tmp/*.sym
 rm -rf /tmp/*.lst
 
-if [ -f verlies.gb ]
+if [ -f /tmp/verlies.gb ]
 then 
-	rm -rf verlies.gb
+	rm -rf /tmp/verlies.gb
 fi
 
 ## Daten
@@ -225,23 +225,23 @@ echo "Erstelle Rom..."
 
 lcc -Wa-l -Wl-m -Wl-j -Wl-yt0x019 -Wl-yo32 -Wm-yn"VERLIES" -o verlies.gb $obj
 
-date
-
-#echo "Starte Emulation"
+echo "Starte Emulation"
 
 if [ -f /tmp/verlies.gb ]
 then
-#	#mgba-qt ../verlies.gb &>/dev/null &
+	#mgba-qt ../verlies.gb &>/dev/null &
 
-	bgb.sh /tmp/verlies.gb &>/dev/null
+	#bgb.sh /tmp/verlies.gb &>/dev/null
 	
 	#https://github.com/bbbbbr/romusage
 	romusage verlies.map
 
-	#killall -15 mednafen
+	killall -15 mednafen
 
 	#better performance on raspberry pi 400
-	#/usr/games/mednafen -psx.dbg_level 0 -video.fs 0 -cheats 1 /tmp/verlies.gb &>/dev/null &
+	/usr/games/mednafen -psx.dbg_level 0 -video.fs 0 -cheats 1 /tmp/verlies.gb &>/dev/null &
+	
+	date
 fi
 
 exit 0

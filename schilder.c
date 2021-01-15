@@ -105,6 +105,10 @@ void p_schalter_status () BANKED
         {
                 p_schalter_change (15, 12);
         }
+        else if ((v_schalter [7] == 1) && (v_lvl == 268)) {
+                p_schalter_change (1, 12);
+        }
+        
 }      
 
 ///setzt Schild

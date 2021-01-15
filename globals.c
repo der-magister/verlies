@@ -92,6 +92,7 @@ UINT8 v_sri;
 UINT8 v_stref;
 BOOLEAN v_portalrune;
 UINT8 v_serz;
+UINT8 v_stoff;
 BOOLEAN v_spitzhacke;
 BOOLEAN v_sichel;
 UINT8 v_portal [4];

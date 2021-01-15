@@ -32,4 +32,5 @@ extern const unsigned char geldkatze2[];
 extern const unsigned char goldvoll[];
 extern const unsigned char heiltrank[];
 extern const unsigned char kartetruhe[];
+extern const unsigned char stoff[];
 

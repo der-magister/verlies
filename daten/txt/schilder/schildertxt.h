@@ -18,3 +18,8 @@ extern const unsigned char schildtxt13[];
 extern const unsigned char schildtxt14[];
 extern const unsigned char schildtxt15[];
 extern const unsigned char schildtxt16[];
+extern const unsigned char schildtxt17[];
+extern const unsigned char schildtxt18[];
+extern const unsigned char schildtxt19[];
+extern const unsigned char schildtxt20[];
+extern const unsigned char schildtxt21[];

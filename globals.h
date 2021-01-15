@@ -253,6 +253,7 @@ extern UINT8 v_sri;
 extern UINT8 v_stref;
 
 extern UINT8 v_serz;
+extern UINT8 v_stoff;
 
 ///Portalrune
 extern BOOLEAN v_portalrune;

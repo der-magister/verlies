@@ -256,6 +256,7 @@ void p_truhe_status () __banked
         else if (v_lvl == 260) { if (v_truhen [82] == 1) p_truhe_change (15, 1); }
         else if (v_lvl == 262) { if (v_truhen [83] == 1) p_truhe_change (1, 12); }
         else if (v_lvl == 264) { if (v_truhen [84] == 1) p_truhe_change (2, 5); }
+        else if (v_lvl == 267) { if (v_truhen [85] == 1) p_truhe_change (7, 6); }
 }
 
 ///Goldtruhe (XK, YK, Truhennummer, Anzahl des Goldes)
@@ -850,6 +851,23 @@ void p_truhe_erz (UINT8 l_mk, UINT8 l_tnr) BANKED
         p_engine_A ();
         p_engine_after_txt ();
     }               
+}
+
+void p_truhe_stoff (UINT8 l_mk, UINT8 l_tnr) BANKED
+{
+        if ((v_keyflag == 1) && (v_smk == l_mk)) {      
+                if (v_truhen [l_tnr] == 0) {
+                        p_engine_set_txt (stoff);
+                        ++v_truhen [l_tnr];
+                        p_truhe_status ();
+                        ++v_stoff;
+        }
+        else {
+                p_engine_set_txt (truheleer);
+        }
+                p_engine_A ();
+                p_engine_after_txt ();
+        }
 }
 
 void p_truhe_zauberstaub (UINT8 l_mk, UINT8 l_tnr) BANKED
