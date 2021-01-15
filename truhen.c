@@ -42,7 +42,7 @@
 
 void p_truhe_init (void) BANKED
 {
-        for (v_i = 0; v_i < 81; ++v_i)
+        for (v_i = 0; v_i < 91; ++v_i)
         {
                 v_truhen [v_i] = 0;
         }

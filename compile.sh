@@ -233,12 +233,12 @@ if [ -f /tmp/verlies.gb ]
 then
 #	#mgba-qt ../verlies.gb &>/dev/null &
 
-	bgb /tmp/verlies.gb &>/dev/null
+	bgb.sh /tmp/verlies.gb &>/dev/null
 	
 	#https://github.com/bbbbbr/romusage
 	romusage verlies.map
 
-	killall -15 mednafen
+	#killall -15 mednafen
 
 	#better performance on raspberry pi 400
 	#/usr/games/mednafen -psx.dbg_level 0 -video.fs 0 -cheats 1 /tmp/verlies.gb &>/dev/null &
