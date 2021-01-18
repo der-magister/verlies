@@ -332,7 +332,7 @@ void p_truhe_proviant (UINT8 l_smk, UINT8 l_tnr, UINT8 l_anz) __banked
                         if (l_anz == 1)
                         {
                                 
-                                if (v_spr + l_anz > v_smpr)
+                                if (v_spr + l_anz <= v_smpr)
                                 {
 					v_tile [0] = 100;
                                         ++v_spr;
@@ -345,7 +345,7 @@ void p_truhe_proviant (UINT8 l_smk, UINT8 l_tnr, UINT8 l_anz) __banked
                         }
                         else if (l_anz == 2)
                         {
-				if (v_spr + l_anz > v_smpr)
+				if (v_spr + l_anz <= v_smpr)
                                 {
 					v_tile [0] = 100;
                                         ++v_spr;

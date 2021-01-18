@@ -29,7 +29,7 @@
 
 void p_umgebung_init (void) __banked
 {
-        for (v_i = 0; v_i <= 50; ++v_i)
+        for (v_i = 0; v_i <= 60; ++v_i)
         {
                 v_stein [v_i] = 0;
                 v_busch [v_i] = 0;
