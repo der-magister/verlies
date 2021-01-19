@@ -1,6 +1,6 @@
 //   Verlies - ein Adventure im Retrodesign
 //
-//   Copyright (C) 2018-2019 Heiko Wolf
+//   Copyright (C) 2018-2021 Heiko Wolf
 //
 //   This program is free software; you can redistribute it and/or modify
 //   it under the terms of the GNU General Public License As published by
@@ -24,7 +24,7 @@
 
 #include "globals.h"
 
-extern const UINT8 v_ganz [255];
+//extern const UINT8 v_ganz [255];
 
 //void p_gegner_set_table (void) BANKED;
 extern void p_set_gegner (void) BANKED;

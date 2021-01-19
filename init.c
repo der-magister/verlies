@@ -55,7 +55,7 @@ void p_init_game1 (void) NONBANKED
         SPRITES_8x8;
   
         //laden der ersten Tiles und Sprites
-        p_engine_loadTileset (2, 8, 37, felsengrund_1, 4);
+        //p_engine_loadTileset (2, 8, 37, felsengrund_1, 4);
         p_engine_loadTileset (2, 38, 81, grundtiles, 4);
         p_engine_loadTileset (2, 82, 127, font, 4); 
         p_engine_loadSpriteset (2, 0, 127, v_spriteset_1, 4);
@@ -74,14 +74,14 @@ void p_init_game1 (void) NONBANKED
         v_timer = 0;
 
         //tmp
-        p_engine_loadTileset (BANK_2, 3, 46, tempel_kg, BANK_17);
+        p_engine_loadTileset (BANK_2, 3, 43, tempel_kg, BANK_4);
 
         
 }
 
 void p_init_game2 (void) NONBANKED
 {
-        for (v_i = 0; v_i != 41; ++v_i)
+        for (v_i = 0; v_i < 41; v_i++)
         {
                 move_sprite (v_i, 0, 0);
         }
@@ -89,6 +89,7 @@ void p_init_game2 (void) NONBANKED
         p_truhe_init ();
         p_schalter_init ();
         p_items_init ();
+        p_gegner_init ();
 
         v_selectItem = 0;
 
@@ -99,9 +100,9 @@ void p_init_game2 (void) NONBANKED
         //tmp für tests
         v_nomobs = FALSE;
         //
-        p_engine_changeLvl (1, 112, 96);
+        //p_engine_changeLvl (1, 112, 96);
         v_keyflag = 0;
-	p_gui_show_location (lfelsengrund);
+	//p_gui_show_location (lfelsengrund);
         
 
 	SHOW_SPRITES;
@@ -117,7 +118,6 @@ void p_init_game2 (void) NONBANKED
         v_questen [0] = 17; v_sgo = 0; v_stp = 1;
         v_spr = 4; ; v_questen [2] = 2;
         v_spitzhacke = TRUE; v_sichel = TRUE; v_schaufel = TRUE; v_portalrune = TRUE; v_slp = 5; v_smlp = 5;
-        v_ks = 9;
 
         //tmp ende
         

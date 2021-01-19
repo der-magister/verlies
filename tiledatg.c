@@ -16,7 +16,7 @@
 //   With this program; if not, write to the Free Software Foundation, Inc.,
 //   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 //
-//   Kontakt: magister@skywave-2000.de
+//   Kontakt: magister@kabelmail.de
 
 //#pragma bank=13
 
@@ -46,7 +46,7 @@ const unsigned char v_kdatg_tempel_kg [28] = { 12, 13, 14, 15, 20, 21, 24, 25, 2
 
 UINT8 p_gegner_koli (void) __banked
 {
-        for (v_a = 0; v_a <= 28; ++v_a)
+        for (v_a = 0; v_a < 29; v_a++)
 	{
 		//Stadtgefängnis
                 if ((v_lvl >= 5) && (v_lvl <= 13) && (v_tile [2] == v_kdatg_1 [v_a])) return FALSE;

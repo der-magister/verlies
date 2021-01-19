@@ -1,6 +1,6 @@
 //   Verlies - ein Adventure im Retrodesign
 //
-//   Copyright (C) 2018-2020 Heiko Wolf
+//   Copyright (C) 2018-2021 Heiko Wolf
 //
 //   This program is free software; you can redistribute it and/or modify
 //   it under the terms of the GNU General Public License As published by
@@ -32,7 +32,7 @@
 
 void p_gegner_init (void) BANKED
 {
-        for (v_i = 0; v_i != 3; ++v_i)
+        for (v_i = 0; v_i != 3; v_i++)
         {
                 v_gmk [v_i] = 0; v_glp [v_i] = 0; v_gtp [v_i] = 0;
         }   
@@ -42,19 +42,21 @@ void p_gegner_init (void) BANKED
 ///horizontale Bewegungsroutine Gegner
 void p_gegner_move_horizontal (void) BANKED
 {
-        for (v_g = 0; v_g < 3; ++v_g)
+        for (v_g = 0; v_g < 3; v_g++)
         {
                 //Nord
                 if (v_gri [v_g] == MOVE_NORTH)
                 {
                         v_tile [2] = v_leveldaten [v_gmk [v_g] - 18];
                         gwalk  = p_gegner_koli ();
+
                         if ((v_gmk [0] == v_gmk [v_g] - 18) || (v_gmk [1] == v_gmk [v_g] - 18)  || (v_gmk [2] == v_gmk [v_g] - 18)) gwalk = FALSE;
                                 
                         if (gwalk == 1)
                         {
                                 v_tile [2] = v_leveldaten [v_gmk [v_g] - 17];
                                 gwalk = p_gegner_koli ();
+
                                 if ((v_gmk [0] == v_gmk [v_g] - 17) || (v_gmk [1] == v_gmk [v_g] - 17)  || (v_gmk [2] == v_gmk [v_g] - 17)) gwalk = FALSE;
                         }
                         if ((gwalk == 0) || (v_gyk [v_g] == 32))
@@ -62,8 +64,7 @@ void p_gegner_move_horizontal (void) BANKED
                                 p_gegner_update (v_g, v_gspl [v_g], MOVE_SOUTH);
                                 
                         }
-                        else if (gwalk == 1)
-                        {
+                        else if (gwalk == 1) {
                                 v_gyk [v_g] -= 8;
                                 
                         }
@@ -73,43 +74,47 @@ void p_gegner_move_horizontal (void) BANKED
                 {
                         v_tile [2] = v_leveldaten [v_gmk [v_g] + 36]; 
                         gwalk = p_gegner_koli ();
+                        
                         if ((v_gmk [0] == v_gmk [v_g] + 36) || (v_gmk [1] == v_gmk [v_g] + 36)  || (v_gmk [2] == v_gmk [v_g] + 36)) gwalk = FALSE;
 
                                 
-                        if (gwalk == 1)
+                        if (gwalk == TRUE)
                         {
                                 v_tile [2] = v_leveldaten [v_gmk [v_g] + 37];
                                 gwalk = p_gegner_koli ();
+                                
                                 if ((v_gmk [0] == v_gmk [v_g] + 37) || (v_gmk [1] == v_gmk [v_g] + 37)  || (v_gmk [2] == v_gmk [v_g] + 37)) gwalk = FALSE;
                         }
-                        if (gwalk == 1)
+                        if (gwalk == TRUE)
                         {
                                 v_gyk [v_g] += 8;
                         }
-                        else if ((gwalk == 0) || (v_gyk [v_g] == 112))
+                        else if ((gwalk == FALSE) || (v_gyk [v_g] == 112))
                         {
                                 p_gegner_update (v_g, v_gspf [v_g], MOVE_NORTH);
                         }
                 }
-                if (gwalk == 1)  p_gegner_move (v_g);
+                if (gwalk == TRUE) p_gegner_move (v_g);
         }
 }
 
 void p_gegner_move_vertical (void) BANKED
 {
-        for (v_g = 0; v_g < 3; ++v_g)
+        for (v_g = 0; v_g < 3; v_g++)
         {
                 //West
                 if (v_gri [v_g] == MOVE_WEST)
                 {
                         v_tile [2] = v_leveldaten [v_gmk [v_g] - 1];
                         gwalk  = p_gegner_koli ();
+                        
                         if ((v_gmk [0] == v_gmk [v_g] - 1) || (v_gmk [1] == v_gmk [v_g] - 1)  || (v_gmk [2] == v_gmk [v_g] - 1)) gwalk = FALSE;
                                 
                         if (gwalk == 1)
                         {
                                 v_tile [2] = v_leveldaten [v_gmk [v_g] + 17];
                                 gwalk = p_gegner_koli ();
+                        
                                 if ((v_gmk [0] == v_gmk [v_g] + 17) || (v_gmk [1] == v_gmk [v_g] + 17)  || (v_gmk [2] == v_gmk [v_g] + 17)) gwalk = FALSE;
                         }
                         if ((gwalk == 0) || (v_gyk [v_g] == 16))
@@ -126,6 +131,7 @@ void p_gegner_move_vertical (void) BANKED
                 {
                         v_tile [2] = v_leveldaten [v_gmk [v_g] + 2]; 
                         gwalk = p_gegner_koli ();
+                        
                         if ((v_gmk [0] == v_gmk [v_g] + 2) || (v_gmk [1] == v_gmk [v_g] + 2)  || (v_gmk [2] == v_gmk [v_g] + 2)) gwalk = FALSE;
 
                                 
@@ -133,6 +139,7 @@ void p_gegner_move_vertical (void) BANKED
                         {
                                 v_tile [2] = v_leveldaten [v_gmk [v_g] + 20];
                                 gwalk = p_gegner_koli ();
+                        
                                 if ((v_gmk [0] == v_gmk [v_g] + 20) || (v_gmk [1] == v_gmk [v_g] + 20)  || (v_gmk [2] == v_gmk [v_g] + 20)) gwalk = FALSE;
                         }
                         if (gwalk == 1)
@@ -150,7 +157,7 @@ void p_gegner_move_vertical (void) BANKED
 
 void p_gegner_speer (void) BANKED
 {
-        for (v_g = 0; v_g < 3; ++v_g)
+        for (v_g = 0; v_g < 3; v_g++)
         {
                 if (v_gri [v_g] == MOVE_DOWN)
                 {
@@ -225,27 +232,27 @@ void p_gegner_set (UINT8 l_nr, UINT8 l_tile, UINT8 l_tile2, UINT8 l_xk, UINT8 l_
 
                 if (l_nr == 0)
                 {
-                        for (v_i = 36; v_i != 40; ++v_i)
+                        for (v_i = 36; v_i < 40; v_i++)
                         {
                                 set_sprite_tile (v_i, l_tile);
-                                ++l_tile;
+                                l_tile++;
                         }
                 }
                 else if (l_nr == 1)
                 {
-                        for (v_i = 32; v_i != 36; ++v_i)
+                        for (v_i = 32; v_i < 36; v_i++)
                         {
                                 set_sprite_tile (v_i, l_tile);
-                                ++l_tile;
+                                l_tile++;
                         }
 
                 }
                 else if (l_nr == 2)
                 {
-                        for (v_i = 28; v_i != 32; ++v_i)
+                        for (v_i = 28; v_i < 32; v_i++)
                         {
                                 set_sprite_tile (v_i,  l_tile);
-                                ++l_tile;
+                                l_tile++;
                         }
 
                 }
@@ -305,7 +312,7 @@ void p_gegner_koli_player (void) BANKED
 
 void p_gegner_stop (void) BANKED
 {
-	for (v_a = 0; v_a <= 3; ++v_a)
+	for (v_a = 0; v_a <= 3; v_a++)
 	{
 		v_gxk [v_a] = 0; v_gyk [v_a] = 0; v_gri [v_a] = 0;
 		p_gegner_move (v_a);
@@ -317,27 +324,27 @@ void p_gegner_update (UINT8 l_nr, UINT8 l_tile, UINT8 l_ri) BANKED
 {
         if (l_nr == 0)
         {
-                for (v_i = 36; v_i != 40; ++v_i)
+                for (v_i = 36; v_i < 40; v_i++)
                 {
                         set_sprite_tile (v_i, l_tile);
-                        ++l_tile;
+                        l_tile++;
                 }
         }
         else if (l_nr == 1)
         {
-                for (v_i = 32; v_i != 36; ++v_i)
+                for (v_i = 32; v_i < 36; v_i++)
                 {
                         set_sprite_tile (v_i, l_tile);
-                        ++l_tile;
+                        l_tile++;
                 }
 
         }
         else if (l_nr == 2)
         {
-                for (v_i = 28; v_i != 32; ++v_i)
+                for (v_i = 28; v_i < 32; v_i++)
                 {
                         set_sprite_tile (v_i,  l_tile);
-                        ++l_tile;
+                        l_tile++;
                 }
         }
         v_gri [l_nr] = l_ri; 

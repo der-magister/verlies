@@ -231,7 +231,7 @@ if [ -f /tmp/verlies.gb ]
 then
 	#mgba-qt ../verlies.gb &>/dev/null &
 
-	bgb.sh /tmp/verlies.gb &>/dev/null
+	bgb.sh /tmp/verlies.gb
 	
 	#https://github.com/bbbbbr/romusage
 	romusage verlies.map
