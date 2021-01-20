@@ -56,6 +56,7 @@ lcc -Wa-l -Wl-m -Wl-j -Wf-bo19 -c -o /tmp/lvldatminen-3.o daten/lvl/lvldatminen-
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo19 -c -o /tmp/lvldatgipfelpfad.o daten/lvl/lvldatgipfelpfad.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo19 -c -o /tmp/lvldattempel-tg.o daten/lvl/lvldattempel-tg.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo20 -c -o /tmp/lvldattempel-kg.o daten/lvl/lvldattempel-kg.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo20 -c -o /tmp/lvldattempel-E1.o daten/lvl/lvldattempel-E1.c
 
 #other
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo3 -c -o /tmp/gameover.o daten/other/gameover.c
@@ -189,7 +190,7 @@ lcc -Wa-l -Wl-m -Wl-j -Wf-bo17 -c -o /tmp/minen3.o minen3.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo17 -c -o /tmp/gipfelpfad.o gipfelpfad.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo17 -c -o /tmp/tempel.o tempel.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo17 -c -o /tmp/tempel-kg.o tempel-kg.c
-
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo17 -c -o /tmp/tempel-e1.o tempel-e1.c
 
 #main
 lcc -Wa-l -Wl-m -Wl-j -Wa-l -Wl-m -Wl-j -c -o /tmp/verlies.o verlies.c
@@ -212,10 +213,10 @@ lcc -Wa-l -Wl-m -Wl-j -Wf-bo12 -c -o /tmp/npc.o npc.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo12 -c -o /tmp/schilder.o schilder.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo12 -c -o /tmp/runen.o runen.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo13 -c -o /tmp/gegner.o gegner.c
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo20 -c -o /tmp/lvlgegner.o lvlgegner.c
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo20 -c -o /tmp/tiledatg.o tiledatg.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo13 -c -o /tmp/lvlgegner.o lvlgegner.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo11 -c -o /tmp/tiledatg.o tiledatg.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo14 -c -o /tmp/boss.o boss.c
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo17 -c -o /tmp/umgebung.o umgebung.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo21 -c -o /tmp/umgebung.o umgebung.c
 
 cd /tmp/
 
@@ -231,15 +232,15 @@ if [ -f /tmp/verlies.gb ]
 then
 	#mgba-qt ../verlies.gb &>/dev/null &
 
-	bgb.sh /tmp/verlies.gb
+	#bgb.sh /tmp/verlies.gb
 	
 	#https://github.com/bbbbbr/romusage
 	romusage verlies.map
 
-	#killall -15 mednafen
+	killall -15 mednafen
 
 	#better performance on raspberry pi 400
-	#/usr/games/mednafen -psx.dbg_level 0 -video.fs 0 -cheats 1 /tmp/verlies.gb &>/dev/null &
+	/usr/games/mednafen -psx.dbg_level 0 -video.fs 0 -cheats 1 /tmp/verlies.gb &>/dev/null &
 	
 	date
 fi

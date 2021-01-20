@@ -57,7 +57,6 @@ void p_engine_loadMap (unsigned char l_lvldat [252], UINT8 l_bnk, UINT8 l_bank) 
                 SWITCH_ROM_MBC5 (l_bnk);
                 for (v_i = 0; v_i != 253; ++v_i) v_leveldaten [v_i] = l_lvldat [v_i];
                 SWITCH_ROM_MBC5 (l_bank);
-                delay (10);
         }
 }
 
