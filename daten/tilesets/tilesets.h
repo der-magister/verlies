@@ -20,3 +20,4 @@ extern const unsigned char tile_leere_truhe [];
 //
 
 extern const unsigned char tempel_kg[];
+extern const unsigned char tempel_1E[];
