@@ -43,6 +43,7 @@
 #include "gipfelpfad.h"
 #include "tempel.h"
 #include "tempel-kg.h"
+#include "tempel-e1.h"
 
 void p_lvl_whichLvL (void) BANKED
 {
@@ -284,6 +285,17 @@ void p_lvl_whichLvL (void) BANKED
         else if (v_lvl == 268) p_lvl268 ();
         else if (v_lvl == 269) p_lvl269 ();
         else if (v_lvl == 270) p_lvl270 ();
+        else if (v_lvl == 275) p_lvl275 (); //Tempel E1 start
+        else if (v_lvl == 276) p_lvl276 ();
+        else if (v_lvl == 277) p_lvl277 ();
+        else if (v_lvl == 278) p_lvl278 ();
+        else if (v_lvl == 279) p_lvl279 ();
+        else if (v_lvl == 280) p_lvl280 ();
+        else if (v_lvl == 281) p_lvl281 ();
+        else if (v_lvl == 282) p_lvl282 ();
+        else if (v_lvl == 283) p_lvl283 ();
+        else if (v_lvl == 284) p_lvl284 ();
+        else if (v_lvl == 285) p_lvl285 ();
 }
 
 void p_lvl_status (void) BANKED

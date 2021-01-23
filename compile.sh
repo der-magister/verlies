@@ -205,7 +205,7 @@ lcc -Wa-l -Wl-m -Wl-j -Wf-bo8 -c -o /tmp/hud.o hud.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo8 -c -o /tmp/portale.o portale.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo8 -c -o /tmp/infoscreen.o infoscreen.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo9 -c -o /tmp/player.o player.c
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo21 -c -o /tmp/tiledat.o tiledat.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo9 -c -o /tmp/tiledat.o tiledat.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/text.o text.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo11 -c -o /tmp/lvlstatus.o lvlstatus.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo12 -c -o /tmp/items.o items.c
