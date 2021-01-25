@@ -108,6 +108,9 @@ void p_schalter_status () BANKED
         else if ((v_schalter [7] == 1) && (v_lvl == 268)) {
                 p_schalter_change (1, 12);
         }
+        else if ((v_schalter [8] == 1) && (v_lvl == 287)) {
+                p_schalter_change (15, 1);
+        }
         
 }      
 

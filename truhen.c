@@ -257,6 +257,10 @@ void p_truhe_status () __banked
         else if (v_lvl == 262) { if (v_truhen [83] == 1) p_truhe_change (1, 12); }
         else if (v_lvl == 264) { if (v_truhen [84] == 1) p_truhe_change (2, 5); }
         else if (v_lvl == 267) { if (v_truhen [85] == 1) p_truhe_change (7, 6); }
+        else if (v_lvl == 277) { 
+                if (v_truhen [86] == 1) p_truhe_change (15, 1);
+                if (v_truhen [87] == 1) p_truhe_change (1, 12); 
+        }
 }
 
 ///Goldtruhe (XK, YK, Truhennummer, Anzahl des Goldes)

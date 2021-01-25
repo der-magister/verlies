@@ -197,4 +197,5 @@ void p_umgebung_state (void) __banked
                 }
         }
         else if (v_lvl == 261) { if (v_stein [52] == 1) p_stein_busch_clear (8, 10); }
+        else if (v_lvl == 275) { if (v_stein [53] == 1) p_stein_busch_clear (14, 5); }
 }

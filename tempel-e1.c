@@ -4,6 +4,7 @@
 #include "umgebung.h"
 #include "truhen.h"
 #include "locations.h"
+#include "schilder.h"
 
 #include "daten/tilesets/tilesets.h"
 #include "daten/lvl/lvldattempel-tg.h"
@@ -12,6 +13,8 @@
 
 void p_lvl275 (void) BANKED
 {
+	p_stein (104, 53);
+
 	if (v_smk == 106) {
 		p_engine_loadMap (v_lvl276, BANK_20, BANK_17);
 		p_engine_changeLvl (276, 16, 64);
@@ -32,6 +35,9 @@ void p_lvl276 (void) BANKED
 
 void p_lvl277 (void) BANKED
 {
+	p_truhe_proviant (51, 86, 1);
+	p_truhe_karte (181, 14, 87);
+
 	if (v_smk == 90) {
 		p_engine_loadMap (v_lvl276, BANK_20, BANK_17);
 		p_engine_changeLvl (276, 144, 64);
@@ -44,13 +50,21 @@ void p_lvl277 (void) BANKED
 
 void p_lvl278 (void) BANKED
 {	
+	p_schalter_tuer (51, 8);
+
 	if (v_smk == 224) {
 		p_engine_loadMap (v_lvl277, BANK_20, BANK_17);
 		p_engine_changeLvl (277, 80, 24);
 	}
-	else if (v_smk == 90) {
-		p_engine_loadMap (v_lvl279, BANK_20, BANK_17);
-		p_engine_changeLvl (279, 144, 64);
+
+	if (v_schalter [8] == 0) {
+		p_tuerzu ();
+	}
+	else {
+		if (v_smk == 90) {
+			p_engine_loadMap (v_lvl279, BANK_20, BANK_17);
+			p_engine_changeLvl (279, 144, 64);
+		}
 	}
 }
 
@@ -93,7 +107,7 @@ void p_lvl281 (void) BANKED
 void p_lvl282 (void) BANKED
 {
 	if (v_smk == 7) {
-		p_engine_loadMap (v_lvl282, BANK_20, BANK_17);
+		p_engine_loadMap (v_lvl281, BANK_20, BANK_17);
 		p_engine_changeLvl (281, 72, 120);
 	}
 	else if (v_smk == 223) {
@@ -133,7 +147,7 @@ void p_lvl284 (void) BANKED
 void p_lvl285 (void) BANKED
 {
 	if (v_smk == 126) {
-		p_engine_loadMap (v_lvl284, BANK_17, BANK_20);
+		p_engine_loadMap (v_lvl284, BANK_20, BANK_17);
 		p_engine_changeLvl (284, 144, 80);
 	}
 	else if (v_smk == 142) {
@@ -141,4 +155,21 @@ void p_lvl285 (void) BANKED
 		p_engine_changeLvl (286, 16, 80);
 	}
 	
+}
+
+void p_lvl286 (void) BANKED
+{
+	if (v_smk == 126) {
+		p_engine_loadMap (v_lvl285, BANK_20, BANK_17);
+		p_engine_changeLvl (285, 144, 80);
+	}
+
+}
+
+void p_lvl287 (void) BANKED
+{
+	if (v_smk == 106) {
+		p_engine_loadMap (v_lvl282, BANK_20, BANK_17);
+		p_engine_changeLvl (282, 16, 64);
+	}
 }
