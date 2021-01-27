@@ -42,7 +42,7 @@
 
 void p_truhe_init (void) BANKED
 {
-        for (v_i = 0; v_i < 91; ++v_i)
+        for (v_i = 0; v_i < 95; ++v_i)
         {
                 v_truhen [v_i] = 0;
         }
@@ -261,6 +261,12 @@ void p_truhe_status () __banked
                 if (v_truhen [86] == 1) p_truhe_change (15, 1);
                 if (v_truhen [87] == 1) p_truhe_change (1, 12); 
         }
+        else if (v_lvl == 287) { 
+            if (v_truhen [88] == 1) p_truhe_change (1, 1);
+            if (v_truhen [89] == 1) p_truhe_change (15, 1);
+            if (v_truhen [90] == 1) p_truhe_change (8, 12);
+        }
+        else if (v_lvl == 283) { if (v_truhen [91] == 1) p_truhe_change (1, 1); }
 }
 
 ///Goldtruhe (XK, YK, Truhennummer, Anzahl des Goldes)

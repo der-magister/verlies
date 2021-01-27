@@ -94,6 +94,8 @@ void p_lvl280 (void) BANKED
 
 void p_lvl281 (void) BANKED
 {
+	p_stein (187, 54);
+
 	if (v_smk == 106) {
 		p_engine_loadMap (v_lvl280, BANK_20, BANK_17);
 		p_engine_changeLvl (280, 16, 64);
@@ -106,6 +108,8 @@ void p_lvl281 (void) BANKED
 
 void p_lvl282 (void) BANKED
 {
+	p_stein (90, 55);
+
 	if (v_smk == 7) {
 		p_engine_loadMap (v_lvl281, BANK_20, BANK_17);
 		p_engine_changeLvl (281, 72, 120);
@@ -122,6 +126,8 @@ void p_lvl282 (void) BANKED
 
 void p_lvl283 (void) BANKED
 {
+	p_truhe_gold (37, 91, 2);
+
 	if (v_smk == 7) {
 		p_engine_loadMap (v_lvl282, BANK_20, BANK_17);
 		p_engine_changeLvl (282, 72, 120);
@@ -168,6 +174,10 @@ void p_lvl286 (void) BANKED
 
 void p_lvl287 (void) BANKED
 {
+	p_truhe_lebenskristall (37, 88);
+	p_truhe_heiltrank (51, 89);
+	p_truhe_ausdauertrank (188, 90);  
+
 	if (v_smk == 106) {
 		p_engine_loadMap (v_lvl282, BANK_20, BANK_17);
 		p_engine_changeLvl (282, 16, 64);

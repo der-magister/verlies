@@ -1,6 +1,6 @@
 //   Verlies - ein Adventure im Retrodesign
 //
-//   Copyright (C) 2018-2020 Heiko Wolf
+//   Copyright (C) 2018-2021 Heiko Wolf
 //
 //   This program is free software; you can redistribute it and/or modify
 //   it under the terms of the GNU General Public License As published by
@@ -18,7 +18,6 @@
 //
 //   Kontakt: magister@kabelmail.de
 
-// globale Variablen sind eigentlich phöse, aber nicht bei der Gameboy-Programmierung mit C
 
 #ifndef _GLOBALS_H_
 #define _GLOBALS_H_
@@ -93,7 +92,7 @@ extern unsigned char v_txt [81];
 extern UINT16 v_lvl;
 
 ///beinhaltet Zustand der Truhen
-extern UINT8 v_truhen [90];    
+extern UINT8 v_truhen [95];    
 
 extern UINT8 v_schalter [20];           
 

@@ -30,7 +30,7 @@ BOOLEAN v_info;
 BOOLEAN v_win;
 unsigned char v_txt [81];
 UINT16 v_lvl;
-UINT8 v_truhen [90];    
+UINT8 v_truhen [95];    
 UINT8 v_schalter [20];           
 UINT8 v_knr [20];
 UINT8 v_questen [10];   
