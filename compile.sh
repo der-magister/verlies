@@ -237,12 +237,12 @@ then
 	#https://github.com/bbbbbr/romusage
 	romusage verlies.map
 
-	#killall -15 mednafen
+	killall -15 mednafen
 
-	flatpak run io.mgba.mGBA /tmp/verlies.gb &>/dev/null &
+	#flatpak run io.mgba.mGBA /tmp/verlies.gb &>/dev/null &
 
 	#better performance on raspberry pi 400
-	#/usr/games/mednafen -psx.dbg_level 0 -video.fs 0 -cheats 0 /tmp/verlies.gb &>/dev/null &
+	/usr/games/mednafen -psx.dbg_level 0 -video.fs 0 -cheats 0 /tmp/verlies.gb &>/dev/null &
 	
 	date
 fi

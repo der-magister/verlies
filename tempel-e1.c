@@ -56,12 +56,11 @@ void p_lvl278 (void) BANKED
 		p_engine_loadMap (v_lvl277, BANK_20, BANK_17);
 		p_engine_changeLvl (277, 80, 24);
 	}
-
-	if (v_schalter [8] == 0) {
-		p_tuerzu ();
-	}
-	else {
-		if (v_smk == 90) {
+	else if (v_smk == 90) {
+		if (v_schalter [8] == 0) {
+			p_tuerzu ();
+		}
+		else if (v_schalter [8] == 1) {
 			p_engine_loadMap (v_lvl279, BANK_20, BANK_17);
 			p_engine_changeLvl (279, 144, 64);
 		}

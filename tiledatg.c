@@ -41,7 +41,7 @@ const unsigned char v_kdatg_tempel_249 [28] = { 0, 1, 2, 4, 5, 0,0,0,0,0,0,0,0,0
 const unsigned char v_kdatg_tempel_250 [28] = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
 const unsigned char v_kdatg_tempel_254 [28] = { 0, 5, 6, 45, 46 ,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
 const unsigned char v_kdatg_tempel_kg [28] = { 12, 13, 14, 15, 20, 21, 24, 25, 26, 27, 28, 29, 30, 31, 37, 39, 40, 41, 42, 43, 44, 45, 46, 0,0,0,0,0 };
-
+const unsigned char v_kdatg_tempel_e1 [28] = { 2, 3, 4, 5, 6, 7, 12, 13, 14, 15, 20, 21, 24, 26, 27, 37, 39, 40, 41, 42, 43, 44, 45, 46, 0,0,0,0};
 
 
 UINT8 p_gegner_koli (void) __banked
@@ -101,6 +101,10 @@ UINT8 p_gegner_koli (void) __banked
                 //Tempel KG
                 else if ((v_lvl >= 260) && (v_lvl <= 270)) {
                     if (v_tile [2] == v_kdatg_tempel_kg [v_a]) return FALSE; 
+                }
+                //Tempel E1
+                else if ((v_lvl >= 275) && (v_lvl <= 287)) {
+                        if (v_tile [2] == v_kdatg_tempel_e1 [v_a]) return FALSE;
                 }
         }
         return TRUE;

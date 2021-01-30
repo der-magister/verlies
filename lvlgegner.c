@@ -1,6 +1,6 @@
 //   Verlies - ein Adventure im Retrodesign
 //
-//   Copyright (C) 2018-2020 Heiko Wolf
+//   Copyright (C) 2018-2021 Heiko Wolf
 //
 //   This program is free software; you can redistribute it and/or modify
 //   it under the terms of the GNU General Public License As published by
@@ -775,5 +775,60 @@ void p_set_gegner (void) BANKED
                 p_gegner_set (0, 88, 84, 128, 56, MOVE_DOWN, 125, 3); 
                 p_gegner_set (1, 88, 84, 32, 56, MOVE_DOWN, 125, 3);    
         }
+        else if (v_lvl == 275) {
+                p_gegner_set (0, 92, 92, 88, 32, MOVE_SOUTH, 2, 2);
+                p_gegner_set (1, 88, 84, 56, 56, MOVE_DOWN, 125, 3);
+        }
+        else if (v_lvl == 276) {
+                p_gegner_set (0, 60, 60, 80, 32, MOVE_SOUTH, 2, 2);
+                p_gegner_set (1, 88, 84, 128, 56, MOVE_DOWN, 125, 3); 
+                p_gegner_set (2, 88, 84, 32, 56, MOVE_DOWN, 125, 3);
+        }
+        else if (v_lvl == 277) {
+                p_gegner_set (0, 56, 56, 80, 112, MOVE_NORTH, 2, 2);
+                p_gegner_set (1, 88, 84, 32, 56, MOVE_DOWN, 125, 3);
+                p_gegner_set (2, 48, 48, 136, 40, MOVE_SOUTH, 2, 2);
+        }
+        else if (v_lvl == 278) {
+                p_gegner_set (0, 44, 44, 136, 40, MOVE_SOUTH, 2, 2);
+                p_gegner_set (1, 56, 56, 24, 88, MOVE_EAST, 2, 2);
+                p_gegner_set (2, 20, 20, 112, 64, MOVE_WEST, 2, 2);
+        }
+        else if (v_lvl == 279) {
+                p_gegner_set (0, 24, 24, 112, 122, MOVE_NORTH, 2, 2);
+                p_gegner_set (1, 24, 24, 56, 32, MOVE_SOUTH, 2, 2);
+                p_gegner_set (1, 88, 84, 32, 56, MOVE_DOWN, 125, 3);
+        }
+        else if (v_lvl == 280) {
+                p_gegner_set (0, 88, 84, 128, 56, MOVE_DOWN, 125, 3); 
+                p_gegner_set (1, 88, 84, 32, 56, MOVE_DOWN, 125, 3);
+                p_gegner_set (2, 44, 44, 136, 96, MOVE_WEST, 2, 2);
+        }
+        else if (v_lvl == 281) {
+                p_gegner_set (0, 56, 56, 24, 96, MOVE_EAST, 2, 2);
+                p_gegner_set (1, 60, 60, 136, 40, MOVE_WEST, 2, 2);
+        }
+        else if (v_lvl == 282) {
+                p_gegner_set (0, 92, 92, 72, 96, MOVE_NORTH, 2, 2);
+                p_gegner_set (1, 60, 60, 40, 32, MOVE_SOUTH, 2, 2);
+                p_gegner_set (2, 60, 60, 112, 112, MOVE_NORTH, 2, 2);
+        }
+        else if (v_lvl == 283) {
+                p_gegner_set (0, 52, 52, 24, 40, MOVE_SOUTH, 2, 2);
+                p_gegner_set (1, 48, 48, 112, 112, MOVE_NORTH, 2, 2);
+                p_gegner_set (2, 88, 84, 128, 72, MOVE_DOWN, 125, 3);
+        }
+        else if (v_lvl == 284) {
+                p_gegner_set (0, 56, 56, 72, 104, MOVE_NORTH, 2, 2);
+                p_gegner_set (1, 88, 84, 128, 72, MOVE_DOWN, 125, 3);
+                p_gegner_set (2, 88, 84, 32, 72, MOVE_DOWN, 125, 3);
+        }
+        else if (v_lvl == 285) {
+                p_gegner_set (0, 52, 52, 136, 32, MOVE_WEST, 2, 2); 
+                p_gegner_set (1, 88, 84, 128, 72, MOVE_DOWN, 125, 3);
+                p_gegner_set (2, 88, 84, 32, 72, MOVE_DOWN, 125, 3);
+        }
+        
+        
         //p_gegner_set_table ();
 }

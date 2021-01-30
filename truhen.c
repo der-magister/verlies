@@ -327,7 +327,7 @@ void p_truhe_proviant_zusatz (UINT8 l_nr) __banked
         v_tile [0] = 65;
         p_engine_set_tile (3, 1, 2);
         SHOW_WIN;
-        ++v_truhen [l_nr];
+        v_truhen [l_nr] = 1;
         p_truhe_status ();
         p_hud_showPR ();
 }
@@ -341,11 +341,10 @@ void p_truhe_proviant (UINT8 l_smk, UINT8 l_tnr, UINT8 l_anz) __banked
                 {
                         if (l_anz == 1)
                         {
-                                
-                                if (v_spr + l_anz <= v_smpr)
+                                if (v_spr + l_anz > v_smpr)
                                 {
 					v_tile [0] = 100;
-                                        ++v_spr;
+                                        v_spr++;
                                         p_truhe_proviant_zusatz (l_tnr);
                                 }
                                 else
@@ -358,7 +357,7 @@ void p_truhe_proviant (UINT8 l_smk, UINT8 l_tnr, UINT8 l_anz) __banked
 				if (v_spr + l_anz <= v_smpr)
                                 {
 					v_tile [0] = 100;
-                                        ++v_spr;
+                                        v_spr++;
                                         p_truhe_proviant_zusatz (l_tnr);
                                 } 
                                 else if (v_spr + l_anz - 1 <= v_smpr)
@@ -373,7 +372,7 @@ void p_truhe_proviant (UINT8 l_smk, UINT8 l_tnr, UINT8 l_anz) __banked
                                 }
                         }
                 }
-                else
+                else if (v_truhen [l_tnr] == 1)
                 {
                         p_engine_set_txt (truheleer);
                 }

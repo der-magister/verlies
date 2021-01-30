@@ -97,9 +97,7 @@ void p_init_game2 (void) NONBANKED
        
         v_keyflag = 1;
         //p_engine_loadMap (v_lvl1a, BANK_5, BANK_4);
-        //tmp für tests
-        v_nomobs = FALSE;
-        //
+
         //p_engine_changeLvl (1, 112, 96);
         v_keyflag = 0;
 	//p_gui_show_location (lfelsengrund);
@@ -108,7 +106,9 @@ void p_init_game2 (void) NONBANKED
 	SHOW_SPRITES;
         
         //tmp für tests
-        
+
+        v_nomobs = FALSE;
+
         v_keyflag = 1;
         p_engine_loadMap (v_lvl275, BANK_20, BANK_17);
         p_engine_changeLvl (275, 40, 64);
@@ -116,7 +116,7 @@ void p_init_game2 (void) NONBANKED
         p_gui_show_location (ltempelE1);
 
         v_questen [0] = 17; v_sgo = 0; v_stp = 1;
-        v_spr = 4; ; v_questen [2] = 2;
+        v_spr = 4; v_questen [2] = 2;
         v_spitzhacke = TRUE; v_sichel = TRUE; v_schaufel = TRUE; v_portalrune = TRUE; v_slp = 5; v_smlp = 5;
 
         //tmp ende
