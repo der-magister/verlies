@@ -214,7 +214,7 @@ lcc -Wa-l -Wl-m -Wl-j -Wf-bo12 -c -o /tmp/schilder.o schilder.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo12 -c -o /tmp/runen.o runen.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo13 -c -o /tmp/gegner.o gegner.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo13 -c -o /tmp/lvlgegner.o lvlgegner.c
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo11 -c -o /tmp/tiledatg.o tiledatg.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo1 -c -o /tmp/tiledatg.o tiledatg.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo14 -c -o /tmp/boss.o boss.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo21 -c -o /tmp/umgebung.o umgebung.c
 

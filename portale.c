@@ -32,7 +32,7 @@ void p_portal_setup (void) __banked
 
 void p_portal (UINT8 l_smk) __banked
 {
-	BOOLEAN l_quit = FALSE;
+	static BOOLEAN l_quit = FALSE;
 
 	if (l_smk == v_smk)
 	{  

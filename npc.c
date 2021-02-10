@@ -112,7 +112,7 @@ void p_max () __banked
 ///Provianthändler
 void p_provianthaendler () __banked
 {
-        BOOLEAN l_quit;
+        static BOOLEAN l_quit;
 
         l_quit = FALSE;
 
@@ -156,7 +156,7 @@ void p_provianthaendler () __banked
 ///Ausdauertrankverkäuferin
 void  p_ausdauerhandlerin () __banked
 {
-        BOOLEAN l_quit;
+        static BOOLEAN l_quit;
 
         l_quit = FALSE;
 
@@ -198,7 +198,7 @@ void  p_ausdauerhandlerin () __banked
 
 void p_heiltrankhaendlerin () __banked
 {
- BOOLEAN l_quit;
+        static BOOLEAN l_quit;
 
         l_quit = FALSE;
 
@@ -240,7 +240,7 @@ void p_heiltrankhaendlerin () __banked
 
 void p_zauberstaubhaendler () __banked
 {
-        BOOLEAN l_quit;
+        static BOOLEAN l_quit;
 
         l_quit = FALSE;
 
