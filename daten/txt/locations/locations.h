@@ -17,3 +17,4 @@ extern const unsigned char lgipfelpfad[];
 extern const unsigned char ltempel [];
 extern const unsigned char ltempelkg[];
 extern const unsigned char ltempelE1[];
+extern const unsigned char ltempelE2[];

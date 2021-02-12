@@ -45,7 +45,7 @@
 
 
 //tmp
-#include "daten/lvl/lvldattempel-E1.h"
+#include "daten/lvl/lvldattempel-E2.h"
 
 void p_init_game1 (void) NONBANKED
 {
@@ -75,8 +75,7 @@ void p_init_game1 (void) NONBANKED
 
         //tmp
         p_engine_loadTileset (BANK_2, 2, 42, tempel_1E, BANK_17);
-
-        
+    
 }
 
 void p_init_game2 (void) NONBANKED
@@ -110,10 +109,10 @@ void p_init_game2 (void) NONBANKED
         v_nomobs = FALSE;
 
         v_keyflag = 1;
-        p_engine_loadMap (v_lvl275, BANK_20, BANK_17);
-        p_engine_changeLvl (275, 40, 64);
+        p_engine_loadMap (v_lvl290, BANK_20, BANK_17);
+        p_engine_changeLvl (290, 120, 72);
         v_keyflag = 0;
-        p_gui_show_location (ltempelE1);
+        p_gui_show_location (ltempelE2);
 
         v_questen [0] = 17; v_sgo = 0; v_stp = 1;
         v_spr = 4; v_questen [2] = 2;

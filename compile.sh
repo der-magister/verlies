@@ -57,6 +57,7 @@ lcc -Wa-l -Wl-m -Wl-j -Wf-bo19 -c -o /tmp/lvldatgipfelpfad.o daten/lvl/lvldatgip
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo19 -c -o /tmp/lvldattempel-tg.o daten/lvl/lvldattempel-tg.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo20 -c -o /tmp/lvldattempel-kg.o daten/lvl/lvldattempel-kg.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo20 -c -o /tmp/lvldattempel-E1.o daten/lvl/lvldattempel-E1.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo20 -c -o /tmp/lvldattempel-E2.o daten/lvl/lvldattempel-E2.c
 
 #other
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo3 -c -o /tmp/gameover.o daten/other/gameover.c
@@ -214,7 +215,7 @@ lcc -Wa-l -Wl-m -Wl-j -Wf-bo12 -c -o /tmp/schilder.o schilder.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo12 -c -o /tmp/runen.o runen.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo13 -c -o /tmp/gegner.o gegner.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo13 -c -o /tmp/lvlgegner.o lvlgegner.c
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo1 -c -o /tmp/tiledatg.o tiledatg.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo11 -c -o /tmp/tiledatg.o tiledatg.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo14 -c -o /tmp/boss.o boss.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo21 -c -o /tmp/umgebung.o umgebung.c
 
@@ -237,14 +238,16 @@ then
 	#https://github.com/bbbbbr/romusage
 	romusage verlies.map
 
-	killall -15 mednafen
+	#killall -15 mednafen
 
 	#flatpak run io.mgba.mGBA /tmp/verlies.gb &>/dev/null &
 
 	#better performance on raspberry pi 400
-	/usr/games/mednafen -psx.dbg_level 0 -video.fs 0 -cheats 0 /tmp/verlies.gb &>/dev/null &
+	#/usr/games/mednafen -psx.dbg_level 0 -video.fs 0 -cheats 0 /tmp/verlies.gb &>/dev/null &
 	
-	date
+	wine "C:\apps\bgb\bgb.exe" /tmp/verlies.gb &>/dev/null &
 fi
+
+date
 
 exit 0

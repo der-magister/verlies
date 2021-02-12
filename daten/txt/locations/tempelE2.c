@@ -1,6 +1,6 @@
 /*
 
- TEMPELKG.C
+ TEMPELE2.C
 
  Map Source File.
 
@@ -8,7 +8,7 @@
    Section       : 
    Bank          : 0
    Map size      : 18 x 1
-   Tile set      : Z:\home\magister\repos\verlies\gfx\entwuerfe\tilesets\gebirgspfad.gbr
+   Tile set      : Z:\home\magister\repos\verlies\gfx\entwuerfe\tilesets\tempel-1E.gbr
    Plane count   : 1 plane (8 bits)
    Plane order   : Tiles are continues
    Tile offset   : 0
@@ -18,14 +18,14 @@
 
 */
 
-#define ltempelkgWidth 18
-#define ltempelkgHeight 1
-#define ltempelkgBank 0
+#define ltempelE2Width 18
+#define ltempelE2Height 1
+#define ltempelE2Bank 0
 
-const unsigned char ltempelkg[] =
+const unsigned char ltempelE2[] =
 {
   0x4A,0x4A,0x4A,0x4A,0x6B,0x7A,0x72,0x6F,0x7A,0x73,
-  0x4A,0x74,0x78,0x4A,0x4A,0x4A,0x4A,0x4A
+  0x4A,0x7A,0x4A,0x63,0x4A,0x4A,0x4A,0x4A
 };
 
-/* End of TEMPELKG.C */
+/* End of TEMPELE2.C */

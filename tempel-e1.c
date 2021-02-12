@@ -1,3 +1,23 @@
+//   Verlies - ein Adventure im Retrodesign
+//
+//   Copyright (C) 2018-2021 Heiko Wolf
+//
+//   This program is free software; you can redistribute it and/or modify
+//   it under the terms of the GNU General Public License As published by
+//   the Free Software Foundation; either version 2 of the License, or
+//   (at your option) any later version.
+//
+//   This program is distributed in the hope that it will be useful,
+//   but WITHOUT ANY WARRANTY; without even the implied warranty of
+//   MERCHANTABILITY Or FITNESS For A PARTICULAR PURPOSE.  See the
+//   GNU General Public License For more details.
+//
+//   You should have received a copy of the GNU General Public License along
+//   With this program; if not, write to the Free Software Foundation, Inc.,
+//   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+//
+//   Kontakt: magister@kabelmail.de
+
 #include "tempel-e1.h"
 
 #include "engine.h"
@@ -9,6 +29,7 @@
 #include "daten/tilesets/tilesets.h"
 #include "daten/lvl/lvldattempel-tg.h"
 #include "daten/lvl/lvldattempel-E1.h"
+#include "daten/lvl/lvldattempel-E2.h"
 #include "daten/txt/locations/locations.h"
 
 void p_lvl275 (void) BANKED
@@ -18,6 +39,12 @@ void p_lvl275 (void) BANKED
 	if (v_smk == 106) {
 		p_engine_loadMap (v_lvl276, BANK_20, BANK_17);
 		p_engine_changeLvl (276, 16, 64);
+	}
+	else if (v_smk == 93) {
+		p_engine_loadTileset (BANK_19, 0, 9, v_tiles_lvl256, BANK_17);
+		p_engine_loadMap (v_lvl256, BANK_19, BANK_17);
+		p_engine_changeLvl (256, v_sxk, v_syk);
+		p_gui_show_location (ltempel);
 	}
 }
 
@@ -167,6 +194,11 @@ void p_lvl286 (void) BANKED
 	if (v_smk == 126) {
 		p_engine_loadMap (v_lvl285, BANK_20, BANK_17);
 		p_engine_changeLvl (285, 144, 80);
+	}
+	else if (v_smk == 121) {
+		p_engine_loadMap (v_lvl290, BANK_20, BANK_17);
+		p_engine_changeLvl (290, v_sxk, v_syk);
+		p_gui_show_location (ltempelE2);
 	}
 
 }
