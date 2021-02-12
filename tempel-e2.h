@@ -17,3 +17,16 @@
 //   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 //
 //   Kontakt: magister@kabelmail.de
+
+#ifndef _TEMPEL_E2_H_
+#define _TEMPEL_E2_H_
+
+#include "globals.h"
+
+void p_lvl290 (void) BANKED;
+void p_lvl291 (void) BANKED;
+void p_lvl292 (void) BANKED;
+void p_lvl293 (void) BANKED;
+void p_lvl294 (void) BANKED;
+
+#endif

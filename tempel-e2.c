@@ -17,3 +17,85 @@
 //   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 //
 //   Kontakt: magister@kabelmail.de
+
+#include "tempel-e2.h"
+
+#include "engine.h"
+#include "truhen.h"
+#include "locations.h"
+
+
+#include "daten/tilesets/tilesets.h"
+#include "daten/lvl/lvldattempel-E1.h"
+#include "daten/lvl/lvldattempel-E2.h"
+#include "daten/txt/locations/locations.h"
+
+void p_lvl290 (void) BANKED
+{
+	if (v_smk == 8) {
+		p_engine_loadMap (v_lvl291, BANK_20, BANK_17);
+		p_engine_changeLvl (291, 80, 120);
+	}
+	/*else if (v_smk == 93) {
+		p_engine_loadTileset (BANK_19, 0, 9, v_tiles_lvl256, BANK_17);
+		p_engine_loadMap (v_lvl256, BANK_19, BANK_17);
+		p_engine_changeLvl (256, v_sxk, v_syk);
+		p_gui_show_location (ltempel);
+	}*/
+}
+
+void p_lvl291 (void) BANKED
+{
+	if (v_smk == 224) {
+		p_engine_loadMap (v_lvl290, BANK_20, BANK_17);
+		p_engine_changeLvl (290, 80, 24);
+	}
+	else if (v_smk == 124) {
+		p_engine_loadMap (v_lvl292, BANK_20, BANK_17);
+		p_engine_changeLvl (292, 16, 72);
+	}
+	else if (v_smk == 8) {
+		p_engine_loadMap (v_lvl293, BANK_20, BANK_17);
+		p_engine_changeLvl (293, 80, 120);
+	}
+}
+
+void p_lvl292 (void) BANKED
+{
+	if (v_smk == 108) {
+		p_engine_loadMap (v_lvl291, BANK_20, BANK_17);
+		p_engine_changeLvl (291, 144, 72);
+	}
+}
+
+void p_lvl293 (void) BANKED
+{
+	if (v_smk == 224) {
+		p_engine_loadMap (v_lvl291, BANK_20, BANK_17);
+		p_engine_changeLvl (291, 80, 24);
+	}
+	else if (v_smk == 108) {
+		p_engine_loadMap (v_lvl294, BANK_20, BANK_17);
+		p_engine_changeLvl (294, 144, 72);
+	}
+	else if (v_smk == 8) {
+		p_engine_loadMap (v_lvl295, BANK_20, BANK_17);
+		p_engine_changeLvl (295, 80, 120);
+	}
+}
+
+void p_lvl294 (void) BANKED
+{
+	if (v_smk == 124) {
+		p_engine_loadMap (v_lvl293, BANK_20, BANK_17);
+		p_engine_changeLvl (293, 16, 72);
+	}
+}
+
+void p_lvl295 (void) BANKED
+{
+	if (v_smk == 224) {
+		p_engine_loadMap (v_lvl293, BANK_20, BANK_17);
+		p_engine_changeLvl (293, 80, 24);
+	}
+}

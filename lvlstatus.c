@@ -44,6 +44,7 @@
 #include "tempel.h"
 #include "tempel-kg.h"
 #include "tempel-e1.h"
+#include "tempel-e2.h"
 
 void p_lvl_whichLvL (void) BANKED
 {
@@ -298,6 +299,13 @@ void p_lvl_whichLvL (void) BANKED
         else if (v_lvl == 285) p_lvl285 ();
         else if (v_lvl == 286) p_lvl286 ();
         else if (v_lvl == 287) p_lvl287 ();
+        else if (v_lvl == 290) p_lvl290 ();
+        else if (v_lvl == 291) p_lvl291 ();
+        else if (v_lvl == 292) p_lvl292 ();
+        else if (v_lvl == 293) p_lvl293 ();
+        else if (v_lvl == 294) p_lvl294 ();
+        else if (v_lvl == 295) p_lvl295 ();
+
 }
 
 void p_lvl_status (void) BANKED

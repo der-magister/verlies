@@ -192,6 +192,7 @@ lcc -Wa-l -Wl-m -Wl-j -Wf-bo17 -c -o /tmp/gipfelpfad.o gipfelpfad.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo17 -c -o /tmp/tempel.o tempel.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo17 -c -o /tmp/tempel-kg.o tempel-kg.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo17 -c -o /tmp/tempel-e1.o tempel-e1.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo17 -c -o /tmp/tempel-e2.o tempel-e2.c
 
 #main
 lcc -Wa-l -Wl-m -Wl-j -Wa-l -Wl-m -Wl-j -c -o /tmp/verlies.o verlies.c
