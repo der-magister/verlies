@@ -28,5 +28,6 @@ void p_lvl291 (void) BANKED;
 void p_lvl292 (void) BANKED;
 void p_lvl293 (void) BANKED;
 void p_lvl294 (void) BANKED;
+void p_lvl295 (void) BANKED;
 
 #endif
