@@ -23,10 +23,10 @@ fi
 echo "Kompiliere..."
 
 #hud
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo8 -c -o /tmp/hudgui.o daten/hud/hudgui.c
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo8 -c -o /tmp/v_infoscreen.o daten/hud/v_infoscreen.c
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo8 -c -o /tmp/v_statscreen.o daten/hud/v_statscreen.c
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/rahmen.o gfx/rahmen.c
+lcc -Wa-l -Wf-max-allocs-per-mode50000 -Wl-m -Wl-j -Wf-bo8 -c -o /tmp/hudgui.o daten/hud/hudgui.c
+lcc -Wa-l -Wf-max-allocs-per-mode50000 -Wl-m -Wl-j -Wf-bo8 -c -o /tmp/v_infoscreen.o daten/hud/v_infoscreen.c
+lcc -Wa-l -Wf-max-allocs-per-mode50000 -Wl-m -Wl-j -Wf-bo8 -c -o /tmp/v_statscreen.o daten/hud/v_statscreen.c
+lcc -Wa-l -Wf-max-allocs-per-mode50000 -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/rahmen.o gfx/rahmen.c
 
 #karten
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo3 -c -o /tmp/k_felsengrund.o daten/karten/k_felsengrund.c

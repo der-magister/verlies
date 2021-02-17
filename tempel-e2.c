@@ -23,6 +23,7 @@
 #include "engine.h"
 #include "truhen.h"
 #include "locations.h"
+#include "npc.h"
 
 
 #include "daten/tilesets/tilesets.h"
@@ -62,6 +63,8 @@ void p_lvl291 (void) BANKED
 
 void p_lvl292 (void) BANKED
 {
+	p_truhe_proviant (182, 92, 2);
+
 	if (v_smk == 108) {
 		p_engine_loadMap (v_lvl291, BANK_20, BANK_17);
 		p_engine_changeLvl (291, 144, 72);
@@ -86,6 +89,11 @@ void p_lvl293 (void) BANKED
 
 void p_lvl294 (void) BANKED
 {
+	p_truhe_ausdauertrank (38, 93);
+	p_truhe_heiltrank (194, 94);
+
+	p_npc_heiler (111); 
+
 	if (v_smk == 124) {
 		p_engine_loadMap (v_lvl293, BANK_20, BANK_17);
 		p_engine_changeLvl (293, 16, 72);
