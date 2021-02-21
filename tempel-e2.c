@@ -37,12 +37,11 @@ void p_lvl290 (void) BANKED
 		p_engine_loadMap (v_lvl291, BANK_20, BANK_17);
 		p_engine_changeLvl (291, 80, 120);
 	}
-	/*else if (v_smk == 93) {
-		p_engine_loadTileset (BANK_19, 0, 9, v_tiles_lvl256, BANK_17);
-		p_engine_loadMap (v_lvl256, BANK_19, BANK_17);
-		p_engine_changeLvl (256, v_sxk, v_syk);
-		p_gui_show_location (ltempel);
-	}*/
+	else if (v_smk == 121) {
+		p_engine_loadMap (v_lvl286, BANK_20, BANK_17);
+		p_engine_changeLvl (286, v_sxk, v_syk);
+		p_gui_show_location (ltempelE1);
+	}
 }
 
 void p_lvl291 (void) BANKED
