@@ -228,10 +228,10 @@ echo "Erstelle Rom..."
 
 lcc -Wa-l -Wl-m -Wl-j -Wl-yt0x019 -Wl-yo32 -Wm-yn"VERLIES" -o verlies.gb $obj
 
-echo "Starte Emulation"
-
 if [ -f /tmp/verlies.gb ]
 then
+	echo "Starte Emulation"
+	
 	#mgba-qt ../verlies.gb &>/dev/null &
 
 	#bgb.sh /tmp/verlies.gb

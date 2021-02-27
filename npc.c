@@ -1,6 +1,6 @@
 //   Verlies - ein Adventure im Retrodesign
 //
-//   Copyright (C) 2018-2020 Heiko Wolf
+//   Copyright (C) 2018-2021 Heiko Wolf
 //
 //   This program is free software; you can redistribute it and/or modify
 //   it under the terms of the GNU General Public License As published by
@@ -46,16 +46,8 @@
 #include "daten/txt/npcs/others.h"
 #include "daten/txt/npcs/xaver.h"
 
-/*void p_nicht_genug_gold () __banked
-{
-  p_engine_set_txt (nichtgold);
-  p_engine_A ();
-  delay (120);
-  p_hud_show ();
-}*/
-
 ///Heiler
-void p_npc_heiler (UINT8 l_mk) __banked
+void p_npc_heiler (UINT8 l_mk) BANKED
 {
 	if ((l_mk == v_smk) && (v_keyflag == 1))
 	{
@@ -78,7 +70,7 @@ void p_npc_heiler (UINT8 l_mk) __banked
 	}
 }
 
-void p_fiona (void) __banked
+void p_fiona (void) BANKED
 {
         if (v_keyflag == 1)
         {
@@ -88,7 +80,7 @@ void p_fiona (void) __banked
         }
 }
 
-void p_zylra (void) __banked
+void p_zylra (void) BANKED
 {
         if (v_keyflag == 1)
         {
@@ -99,7 +91,7 @@ void p_zylra (void) __banked
 }
 
 
-void p_max () __banked
+void p_max (void) BANKED
 {
         if (v_keyflag == 1)
         {
@@ -110,7 +102,7 @@ void p_max () __banked
 }
 
 ///Provianthändler
-void p_provianthaendler () __banked
+void p_provianthaendler (void) BANKED
 {
         static BOOLEAN l_quit;
 
@@ -154,7 +146,7 @@ void p_provianthaendler () __banked
 }
 
 ///Ausdauertrankverkäuferin
-void  p_ausdauerhandlerin () __banked
+void  p_ausdauerhandlerin (void) BANKED
 {
         static BOOLEAN l_quit;
 
@@ -196,7 +188,7 @@ void  p_ausdauerhandlerin () __banked
         }
 }
 
-void p_heiltrankhaendlerin () __banked
+void p_heiltrankhaendlerin (void) BANKED
 {
         static BOOLEAN l_quit;
 
@@ -238,7 +230,7 @@ void p_heiltrankhaendlerin () __banked
         }
 }
 
-void p_zauberstaubhaendler () __banked
+void p_zauberstaubhaendler (void) BANKED
 {
         static BOOLEAN l_quit;
 
@@ -341,124 +333,19 @@ void p_xaver_rotgebirge (void) BANKED
         }
 }
 
-///NPC Helfer XK, YK, Typ: 1 Heiltrank x 1, 2 Proviant x 2, 3 Gold x 5, Questnr
-/*void p_npc_helfer (UINT8 v_nxk, UINT8 v_nyk, UINT8 v_ntyp, UINT8 v_nqnr) __banked
+void p_xaver_tempel (void) BANKED
 {
- if (((v_nxk == v_sxk ) && (v_nyk == v_syk + 8)) ||
-      ((v_nxk == v_sxk ) && (v_nyk == v_syk - 8)) ||
-      ((v_nxk == v_sxk + 8) && (v_nyk == v_syk)) ||
-      ((v_nxk == v_sxk - 8) && (v_nyk == v_syk)))
-  {
-    p_hud_hide (); 
-    
-    p_engine_set_txt (npctxt1);
-    p_engine_down ();
-   
-    //Heiltrank
-    if (v_ntyp == 1)
-    {
-      p_engine_set_txt (npctxt2);
-      p_engine_down ();
-
-      if (v_sht < v_smht) 
-      {
-          ++v_sht;
-      }
-      
-      v_questen [v_nqnr] = 1;
-      p_engine_set_txt (npctxt3);
-      p_engine_after_txt ();
-      v_aktion = TRUE;
-    }
-  }
-}*/
-
-///Questgeber
-/*void p_npc_questgeber1 (UINT8 v_nxk, UINT8 v_nyk, UINT8 v_qnr) __banked
-{
-  if (((v_nxk == v_sxk ) && (v_nyk == v_syk + 8)) ||
-      ((v_nxk == v_sxk ) && (v_nyk == v_syk - 8)) ||
-      ((v_nxk == v_sxk + 8) && (v_nyk == v_syk)) ||
-      ((v_nxk == v_sxk - 8) && (v_nyk == v_syk)))
-  {
-    if (v_questen [7] < 3) p_hud_hide ();
-    
-    if (v_questen [7] == 0)
-    {
-      p_engine_set_txt (questtxt1); 
-      v_questen [7] = 1;
-    } 
-    else if (v_questen [7] == 1)
-    {
-      p_engine_set_txt (questtxt1b); 
-    }
-    else if (v_questen [7] == 2)
-    {
-      p_engine_set_txt (questtxt1c);
-      v_questen [v_qnr] = 3;
-      ++v_ske;
-    }
-    v_aktion = TRUE;
-    p_engine_A ();
-    delay (150);
-    p_lvl_status ();
-    p_hud_show ();
-  }
-}*/
-
-///Tauscher Gold gegen Proviant
-/*void p_npc_tausch_proviant (UINT8 nxk, UINT8 nyk) __banked
-{
-  UINT8 quit = FALSE;
-
-  if (((nxk == v_sxk ) && (nyk == v_syk + 8)) ||
-      ((nxk == v_sxk ) && (nyk == v_syk - 8)) ||
-      ((nxk == v_sxk + 8) && (nyk == v_syk)) ||
-      ((nxk == v_sxk - 8) && (nyk == v_syk)))
-  {
-    p_hud_hide ();
-    p_engine_set_txt (tausch1);
-    p_engine_down ();
-    p_engine_set_txt (tausch2);
-
-    while (quit == FALSE)
-    {
-      if (joypad () & J_A)
-      {
-        delay (120);
-        p_hud_show ();
-        quit = TRUE;
-      }
-      else if (joypad () & J_B)
-      {
-        if (v_sgo >= 1)
-        {
-          if (v_spr < v_smpr)
-          {
-            ++v_spr;
-            --v_sgo;
-            p_engine_set_txt (tausch3);
-            p_engine_A ();
-            quit = TRUE;
-            delay (120);
-            p_hud_show ();
-          }
-          else if (v_spr >= v_smpr)
-          {
-            p_engine_set_txt (proviantvolltxt);
-            p_engine_A ();
-            quit = TRUE;
-            delay (120);
-            p_hud_show ();
-          }
+    if (v_questen [0] == 17) {
+        if ((v_smk == 138) || (v_smk == 104) || (v_smk == 176)) {
+                p_engine_set_txt (xavertxt28);
+                p_engine_down ();
+                p_engine_set_txt (xavertxt29);
+                p_engine_down ();
+                p_engine_set_txt (xavertxt30);
+                p_engine_A ();
+                p_engine_after_txt ();
+                v_questen [0] = 18;
+                p_lvl_status ();
         }
-        else if (v_sgo < 1)
-        {
-          p_nicht_genug_gold ();
-          quit = TRUE;
-        }
-      }
     }
-  }
-}*/
-
+}

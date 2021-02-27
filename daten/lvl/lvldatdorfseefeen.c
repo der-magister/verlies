@@ -1,5 +1,24 @@
-//#pragma bank=6
+//   Verlies - ein Adventure im Retrodesign
+//
+//   Copyright (C) 2018-2021 Heiko Wolf
+//
+//   This program is free software; you can redistribute it and/or modify
+//   it under the terms of the GNU General Public License As published by
+//   the Free Software Foundation; either version 2 of the License, or
+//   (at your option) any later version.
+//
+//   This program is distributed in the hope that it will be useful,
+//   but WITHOUT ANY WARRANTY; without even the implied warranty of
+//   MERCHANTABILITY Or FITNESS For A PARTICULAR PURPOSE.  See the
+//   GNU General Public License For more details.
+//
+//   You should have received a copy of the GNU General Public License along
+//   With this program; if not, write to the Free Software Foundation, Inc.,
+//   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+//
+//   Kontakt: magister@kabelmail.de
 
+//#pragma bank=6
 
 const unsigned char v_lvl90[] =
 {
@@ -31,7 +50,6 @@ const unsigned char v_lvl90[] =
   0x05,0x05
 };
 
-
 const unsigned char v_lvl91[] =
 {
   0x05,0x05,0x05,0x05,0x05,0x05,0x05,0x05,0x20,0x22,
@@ -61,5 +79,3 @@ const unsigned char v_lvl91[] =
   0x05,0x05,0x05,0x05,0x05,0x05,0x05,0x05,0x05,0x05,
   0x05,0x05
 };
-
-/* End of V_LVL91.C */

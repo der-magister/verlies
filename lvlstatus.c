@@ -706,6 +706,16 @@ void p_lvl_status (void) BANKED
         else if (v_lvl == 278) { 
                 p_schalter_status (); 
         }
+        else if (v_lvl == 292) {
+                if (v_questen [0] > 17) {
+                        v_tile [0] = 38;
+                        p_engine_set_tile (14, 7, LAYER_BKG);
+                        p_engine_set_tile (15, 7, LAYER_BKG);
+                        p_engine_set_tile (14, 8, LAYER_BKG);
+                        p_engine_set_tile (15, 8, LAYER_BKG);
+                }
+        }
         
-        p_umgebung_state ();    
+        p_umgebung_state ();  
+
 }

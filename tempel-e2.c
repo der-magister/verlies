@@ -63,6 +63,7 @@ void p_lvl291 (void) BANKED
 void p_lvl292 (void) BANKED
 {
 	p_truhe_proviant (182, 92, 2);
+	p_xaver_tempel ();
 
 	if (v_smk == 108) {
 		p_engine_loadMap (v_lvl291, BANK_20, BANK_17);
