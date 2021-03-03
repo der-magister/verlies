@@ -1,6 +1,6 @@
 //   Verlies - ein Adventure im Retrodesign
 //
-//   Copyright (C) 2018-2020 Heiko Wolf
+//   Copyright (C) 2018-2021 Heiko Wolf
 //
 //   This program is free software; you can redistribute it and/or modify
 //   it under the terms of the GNU General Public License As published by
@@ -23,6 +23,7 @@
 
 #include "globals.h"
 
+void p_map_init (void) BANKED;
 void p_map_draw_mark (UINT8 l_xk, UINT8 l_yk) BANKED;
 void p_showMap (void) BANKED;
 

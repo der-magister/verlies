@@ -1,6 +1,6 @@
 //   Verlies - ein Adventure im Retrodesign
 //
-//   Copyright (C) 2018-2020 Heiko Wolf
+//   Copyright (C) 2018-2021 Heiko Wolf
 //
 //   This program is free software; you can redistribute it and/or modify
 //   it under the terms of the GNU General Public License As published by
@@ -75,7 +75,7 @@
 #include "daten/other/techend.h"
 
 ///Ablauf Raum 1
-void p_lvl1 () __banked
+void p_lvl1 () BANKED
 {
 
         //Heiler
@@ -257,12 +257,12 @@ void p_lvl1 () __banked
 }
 
 ///Ablauf Raum 2
-void p_lvl2 () __banked
+void p_lvl2 () BANKED
 {
         p_portal (22);
 
         //Schilder
-        p_schild (190, schildtxt1c);
+        p_schild (152, schildtxt1c);
         p_schild (56, schildtxt1d);
 
         //NPC Schmiedin Fiona 
@@ -278,7 +278,7 @@ void p_lvl2 () __banked
         }
 
         //Raumwechsel 1 (Hafen)
-	if ((v_smk == 225) && (v_keyflag == 1))
+	if (v_smk == 225)
 	{
 		p_engine_loadTileset (2, 8, 29, felsengrund_1, 15);
 		p_engine_loadMap (v_lvl1a, 5, 15);
@@ -286,7 +286,7 @@ void p_lvl2 () __banked
 	}
 }
 
-void p_lvl3 () __banked
+void p_lvl3 () BANKED
 {
         //Schild
         p_schild (195, schildtxt1e);
@@ -313,7 +313,9 @@ void p_lvl3 () __banked
                                 p_engine_set_txt (hugotxt3);
                                 p_engine_A ();
                                 p_engine_after_txt ();
-                                ++v_questen [2];
+                                v_questen [2] = 1;
+                                v_tuer [6] = 1;
+                                p_lvl_status ();
                         }
                         else if (v_questen [2] == 1)
                         {
@@ -341,12 +343,17 @@ void p_lvl3 () __banked
 
         if (v_keyflag == 1)
         {
-                if (v_smk == 90)
-                {
+                if (v_smk == 90) {
+                        if (v_tuer [6] == 0) {
+                                p_tuerzu ();
+                }
+                else if (v_tuer [6] == 1) {
+                        
                         p_engine_loadTileset (2, 4, 33, wiesen_1, 15);
                         p_engine_loadMap (v_lvl20, 5, 15);
                         p_engine_changeLvl (20, 144, 64);
                         p_gui_show_location (lwiesen);
+                        }
                 }
 
                 //Levelwechsel Raum 1 (Hafen)

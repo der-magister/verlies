@@ -35,6 +35,14 @@
 #include "daten/karten/k_dorfseefeen.h"
 #include "daten/karten/nomap.h"
 
+void p_map_init (void) BANKED
+{
+        for (v_i = 0; v_i != 15; ++v_i) {
+                v_knr [v_i] = 0;
+        }
+
+}
+
 ///Zeichnet aktuelle Position (Raum) auf der Karte ein
 void p_map_draw_mark (UINT8 l_xk, UINT8 l_yk) BANKED
 {

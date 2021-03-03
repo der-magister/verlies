@@ -46,6 +46,13 @@
 #include "tempel-e1.h"
 #include "tempel-e2.h"
 
+void p_lvl_init (void) BANKED 
+{
+        for (v_i = 0; v_i != 15; ++v_i) {
+                v_tuer [v_i] = 0;
+        }
+}
+
 void p_lvl_whichLvL (void) BANKED
 {
 	if (v_lvl == 1) p_lvl1 ();
@@ -341,6 +348,20 @@ void p_lvl_status (void) BANKED
                         if (v_questen [1] == 0) ++v_questen [1];
                 }
 	}
+        else if (v_lvl == 3) {
+                if (v_tuer [6] == 1)
+                {
+                        v_tile [0] = 42;
+                        p_engine_set_tile (0, 5, 1);
+                        v_tile [0] = 41;
+                        p_engine_set_tile (0, 6, 1);
+                        v_tile [0] = 40;
+                        p_engine_set_tile (1, 5, 1);
+                        v_tile [0] = 39;
+                        p_engine_set_tile (1, 6, 1);
+                }
+        }
+
 	else if (v_lvl == 10)
 	{
 		p_schalter_status ();

@@ -18,10 +18,10 @@
 //
 //   Kontakt: magister@kabelmail.de
 
-#ifndef _HEILERTXT_H_
-#define _HEILERTXT_H_
+#ifndef _AUSDAUERVERKAEUFERIN_H_
+#define _AUSDAUERVERKAEUFERIN_H_
 
-extern const unsigned char heilertxt1[];
-extern const unsigned char heilertxt2[];
+extern const unsigned char ausdauerverkaeuferin1[];
+extern const unsigned char ausdauerverkaeuferin2[];
 
 #endif

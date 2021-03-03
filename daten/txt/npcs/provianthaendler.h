@@ -18,10 +18,10 @@
 //
 //   Kontakt: magister@kabelmail.de
 
-#ifndef _HEILERTXT_H_
-#define _HEILERTXT_H_
+#ifndef _PROVIANTHAENDLER_H_
+#define _PROVIANTHAENDLER_H_
 
-extern const unsigned char heilertxt1[];
-extern const unsigned char heilertxt2[];
+extern const unsigned char provianthaendler1[];
+extern const unsigned char provianthaendler2[];
 
 #endif

@@ -36,12 +36,10 @@
 #include "daten/lvl/lvldatfelsengrund.h"
 #include "daten/lvl/lvldatstadtgefaengnis.h"
 
-#include "daten/txt/npcs/phobetxt1.h"
-#include "daten/txt/npcs/phobetxt2.h"
-#include "daten/txt/npcs/phobetxt3.h"
+#include "daten/txt/npcs/phobetxt.h"
 
 ///Ablauf Raum 5
-void p_lvl5 (void) __banked
+void p_lvl5 (void) BANKED
 {
 	//Truhe mit Schwert
 	p_truhe_schwert (37, 1);
@@ -65,7 +63,7 @@ void p_lvl5 (void) __banked
 }
 
 ///Ablauf Raum 6
-void p_lvl6 () __banked
+void p_lvl6 (void) BANKED
 {
         //Raumwechsel
         if (v_keyflag == 1)
@@ -84,7 +82,7 @@ void p_lvl6 () __banked
 }
 
 ///Ablauf Raum 7 (Stadtgefängnis)
-void p_lvl7 () __banked
+void p_lvl7 () BANKED
 {
 	//Truhe mit Karte
 	p_truhe_karte (51, 1, 2);
@@ -106,7 +104,7 @@ void p_lvl7 () __banked
 }
 
 //Ablauf Raum 8
-void p_lvl8 () __banked
+void p_lvl8 () BANKED
 {
         //Raumwechsel
         if (v_keyflag == 1)
@@ -125,7 +123,7 @@ void p_lvl8 () __banked
 }
 
 ///Ablauf Raum 9
-void p_lvl9 () __banked
+void p_lvl9 () BANKED
 {
         //Truhe mit 2 Gold
         p_truhe_gold (195, 3, 2);
@@ -147,7 +145,7 @@ void p_lvl9 () __banked
 }
 
 ///Ablauf Raum 10
-void p_lvl10 () __banked
+void p_lvl10 () BANKED
 {
         //Schalter der eine Tür öffnet
 	p_schalter_tuer (47, 0);
@@ -176,7 +174,7 @@ void p_lvl10 () __banked
 }
 
 ///Ablauf Raum 11
-void p_lvl11 () __banked
+void p_lvl11 () BANKED
 {
         //Raumwechsel
         if (v_keyflag == 1)
@@ -200,7 +198,7 @@ void p_lvl11 () __banked
 }
 
 ///Ablauf Raum 12
-void p_lvl12 () __banked
+void p_lvl12 () BANKED
 {
         //Provianttruhe
 	p_truhe_proviant (44, 4, 1);
@@ -214,7 +212,7 @@ void p_lvl12 () __banked
 }
 
 ///Ablauif Raum 13
-void p_lvl13 () __banked
+void p_lvl13 () BANKED
 {
 	//erste Begegnung mit Phobe
 	if ((v_smk == 120) && (v_questen [0] == 1))

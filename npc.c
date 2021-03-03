@@ -28,14 +28,11 @@
 #include "other.h"
 
 #include "daten/txt/npcs/heilertxt.h"
-#include "daten/txt/npcs/provianthaendler1.h"
-#include "daten/txt/npcs/provianthaendler2.h"
+#include "daten/txt/npcs/provianthaendler.h"
 #include "daten/txt/npcs/fiona-1.h"
 #include "daten/txt/npcs/max-1.h"
-#include "daten/txt/npcs/ausdauerverkaeuferin1.h"
-#include "daten/txt/npcs/ausdauerverkaeuferin2.h"
-#include "daten/txt/npcs/heiltrankverkaeuferin1.h"
-#include "daten/txt/npcs/heiltrankverkaeuferin2.h"
+#include "daten/txt/npcs/ausdauerverkaeuferin.h"
+#include "daten/txt/npcs/heiltrankverkaeuferin.h"
 #include "daten/txt/npcs/zauberstaubhaendler1.h"
 #include "daten/txt/npcs/zauberstaubhaendler2.h"
 

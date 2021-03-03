@@ -48,7 +48,7 @@ void p_truhe_init (void) BANKED
         }
 }
 
-void p_truhe_change (UINT8 l_xk, UINT8 l_yk) __banked
+void p_truhe_change (UINT8 l_xk, UINT8 l_yk) BANKED
 {
 	v_tile [0] = 45;
 	p_engine_set_tile (l_xk, l_yk, 1);
@@ -57,7 +57,7 @@ void p_truhe_change (UINT8 l_xk, UINT8 l_yk) __banked
 }
 
 ///Grafikänderungen für Truhen die geöffnet wurden
-void p_truhe_status () __banked
+void p_truhe_status () BANKED
 {
 	v_tile [0] = 18;
 	if (v_lvl == 1)
@@ -78,6 +78,7 @@ void p_truhe_status () __banked
 	{
 		if (v_truhen [2] == 1)
 		{
+                        p_truhe_change (15, 1);
 		}
 	}
         else if (v_lvl == 9)
@@ -85,7 +86,6 @@ void p_truhe_status () __banked
                 if (v_truhen [3] == 1)
                 {
                         p_truhe_change (15, 12);
-                        p_truhe_change (15, 1);
                 }
         }
         else if (v_lvl == 12)
@@ -275,7 +275,7 @@ void p_truhe_status () __banked
 }
 
 ///Goldtruhe (XK, YK, Truhennummer, Anzahl des Goldes)
-void p_truhe_gold (UINT8 l_smk, UINT8 l_tnr, UINT8 l_anz) __banked
+void p_truhe_gold (UINT8 l_smk, UINT8 l_tnr, UINT8 l_anz) BANKED
 {
         if ((l_smk == v_smk) && (v_keyflag == 1))
         {
@@ -324,7 +324,7 @@ void p_truhe_gold (UINT8 l_smk, UINT8 l_tnr, UINT8 l_anz) __banked
         }
 }
 
-void p_truhe_proviant_zusatz (UINT8 l_nr) __banked
+void p_truhe_proviant_zusatz (UINT8 l_nr) BANKED
 {
         HIDE_WIN;
         p_engine_set_txt (erhalten);
@@ -338,7 +338,7 @@ void p_truhe_proviant_zusatz (UINT8 l_nr) __banked
 }
 
 ///truhe mit Proviant
-void p_truhe_proviant (UINT8 l_smk, UINT8 l_tnr, UINT8 l_anz) __banked
+void p_truhe_proviant (UINT8 l_smk, UINT8 l_tnr, UINT8 l_anz) BANKED
 {
         if ((l_smk == v_smk) && (v_keyflag == 1))
         {
@@ -346,7 +346,7 @@ void p_truhe_proviant (UINT8 l_smk, UINT8 l_tnr, UINT8 l_anz) __banked
                 {
                         if (l_anz == 1)
                         {
-                                if (v_spr + l_anz > v_smpr)
+                                if (v_spr + l_anz <= v_smpr)
                                 {
 					v_tile [0] = 100;
                                         v_spr++;
@@ -387,7 +387,7 @@ void p_truhe_proviant (UINT8 l_smk, UINT8 l_tnr, UINT8 l_anz) __banked
 }
 
 ///Truhe mit Schwert (Spielerkartekoordinate, Truhennummer)
-void p_truhe_schwert (UINT8 l_smk, UINT8 l_tnr) __banked
+void p_truhe_schwert (UINT8 l_smk, UINT8 l_tnr) BANKED
 {
   if ((v_smk == l_smk) && (v_keyflag == 1))
   {
@@ -413,15 +413,15 @@ void p_truhe_schwert (UINT8 l_smk, UINT8 l_tnr) __banked
 }
 
 ///Truhe mit Karte (Position der Truhe, Kartennummer, Truhennummer)
-void p_truhe_karte (UINT8 l_smk, UINT8 l_knr, UINT8 l_tnr) __banked
+void p_truhe_karte (UINT8 l_smk, UINT8 l_knr, UINT8 l_tnr) BANKED
 {
 	if ((v_smk == l_smk) && (v_keyflag == 1))
 	{
 		if (v_truhen [l_tnr] == 0)
 		{
-			++v_knr [l_knr];
+			v_knr [l_knr] = 1;
 			p_engine_set_txt (kartetruhe);
-			++v_truhen [l_tnr];
+			v_truhen [l_tnr] = 1;
                         p_truhe_status ();
 		}
 		else
@@ -434,7 +434,7 @@ void p_truhe_karte (UINT8 l_smk, UINT8 l_knr, UINT8 l_tnr) __banked
 }
 
 ///Truhe mit Ausdauertrank (Position der Truhe, Truhennummer)
-void p_truhe_ausdauertrank (UINT8 l_smk, UINT8 v_tnr) __banked
+void p_truhe_ausdauertrank (UINT8 l_smk, UINT8 v_tnr) BANKED
 {
         if ((l_smk == v_smk) && (v_keyflag == 1))
         {
@@ -467,7 +467,7 @@ void p_truhe_ausdauertrank (UINT8 l_smk, UINT8 v_tnr) __banked
         }
 }
 
-void p_truhe_heiltrank (UINT8 l_smk, UINT8 v_tnr) __banked
+void p_truhe_heiltrank (UINT8 l_smk, UINT8 v_tnr) BANKED
 {
         if ((l_smk == v_smk) && (v_keyflag == 1))
         {
@@ -500,7 +500,7 @@ void p_truhe_heiltrank (UINT8 l_smk, UINT8 v_tnr) __banked
         }
 }
 
-void p_truhe_kraut (UINT8 l_smk, UINT8 v_tnr) __banked
+void p_truhe_kraut (UINT8 l_smk, UINT8 v_tnr) BANKED
 {
         if ((l_smk == v_smk) && (v_keyflag == 1))
         {
@@ -534,7 +534,7 @@ void p_truhe_kraut (UINT8 l_smk, UINT8 v_tnr) __banked
 }
 
 ///Truhe mit Brotbuchse 1
-void p_truhe_brotbuechse_1 () __banked
+void p_truhe_brotbuechse_1 () BANKED
 {
         if (v_truhen [9] == 0)
         {
@@ -551,7 +551,7 @@ void p_truhe_brotbuechse_1 () __banked
         p_engine_after_txt (); 
 }
 
-void p_truhe_brotbuechse_2 () __banked
+void p_truhe_brotbuechse_2 () BANKED
 {
         if (v_truhen [42] == 0)
         {
@@ -568,7 +568,7 @@ void p_truhe_brotbuechse_2 () __banked
         p_engine_after_txt (); 
 }
 
-void p_truhe_geldkatze1 () __banked
+void p_truhe_geldkatze1 () BANKED
 {
         if (v_truhen [26] == 0)
         {
@@ -585,7 +585,7 @@ void p_truhe_geldkatze1 () __banked
         p_engine_after_txt ();
 }
 
-void p_truhe_geldkatze2 () __banked
+void p_truhe_geldkatze2 () BANKED
 {
         if (v_truhen [53] == 0)
         {
@@ -619,7 +619,7 @@ void p_truhe_kraeuterbeutel (void) BANKED
         p_engine_after_txt ();
 }
 
-void p_truhe_magischer_stein () __banked
+void p_truhe_magischer_stein () BANKED
 {
         if (v_keyflag == 1)
         {
@@ -642,7 +642,7 @@ void p_truhe_magischer_stein () __banked
         }
 }
 
-void p_truhe_wappenrock () __banked
+void p_truhe_wappenrock () BANKED
 {
         if (v_keyflag == 1)
         {
@@ -667,7 +667,7 @@ void p_truhe_wappenrock () __banked
 
 
 ///Lebenspunkhöhungstruhe
-void p_truhe_lebenskristall (UINT8 l_mk, UINT8 l_nr) __banked
+void p_truhe_lebenskristall (UINT8 l_mk, UINT8 l_nr) BANKED
 {
         if (l_mk == v_smk)
         {
@@ -694,7 +694,7 @@ void p_truhe_lebenskristall (UINT8 l_mk, UINT8 l_nr) __banked
         }
 }
 
-void p_truhe_aspekt_wald (void) __banked
+void p_truhe_aspekt_wald (void) BANKED
 {
         if (v_keyflag == 1)
         {
@@ -718,7 +718,7 @@ void p_truhe_aspekt_wald (void) __banked
 }
 
 ///Truhe mit Heiltrank (XK, YK, Truhennummer)
-/*void p_truhe_heiltrank (UINT8 v_txk, UINT8 v_tyk, UINT8 v_tnr) __banked
+/*void p_truhe_heiltrank (UINT8 v_txk, UINT8 v_tyk, UINT8 v_tnr) BANKED
 {
   if (((v_txk == v_sxk ) && (v_tyk == v_syk + 8)) ||
       ((v_txk == v_sxk ) && (v_tyk == v_syk - 8)) ||
@@ -756,7 +756,7 @@ void p_truhe_aspekt_wald (void) __banked
 }*/
 
 ///Truhe mit Schlüssel (XK, YK, Truhennummer)
-/*void p_truhe_key (UINT8 v_txk, UINT8 v_tyk, UINT8 v_tnr) __banked
+/*void p_truhe_key (UINT8 v_txk, UINT8 v_tyk, UINT8 v_tnr) BANKED
 {
   if (((v_txk == v_sxk ) && (v_tyk == v_syk + 8)) ||
       ((v_txk == v_sxk ) && (v_tyk == v_syk - 8)) ||
@@ -786,7 +786,7 @@ void p_truhe_aspekt_wald (void) __banked
   }
 }*/
 
-/*void p_truhe_runen (UINT8 v_txk, UINT8 v_tyk, UINT8 v_tnr) __banked
+/*void p_truhe_runen (UINT8 v_txk, UINT8 v_tyk, UINT8 v_tnr) BANKED
 {
   if (((v_txk == v_sxk ) && (v_tyk == v_syk + 8)) ||
       ((v_txk == v_sxk ) && (v_tyk == v_syk - 8)) ||
@@ -811,7 +811,7 @@ void p_truhe_aspekt_wald (void) __banked
   }
 }*/
 
-void p_truhe_schluessel (UINT8 l_mk, UINT8 l_nr) __banked
+void p_truhe_schluessel (UINT8 l_mk, UINT8 l_nr) BANKED
 {
         if ((v_keyflag == 1) && (v_smk == l_mk))
         {
@@ -931,7 +931,7 @@ void p_truhe_portalrune (UINT8 l_mk, UINT8 l_tnr) BANKED
     }                  
 }
 
-void p_truhe_aspekt_berg (void) __banked
+void p_truhe_aspekt_berg (void) BANKED
 {
         if (v_keyflag == 1)
         {

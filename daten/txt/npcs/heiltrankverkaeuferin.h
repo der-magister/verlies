@@ -18,14 +18,10 @@
 //
 //   Kontakt: magister@kabelmail.de
 
-#ifndef _LVLDATTEMPEL_E2_H_
-#define _LVLDATTEMPEL_E2_H_
+#ifndef _HEILTRANKVERKAEUFERIN_H_
+#define _HEILTRANKVERKAEUFERIN_H_
 
-extern const unsigned char v_lvl290[];
-extern const unsigned char v_lvl291[];
-extern const unsigned char v_lvl292[];
-extern const unsigned char v_lvl293[];
-extern const unsigned char v_lvl294[];
-extern const unsigned char v_lvl295[];
+extern const unsigned char heiltrankverkaeuferin1[];
+extern const unsigned char heiltrankverkaeuferin2[];
 
 #endif

@@ -75,22 +75,16 @@ lcc -Wa-l -Wl-m -Wl-j -Wf-bo2 -c -o /tmp/tilesets.o daten/tilesets/tilesets.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo3 -c -o /tmp/locationstxt.o daten/txt/locations/locations.c
 
 #Texte von Npcs und Gegnern
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/ausdauerverkaeuferin1.o daten/txt/npcs/ausdauerverkaeuferin1.c
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/ausdauerverkaeuferin2.o daten/txt/npcs/ausdauerverkaeuferin2.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/ausdauerverkaeuferin.o daten/txt/npcs/ausdauerverkaeuferin.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/fiona-1.o daten/txt/npcs/fiona-1.c
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/heilertxt1.o daten/txt/npcs/heilertxt1.c
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/heilertxt2.o daten/txt/npcs/heilertxt2.c
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/heiltrankverkaeuferin1.o daten/txt/npcs/heiltrankverkaeuferin1.c
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/heiltrankverkaeuferin2.o daten/txt/npcs/heiltrankverkaeuferin2.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/heilertxt.o daten/txt/npcs/heilertxt.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/heiltrankverkaeuferin.o daten/txt/npcs/heiltrankverkaeuferin.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/hugotxt.o daten/txt/npcs/hugo.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/max-1.o daten/txt/npcs/max-1.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/ogerboss1.o daten/txt/npcs/ogerboss1.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/ogerboss2.o daten/txt/npcs/ogerboss2.c
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/phobetxt1.o daten/txt/npcs/phobetxt1.c
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/phobetxt2.o daten/txt/npcs/phobetxt2.c
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/phobetxt3.o daten/txt/npcs/phobetxt3.c
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/provianthaendler1.o daten/txt/npcs/provianthaendler1.c
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/provianthaendler2.o daten/txt/npcs/provianthaendler2.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/phobetxt1.o daten/txt/npcs/phobetxt.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/provianthaendler.o daten/txt/npcs/provianthaendler.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/saratxt.o daten/txt/npcs/sara.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/xavertxt1.o daten/txt/npcs/xavertxt1.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/xavertxt2.o daten/txt/npcs/xavertxt2.c
