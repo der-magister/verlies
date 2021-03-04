@@ -189,30 +189,30 @@ lcc -Wa-l -Wl-m -Wl-j -Wf-bo17 -c -o /tmp/tempel-e1.o tempel-e1.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo17 -c -o /tmp/tempel-e2.o tempel-e2.c
 
 #main
-lcc -Wa-l -Wl-m -Wl-j -Wa-l -Wl-m -Wl-j -c -o /tmp/verlies.o verlies.c
-lcc -Wa-l -Wl-m -Wl-j -c -o /tmp/globals.o globals.c
-lcc -Wa-l -Wl-m -Wl-j -c -o /tmp/engine.o engine.c
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo3 -c -o /tmp/locations.o locations.c
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo3 -c -o /tmp/map.o map.c
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo3 -c -o /tmp/other.o other.c
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo4 -c -o /tmp/init.o init.c 
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo7 -c -o /tmp/truhen.o truhen.c
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo8 -c -o /tmp/hud.o hud.c
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo8 -c -o /tmp/portale.o portale.c
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo8 -c -o /tmp/infoscreen.o infoscreen.c
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo9 -c -o /tmp/player.o player.c
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo9 -c -o /tmp/tiledat.o tiledat.c
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/text.o text.c
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo11 -c -o /tmp/lvlstatus.o lvlstatus.c
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo12 -c -o /tmp/items.o items.c
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo12 -c -o /tmp/npc.o npc.c
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo12 -c -o /tmp/schilder.o schilder.c
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo12 -c -o /tmp/runen.o runen.c
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo13 -c -o /tmp/gegner.o gegner.c
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo13 -c -o /tmp/lvlgegner.o lvlgegner.c
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo11 -c -o /tmp/tiledatg.o tiledatg.c
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo14 -c -o /tmp/boss.o boss.c
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo21 -c -o /tmp/umgebung.o umgebung.c
+lcc -Wa-l -Wf-max-allocs-per-mode50000 -Wl-m -Wl-j -Wa-l -Wl-m -Wl-j -c -o /tmp/verlies.o verlies.c
+lcc -Wa-l -Wf-max-allocs-per-mode50000 -Wl-m -Wl-j -c -o /tmp/globals.o globals.c
+lcc -Wa-l -Wf-max-allocs-per-mode50000 -Wl-m -Wl-j -c -o /tmp/engine.o engine.c
+lcc -Wa-l -Wf-max-allocs-per-mode50000 -Wl-m -Wl-j -Wf-bo3 -c -o /tmp/locations.o locations.c
+lcc -Wa-l -Wf-max-allocs-per-mode50000 -Wl-m -Wl-j -Wf-bo3 -c -o /tmp/map.o map.c
+lcc -Wa-l -Wf-max-allocs-per-mode50000 -Wl-m -Wl-j -Wf-bo3 -c -o /tmp/other.o other.c
+lcc -Wa-l -Wf-max-allocs-per-mode50000 -Wl-m -Wl-j -Wf-bo4 -c -o /tmp/init.o init.c 
+lcc -Wa-l -Wf-max-allocs-per-mode50000 -Wl-m -Wl-j -Wf-bo7 -c -o /tmp/truhen.o truhen.c
+lcc -Wa-l -Wf-max-allocs-per-mode50000 -Wl-m -Wl-j -Wf-bo8 -c -o /tmp/hud.o hud.c
+lcc -Wa-l -Wf-max-allocs-per-mode50000 -Wl-m -Wl-j -Wf-bo8 -c -o /tmp/portale.o portale.c
+lcc -Wa-l -Wf-max-allocs-per-mode50000 -Wl-m -Wl-j -Wf-bo8 -c -o /tmp/infoscreen.o infoscreen.c
+lcc -Wa-l -Wf-max-allocs-per-mode50000 -Wl-m -Wl-j -Wf-bo9 -c -o /tmp/player.o player.c
+lcc -Wa-l -Wf-max-allocs-per-mode50000 -Wl-m -Wl-j -Wf-bo9 -c -o /tmp/tiledat.o tiledat.c
+lcc -Wa-l -Wf-max-allocs-per-mode50000 -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/text.o text.c
+lcc -Wa-l -Wf-max-allocs-per-mode50000 -Wl-m -Wl-j -Wf-bo11 -c -o /tmp/lvlstatus.o lvlstatus.c
+lcc -Wa-l -Wf-max-allocs-per-mode50000 -Wl-m -Wl-j -Wf-bo12 -c -o /tmp/items.o items.c
+lcc -Wa-l -Wf-max-allocs-per-mode50000 -Wl-m -Wl-j -Wf-bo12 -c -o /tmp/npc.o npc.c
+lcc -Wa-l -Wf-max-allocs-per-mode50000 -Wl-m -Wl-j -Wf-bo12 -c -o /tmp/schilder.o schilder.c
+lcc -Wa-l -Wf-max-allocs-per-mode50000 -Wl-m -Wl-j -Wf-bo12 -c -o /tmp/runen.o runen.c
+lcc -Wa-l -Wf-max-allocs-per-mode50000 -Wl-m -Wl-j -Wf-bo13 -c -o /tmp/gegner.o gegner.c
+lcc -Wa-l -Wf-max-allocs-per-mode50000 -Wl-m -Wl-j -Wf-bo13 -c -o /tmp/lvlgegner.o lvlgegner.c
+lcc -Wa-l -Wf-max-allocs-per-mode50000 -Wl-m -Wl-j -Wf-bo11 -c -o /tmp/tiledatg.o tiledatg.c
+lcc -Wa-l -Wf-max-allocs-per-mode50000 -Wl-m -Wl-j -Wf-bo14 -c -o /tmp/boss.o boss.c
+lcc -Wa-l -Wf-max-allocs-per-mode50000 -Wl-m -Wl-j -Wf-bo21 -c -o /tmp/umgebung.o umgebung.c
 
 cd /tmp/
 
