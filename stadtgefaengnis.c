@@ -53,6 +53,7 @@ void p_lvl5 (void) BANKED
                         p_engine_loadMap (v_lvl1a, 5, 16);
                         p_engine_changeLvl (1, 136, 32);
                         p_gui_show_location (lfelsengrund);
+                        v_region = 1;
                 }
                 else if (v_smk == 124)
                 {

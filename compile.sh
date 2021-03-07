@@ -12,6 +12,8 @@ rm -rf /tmp/*.o
 rm -rf /tmp/*.asm
 rm -rf /tmp/*.sym
 rm -rf /tmp/*.lst
+rm -rf /tmp/*.noi
+rm -rf /tmp/*.map
 
 if [ -f /tmp/verlies.gb ]
 then 

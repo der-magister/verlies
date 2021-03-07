@@ -407,21 +407,21 @@ void p_lvl37 () __banked
 {
         p_schild (74, schildtxt2);
 
-        if (v_keyflag == 1)
+        
+        if (v_smk == 124)
         {
-                if (v_smk == 124)
-                {
                         p_engine_loadMap (v_lvl36, BANK_5, BANK_16);
                         p_engine_changeLvl (36, 16, 72);
-                }
-                else if (v_smk == 108)
-                {
-                        p_engine_loadTileset (BANK_2, 4, 34, ogerhoehlen, BANK_16);
-                        p_engine_loadMap (v_lvl40, BANK_5, BANK_16);
-                        p_engine_changeLvl (40, 144, 72);
-                        p_gui_show_location (logerh);
-                }
         }
+        else if (v_smk == 108)
+        {
+                p_engine_loadTileset (BANK_2, 4, 34, ogerhoehlen, BANK_16);
+                p_engine_loadMap (v_lvl40, BANK_6, BANK_16);
+                p_engine_changeLvl (40, 144, 72);
+                p_gui_show_location (logerh);
+                v_region = 4;
+        }
+        
 }
 
 void p_lvl38 () __banked

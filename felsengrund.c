@@ -252,6 +252,7 @@ void p_lvl1 () BANKED
                         p_engine_loadMap (v_lvl5, 5, 15);
                         p_engine_changeLvl (5, 136, 32);
                         p_gui_show_location (lstadtgefaengnis);
+                        v_region = 2;
                 }
         }
 }
@@ -349,10 +350,11 @@ void p_lvl3 () BANKED
                 }
                 else if (v_tuer [6] == 1) {
                         
-                        p_engine_loadTileset (2, 4, 33, wiesen_1, 15);
+                        p_engine_loadTileset (2, 3, 34, wiesen_1, 15);
                         p_engine_loadMap (v_lvl20, 5, 15);
                         p_engine_changeLvl (20, 144, 64);
                         p_gui_show_location (lwiesen);
+                        v_region = 3;
                         }
                 }
 

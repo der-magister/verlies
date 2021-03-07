@@ -123,3 +123,22 @@ UINT8 v_loch [10];
 UINT8 v_sflimmtm;
 UINT8 v_ks; //Zählwert Kolision Spieler
 
+/*
+	aktuelle Aufenthaltsregion
+	1 - Felsengrund
+	2 - Stadtgefängnis
+	3 - Wiesen
+	4 - Ogerhöhlen
+	5 - Dorf der Seefeen
+	6 - Feensee
+	7 - Eichenwald
+	8 - Der alte Baum
+	9 - Gebirgspfad
+       10 - Zwergenheim
+       11 - Rotgebirge
+       12 - Die Mine
+       13 - Gipfelpfad
+       14 - Phurs Tempel	
+*/
+UINT8 v_region; 
+

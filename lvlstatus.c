@@ -345,7 +345,7 @@ void p_lvl_status (void) BANKED
                         p_engine_set_tile (2, 6, 1);
                         p_engine_set_tile (3, 6, 1);
 
-                        if (v_questen [1] == 0) ++v_questen [1];
+                        if (v_questen [1] == 0) v_questen [1] = 1;
                 }
 	}
         else if (v_lvl == 3) {
@@ -738,5 +738,4 @@ void p_lvl_status (void) BANKED
         }
         
         p_umgebung_state ();  
-
 }

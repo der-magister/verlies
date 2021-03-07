@@ -1,6 +1,6 @@
 //   Verlies - ein Adventure im Retrodesign
 //
-//   Copyright (C) 2018-2020 Heiko Wolf
+//   Copyright (C) 2018-2021 Heiko Wolf
 //
 //   This program is free software; you can redistribute it and/or modify
 //   it under the terms of the GNU General Public License As published by
@@ -55,7 +55,7 @@ void p_showMap (void) BANKED
 	v_tile [0] = 52;
 
 	//Karte 1 - Felsengrund
-	if ((v_lvl < 4) && (v_knr [0] == 1))
+	if ((v_region == 1) && (v_knr [0] == 1))
 	{
 		set_win_tiles (8, 12, 2, 2, k_felsengrund);
 
@@ -65,7 +65,7 @@ void p_showMap (void) BANKED
 	}
 
 	//Karte 2 - Stadtgefaengnis
-	else if ((v_lvl > 4) && (v_lvl < 14) && (v_knr [1] == 1))
+	else if ((v_region == 2) && (v_knr [1] == 1))
 	{
 		set_win_tiles (8, 12, 4, 3, k_gefaengnis);
 		
@@ -79,7 +79,8 @@ void p_showMap (void) BANKED
 		else if (v_lvl == 12) p_map_draw_mark (10, 13);
 		else if (v_lvl == 13) p_map_draw_mark (11, 14);
 	}
-        else if ((v_lvl > 19) && (v_lvl < 46) && (v_knr [2] == 1))
+        //Karte 3 - Wiesen
+        else if ((v_region == 3) && (v_knr [2] == 1))
         {
                 set_win_tiles (6, 11, 9, 6, k_wiesen);
 
@@ -101,7 +102,26 @@ void p_showMap (void) BANKED
                 else if (v_lvl == 35) p_map_draw_mark (9, 15);
                 else if (v_lvl == 36) p_map_draw_mark (8, 15);
                 else if (v_lvl == 37) p_map_draw_mark (7, 15);
+                else if (v_lvl == 16) p_map_draw_mark (9, 14);
+                else if (v_lvl == 80) p_map_draw_mark (9, 13);
+                else if (v_lvl == 81) p_map_draw_mark (9, 12);
+                else if (v_lvl == 71) p_map_draw_mark (9, 16);
+                else if (v_lvl == 70) p_map_draw_mark (10, 16);
+                else if (v_lvl == 72) p_map_draw_mark (11, 16);
+                else if (v_lvl == 38) p_map_draw_mark (13, 15);
+                else if (v_lvl == 76) p_map_draw_mark (13, 16);
+                else if (v_lvl == 39) p_map_draw_mark (14, 15);
+                else if (v_lvl == 77) p_map_draw_mark (14, 16);
+                else if (v_lvl == 78) p_map_draw_mark (8, 16);
+                else if (v_lvl == 84) p_map_draw_mark (8, 14);
+                else if (v_lvl == 85) p_map_draw_mark (8, 13);
+                else if (v_lvl == 82) p_map_draw_mark (8, 12);
+                else if (v_lvl == 79) p_map_draw_mark (7, 16);
+                else if (v_lvl == 87) p_map_draw_mark (7, 14);
+                else if (v_lvl == 86) p_map_draw_mark (7, 13);
+                else if (v_lvl == 83) p_map_draw_mark (7, 12);
         }
+        //Karte 4 Ogerhoehlen
         else if ((v_lvl > 39) && (v_lvl < 67) && (v_knr [3] == 1))
         {
                 set_win_tiles (7, 12, 8, 5, k_oger);
