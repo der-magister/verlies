@@ -349,7 +349,7 @@ void p_truhe_proviant (UINT8 l_smk, UINT8 l_tnr, UINT8 l_anz) BANKED
                                 if (v_spr + l_anz <= v_smpr)
                                 {
 					v_tile [0] = 100;
-                                        v_spr++;
+                                        ++v_spr;
                                         p_truhe_proviant_zusatz (l_tnr);
                                 }
                                 else
@@ -361,14 +361,14 @@ void p_truhe_proviant (UINT8 l_smk, UINT8 l_tnr, UINT8 l_anz) BANKED
                         {
 				if (v_spr + l_anz <= v_smpr)
                                 {
-					v_tile [0] = 100;
-                                        v_spr++;
+					v_tile [0] = 99;
+                                        v_spr += 2;
                                         p_truhe_proviant_zusatz (l_tnr);
                                 } 
                                 else if (v_spr + l_anz - 1 <= v_smpr)
                                 {
-				        v_tile [0] = 99;
-                                        v_spr += 2;
+				        v_tile [0] = 100;
+                                        ++v_spr;
                                         p_truhe_proviant_zusatz (l_tnr);
                                 }
                                 else
@@ -540,7 +540,7 @@ void p_truhe_brotbuechse_1 () BANKED
         {
                 p_engine_set_txt (brotbuechse_1);
                 ++v_truhen [9];
-                ++v_smpr;
+                v_smpr=6;
                 p_truhe_status (); 
         }
         else

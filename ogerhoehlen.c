@@ -69,7 +69,7 @@ void p_lvl40 (void) BANKED
                 v_region = 3;
         }
         else if (v_smk == 11) {
-                p_engine_loadMap (v_lvl42, BANK_5, BANK_16);
+                p_engine_loadMap (v_lvl42, BANK_6, BANK_16);
                 p_engine_changeLvl (42, 104, 120);
         }
 }
@@ -284,7 +284,7 @@ void p_lvl55 (void) BANKED
                         v_tuer [2] = 1;
                         --v_ske;
                 } 
-                if (v_tuer [2] == 1) {
+                else if (v_tuer [2] == 1) {
                         p_engine_loadMap (v_lvl61, BANK_6, BANK_16);  
                         p_engine_changeLvl (61, 48, 24);
                 }
