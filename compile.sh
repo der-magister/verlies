@@ -226,7 +226,8 @@ lcc -Wa-l -Wl-m -Wl-j -Wl-yt0x019 -Wl-yo32 -Wm-yn"VERLIES" -o verlies.gb $obj
 
 if [ -f /tmp/verlies.gb ]
 then
-	echo "Starte Emulation"
+
+#	echo "Starte Emulation"
 	
 	#mgba-qt ../verlies.gb &>/dev/null &
 
@@ -235,14 +236,17 @@ then
 	#https://github.com/bbbbbr/romusage
 	romusage verlies.map
 
+	cp /tmp/verlies.gb /home/magister/repos/verlies/verlies.gb
 	#killall -15 mednafen
 
 	#flatpak run io.mgba.mGBA /tmp/verlies.gb &>/dev/null &
 
 	#better performance on raspberry pi 400
-	#/usr/games/mednafen -psx.dbg_level 0 -video.fs 0 -cheats 0 /tmp/verlies.gb &>/dev/null &
+	#/usr/games/mednafen -psx.dbg_level 0 -video.fs 0 -gb.system_type dmg -gb.xscale 4,000000 -gb.yscale 4,000000 /tmp/verlies.gb &>/dev/null &
 	
-	wine "C:\apps\bgb\bgb.exe" /tmp/verlies.gb &>/dev/null &
+#	wine "C:\apps\bgb\bgb.exe" /tmp/verlies.gb &>/dev/null &
+	BGB.exe C:\\magister\\repos\\verlies\\verlies.gb &
+
 fi
 
 date
