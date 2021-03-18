@@ -346,7 +346,7 @@ void p_truhe_proviant (UINT8 l_smk, UINT8 l_tnr, UINT8 l_anz) BANKED
                 {
                         if (l_anz == 1)
                         {
-                                if (v_spr + l_anz <= v_smpr)
+                                if (v_spr < v_smpr)
                                 {
 					v_tile [0] = 100;
                                         ++v_spr;
@@ -365,7 +365,7 @@ void p_truhe_proviant (UINT8 l_smk, UINT8 l_tnr, UINT8 l_anz) BANKED
                                         v_spr += 2;
                                         p_truhe_proviant_zusatz (l_tnr);
                                 } 
-                                else if (v_spr + l_anz - 1 <= v_smpr)
+                                else if (v_spr < v_smpr)
                                 {
 				        v_tile [0] = 100;
                                         ++v_spr;
@@ -393,7 +393,7 @@ void p_truhe_schwert (UINT8 l_smk, UINT8 l_tnr) BANKED
   {
     if (v_truhen [l_tnr] == 0)
     {
-      if (v_stp <= 0)
+      if (v_stp == 0)
       {
         ++v_stp;
         p_engine_set_txt (schwerttruhe);

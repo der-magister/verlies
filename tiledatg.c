@@ -46,7 +46,7 @@ const unsigned char v_kdatg_tempel_e1 [28] = { 2, 3, 4, 5, 6, 7, 12, 13, 14, 15,
 
 UINT8 p_gegner_koli (void) __banked
 {
-        for (v_a = 0; v_a < 29; v_a++)
+        for (v_a = 0; v_a != 29; v_a++)
 	{
 		//Stadtgefängnis
                 if ((v_lvl >= 5) && (v_lvl <= 13) && (v_tile [2] == v_kdatg_1 [v_a])) return FALSE;
