@@ -230,22 +230,22 @@ then
 #	echo "Starte Emulation"
 	
 	#mgba-qt ../verlies.gb &>/dev/null &
-
-	#bgb.sh /tmp/verlies.gb
 	
 	#https://github.com/bbbbbr/romusage
 	romusage verlies.map
 
-	cp /tmp/verlies.gb /home/magister/repos/verlies/verlies.gb
+	#cp /tmp/verlies.gb /home/magister/repos/verlies/verlies.gb
 	#killall -15 mednafen
 
 	#flatpak run io.mgba.mGBA /tmp/verlies.gb &>/dev/null &
 
 	#better performance on raspberry pi 400
-	/usr/games/mednafen -psx.dbg_level 0 -video.fs 0 -gb.system_type dmg -gb.xscale 4,000000 -gb.yscale 4,000000 /tmp/verlies.gb &>/dev/null &
+	#/usr/games/mednafen -psx.dbg_level 0 -video.fs 0 -gb.system_type dmg -gb.xscale 4,000000 -gb.yscale 4,000000 /tmp/verlies.gb &>/dev/null &
 	
 #	wine "C:\apps\bgb\bgb.exe" /tmp/verlies.gb &>/dev/null &
 	#BGB.exe C:\\magister\\repos\\verlies\\verlies.gb &
+
+	bgb.sh /tmp/verlies.gb
 
 fi
 

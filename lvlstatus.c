@@ -455,7 +455,7 @@ void p_lvl_status (void) BANKED
         } 
         else if (v_lvl == 65)
         {
-                if (v_questen [0] >= 2)
+                if (v_questen [0] >= 3)
                 {
                         p_engine_set_tile (8, 5, LAYER_BKG);
                         p_engine_set_tile (9, 5, LAYER_BKG);

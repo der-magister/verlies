@@ -34,7 +34,7 @@ const unsigned char v_kdat_2 [28] = { 46, 45, 44, 43, 37, 36, 35, 34, 33, 32, 31
 const unsigned char v_kdat_5 [28] = { 4, 5, 6, 16, 17, 18, 19, 20, 21, 22, 24, 25, 26, 27, 28, 29, 30, 31, 36, 37, 45, 46, 0, 0, 0, 0, 0, 0 };
 
 //Kolisionsdaten Ogerhöhlen
-const unsigned char v_kdat_6 [28] = { 20, 21, 25, 26, 27, 36, 37, 43, 44, 45, 46, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+const unsigned char v_kdat_6 [28] = { 20, 21, 25, 26, 27, 36, 37, 43, 44, 45, 46, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
 
 //Kolisionsdaten Feenseedorf und Feensee
 const unsigned char v_kdat_feensee [28] = { 5, 16, 17, 18, 19, 20, 22, 21, 28, 29, 30, 31, 36, 37, 45, 46, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
@@ -78,7 +78,7 @@ const unsigned char v_kdat_tempel_e2 [28] = { 8, 9, 10, 11, 16, 17, 18, 19, 20, 
 
 UINT8 p_spieler_koli (void) __banked
 {
-	for (v_a = 0; v_a <= 28; ++v_a)
+	for (v_a = 0; v_a != 28; ++v_a)
 	{
                 //felsengrund
 		if ((v_lvl == 1) && (v_tile [1] == v_kdat_1 [v_a])) return FALSE;
@@ -86,8 +86,9 @@ UINT8 p_spieler_koli (void) __banked
                 else if ((v_lvl == 3) && (v_tile [1] == v_kdat_4 [v_a])) return FALSE;
                 
                 //stadtgefängnis
-                else if ((v_lvl >= 5) && (v_lvl <= 13) && (v_tile [1] == v_kdat_2 [v_a])) return FALSE;
-
+                else if (v_region == 2) { 
+                        if (v_tile [1] == v_kdat_2 [v_a]) return FALSE;
+                }
                 //die grossen wiesen
                 else if ((v_lvl >= 19) && (v_lvl < 40) && (v_tile [1] == v_kdat_5 [v_a])) return FALSE;
                 else if ((v_lvl >= 70) && (v_lvl <= 79) && (v_tile [1] == v_kdat_5 [v_a])) return FALSE;

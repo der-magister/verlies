@@ -227,7 +227,7 @@ void p_lvl13 () BANKED
                         p_engine_set_txt (phobetxt3);
                         p_engine_A ();
                         p_engine_after_txt ();
-                        ++v_questen [0];
+                        v_questen [0] = 2;
                         p_lvl_status ();
                 }
 	}

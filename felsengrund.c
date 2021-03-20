@@ -104,7 +104,7 @@ void p_lvl1 () BANKED
                                 p_engine_set_txt (saratxt3);
                                 p_engine_A ();
                                 p_engine_after_txt ();
-                                ++v_questen [1];
+                                v_questen [1] = 1;
                         }
                         else if ((v_questen [1] == 1) && (v_stein [0] == 0))
                         {
@@ -121,7 +121,7 @@ void p_lvl1 () BANKED
                                 p_engine_set_txt (saratxt7);
                                 p_engine_A ();
                                 p_engine_after_txt ();
-                                ++v_questen [1];
+                                v_questen [1] = 2;
                                 v_sgo += 2;
                         }
                         else if (v_questen [1] == 2)
@@ -155,7 +155,7 @@ void p_lvl1 () BANKED
                                 p_engine_set_txt (xavertxt7);
                                 p_engine_A ();
                                 p_engine_after_txt ();
-                                ++v_questen [0];
+                                v_questen [0] = 1;
                                 p_lvl_status ();
                         }
                         else if (v_questen [0] == 1)
@@ -175,7 +175,7 @@ void p_lvl1 () BANKED
                                 p_engine_set_txt (xavertxt11);
                                 p_engine_A ();
                                 p_engine_after_txt ();
-                                ++v_questen [0];
+                                v_questen [0] = 3;
                                 p_lvl_status ();
                                 v_spitzhacke = TRUE;
                         }
@@ -300,7 +300,7 @@ void p_lvl3 () BANKED
 
         if (v_smk  == 148) p_heiltrankhaendlerin ();
 
-
+        //Aufgabe Wächter Hugo
         if (v_keyflag == 1)
         {
                 if ((v_smk == 92) || (v_smk == 58) || (v_smk == 20))
