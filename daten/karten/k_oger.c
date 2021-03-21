@@ -1,5 +1,3 @@
-//#pragma bank=3
-
 /*
 
  K_OGER.C
@@ -10,7 +8,7 @@
    Section       : 
    Bank          : 0
    Map size      : 8 x 5
-   Tile set      : D:\magister\owncloud\projekte\verlies-16x16\gfx\entwuerfe\tilesets\wiesen_1.gbr
+   Tile set      : Z:\home\magister\repos\verlies\gfx\entwuerfe\tilesets\ogerhoehlen.gbr
    Plane count   : 1 plane (8 bits)
    Plane order   : Tiles are continues
    Tile offset   : 0

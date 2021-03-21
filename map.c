@@ -122,7 +122,7 @@ void p_showMap (void) BANKED
                 else if (v_lvl == 83) p_map_draw_mark (7, 12);
         }
         //Karte 4 Ogerhoehlen
-        else if ((v_lvl > 39) && (v_lvl < 67) && (v_knr [3] == 1))
+        else if ((v_region == 4) && (v_knr [3] == 1))
         {
                 set_win_tiles (7, 12, 8, 5, k_oger);
 
@@ -137,9 +137,22 @@ void p_showMap (void) BANKED
                 else if (v_lvl == 49) p_map_draw_mark (14, 16);
                 else if (v_lvl == 46) p_map_draw_mark (14, 15);
                 else if (v_lvl == 52) p_map_draw_mark (14, 14);
-                else if (v_lvl =0 60) p_map_draw_mark (14, 13);
-                
-
+                else if (v_lvl == 60) p_map_draw_mark (14, 13);
+                else if (v_lvl == 48) p_map_draw_mark (13, 16);
+                else if (v_lvl == 47) p_map_draw_mark (13, 15);
+                else if (v_lvl == 51) p_map_draw_mark (13, 14);
+                else if (v_lvl == 59) p_map_draw_mark (13, 13);
+                else if (v_lvl == 54) p_map_draw_mark (12, 15);
+                else if (v_lvl == 58) p_map_draw_mark (12, 13);
+                else if (v_lvl == 61) p_map_draw_mark (11, 16);
+                else if (v_lvl == 55) p_map_draw_mark (11, 15);
+                else if (v_lvl == 56) p_map_draw_mark (11, 14);
+                else if (v_lvl == 57) p_map_draw_mark (11, 13);
+                else if (v_lvl == 62) p_map_draw_mark (10, 16);
+                else if (v_lvl == 63) p_map_draw_mark (9, 16);
+                else if (v_lvl == 64) p_map_draw_mark (9, 15);
+                else if (v_lvl == 65) p_map_draw_mark (9, 14);
+                else if (v_lvl == 66) p_map_draw_mark (9, 13);
         }
         else if (((v_lvl == 90) || (v_lvl == 91)) && (v_knr [4] == 1))
         {
