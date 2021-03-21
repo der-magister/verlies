@@ -127,6 +127,19 @@ void p_showMap (void) BANKED
                 set_win_tiles (7, 12, 8, 5, k_oger);
 
                 if (v_lvl == 40) p_map_draw_mark (15, 16);
+                else if (v_lvl == 41) p_map_draw_mark (16, 15);
+                else if (v_lvl == 42) p_map_draw_mark (16, 14);
+                else if (v_lvl == 43) p_map_draw_mark (16, 13);
+                else if (v_lvl == 44) p_map_draw_mark (16, 12);
+                else if (v_lvl == 50) p_map_draw_mark (15, 16);
+                else if (v_lvl == 45) p_map_draw_mark (15, 15);
+                else if (v_lvl == 53) p_map_draw_mark (15, 14);
+                else if (v_lvl == 49) p_map_draw_mark (14, 16);
+                else if (v_lvl == 46) p_map_draw_mark (14, 15);
+                else if (v_lvl == 52) p_map_draw_mark (14, 14);
+                else if (v_lvl =0 60) p_map_draw_mark (14, 13);
+                
+
         }
         else if (((v_lvl == 90) || (v_lvl == 91)) && (v_knr [4] == 1))
         {

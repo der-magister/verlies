@@ -1,6 +1,6 @@
 //   Verlies - ein Adventure im Retrodesign
 //
-//   Copyright (C) 2018-2020 Heiko Wolf
+//   Copyright (C) 2018-2021 Heiko Wolf
 //
 //   This program is free software; you can redistribute it and/or modify
 //   it under the terms of the GNU General Public License As published by
@@ -23,11 +23,11 @@
 
 #include "globals.h"
 
-extern void p_spieler_init (void) __banked;
-extern void p_spieler_setSprite (UINT8 l_set) __banked;
+extern void p_spieler_init (void) BANKED;
+extern void p_spieler_setSprite (UINT8 l_set) BANKED;
 extern void p_spieler_set_sprite (void) BANKED;
 extern void p_spieler_blink (void) BANKED;
-extern void p_spieler_blink_off (void) __banked;
+extern void p_spieler_blink_off (void) BANKED;
 //extern void p_spieler_move  (UINT8 v_ri) BANKED;
 extern void p_spieler_attack (void) BANKED;
 extern void p_spieler_hideAttack (void) BANKED;

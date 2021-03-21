@@ -1,6 +1,6 @@
 //   Verlies - ein Adventure/RPG im Retrodesign
 //
-//   Copyright (C) 2018-2020 Heiko Wolf
+//   Copyright (C) 2018-2021 Heiko Wolf
 //
 //   This program is free software; you can redistribute it and/or modify
 //   it under the terms of the GNU General Public License As published by
@@ -29,7 +29,7 @@
 #include "engine.h"
 
 ///setzt das Spielersprite an angegebene Position
-void p_spieler_set_sprite (void) __banked
+void p_spieler_set_sprite (void) BANKED
 {
         //Sprites bewegen
         move_sprite (0, v_sxk, v_syk);
@@ -43,7 +43,7 @@ void p_spieler_set_sprite (void) __banked
 }
 
 ///Init der Spielerdaten am Start des Spieles
-void p_spieler_init (void) __banked
+void p_spieler_init (void) BANKED
 {
         p_spieler_setSprite (1);
 	
@@ -61,7 +61,7 @@ void p_spieler_init (void) __banked
 }
 
 //Spritenummerwechsel fuer Trefferanimation
-void p_spieler_setSprite (UINT8 l_set) __banked
+void p_spieler_setSprite (UINT8 l_set) BANKED
 {
         if (l_set == 1)
         {
@@ -87,13 +87,13 @@ void p_spieler_setSprite (UINT8 l_set) __banked
         }
 }
 
-void p_spieler_blink (void) __banked
+void p_spieler_blink (void) BANKED
 {
         p_spieler_setSprite (2);
         v_sflimmtm = 0;
 }
 
-void p_spieler_blink_off (void) __banked
+void p_spieler_blink_off (void) BANKED
 {
         p_spieler_setSprite (1);
         v_sflimmtm = 255;
@@ -205,7 +205,7 @@ void p_spieler_after_move (void) BANKED
 
 
 ///Bewegungroutine des Spielersprites
-/*void p_spieler_move  (UINT8 l_ri) __banked
+/*void p_spieler_move  (UINT8 l_ri) BANKED
 {
         v_sri = l_ri;
         v_walk = TRUE; 
@@ -278,7 +278,7 @@ void p_spieler_after_move (void) BANKED
 }*/
 
 ///Angriff des Spielers
-void p_spieler_attack () __banked
+void p_spieler_attack () BANKED
 {
         //Nord
         if ((v_sri == MOVE_NORTH) && (v_syk != 24))
@@ -441,7 +441,7 @@ void p_spieler_attack () __banked
 }
 
 ///Versteckt Attackesprites 
-void p_spieler_hideAttack (void) __banked
+void p_spieler_hideAttack (void) BANKED
 {
         move_sprite (5, 0, 0);
         move_sprite (6, 0, 0);
@@ -449,7 +449,7 @@ void p_spieler_hideAttack (void) __banked
         move_sprite (8, 0, 0);
 }
 
-void p_spieler_inc_ausdauer (void) __banked
+void p_spieler_inc_ausdauer (void) BANKED
 {
         if (v_saus < v_smaus) ++v_saus;
         p_hud_showAD ();
