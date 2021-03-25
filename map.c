@@ -126,33 +126,33 @@ void p_showMap (void) BANKED
         {
                 set_win_tiles (7, 12, 8, 5, k_oger);
 
-                if (v_lvl == 40) p_map_draw_mark (15, 16);
-                else if (v_lvl == 41) p_map_draw_mark (16, 15);
-                else if (v_lvl == 42) p_map_draw_mark (16, 14);
-                else if (v_lvl == 43) p_map_draw_mark (16, 13);
-                else if (v_lvl == 44) p_map_draw_mark (16, 12);
-                else if (v_lvl == 50) p_map_draw_mark (15, 16);
-                else if (v_lvl == 45) p_map_draw_mark (15, 15);
-                else if (v_lvl == 53) p_map_draw_mark (15, 14);
-                else if (v_lvl == 49) p_map_draw_mark (14, 16);
-                else if (v_lvl == 46) p_map_draw_mark (14, 15);
-                else if (v_lvl == 52) p_map_draw_mark (14, 14);
-                else if (v_lvl == 60) p_map_draw_mark (14, 13);
-                else if (v_lvl == 48) p_map_draw_mark (13, 16);
-                else if (v_lvl == 47) p_map_draw_mark (13, 15);
-                else if (v_lvl == 51) p_map_draw_mark (13, 14);
-                else if (v_lvl == 59) p_map_draw_mark (13, 13);
-                else if (v_lvl == 54) p_map_draw_mark (12, 15);
-                else if (v_lvl == 58) p_map_draw_mark (12, 13);
-                else if (v_lvl == 61) p_map_draw_mark (11, 16);
-                else if (v_lvl == 55) p_map_draw_mark (11, 15);
-                else if (v_lvl == 56) p_map_draw_mark (11, 14);
-                else if (v_lvl == 57) p_map_draw_mark (11, 13);
-                else if (v_lvl == 62) p_map_draw_mark (10, 16);
-                else if (v_lvl == 63) p_map_draw_mark (9, 16);
-                else if (v_lvl == 64) p_map_draw_mark (9, 15);
-                else if (v_lvl == 65) p_map_draw_mark (9, 14);
-                else if (v_lvl == 66) p_map_draw_mark (9, 13);
+                if (v_lvl == 40) p_map_draw_mark (14, 15);
+                else if (v_lvl == 41) p_map_draw_mark (14, 16);
+                else if (v_lvl == 42) p_map_draw_mark (14, 14);
+                else if (v_lvl == 43) p_map_draw_mark (14, 13);
+                else if (v_lvl == 44) p_map_draw_mark (14, 12);
+                else if (v_lvl == 50) p_map_draw_mark (13, 16);
+                else if (v_lvl == 45) p_map_draw_mark (13, 15);
+                else if (v_lvl == 53) p_map_draw_mark (13, 14); 
+                else if (v_lvl == 49) p_map_draw_mark (12, 16);
+                else if (v_lvl == 46) p_map_draw_mark (12, 15);
+                else if (v_lvl == 52) p_map_draw_mark (12, 14);
+                else if (v_lvl == 60) p_map_draw_mark (12, 13);
+                else if (v_lvl == 48) p_map_draw_mark (11, 16);
+                else if (v_lvl == 47) p_map_draw_mark (11, 15);
+                else if (v_lvl == 51) p_map_draw_mark (11, 14);
+                else if (v_lvl == 59) p_map_draw_mark (11, 13);
+                else if (v_lvl == 54) p_map_draw_mark (10, 15);
+                else if (v_lvl == 58) p_map_draw_mark (10, 13);
+                else if (v_lvl == 61) p_map_draw_mark (9, 16);
+                else if (v_lvl == 55) p_map_draw_mark (9, 15);
+                else if (v_lvl == 56) p_map_draw_mark (9, 14);
+                else if (v_lvl == 57) p_map_draw_mark (9, 13);
+                else if (v_lvl == 62) p_map_draw_mark (8, 16);
+                else if (v_lvl == 63) p_map_draw_mark (7, 16);
+                else if (v_lvl == 64) p_map_draw_mark (7, 15);
+                else if (v_lvl == 65) p_map_draw_mark (7, 14);
+                //else if (v_lvl == 66) p_map_draw_mark (7, 13);
         }
         else if (((v_lvl == 90) || (v_lvl == 91)) && (v_knr [4] == 1))
         {

@@ -97,7 +97,9 @@ UINT8 p_spieler_koli (void) __banked
                 else if ((v_lvl >= 84) && (v_lvl <= 87) && (v_tile [1] == v_kdat_5 [v_a])) return FALSE;
 
                 //ogerhöhle
-                else if ((v_lvl >= 40) && (v_lvl <= 66) && (v_tile [1] == v_kdat_6 [v_a])) return FALSE;
+                else if (v_region == 4) { 
+                        if (v_tile [1] == v_kdat_6 [v_a]) return FALSE;
+                }
 
                 //Feenseedorf und Feensee
                 else if ((v_lvl >= 90) && (v_lvl <= 117) && (v_tile [1] == v_kdat_feensee [v_a])) return FALSE;
