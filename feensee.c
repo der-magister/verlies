@@ -2,7 +2,7 @@
 
 //   Verlies - ein Adventure im Retrodesign
 //
-//   Copyright (C) 2018-2019 Heiko Wolf
+//   Copyright (C) 2018-2021 Heiko Wolf
 //
 //   This program is free software; you can redistribute it and/or modify
 //   it under the terms of the GNU General Public License As published by
@@ -61,7 +61,7 @@
 #include "daten/txt/schilder/schildertxt.h"
 
 ///Ablauf Raum 90
-void p_lvl90 () __banked
+void p_lvl90 () BANKED
 {
         p_truhe_karte (37, 4, 27);
 
@@ -134,13 +134,15 @@ void p_lvl90 () __banked
                 p_engine_loadMap (v_lvl70, BANK_5, BANK_16);
                 p_engine_changeLvl (70, 80, 120);
                 p_gui_show_location (lwiesen);
+                v_region = 3;
         } 
 }
 
 ///Ablauf Raum 91
-void p_lvl91 () __banked
+void p_lvl91 () BANKED
 {
         p_portal (21);
+        
         
 
         if (v_smk == 69) { p_provianthaendler (); }
@@ -160,8 +162,10 @@ void p_lvl91 () __banked
         }
 }
 
+
+//Feensee
 ///Ablauf Raum 95
-void p_lvl95 () __banked
+void p_lvl95 () BANKED
 {
         p_stein (56, 5);
 
@@ -185,7 +189,7 @@ void p_lvl95 () __banked
 }
 
 ///Ablauf Raum 96
-void p_lvl96 () __banked
+void p_lvl96 () BANKED
 {
         if (v_smk == 108)
         {
@@ -200,7 +204,7 @@ void p_lvl96 () __banked
 }
 
 ///Ablauf Raum 97
-void p_lvl97 () __banked
+void p_lvl97 () BANKED
 {
         if (v_smk == 54)
         {
@@ -215,7 +219,7 @@ void p_lvl97 () __banked
 }
 
 ///Ablauf Raum 98
-void p_lvl98 () __banked
+void p_lvl98 () BANKED
 {
         if (v_smk == 70)
         {
@@ -230,7 +234,7 @@ void p_lvl98 () __banked
 }
 
 ///Ablauf Raum 99
-void p_lvl99 () __banked
+void p_lvl99 () BANKED
 {
         p_truhe_karte (37, 5, 30);
 
@@ -248,7 +252,7 @@ void p_lvl99 () __banked
 }
 
 ///Ablauf Raum 100
-void p_lvl100 () __banked
+void p_lvl100 () BANKED
 {
         if (v_smk == 7)
         {
@@ -263,7 +267,7 @@ void p_lvl100 () __banked
 }
 
 ///Ablauf Raum 101
-void p_lvl101 () __banked
+void p_lvl101 () BANKED
 {
         if (v_smk == 11)
         {
@@ -278,7 +282,7 @@ void p_lvl101 () __banked
 }
 
 ///Ablauf Raum 102
-void p_lvl102 () __banked
+void p_lvl102 () BANKED
 {
         if (v_smk == 7)
         {
@@ -293,7 +297,7 @@ void p_lvl102 () __banked
 }
 
 ///Ablauf Raum 103
-void p_lvl103 () __banked
+void p_lvl103 () BANKED
 {
         if (v_questen [0] < 6)
         {
@@ -313,7 +317,7 @@ void p_lvl103 () __banked
         }
 }
 
-void p_lvl104 () __banked
+void p_lvl104 () BANKED
 {
         p_stein (191, 6);
         p_truhe_gold (51, 28, 1);
@@ -330,7 +334,7 @@ void p_lvl104 () __banked
         }
 }
 
-void p_lvl105 () __banked
+void p_lvl105 () BANKED
 {
         if (v_smk == 7)
         {
@@ -349,7 +353,7 @@ void p_lvl105 () __banked
 	}
 }
 
-void p_lvl106 () __banked
+void p_lvl106 () BANKED
 {
 	if (v_smk == 108)
 	{
@@ -364,7 +368,7 @@ void p_lvl106 () __banked
         }
 }
 
-void p_lvl107 () __banked
+void p_lvl107 () BANKED
 {
         p_stein (44, 13);
         p_truhe_proviant (181, 35, 1);
@@ -386,7 +390,7 @@ void p_lvl107 () __banked
         }
 }
 
-void p_lvl108 () __banked
+void p_lvl108 () BANKED
 {
         if (v_smk == 198)
         {
@@ -400,7 +404,7 @@ void p_lvl108 () __banked
         }
 }
 
-void p_lvl109 () __banked
+void p_lvl109 () BANKED
 {
         if (v_smk == 11)
         {
@@ -419,7 +423,7 @@ void p_lvl109 () __banked
         }
 }
 
-void p_lvl110 () __banked
+void p_lvl110 () BANKED
 {
         p_stein (51, 10);
         p_stein (176, 11);
@@ -439,7 +443,7 @@ void p_lvl110 () __banked
         }
 }
 
-void p_lvl111 () __banked
+void p_lvl111 () BANKED
 {
         if (v_smk == 162)
         {
@@ -453,7 +457,7 @@ void p_lvl111 () __banked
         }
 }
 
-void p_lvl112 () __banked
+void p_lvl112 () BANKED
 {
         p_stein (150, 14);
         p_stein (186, 15);
@@ -479,7 +483,7 @@ void p_lvl112 () __banked
         }
 }
 
-void p_lvl113 () __banked
+void p_lvl113 () BANKED
 {
         if (v_smk == 144)
         {
@@ -493,7 +497,7 @@ void p_lvl113 () __banked
         }
 }
 
-void p_lvl114 () __banked
+void p_lvl114 () BANKED
 {
         p_stein (191, 7);
         p_stein (38, 8);
@@ -516,7 +520,7 @@ void p_lvl114 () __banked
 
 }
 
-void p_lvl115 () __banked
+void p_lvl115 () BANKED
 {
         if (v_smk == 11)
         {
@@ -530,7 +534,7 @@ void p_lvl115 () __banked
         }
 }
 
-void p_lvl116 () __banked
+void p_lvl116 () BANKED
 {
         p_truhe_magischer_stein ();
 
@@ -541,7 +545,7 @@ void p_lvl116 () __banked
         }
 }
 
-void p_lvl117 () __banked
+void p_lvl117 () BANKED
 {
         p_truhe_proviant (183, 32, 2);
         p_truhe_ausdauertrank (188, 33);

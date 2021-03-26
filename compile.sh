@@ -31,13 +31,7 @@ lcc -Wa-l -Wf-max-allocs-per-mode50000 -Wl-m -Wl-j -Wf-bo8 -c -o /tmp/v_statscre
 lcc -Wa-l -Wf-max-allocs-per-mode50000 -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/rahmen.o gfx/rahmen.c
 
 #karten
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo3 -c -o /tmp/k_felsengrund.o daten/karten/k_felsengrund.c
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo3 -c -o /tmp/k_gefaengnis.o daten/karten/k_gefaengnis.c
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo3 -c -o /tmp/k_oger.o daten/karten/k_oger.c
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo3 -c -o /tmp/k_wiesen.o daten/karten/k_wiesen.c
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo3 -c -o /tmp/k_feensee.o daten/karten/k_feensee.c
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo3 -c -o /tmp/k_dorfseefeen.o daten/karten/k_dorfseefeen.c
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo3 -c -o /tmp/k_eichenwald.o daten/karten/k_eichenwald.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo3 -c -o /tmp/maps.o daten/karten/maps.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo3 -c -o /tmp/nomap.o daten/karten/nomap.c
 
 #lvl

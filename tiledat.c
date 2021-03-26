@@ -102,7 +102,9 @@ UINT8 p_spieler_koli (void) __banked
                 }
 
                 //Feenseedorf und Feensee
-                else if ((v_lvl >= 90) && (v_lvl <= 117) && (v_tile [1] == v_kdat_feensee [v_a])) return FALSE;
+                else if ((v_region == 5) || (v_region == 6)) { 
+                        if (v_tile [1] == v_kdat_feensee [v_a]) return FALSE;
+                }
 
                 //Eichenwald
 		else if ((v_lvl >= 120) && (v_lvl <= 143) && (v_tile [1] == v_kdat_eichenwald [v_a])) return FALSE;

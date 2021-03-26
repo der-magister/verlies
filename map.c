@@ -23,16 +23,7 @@
 #include "map.h"
 #include "engine.h"
 
-#include "daten/karten/k_felsengrund.h"
-#include "daten/karten/k_gefaengnis.h"
-#include "daten/karten/k_wiesen.h"
-#include "daten/karten/k_oger.h"
-#include "daten/karten/k_dorfseefeen.h"
-#include "daten/karten/k_feensee.h"
-#include "daten/karten/k_eichenwald.h"
-#include "daten/karten/k_feensee.h"
-#include "daten/karten/k_dorfseefeen.h"
-#include "daten/karten/k_dorfseefeen.h"
+#include "daten/karten/maps.h"
 #include "daten/karten/nomap.h"
 
 void p_map_init (void) BANKED
