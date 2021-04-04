@@ -69,57 +69,52 @@ void p_lvl90 () BANKED
 
         if ((v_smk == 67) || (v_smk == 33) || (v_smk == 105))
         {
-                if ((v_keyflag == 1) && (v_questen [0] == 4))
-                {
-                        p_engine_set_txt (feenaeltestetxt1);
-                        p_engine_down ();
-                        p_engine_set_txt (feenaeltestetxt2);
-                        p_engine_down ();
-                        p_engine_set_txt (feenaeltestetxt3);
-                        p_engine_down ();
-                        p_engine_set_txt (feenaeltestetxt4);
-                        p_engine_down ();
-                        p_engine_set_txt (feenaeltestetxt5);
-                        p_engine_down ();
-                        p_engine_set_txt (feenaeltestetxt6);
-                        p_engine_A ();
-                        p_engine_after_txt ();
-                        v_questen [0] = 5;
-                } 
-                else if ((v_keyflag == 1) && (v_questen [0] == 5))
-                {
-                        p_engine_set_txt (feenaeltestetxt6);
-                        p_engine_A ();
-                        p_engine_after_txt ();
-                }
-                else if ((v_keyflag == 1) && v_questen [0] == 7)
-                {
-                        p_engine_set_txt (feenaeltestetxt7);
-                        p_engine_down ();
-                        p_engine_set_txt (feenaeltestetxt8);
-                        p_engine_down ();
-                        p_engine_set_txt (feenaeltestetxt9);
-                        p_engine_down ();
-                        p_engine_set_txt (feenaeltestetxt10);
-                        p_engine_down ();
-                        p_engine_set_txt (feenaeltestetxt11);
-                        p_engine_down ();
-                        /*p_engine_set_txt (feenaeltestetxt12);
-                        p_engine_down ();
-                        p_engine_set_txt (feenaeltestetxt13);
-                        p_engine_down ();*/
-                        p_engine_set_txt (feenaeltestetxt14);
-                        p_engine_A ();
-                        p_engine_after_txt ();
-                        v_questen [0] = 8;
-                        v_use_portal = TRUE;
-                        v_aspekte [0] = TRUE;
-                }
-                else if ((v_keyflag == 1) && (v_questen [0] > 7))
-                {
-                        p_engine_set_txt (feenaeltestetxt14);
-                        p_engine_A ();
-                        p_engine_after_txt ();        
+                if (v_keyflag == 1) { 
+                        if ((v_questen [0] == 4) || (v_questen [2] == 2)) {
+                                p_engine_set_txt (feenaeltestetxt1);
+                                p_engine_down ();
+                                p_engine_set_txt (feenaeltestetxt2);
+                                p_engine_down ();
+                                p_engine_set_txt (feenaeltestetxt3);
+                                p_engine_down ();
+                                p_engine_set_txt (feenaeltestetxt4);
+                                p_engine_down ();
+                                p_engine_set_txt (feenaeltestetxt5);
+                                p_engine_down ();
+                                p_engine_set_txt (feenaeltestetxt6);
+                                p_engine_A ();
+                                p_engine_after_txt ();
+                                v_questen [0] = 5;
+                                v_questen [2] = 3;
+                        } 
+                        else if  (v_questen [0] == 5) {
+                                p_engine_set_txt (feenaeltestetxt6);
+                                p_engine_A ();
+                                p_engine_after_txt ();
+                        }
+                        else if (v_questen [0] == 7) {
+                                p_engine_set_txt (feenaeltestetxt7);
+                                p_engine_down ();
+                                p_engine_set_txt (feenaeltestetxt8);
+                                p_engine_down ();
+                                p_engine_set_txt (feenaeltestetxt9);
+                                p_engine_down ();
+                                p_engine_set_txt (feenaeltestetxt10);
+                                p_engine_down ();
+                                p_engine_set_txt (feenaeltestetxt11);
+                                p_engine_down ();
+                                p_engine_set_txt (feenaeltestetxt14);
+                                p_engine_A ();
+                                p_engine_after_txt ();
+                                v_questen [0] = 8;
+                                v_use_portal = TRUE;
+                                v_aspekte [0] = TRUE;
+                        }
+                        else if (v_questen [0] > 7) {
+                                p_engine_set_txt (feenaeltestetxt14);
+                                p_engine_A ();
+                                p_engine_after_txt ();        
+                        }
                 }
         }
 
@@ -142,15 +137,13 @@ void p_lvl90 () BANKED
 void p_lvl91 () BANKED
 {
         p_portal (21);
+        p_schild (55, schildtxt1d);
         
-        
-
         if (v_smk == 69) { p_provianthaendler (); }
 
         if (v_smk == 201) p_zauberstaubhaendler ();
 
-        if (v_smk == 8)
-        {
+        if (v_smk == 8) {
                 p_engine_loadMap (v_lvl90, BANK_6, BANK_16);
                 p_engine_changeLvl (90, 80, 120);
         }
