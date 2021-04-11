@@ -1,0 +1,6 @@
+#!/bin/bash
+
+wine "C:\apps\GBMB\gbmb.exe" &>/dev/null &
+
+exit 0
+

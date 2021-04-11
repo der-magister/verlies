@@ -1,0 +1,6 @@
+#!/bin/bash
+
+wine "C:\apps\GBTD\gbtd.exe" &>/dev/null &
+
+exit 0
+
