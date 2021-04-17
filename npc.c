@@ -242,10 +242,10 @@ void p_zauberstaubhaendler (void) BANKED
 
                         if (joypad () & J_A)
                         {
-                                if ((v_sat != v_smat) && (v_sgo > 1))
+                                if ((v_sat != v_smat) && (v_sgo > 3))
                                 {
                                         ++v_sat;
-                                        v_sgo -= 2;
+                                        v_sgo -= 4;
                                         p_engine_set_txt (zauberstaubhaendler2);
                                         p_engine_A ();
                                         p_engine_after_txt ();
