@@ -129,7 +129,7 @@ void p_lvl90 (void) BANKED
         }
         else if (v_smk == 8)
         {
-                p_engine_loadTileset (2, 4, 33, wiesen_1, BANK_16);
+                p_engine_loadTileset (BANK_2, 3, 34, wiesen_1, BANK_16);
                 p_engine_loadMap (v_lvl70, BANK_5, BANK_16);
                 p_engine_changeLvl (70, 80, 120);
                 p_gui_show_location (lwiesen);

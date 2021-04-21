@@ -125,7 +125,7 @@ UINT8 v_ks; //Zählwert Kolision Spieler
 
 /*
 	aktuelle Aufenthaltsregion
-	1 - Felsengrund
+	1 - Felsengrund Hafen
 	2 - Stadtgefängnis
 	3 - Wiesen
 	4 - Ogerhöhlen
