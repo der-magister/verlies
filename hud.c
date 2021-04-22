@@ -124,16 +124,11 @@ void p_hud_showGO (void) __banked
   //p_hud_umwandlung (((v_sgo / 10) / 10) % 10, 16, 1, 2);
 }
 
-///zeigt aktuelle Anzahl Heiltränke des Spielers an
+///zeigt aktuelle/maximale Anzahl Heiltränke des Spielers an
 void p_hud_showHT (void) __banked
 {
-  p_hud_umwandlung (v_sht, 3, 4, LAYER_WIN);
-}
-
-///max. Anzahl von Heiltränke des Spielers
-void p_hud_showMHT (void) __banked
-{
-  p_hud_umwandlung (v_smht, 5, 4, LAYER_WIN);
+        p_hud_umwandlung (v_sht, 3, 4, LAYER_WIN);
+        p_hud_umwandlung (v_smht, 5, 4, LAYER_WIN);
 }
 
 ///zeigt Anzahl Proviant des Spielers an
@@ -191,8 +186,8 @@ void p_hud_showSpitzhacke (void) __banked
 {
         
         if (v_spitzhacke == TRUE) {
-                set_win_tiles (8, 4, 1, 1, v_tile);
                 v_tile [0] = 51;
+                set_win_tiles (8, 4, 1, 1, v_tile);
         }
 }
 
@@ -284,7 +279,7 @@ void p_gui_show_infoscreen (void) __banked
         move_win (7, 0);
         SHOW_WIN;  
         HIDE_SPRITES;
-        delay (200);
+        delay (200);   
 }
 
 ///versteckt Infoscreen
@@ -296,19 +291,20 @@ void p_gui_hide_infoscreen (void) __banked
         v_info = FALSE; v_walk = TRUE;
         delay (150);
         p_hud_show ();
+        gloop = v_gspeed;
 }
 
 
 ///Zeigt HUD an
 void p_hud_show (void) __banked
 { 
-  p_hud_showLP ();
-  p_hud_showPR ();
-  p_hud_showXYK ();
-  p_hud_showAD ();
-  p_hud_showStaub ();
-  p_drawSelectItem ();
-  p_view_sword ();
+          p_hud_showLP ();
+          p_hud_showPR ();
+          p_hud_showXYK ();
+          p_hud_showAD ();
+          p_hud_showStaub ();
+          p_drawSelectItem ();
+          p_view_sword ();
 }
 
 ///Blinken von LP und Proviant-Anzeige bei niedrigen Werten  

@@ -242,14 +242,15 @@ void p_zauberstaubhaendler (void) BANKED
 
                         if (joypad () & J_A)
                         {
-                                if ((v_sat != v_smat) && (v_sgo > 3))
+                                if ((v_sstaub != v_smstaub) && (v_sgo > 3))
                                 {
-                                        ++v_sat;
+                                        ++v_sstaub;
                                         v_sgo -= 4;
                                         p_engine_set_txt (zauberstaubhaendler2);
                                         p_engine_A ();
                                         p_engine_after_txt ();
                                         l_quit = TRUE;
+                                        p_hud_showStaub ();
                                 }
                                 else 
                                 {
