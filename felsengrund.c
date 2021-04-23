@@ -38,6 +38,7 @@
 
 #include "daten/txt/schilder/schildertxt.h"
 
+#include "daten/txt/npcs/xaver.h"
 #include "daten/txt/npcs/xavertxt1.h"
 #include "daten/txt/npcs/xavertxt2.h"
 #include "daten/txt/npcs/xavertxt3.h"
@@ -202,6 +203,11 @@ void p_lvl1 () BANKED
                                 p_engine_after_txt ();
                                 ++v_questen [3];
                                 ++v_questen [0];
+                        }
+                        else if (v_questen [0] == 4) {
+                                p_engine_set_txt (xavertxt31);
+                                p_engine_A ();
+                                p_engine_after_txt ();
                         }
                         else if (v_questen [0] == 8)
                         {

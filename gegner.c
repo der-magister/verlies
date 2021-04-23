@@ -42,7 +42,7 @@ void p_gegner_init (void) BANKED
 ///horizontale Bewegungsroutine Gegner
 void p_gegner_move_horizontal (void) BANKED
 {
-        for (v_g = 0; v_g < 3; v_g++)
+        for (v_g = 0; v_g != 3; v_g++)
         {
                 //Nord
                 if (v_gri [v_g] == MOVE_NORTH)
@@ -100,7 +100,7 @@ void p_gegner_move_horizontal (void) BANKED
 
 void p_gegner_move_vertical (void) BANKED
 {
-        for (v_g = 0; v_g < 3; v_g++)
+        for (v_g = 0; v_g != 3; v_g++)
         {
                 //West
                 if (v_gri [v_g] == MOVE_WEST)
@@ -157,7 +157,7 @@ void p_gegner_move_vertical (void) BANKED
 
 void p_gegner_speer (void) BANKED
 {
-        for (v_g = 0; v_g < 3; v_g++)
+        for (v_g = 0; v_g != 3; v_g++)
         {
                 if (v_gri [v_g] == MOVE_DOWN)
                 {
@@ -291,7 +291,7 @@ void p_gegner_koli_player (void) BANKED
                         {       
         		      if (v_gri [v_kg] != MOVE_DOWN)
         		      {
-        		              if (v_sflimmtm == 255) { v_slp -= v_gtp [v_kg]; }
+        		              if (v_sflimmtm == 255) { v_slp = v_gtp [v_kg] - v_srs; }
 
                                         if (v_gri [v_kg] == MOVE_NORTH) {v_gri [v_kg] = MOVE_SOUTH; }
                                         else if (v_gri [v_kg] == MOVE_SOUTH) {v_gri [v_kg] = MOVE_NORTH; }

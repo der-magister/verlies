@@ -175,7 +175,7 @@ void p_gui_showHK (void) __banked
 
 void p_hud_showStaub (void) __banked
 {
-        if (v_info == FALSE) p_hud_umwandlung (v_sstaub, 16, 18, LAYER_BKG);
+        if (v_info == FALSE) p_hud_umwandlung (v_sstaub, 18, 16, LAYER_BKG);
         else if (v_info == TRUE) {
                 p_hud_umwandlung (v_sstaub, 3, 7, LAYER_WIN);
                 p_hud_umwandlung (v_smstaub, 5, 7, LAYER_WIN);
@@ -291,9 +291,8 @@ void p_gui_hide_infoscreen (void) __banked
         v_info = FALSE; v_walk = TRUE;
         delay (150);
         p_hud_show ();
-        gloop = v_gspeed;
+        gloop = v_gspeed - 1;
 }
-
 
 ///Zeigt HUD an
 void p_hud_show (void) __banked

@@ -155,6 +155,8 @@ void  p_use_heiltrank () __banked
                         
                         if (v_sht == 0) { v_selectItem = 0;  p_drawSelectItem (); } 
                         p_hud_show ();
+                        v_tile [0] = 69;
+                        set_bkg_tiles (1, 16, 1, 1, v_tile); 
                 }
         }
 }
@@ -180,7 +182,7 @@ void  p_use_ausdauertrank () __banked
         }
 }
 
-void p_select_spitzhacke () __banked
+void p_select_spitzhacke (void) __banked
 {
         set_sprite_tile (9, 104);
         set_sprite_tile (10, 105);
@@ -188,7 +190,7 @@ void p_select_spitzhacke () __banked
         set_sprite_tile (12, 107);
 }
 
-void p_select_sichel () __banked
+void p_select_sichel (void) __banked
 {
         set_sprite_tile (9, 100);
         set_sprite_tile (10, 101);
@@ -205,7 +207,7 @@ void p_select_schaufel (void) BANKED
 }
 
 ///Benutzung der Spitzhacke
-void p_use_item () __banked
+void p_use_item (void) __banked
 {
         if (v_keyflag == 2)
         {

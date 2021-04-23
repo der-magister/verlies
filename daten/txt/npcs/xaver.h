@@ -9,5 +9,6 @@ extern const unsigned char xavertxt27[];
 extern const unsigned char xavertxt28[];
 extern const unsigned char xavertxt29[];
 extern const unsigned char xavertxt30[];
+extern const unsigned char xavertxt31[];
 
 #endif
