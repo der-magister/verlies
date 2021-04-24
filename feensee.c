@@ -40,20 +40,7 @@
 
 #include "daten/txt/locations/locations.h"
 
-#include "daten/txt/npcs/feenaeltestetxt1.h"
-#include "daten/txt/npcs/feenaeltestetxt2.h"
-#include "daten/txt/npcs/feenaeltestetxt3.h"
-#include "daten/txt/npcs/feenaeltestetxt4.h"
-#include "daten/txt/npcs/feenaeltestetxt5.h"
-#include "daten/txt/npcs/feenaeltestetxt6.h"
-#include "daten/txt/npcs/feenaeltestetxt7.h"
-#include "daten/txt/npcs/feenaeltestetxt8.h"
-#include "daten/txt/npcs/feenaeltestetxt9.h"
-#include "daten/txt/npcs/feenaeltestetxt10.h"
-#include "daten/txt/npcs/feenaeltestetxt11.h"
-#include "daten/txt/npcs/feenaeltestetxt12.h"
-#include "daten/txt/npcs/feenaeltestetxt13.h"
-#include "daten/txt/npcs/feenaeltestetxt14.h"
+#include "daten/txt/npcs/feenaeltestetxt.h"
 
 #include "daten/txt/other/oelloch.h"
 #include "daten/txt/other/oelloch2.h"
