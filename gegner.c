@@ -267,7 +267,7 @@ void p_gegner_set (UINT8 l_nr, UINT8 l_tile, UINT8 l_tile2, UINT8 l_xk, UINT8 l_
 ///Kolisionsabfrage Gegner auf Spieler
 void p_gegner_koli_player (void) BANKED
 {
-        for (v_kg = 0; v_kg < 3; ++v_kg)
+        for (v_kg = 0; v_kg != 3; ++v_kg)
         {
               
                         //mitte
@@ -291,7 +291,7 @@ void p_gegner_koli_player (void) BANKED
                         {       
         		      if (v_gri [v_kg] != MOVE_DOWN)
         		      {
-        		              if (v_sflimmtm == 255) { v_slp = v_gtp [v_kg] - v_srs; }
+        		              if (v_sflimmtm == 255) { v_slp = v_slp - v_gtp [v_kg] + v_srs; }
 
                                         if (v_gri [v_kg] == MOVE_NORTH) {v_gri [v_kg] = MOVE_SOUTH; }
                                         else if (v_gri [v_kg] == MOVE_SOUTH) {v_gri [v_kg] = MOVE_NORTH; }
