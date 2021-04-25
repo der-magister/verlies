@@ -1,6 +1,6 @@
 //   Verlies - ein Adventure im Retrodesign
 //
-//   Copyright (C) 2018-2020 Heiko Wolf
+//   Copyright (C) 2018-2021 Heiko Wolf
 //
 //   This program is free software; you can redistribute it and/or modify
 //   it under the terms of the GNU General Public License As published by
@@ -41,5 +41,6 @@ extern void p_gegner_hide_3 (void) BANKED;
 extern void p_gegner_koli_player (void) BANKED;
 extern void p_gegner_stop (void) BANKED;
 extern void p_gegner_update (UINT8 l_nr, UINT8 l_tile, UINT8 l_ri) BANKED;
+extern INT8 p_gegner_schaden (void) __banked;
                    
 #endif

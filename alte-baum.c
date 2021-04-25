@@ -398,6 +398,6 @@ void p_lvl166 (void) BANKED
 	else if (v_smk == 123)
 	{
 		p_engine_loadMap (v_lvl145, BANK_18, BANK_17);
-		p_engine_changeLvl (145, 16, 72);
+		p_engine_changeLvl (145, 104, 72);
 	}
 }
