@@ -291,7 +291,7 @@ void p_gegner_koli_player (void) BANKED
                         {       
         		      if (v_gri [v_kg] != MOVE_DOWN)
         		      {
-        		              if (v_sflimmtm == 255) { v_slp = p_gegner_schaden (); }
+        		              if (v_sflimmtm == 255) { v_slp = v_slp - p_gegner_schaden (); }
 
                                         if (v_gri [v_kg] == MOVE_NORTH) {v_gri [v_kg] = MOVE_SOUTH; }
                                         else if (v_gri [v_kg] == MOVE_SOUTH) {v_gri [v_kg] = MOVE_NORTH; }
@@ -354,7 +354,7 @@ INT8 p_gegner_schaden (void) __banked
 {
     INT8 l_dmg;
 
-    l_dmg = v_slp - v_gtp [v_kg] + v_srs;
+    l_dmg = v_gtp [v_kg] - v_srs;
 
     if (l_dmg == 0) l_dmg = 1; 
 

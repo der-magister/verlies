@@ -23,12 +23,12 @@
 #include "tiledatg.h"
 
 ///beinhaltet Tile die eine Kolision beim Gegner auslösen
-const unsigned char v_kdatg_1 [30] = { 22, 23, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
-const unsigned char v_kdatg_2 [30] = { 5, 6, 9, 10, 11, 22, 24, 25, 26, 27, 28, 29, 30, 31, 36, 37, 39, 49, 41, 42,0,0,0,0,0 };
-const unsigned char v_kdatg_3 [30] = { 8, 9, 10, 11, 20, 21, 25, 26, 27, 32, 33, 34, 35, 39, 40, 41, 42, 43, 44,0,0,0,0,0 };
-const unsigned char v_kdatg_4 [30] = { 5, 20, 21, 32, 33, 34, 36, 36, 37, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
-const unsigned char v_kdatg_5 [30] = { 4, 5, 6, 8, 9, 10, 11, 20, 21, 22, 24, 25, 26, 27, 28, 29, 30, 31, 36, 37, 0,0,0,0,0};
-const unsigned char v_kdatg_alte_baum [30] = { 46, 45, 44, 43, 37, 36, 22, 21, 20, 7, 5, 4, 12 , 13 ,14 ,15 ,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
+const unsigned char v_kdatg_1 [4] = { 22, 23, 39, 41 };
+const unsigned char v_kdatg_2 [20] = { 5, 6, 9, 10, 11, 22, 24, 25, 26, 27, 28, 29, 30, 31, 36, 37, 39, 49, 41, 42 };
+const unsigned char v_kdatg_3 [19] = { 8, 9, 10, 11, 20, 21, 25, 26, 27, 32, 33, 34, 35, 39, 40, 41, 42, 43, 44  };
+const unsigned char v_kdatg_4 [9] = { 5, 20, 21, 32, 33, 34, 36, 36, 37 };
+const unsigned char v_kdatg_5 [20] = { 4, 5, 6, 8, 9, 10, 11, 20, 21, 22, 24, 25, 26, 27, 28, 29, 30, 31, 36, 37 };
+const unsigned char v_kdatg_alte_baum [16] = { 46, 45, 44, 43, 37, 36, 22, 21, 20, 7, 5, 4, 12, 13 ,14 ,15 };
 const unsigned char v_kdatg_gebirgspfad [30] = { 3, 4, 5, 6, 7, 20, 21, 22, 25, 28, 29, 30, 31, 36, 37, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
 const unsigned char v_kdatg_mine_1 [28] = { 3, 8, 9, 10, 11, 12, 13, 14, 15, 20, 21, 25, 26, 27, 28, 29, 39, 31, 32, 33, 34, 35, 36, 37, 43, 44, 45, 46 };
 const unsigned char v_kdatg_mine_2 [28] = { 1, 3, 8, 9, 10, 11, 12, 13, 14, 15, 20, 21, 25, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 24, 0,0,0,0 };
@@ -46,32 +46,46 @@ const unsigned char v_kdatg_tempel_e1 [28] = { 2, 3, 4, 5, 6, 7, 12, 13, 14, 15,
 
 UINT8 p_gegner_koli (void) __banked
 {
-        for (v_a = 0; v_a != 29; v_a++)
-	{
-		//Stadtgefängnis
-                if ((v_lvl >= 5) && (v_lvl <= 13) && (v_tile [2] == v_kdatg_1 [v_a])) return FALSE;
+	//Stadtgefängnis
+        if (v_region == 2) {
+                for (v_a = 0; v_a != sizeof (v_kdatg_1) + 1; ++v_a) {
+                        if (v_tile [2] == v_kdatg_1 [v_a]) return FALSE;
+                }
+        }
+        //Wiesen
+        else if (v_region == 3) {
+                for (v_a = 0; v_a != sizeof (v_kdatg_2) + 1; ++v_a) {
+                        if (v_tile [2] == v_kdatg_2 [v_a]) return FALSE;
+                }
+        }
+        //Ogerhöhlen
+        else if (v_region == 4) {
+                for (v_a = 0; v_a != sizeof (v_kdatg_3) + 1; ++v_a) {
+                        if (v_tile [2] == v_kdatg_3 [v_a]) return FALSE;
+                }
+        }
                 
-                //Die großen Wiesen
-                else if ((v_lvl >= 19) && (v_lvl < 40) && (v_tile [2] == v_kdatg_2 [v_a])) return FALSE;
-                else if ((v_lvl >= 70) && (v_lvl <= 79) && (v_tile [2] == v_kdatg_2 [v_a])) return FALSE;
-                else if ((v_lvl >= 16) && (v_lvl <= 18) && (v_tile [2] == v_kdatg_2 [v_a])) return FALSE;
-                else if ((v_lvl >= 80) && (v_lvl <= 83) && (v_tile [2] == v_kdatg_2 [v_a])) return FALSE;
-                else if ((v_lvl >= 84) && (v_lvl <= 87) && (v_tile [2] == v_kdatg_2 [v_a])) return FALSE;
+        //Feensee
+        else if (v_region == 6) {
+                for (v_a = 0; v_a != sizeof (v_kdatg_4) + 1; ++v_a) {
+                        if (v_tile [2] == v_kdatg_4 [v_a]) return FALSE;
+                }
+        }
+        //Eichenwald
+        else if (v_region == 7) {
+                for (v_a = 0; v_a != sizeof (v_kdatg_5) + 1; ++v_a) {
+                        if (v_tile [2] == v_kdatg_5 [v_a]) return FALSE;
+                }
+        }
 
-                //Ogerhöhlen
-                else if ((v_lvl >= 40) && (v_lvl <= 66) && (v_tile [2] == v_kdatg_3 [v_a])) return FALSE;
-                
-                //Feensee
-                else if ((v_lvl >= 95) && (v_lvl <= 117) && (v_tile [2] == v_kdatg_4 [v_a])) return FALSE;
-
-                //Eichenwald
-                else if ((v_lvl >= 120) && (v_lvl <= 143) && (v_tile [2] == v_kdatg_5 [v_a])) return FALSE;
-
-                //Alte Baum
-                else if ((v_lvl >= 145) && (v_lvl <= 166) && (v_tile [2] == v_kdatg_alte_baum [v_a])) return FALSE;
-
-                //Gebirgspfad
-                else if ((v_lvl >= 168) && (v_lvl <= 179) && (v_tile [2] == v_kdatg_gebirgspfad [v_a])) return FALSE;        
+        //Alte Baum
+        else if (v_region == 8) {
+                for (v_a = 0; v_a != sizeof (v_kdatg_gebirgspfad) + 1; ++v_a) { 
+                        if (v_tile [2] == v_kdatg_alte_baum [v_a]) return FALSE;
+                }
+        }
+        //Gebirgspfad
+        else if ((v_lvl >= 168) && (v_lvl <= 179) && (v_tile [2] == v_kdatg_gebirgspfad [v_a])) return FALSE;        
 
                 //Rotgebirge
                 else if ((v_lvl >= 190) && (v_lvl <= 203) && (v_tile [2] == v_kdatg_gebirgspfad [v_a])) return FALSE;
@@ -106,6 +120,6 @@ UINT8 p_gegner_koli (void) __banked
                 else if ((v_lvl >= 275) && (v_lvl <= 287)) {
                         if (v_tile [2] == v_kdatg_tempel_e1 [v_a]) return FALSE;
                 }
-        }
+        //}
         return TRUE;
 }

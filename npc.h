@@ -30,6 +30,7 @@ extern void p_provianthaendler (void) BANKED;
 extern void p_ausdauerhandlerin (void) BANKED;
 extern void p_heiltrankhaendlerin (void) BANKED;
 extern void p_zauberstaubhaendler (void) BANKED;
+extern void p_kraeuterhaendler (void) __banked;
 extern void p_vanyra (void) BANKED;
 extern void p_waechter_zwergenheim (void) BANKED;
 extern void p_zylra (void) BANKED;

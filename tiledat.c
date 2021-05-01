@@ -90,11 +90,15 @@ UINT8 p_spieler_koli (void) __banked
                         if (v_tile [1] == v_kdat_2 [v_a]) return FALSE;
                 }
                 //die grossen wiesen
-                else if ((v_lvl >= 19) && (v_lvl < 40) && (v_tile [1] == v_kdat_5 [v_a])) return FALSE;
+                /*else if ((v_lvl >= 19) && (v_lvl < 40) && (v_tile [1] == v_kdat_5 [v_a])) return FALSE;
                 else if ((v_lvl >= 70) && (v_lvl <= 79) && (v_tile [1] == v_kdat_5 [v_a])) return FALSE;
                 else if ((v_lvl >= 16) && (v_lvl <= 18) && (v_tile [1] == v_kdat_5 [v_a])) return FALSE;
                 else if ((v_lvl >= 80) && (v_lvl <= 83) && (v_tile [1] == v_kdat_5 [v_a])) return FALSE;
-                else if ((v_lvl >= 84) && (v_lvl <= 87) && (v_tile [1] == v_kdat_5 [v_a])) return FALSE;
+                else if ((v_lvl >= 84) && (v_lvl <= 87) && (v_tile [1] == v_kdat_5 [v_a])) return FALSE;*/
+
+                else if (v_region == 3) {
+                        if (v_tile [1] == v_kdat_5 [v_a]) return FALSE;
+                }
 
                 //ogerhöhle
                 else if (v_region == 4) { 
