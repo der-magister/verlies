@@ -59,6 +59,8 @@ void p_lvl138 (void) __banked
 
 	if (v_smk == 76) p_provianthaendler ();
 
+	if (v_smk == 184) p_kraeuterhandler ();
+
 	if ((v_smk == 86) && (v_keyflag == 1))
 	{
 		if (v_questen [0] == 9)

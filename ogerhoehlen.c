@@ -219,7 +219,7 @@ void p_lvl51 (void) BANKED
                 if ((v_tuer [1] == 0) && (v_ske == 0)) {
                         p_tuerzu ();
                 }
-                else if ((v_tuer [1] == 0) && (v_ske == 1)) {
+                else if ((v_tuer [1] == 0) && (v_ske != 0)) {
                         v_tuer [1] = 1;
                         --v_ske;
                 } 
@@ -280,7 +280,7 @@ void p_lvl55 (void) BANKED
                         p_tuerzu ();
                 }
         
-                else if ((v_tuer [2] == 0) && (v_ske == 1)) {
+                else if ((v_tuer [2] == 0) && (v_ske != 0)) {
                         v_tuer [2] = 1;
                         --v_ske;
                 } 

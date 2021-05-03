@@ -35,6 +35,7 @@
 #include "daten/txt/npcs/heiltrankverkaeuferin.h"
 #include "daten/txt/npcs/zauberstaubhaendler1.h"
 #include "daten/txt/npcs/zauberstaubhaendler2.h"
+#include "daten/txt/npcs/kraeuterhaendler.h"
 
 #include "daten/txt/other/handelnichtmoeglich.h"
 #include "daten/txt/npcs/vanyra.h"
@@ -265,12 +266,53 @@ void p_zauberstaubhaendler (void) BANKED
                                 p_engine_after_txt ();
                                 l_quit = TRUE; 
                         }
-                }
-                
+                }                
         }
 }
 
-void p_vanyra (void) BANKED {
+///Kraeuterhaendler
+void p_kraeuterhandler (void) __banked
+{
+        static BOOLEAN l_quit;
+
+        l_quit = FALSE;
+
+        if (v_keyflag == 1)
+        {
+                p_engine_set_txt (kraeuterhaendler1);
+
+                while (l_quit == FALSE) 
+                {
+                        if (joypad () & J_A)
+                        {
+                                if ((v_shk != v_smhk) && (v_sgo > 1))
+                                {
+                                        ++v_shk;
+                                        v_sgo -= 2;
+                                        p_engine_set_txt (kraeuterhaendler2);
+                                        p_engine_A ();
+                                        p_engine_after_txt ();
+                                        l_quit = TRUE;
+                                }
+                                else 
+                                {
+                                        p_engine_set_txt (handelnichtmoeglich);
+                                        p_engine_A ();
+                                        p_engine_after_txt ();
+                                        l_quit = TRUE;
+                                }
+                        }
+                        else if (joypad () & J_B) 
+                        { 
+                                p_engine_after_txt ();
+                                l_quit = TRUE; 
+                        }
+                } 
+        }
+}
+
+void p_vanyra (void) BANKED 
+{
         if (v_questen [0] == 13) {
                 p_engine_set_txt (vanyratxt1);
                 p_engine_down ();
@@ -288,7 +330,8 @@ void p_vanyra (void) BANKED {
         p_engine_after_txt ();
 }
 
-void p_waechter_zwergenheim (void) BANKED {
+void p_waechter_zwergenheim (void) BANKED 
+{
         if (v_questen [0] == 13) {
                 p_engine_set_txt (waechtertxt1);
         }
@@ -296,7 +339,8 @@ void p_waechter_zwergenheim (void) BANKED {
         p_engine_after_txt ();
 }
 
-void p_hueterin (void) BANKED {
+void p_hueterin (void) BANKED 
+{
         if (v_smk == 152)
         {
                 if (v_questen [0] == 14) {

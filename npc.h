@@ -16,7 +16,7 @@
 //   With this program; if not, write to the Free Software Foundation, Inc.,
 //   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 //
-//   Kontakt: heiko.wolf.mail@gmail.com
+//   Kontakt: projekte@kabelmail.net
 
 #ifndef _NPC_H_
 #define _NPC_H_
@@ -30,6 +30,7 @@ extern void p_provianthaendler (void) BANKED;
 extern void p_ausdauerhandlerin (void) BANKED;
 extern void p_heiltrankhaendlerin (void) BANKED;
 extern void p_zauberstaubhaendler (void) BANKED;
+extern void p_kraeuterhandler (void) __banked;
 extern void p_kraeuterhaendler (void) __banked;
 extern void p_vanyra (void) BANKED;
 extern void p_waechter_zwergenheim (void) BANKED;

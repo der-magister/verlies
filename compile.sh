@@ -100,6 +100,7 @@ lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/othertxt.o daten/txt/npcs/others.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/zylratxt1.o daten/txt/npcs/zylra-1.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/hueterintxt.o daten/txt/npcs/hueterin.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/xavertxt.o daten/txt/npcs/xaver.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/kraeuterhaendlertxt.o daten/txt/npcs/kraeuterhaendler.c
 
 # Texte Portale
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo8 -c -o obj/portal.o daten/txt/portale/portal.c

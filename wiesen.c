@@ -16,7 +16,7 @@
 //   With this program; if not, write to the Free Software Foundation, Inc.,
 //   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 //
-//   Kontakt: magister@kabelmail.de
+//   Kontakt: projekte@kabelmail.net
 
 //#pragma bank=16
 
@@ -42,78 +42,68 @@
 #include "daten/txt/schilder/schildertxt.h"
 
 ///Ablauf Raum 20
-void p_lvl20 () __banked
+void p_lvl20 (void) __banked
 {
 	p_schild (195, schildtxt4);
 	
         //Levelwechsel Raum 3 (Felsengrund Marktviertel)
-        if (v_keyflag == 1)
+        if (v_smk == 106)
         {
-                if (v_smk == 106)
-                {
-                        p_engine_loadTileset (2, 8, 29, felsengrund_1, 16);
-                        p_engine_loadTileset (2, 4, 15, felsengrund_3, 16);
-                        p_engine_loadMap (v_lvl1c, BANK_5, BANK_16);
-                        p_engine_changeLvl (3, 16, 64);
-                        p_gui_show_location (lfelsengrund);
-                }
-                else if (v_smk == 9)
-                {
-                        p_engine_loadMap (v_lvl21, BANK_5, BANK_16);
-                        p_engine_changeLvl (21, 88, 120);
-                }
-                else if (v_smk == 90)
-                {
-                        p_engine_loadMap (v_lvl24, BANK_5, BANK_16);
-                        p_engine_changeLvl (24, 144, 64);
-                } 
+                p_engine_loadTileset (BANK_2, 8, 29, felsengrund_1, BANK_16);
+                p_engine_loadTileset (BANK_2, 4, 15, felsengrund_3, BANK_16);
+                p_engine_loadMap (v_lvl1c, BANK_5, BANK_16);
+                p_engine_changeLvl (3, 16, 64);
+                p_gui_show_location (lfelsengrund);
         }
-
+        else if (v_smk == 9)
+        {
+                p_engine_loadMap (v_lvl21, BANK_5, BANK_16);
+                p_engine_changeLvl (21, 88, 120);
+        }
+        else if (v_smk == 90)
+        {
+                p_engine_loadMap (v_lvl24, BANK_5, BANK_16);
+                p_engine_changeLvl (24, 144, 64);
+        } 
 }
 
 ///Ablauf Raum 21
-void p_lvl21 () __banked
+void p_lvl21 (void) __banked
 {
         //Raumwechsel
-        if (v_keyflag == 1)
+        if (v_smk == 225)
         {
-                if (v_smk == 225)
-                {
-                        p_engine_loadMap (v_lvl20, BANK_5, BANK_16);
-                        p_engine_changeLvl (20, 88, 24);
-                }
-                else if (v_smk == 9)
-                {
-                        p_engine_loadMap (v_lvl22, BANK_5, BANK_16);
-                        p_engine_changeLvl (22, 88, 120);
-                }
+                p_engine_loadMap (v_lvl20, BANK_5, BANK_16);
+                p_engine_changeLvl (20, 88, 24);
+        }
+        else if (v_smk == 9)
+        {
+                p_engine_loadMap (v_lvl22, BANK_5, BANK_16);
+                p_engine_changeLvl (22, 88, 120);
         }
 }
 
 ///Ablauf Raum 22
-void p_lvl22 () __banked
+void p_lvl22 (void) __banked
 {
 	//Stein
 	p_stein (45, 1);
 	
         //Raumwechsel
-        if (v_keyflag == 1)
+        if (v_smk == 225)
         {
-                if (v_smk == 225)
-                {
                         p_engine_loadMap (v_lvl21, BANK_5, BANK_16);
                         p_engine_changeLvl (21, 88, 24);
-                }
-                else if (v_smk == 9)
-                {
-			p_engine_loadMap (v_lvl22b, BANK_5, BANK_16);
-                        p_engine_changeLvl (23, 88, 120);
-		}
+        }
+        else if (v_smk == 9)
+        {
+		p_engine_loadMap (v_lvl22b, BANK_5, BANK_16);
+                p_engine_changeLvl (23, 88, 120);
         }
 }
 
 ///Ablauf Raum 23
-void p_lvl23 () __banked
+void p_lvl23 (void) __banked
 {
 	//Truhe mit 2 Gold
 	p_truhe_gold (64, 5, 2);
@@ -121,230 +111,200 @@ void p_lvl23 () __banked
 	p_truhe_karte (62, 2, 6);
 	
 	//Raumwechsel
-	if (v_keyflag == 1)
+	if (v_smk == 225)
 	{
-		if (v_smk == 225)
-		{
-			p_engine_loadMap (v_lvl22, BANK_5, BANK_16);
-			p_engine_changeLvl (22, 88, 24);
-		}
+		p_engine_loadMap (v_lvl22, BANK_5, BANK_16);
+		p_engine_changeLvl (22, 88, 24);
 	}
 }
 
 ///Ablauf Raum 24
-void p_lvl24 () __banked
+void p_lvl24 (void) __banked
 {
-        if (v_keyflag == 1)
+        p_schild (173, schildtxt22);
+
+        if (v_smk == 106)
         {
-                if (v_smk == 106)
-                {
-                        p_engine_loadMap (v_lvl20, BANK_5, BANK_16);
-                        p_engine_changeLvl (20, 16, 64);
-                }
-                else if (v_smk == 9)
-                {
-                        p_engine_loadMap (v_lvl25, BANK_5, BANK_16);
-                        p_engine_changeLvl (25, 88, 120);
-                }
-                else if (v_smk == 225)
-                {
-                        p_engine_loadMap (v_lvl38, BANK_5, BANK_16);
-                        p_engine_changeLvl (38, 88, 24);
-                }
+                p_engine_loadMap (v_lvl20, BANK_5, BANK_16);
+                p_engine_changeLvl (20, 16, 64);
         }
+        else if (v_smk == 9)
+        {
+                p_engine_loadMap (v_lvl25, BANK_5, BANK_16);
+                p_engine_changeLvl (25, 88, 120);
+        }
+        else if (v_smk == 225)
+        {
+                p_engine_loadMap (v_lvl38, BANK_5, BANK_16);
+                p_engine_changeLvl (38, 88, 24);
+        }
+        
 }
 
 ///Ablauf Raum 25
-void p_lvl25 () __banked
+void p_lvl25 (void) __banked
 {
         //Goldtruhe
         p_truhe_gold (50, 7, 1);
 
-        if (v_keyflag == 1)
+        if (v_smk == 225)
         {
-                if (v_smk == 225)
-                {
-                        p_engine_loadMap (v_lvl24, BANK_5, BANK_16);
-                        p_engine_changeLvl (24, 88, 24);
-                }
-                else if (v_smk == 90)
-                {
-                        p_engine_loadMap (v_lvl26, BANK_5, BANK_16);
-                        p_engine_changeLvl (26, 144, 64);
-                }
+                p_engine_loadMap (v_lvl24, BANK_5, BANK_16);
+                p_engine_changeLvl (24, 88, 24);
+        }
+        else if (v_smk == 90)
+        {
+                p_engine_loadMap (v_lvl26, BANK_5, BANK_16);
+                p_engine_changeLvl (26, 144, 64);
         }
 }
 
 ///Ablauf Raum 26
-void p_lvl26 () __banked
+void p_lvl26 (void) __banked
 {
-        if (v_keyflag == 1)
+        if (v_smk == 106)
         {
-                if (v_smk == 106)
-                {
-                        p_engine_loadMap (v_lvl25, BANK_5, BANK_16);
-                        p_engine_changeLvl (25, 16, 64); 
-                }
-                else if (v_smk == 5)
-                {
-                        p_engine_loadMap (v_lvl27, BANK_5, BANK_16);
-                        p_engine_changeLvl (27, 56, 120);
-                }
+                p_engine_loadMap (v_lvl25, BANK_5, BANK_16);
+                p_engine_changeLvl (25, 16, 64); 
+        }
+        else if (v_smk == 5)
+        {
+                p_engine_loadMap (v_lvl27, BANK_5, BANK_16);
+                p_engine_changeLvl (27, 56, 120);
         }
 }
 
 ///Ablauf Raum 27
-void p_lvl27 () __banked
+void p_lvl27 (void) __banked
 {
-        if (v_keyflag == 1)
+        if (v_smk == 70)
         {
-                if (v_smk == 70)
-                {
-                        p_engine_loadMap (v_lvl28, BANK_5, BANK_16);
-                        p_engine_changeLvl (28, 16, 48);
-                }
-                else if (v_smk ==221)
-                {
-                        p_engine_loadMap (v_lvl26, BANK_5, BANK_16);
-                        p_engine_changeLvl (26, 56, 24);
-                }
-                else if (v_smk == 126)
-                {
-                        p_engine_loadMap (v_lvl29, BANK_5, BANK_16);
-                        p_engine_changeLvl (29, 144, 80);
-                }
+                p_engine_loadMap (v_lvl28, BANK_5, BANK_16);
+                p_engine_changeLvl (28, 16, 48);
+        }
+        else if (v_smk ==221)
+        {
+                p_engine_loadMap (v_lvl26, BANK_5, BANK_16);
+                p_engine_changeLvl (26, 56, 24);
+        }
+        else if (v_smk == 126)
+        {
+                p_engine_loadMap (v_lvl29, BANK_5, BANK_16);
+                p_engine_changeLvl (29, 144, 80);
         }
 
 }
 
 
 ///Ablauf Raum 28
-void p_lvl28 () __banked
+void p_lvl28 (void) __banked
 {
         p_truhe_ausdauertrank (195, 8);
-
-        if (v_keyflag == 1)
+        
+        if (v_smk == 54)
         {
-                if (v_smk == 54)
-                {
-                        p_engine_loadMap (v_lvl27, BANK_5, BANK_16);
-                        p_engine_changeLvl (27, 144, 48);
-                }
+                p_engine_loadMap (v_lvl27, BANK_5, BANK_16);
+                p_engine_changeLvl (27, 144, 48);
         }
 }
 
 
 ///Ablauf Raum 29
-void p_lvl29 () __banked
+void p_lvl29 (void) __banked
 {
 
         p_stein (128, 2);
 
-        if (v_keyflag == 1)
+        if (v_smk == 142)
         {
-                if (v_smk == 142)
-                {
-                        p_engine_loadMap (v_lvl27, BANK_5, BANK_16);
-                        p_engine_changeLvl (27, 16, 80);
-                }
-                else if (v_smk == 126)
-                {
-                        p_engine_loadMap (v_lvl31, BANK_5, BANK_16);
-                        p_engine_changeLvl (31, 144, 80);
-                }
-                else if (v_smk == 224)
-                {
-                        p_engine_loadMap (v_lvl30, BANK_5, BANK_16);
-                        p_engine_changeLvl (30, 80, 24);
-                }
+                p_engine_loadMap (v_lvl27, BANK_5, BANK_16);
+                p_engine_changeLvl (27, 16, 80);
+        }
+        else if (v_smk == 126)
+        {
+                p_engine_loadMap (v_lvl31, BANK_5, BANK_16);
+                p_engine_changeLvl (31, 144, 80);
+        }
+        else if (v_smk == 224)
+        {
+                p_engine_loadMap (v_lvl30, BANK_5, BANK_16);
+                p_engine_changeLvl (30, 80, 24);
         } 
 }
 
 ///Ablauf Raum 31
-void p_lvl31 () __banked
+void p_lvl31 (void) __banked
 {
         p_truhe_proviant (145, 10, 1);
 
-        if (v_keyflag == 1)
+        if (v_smk == 188)
         {
-                if (v_smk == 188)
-                {
-                        p_truhe_brotbuechse_1 ();
-                }
+                p_truhe_brotbuechse_1 ();
+        }
                 //Raumwechsel
-                if (v_smk == 142)
-                {
-                        p_engine_loadMap (v_lvl29, BANK_5, BANK_16);
-                        p_engine_changeLvl (29, 16, 80);
-                }
+        if (v_smk == 142)
+        {
+                p_engine_loadMap (v_lvl29, BANK_5, BANK_16);
+                p_engine_changeLvl (29, 16, 80);
         }
 }
 
 ///Ablauf Raum 30
-void p_lvl30 () __banked
+void p_lvl30 (void) __banked
 {
-        if (v_keyflag == 1)
+        if (v_smk == 8)
         {
-                if (v_smk == 8)
-                {
-                        p_engine_loadMap (v_lvl29, BANK_5, BANK_16);
-                        p_engine_changeLvl (29, 80, 120);
-                }
-                else if (v_smk == 224)
-                {
-                        p_engine_loadMap (v_lvl32, BANK_5, BANK_16);
-                        p_engine_changeLvl (32, 80, 24);
-                }
+                p_engine_loadMap (v_lvl29, BANK_5, BANK_16);
+                p_engine_changeLvl (29, 80, 120);
+        }
+        else if (v_smk == 224)
+        {
+                p_engine_loadMap (v_lvl32, BANK_5, BANK_16);
+                p_engine_changeLvl (32, 80, 24);
         }
 }
 
 ///Ablauf Raum 32
-void p_lvl32 () __banked
+void p_lvl32 (void) __banked
 {
-        if (v_keyflag == 1)
+        //Raumwechsel
+        if (v_smk == 8)
         {
-                //Raumwechsel
-                if (v_smk == 8)
-                {
-                        p_engine_loadMap (v_lvl30, BANK_5, BANK_16);
-                        p_engine_changeLvl (30, 80, 120);
-                }
-                else if (v_smk == 224)
-                {
-                        p_engine_loadMap (v_lvl33, BANK_5, BANK_16);
-                        p_engine_changeLvl (33, 80, 24);                       
-                }
+                p_engine_loadMap (v_lvl30, BANK_5, BANK_16);
+                p_engine_changeLvl (30, 80, 120);
+        }
+        else if (v_smk == 224)
+        {
+                p_engine_loadMap (v_lvl33, BANK_5, BANK_16);
+                p_engine_changeLvl (33, 80, 24);                       
         }
 }
 
 ///Ablauf Raum 33
-void p_lvl33 () __banked
+void p_lvl33 (void) __banked
 {
-        if (v_keyflag == 1)
+        if (v_smk == 8)
         {
-                if (v_smk == 8)
-                {
-                        p_engine_loadMap (v_lvl32, BANK_5, BANK_16);
-                        p_engine_changeLvl (32, 80, 120);
-                }
-                else if (v_smk == 144)
-                {
-                        p_engine_loadMap (v_lvl34, BANK_5, BANK_16);
-                        p_engine_changeLvl (34, 144, 88);
-                }
+                p_engine_loadMap (v_lvl32, BANK_5, BANK_16);
+                p_engine_changeLvl (32, 80, 120);
+        }
+        else if (v_smk == 144)
+        {
+                p_engine_loadMap (v_lvl34, BANK_5, BANK_16);
+                p_engine_changeLvl (34, 144, 88);
         }
 }
 
 ///Ablauf Raum 34
-void p_lvl34 () __banked
+void p_lvl34 (void) __banked
 {
-     if (v_keyflag == 1)
-     { 
-             if (v_smk == 160)
-             {
+        p_schild (133, schildtxt23);
+
+        if (v_smk == 160)
+        {
                      p_engine_loadMap (v_lvl33, BANK_5, BANK_16);
                      p_engine_changeLvl (33, 16, 88);
-             }
+        }
              else if (v_smk == 144)
              {
                      p_engine_loadMap (v_lvl35, BANK_5, BANK_16);
@@ -355,10 +315,10 @@ void p_lvl34 () __banked
                      p_engine_loadMap (v_lvl70, BANK_5, BANK_16);
                      p_engine_changeLvl (70, 48, 24);
              }
-     }   
+       
 }
 
-void p_lvl35 () __banked
+void p_lvl35 (void) __banked
 {
         if (v_smk == 160)
         {
@@ -378,36 +338,32 @@ void p_lvl35 () __banked
 }
 
 ///Ablauf Raum 36
-void p_lvl36 () __banked
+void p_lvl36 (void) __banked
 {
 	p_busch (188, 1);
 	
-        if (v_keyflag == 1)
+        if (v_smk == 88)
         {
-                if (v_smk == 88)
-                {
-                        p_engine_loadMap (v_lvl35, BANK_5, BANK_16);
-                        p_engine_changeLvl (35, 16, 56);
-                }
-                else if (v_smk == 108)
-                {
-                        p_engine_loadMap (v_lvl37, BANK_5, BANK_16);
-                        p_engine_changeLvl (37, 144, 72);
-                }
-                else if (v_smk == 224)
-                {
-			p_engine_loadMap (v_lvl78, BANK_5, BANK_16);
-			p_engine_changeLvl (78, 80, 24);
-		}
+                p_engine_loadMap (v_lvl35, BANK_5, BANK_16);
+                p_engine_changeLvl (35, 16, 56);
         }
+        else if (v_smk == 108)
+        {
+                p_engine_loadMap (v_lvl37, BANK_5, BANK_16);
+                p_engine_changeLvl (37, 144, 72);
+        }
+        else if (v_smk == 224)
+        {
+		p_engine_loadMap (v_lvl78, BANK_5, BANK_16);
+		p_engine_changeLvl (78, 80, 24);
+	}
 }
 
 ///Ablauf Raum 37
-void p_lvl37 () __banked
+void p_lvl37 (void) __banked
 {
         p_schild (74, schildtxt2);
 
-        
         if (v_smk == 124)
         {
                         p_engine_loadMap (v_lvl36, BANK_5, BANK_16);
@@ -424,187 +380,156 @@ void p_lvl37 () __banked
         
 }
 
-void p_lvl38 () __banked
+void p_lvl38 (void) __banked
 {
-        if (v_keyflag == 1)
+        if (v_smk == 9)
         {
-                if (v_smk == 9)
-                {
-                        p_engine_loadMap (v_lvl24, BANK_5, BANK_16);
-                        p_engine_changeLvl (24, 88, 120);
-                }
-                else if (v_smk == 106)
-                {
-                        p_engine_loadMap (v_lvl39, BANK_5, BANK_16);
-                        p_engine_changeLvl (39, 16, 64);
-                }
+                p_engine_loadMap (v_lvl24, BANK_5, BANK_16);
+                p_engine_changeLvl (24, 88, 120);
+        }
+        else if (v_smk == 106)
+        {
+                p_engine_loadMap (v_lvl39, BANK_5, BANK_16);
+                p_engine_changeLvl (39, 16, 64);
         }
 }
 
-void p_lvl39 () __banked
+void p_lvl39 (void) __banked
 {
         p_truhe_gold (116, 22, 2);
 
-        if (v_keyflag == 1)
+        if (v_smk == 90)
         {
-                if (v_smk == 90)
-                {
-                        p_engine_loadMap (v_lvl38, BANK_5, BANK_16);
-                        p_engine_changeLvl (38, 144, 64);
-                }
+                p_engine_loadMap (v_lvl38, BANK_5, BANK_16);
+                p_engine_changeLvl (38, 144, 64);
         }
 }
 
-void p_lvl70 () __banked
+void p_lvl70 (void) __banked
 {
         p_schild (201, schildtxt3);
         p_busch (188, 0);
 
-        if (v_keyflag == 1)
+        if (v_smk == 4)
         {
-                if (v_smk == 4)
-                {
-                        p_engine_loadMap (v_lvl34, BANK_5, BANK_16);
-                        p_engine_changeLvl (34, 48, 120);
-                }
-                else if (v_smk == 108)
-                {
-                        p_engine_loadMap (v_lvl71, BANK_5, BANK_16);
-                        p_engine_changeLvl (71, 144, 72);
-                }
-                else if (v_smk == 124)
-                {
-                        p_engine_loadMap (v_lvl72, BANK_5, BANK_16);
-                        p_engine_changeLvl (72, 16, 72);
-                } 
-                else if (v_smk == 224)
-                {
-                        p_engine_loadTileset (2, 4, 33, feensee_1, BANK_16);
-                        p_engine_loadMap (v_lvl90, BANK_6, BANK_16);
-                        p_engine_changeLvl (90, 80, 24);
-                        p_gui_show_location (lseefeendorf);
-                        v_region = 5;
-                }
-                
+                p_engine_loadMap (v_lvl34, BANK_5, BANK_16);
+                p_engine_changeLvl (34, 48, 120);
+        }
+        else if (v_smk == 108)
+        {
+                p_engine_loadMap (v_lvl71, BANK_5, BANK_16);
+                p_engine_changeLvl (71, 144, 72);
+        }
+        else if (v_smk == 124)
+        {
+                p_engine_loadMap (v_lvl72, BANK_5, BANK_16);
+                p_engine_changeLvl (72, 16, 72);
+        } 
+        else if (v_smk == 224)
+        {
+                p_engine_loadTileset (2, 4, 33, feensee_1, BANK_16);
+                p_engine_loadMap (v_lvl90, BANK_6, BANK_16);
+                p_engine_changeLvl (90, 80, 24);
+                p_gui_show_location (lseefeendorf);
+                v_region = 5;
         }
 }
 
-void p_lvl71 () __banked
+void p_lvl71 (void) __banked
 {
         p_truhe_gold (44, 23, 1);
 
-        if (v_keyflag == 1)
+        if (v_smk == 124)
         {
-                if (v_smk == 124)
-                {
-                        p_engine_loadMap (v_lvl70, BANK_5, BANK_16);
-                        p_engine_changeLvl (70, 16, 72);
-                }
+                p_engine_loadMap (v_lvl70, BANK_5, BANK_16);
+                p_engine_changeLvl (70, 16, 72);
         }
 }
 
-void p_lvl72 () __banked 
+void p_lvl72 (void) __banked 
 {
-        if (v_keyflag == 1)
+        if (v_smk == 108)
         {
-                if (v_smk == 108)
-                {
-                        p_engine_loadMap (v_lvl70, BANK_5, BANK_16);
-                        p_engine_changeLvl (70, 144, 72);
-                }
-                else if (v_smk == 124)
-                {
-                        p_engine_loadMap (v_lvl73, BANK_5, BANK_16);
-                        p_engine_changeLvl (73, 16, 72);
-                }
+                p_engine_loadMap (v_lvl70, BANK_5, BANK_16);
+                p_engine_changeLvl (70, 144, 72);
+        }
+        else if (v_smk == 124)
+        {
+                p_engine_loadMap (v_lvl73, BANK_5, BANK_16);
+                p_engine_changeLvl (73, 16, 72);
         }
 }
 
-void p_lvl73 () __banked
+void p_lvl73 (void) __banked
 {
-        if (v_keyflag == 1)
+        if (v_smk == 108)
         {
-                if (v_smk == 108)
-                {
-                        p_engine_loadMap (v_lvl72, BANK_5, BANK_16);
-                        p_engine_changeLvl (72, 144, 72);
-                }
-                else if (v_smk == 10)
-                {
-                        p_engine_loadMap (v_lvl74, BANK_5, BANK_16);
-                        p_engine_changeLvl (74, 96, 120);
-                }
-                else if (v_smk == 178)
-                {
-                        p_engine_loadMap (v_lvl76, BANK_5, BANK_16);
-                        p_engine_changeLvl (76, 16, 96);
-                }
+                p_engine_loadMap (v_lvl72, BANK_5, BANK_16);
+                p_engine_changeLvl (72, 144, 72);
+        }
+        else if (v_smk == 10)
+        {
+                p_engine_loadMap (v_lvl74, BANK_5, BANK_16);
+                p_engine_changeLvl (74, 96, 120);
+        }
+        else if (v_smk == 178)
+        {
+                p_engine_loadMap (v_lvl76, BANK_5, BANK_16);
+                p_engine_changeLvl (76, 16, 96);
         }
 }
 
-void p_lvl74 () __banked
+void p_lvl74 (void) __banked
 {
-        if (v_keyflag == 1)
+        if (v_smk == 226)
         {
-                if (v_smk == 226)
-                {
-                        p_engine_loadMap (v_lvl73, BANK_5, BANK_16);
-                        p_engine_changeLvl (73, 96, 25);
-                }
-                else if (v_smk == 10)
-                {
-                        p_engine_loadMap (v_lvl75, BANK_5, BANK_16);
-                        p_engine_changeLvl (75, 96, 120); 
-                }
+                p_engine_loadMap (v_lvl73, BANK_5, BANK_16);
+                p_engine_changeLvl (73, 96, 25);
+        }
+        else if (v_smk == 10)
+        {
+                p_engine_loadMap (v_lvl75, BANK_5, BANK_16);
+                p_engine_changeLvl (75, 96, 120); 
         }
 }
 
-void p_lvl75 () __banked
+void p_lvl75 (void) __banked
 {
         p_npc_heiler (61);
 
-        if (v_keyflag == 1)
+        if (v_smk == 226)
         {
-                if (v_smk == 226)
-                {
-                        p_engine_loadMap (v_lvl74, BANK_5, BANK_16);
-                        p_engine_changeLvl (74, 96, 25);
-                }	
+                p_engine_loadMap (v_lvl74, BANK_5, BANK_16);
+                p_engine_changeLvl (74, 96, 25);	
         }
 }
 
-void p_lvl76 () __banked
+void p_lvl76 (void) __banked
 {
-	if (v_keyflag == 1)
+	if (v_smk == 162)
 	{
-		if (v_smk == 162)
-		{
-			p_engine_loadMap (v_lvl73, BANK_5, BANK_16);
-			p_engine_changeLvl (73, 144, 96);
-		}
-		else if (v_smk == 52)
-		{
-			p_engine_loadMap (v_lvl77, BANK_5, BANK_16);
-			p_engine_changeLvl (77, 16, 40);
-		}
+		p_engine_loadMap (v_lvl73, BANK_5, BANK_16);
+		p_engine_changeLvl (73, 144, 96);
+	}
+	else if (v_smk == 52)
+	{
+		p_engine_loadMap (v_lvl77, BANK_5, BANK_16);
+		p_engine_changeLvl (77, 16, 40);
 	}
 }
 
-void p_lvl77 () __banked
+void p_lvl77 (void) __banked
 {
 	p_truhe_gold (188, 24, 2);
 	
-	if (v_keyflag == 1)
+        if (v_smk == 36)
 	{
-		if (v_smk == 36)
-		{
-			p_engine_loadMap (v_lvl76, BANK_5, BANK_16);
-			p_engine_changeLvl (76, 144, 40);
-		}
+		p_engine_loadMap (v_lvl76, BANK_5, BANK_16);
+		p_engine_changeLvl (76, 144, 40);
 	}
 }
 
-void p_lvl78 () __banked
+void p_lvl78 (void) __banked
 {
 	if (v_smk == 126)
         {
@@ -618,7 +543,7 @@ void p_lvl78 () __banked
         }
 }
 
-void p_lvl79 () __banked
+void p_lvl79 (void) __banked
 {
         if (v_smk == 142)
         {
@@ -632,7 +557,7 @@ void p_lvl79 () __banked
         }
 }
 
-void p_lvl15 () __banked
+void p_lvl15 (void) __banked
 {
         p_truhe_heiltrank (43, 25);
         
@@ -645,7 +570,7 @@ void p_lvl15 () __banked
         }
 }
 
-void p_lvl16 () __banked
+void p_lvl16 (void) __banked
 {
         if (v_smk == 227)
         {
@@ -664,7 +589,7 @@ void p_lvl16 () __banked
         }
 }
 
-void p_lvl17 () __banked
+void p_lvl17 (void) __banked
 {
         if (v_smk == 54)
         {
@@ -678,7 +603,7 @@ void p_lvl17 () __banked
         }
 }
 
-void p_lvl18 () __banked
+void p_lvl18 (void) __banked
 {
         if (v_smk == 226)
         {
@@ -692,7 +617,7 @@ void p_lvl18 () __banked
         }
 }
 
-void p_lvl80 () __banked
+void p_lvl80 (void) __banked
 {
         if (v_smk == 142)
         {
@@ -706,7 +631,7 @@ void p_lvl80 () __banked
         }
 }
 
-void p_lvl81 () __banked
+void p_lvl81 (void) __banked
 {
         p_busch (110, 2);
 
@@ -729,7 +654,7 @@ void p_lvl81 () __banked
         }
 }
 
-void p_lvl82 () __banked
+void p_lvl82 (void) __banked
 {
         if (v_smk == 124)
         {
@@ -743,7 +668,7 @@ void p_lvl82 () __banked
         }
 }
 
-void p_lvl83 () __banked
+void p_lvl83 (void) __banked
 {
         if (v_smk == 124)
         {
@@ -753,7 +678,7 @@ void p_lvl83 () __banked
         }
 }
 
-void p_lvl84 () __banked
+void p_lvl84 (void) __banked
 {
         if (v_smk == 124)
         {
@@ -767,7 +692,7 @@ void p_lvl84 () __banked
         }
 }
 
-void p_lvl85 () __banked
+void p_lvl85 (void) __banked
 {
         if (v_smk == 227)
         {
@@ -781,7 +706,7 @@ void p_lvl85 () __banked
         }
 }
 
-void p_lvl86 () __banked
+void p_lvl86 (void) __banked
 {
         if (v_smk == 196)
         {
@@ -802,7 +727,7 @@ void p_lvl86 () __banked
         }
 }
 
-void p_lvl87 () __banked
+void p_lvl87 (void) __banked
 {
         if (v_smk == 8)
         {
@@ -810,4 +735,3 @@ void p_lvl87 () __banked
                 p_engine_changeLvl (86, 80, 120);        
         }
 }
-

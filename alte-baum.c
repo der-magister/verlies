@@ -127,7 +127,7 @@ void p_lvl150 (void) BANKED
                         {
                                 p_tuerzu ();
                         }
-                        else if ((v_tuer [3] == 0) && (v_ske == 1))
+                        else if ((v_tuer [3] == 0) && (v_ske != 0))
                         {
                                 v_tuer [3] = 1;
                                 --v_ske;
