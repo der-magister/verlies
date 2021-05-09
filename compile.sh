@@ -8,12 +8,17 @@ date
 
 echo "Lösche alte Dateien..."
 
-rm -rf obj/*.o
-rm -rf obj/*.asm
-rm -rf obj/*.sym
-rm -rf obj/*.lst
-rm -rf obj/*.noi
-rm -rf obj/*.map
+if [ -d obj ]
+then
+	rm -rf obj/*.o
+	rm -rf obj/*.asm
+	rm -rf obj/*.sym
+	rm -rf obj/*.lst
+	rm -rf obj/*.noi
+	rm -rf obj/*.map
+else 
+	mkdir obj
+fi
 
 if [ -f obj/verlies.gb ]
 then 
@@ -203,9 +208,9 @@ then
 	#/usr/games/mednafen -psx.dbg_level 0 -video.fs 0 -gb.system_type dmg -gb.xscale 4,000000 -gb.yscale 4,000000 obj/verlies.gb &>/dev/null &
 	
 #	wine "C:\apps\bgb\bgb.exe" obj/verlies.gb &>/dev/null &
-	BGB.exe C:\\magister\\repos\\verlies\\obj\\verlies.gb &
+	#BGB.exe C:\\magister\\repos\\verlies\\obj\\verlies.gb &
 
-	#bgb.sh verlies.gb
+	bgb.sh verlies.gb
 
 fi
 
