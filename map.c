@@ -153,7 +153,7 @@ void p_showMap (void) BANKED
                 else if (v_lvl == 91) p_map_draw_mark (9, 13);
         }
         //Karte Feensee
-        else if ((v_region == 6)&& (v_knr [5] == 1)) {
+        else if ((v_region == 6) && (v_knr [5] == 1)) {
                 set_win_tiles (7, 11, 6, 6, k_feensee);
 
                 if (v_lvl == 95) p_map_draw_mark (9, 11);
@@ -184,10 +184,33 @@ void p_showMap (void) BANKED
                 else if (v_lvl == 115) p_map_draw_mark (11, 16);
                 else if (v_lvl == 116) p_map_draw_mark (12, 16);
         }
-        else if ((v_lvl >= 120) && (v_lvl <= 143) && (v_knr [6] == 1))
-        {
+        else if ((v_region == 7) && (v_knr [6] == 1)) {
                 set_win_tiles (8, 11, 5, 6, k_eichenwald);
 
+                if (v_lvl == 120) p_map_draw_mark (10, 16);
+                else if (v_lvl == 121) p_map_draw_mark (11, 16);
+                else if (v_lvl == 122) p_map_draw_mark (12, 16);
+                else if (v_lvl == 123) p_map_draw_mark (10, 15);
+                else if (v_lvl == 124) p_map_draw_mark (11, 15);
+                else if (v_lvl == 125) p_map_draw_mark (11, 14);
+                else if (v_lvl == 126) p_map_draw_mark (10, 13);
+                else if (v_lvl == 127) p_map_draw_mark (9, 15);
+                else if (v_lvl == 128) p_map_draw_mark (8, 15);
+                else if (v_lvl == 129) p_map_draw_mark (9, 14); 
+                else if (v_lvl == 130) p_map_draw_mark (9, 13);
+                else if (v_lvl == 131) p_map_draw_mark (8, 13);
+                else if (v_lvl == 132) p_map_draw_mark (8, 12);
+                else if (v_lvl == 133) p_map_draw_mark (8, 11);
+                else if (v_lvl == 134) p_map_draw_mark (9, 11);
+                else if (v_lvl == 135) p_map_draw_mark (10, 11);
+                else if (v_lvl == 136) p_map_draw_mark (10, 12);
+                else if (v_lvl == 137) p_map_draw_mark (9, 12);
+                else if (v_lvl == 138) p_map_draw_mark (10, 13);
+                else if (v_lvl == 139) p_map_draw_mark (11, 12);
+                else if (v_lvl == 140) p_map_draw_mark (11, 11);
+                else if (v_lvl == 141) p_map_draw_mark (11, 12);
+                else if (v_lvl == 142) p_map_draw_mark (12, 12);
+                else if (v_lvl == 143) p_map_draw_mark (12, 13);
         }        
 	else
 	{

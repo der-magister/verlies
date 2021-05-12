@@ -239,7 +239,7 @@ void p_lvl31 (void) __banked
 
         if (v_smk == 188)
         {
-                p_truhe_brotbuechse_1 ();
+                p_truhe_brotfach_1 ();
         }
                 //Raumwechsel
         if (v_smk == 142)
@@ -651,6 +651,7 @@ void p_lvl81 (void) __banked
                 p_engine_loadMap (v_lvl120, BANK_18, BANK_16);
                 p_engine_changeLvl (120, 88, 120);
                 p_gui_show_location (leichenwald);
+                v_region = 7;
         }
 }
 

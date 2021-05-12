@@ -1,6 +1,6 @@
 //   Verlies - ein Adventure im Retrodesign
 //
-//   Copyright (C) 2018-2020 Heiko Wolf
+//   Copyright (C) 2018-2021 Heiko Wolf
 //
 //   This program is free software; you can redistribute it and/or modify
 //   it under the terms of the GNU General Public License As published by
@@ -16,34 +16,34 @@
 //   With this program; if not, write to the Free Software Foundation, Inc.,
 //   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 //
-//   Kontakt: magister@kabelmail.de
+//   Kontakt: projekte@kabelmail.net
 
 #ifndef _ALTE_BAUM_H_
 #define _ALTE_BAUM_H_
 
 #include "globals.h"
 
-extern void p_lvl145 (void) BANKED;
-extern void p_lvl146 (void) BANKED;
-extern void p_lvl147 (void) BANKED;
-extern void p_lvl148 (void) BANKED;
-extern void p_lvl149 (void) BANKED;
-extern void p_lvl150 (void) BANKED;
-extern void p_lvl151 (void) BANKED;
-extern void p_lvl152 (void) BANKED;
-extern void p_lvl153 (void) BANKED;
-extern void p_lvl154 (void) BANKED;
-extern void p_lvl155 (void) BANKED;
-extern void p_lvl156 (void) BANKED;
-extern void p_lvl157 (void) BANKED;
-extern void p_lvl158 (void) BANKED;
-extern void p_lvl159 (void) BANKED;
-extern void p_lvl160 (void) BANKED;
-extern void p_lvl161 (void) BANKED;
-extern void p_lvl162 (void) BANKED;
-extern void p_lvl163 (void) BANKED;
-extern void p_lvl164 (void) BANKED;
-extern void p_lvl165 (void) BANKED;
-extern void p_lvl166 (void) BANKED;
+extern void p_lvl145 (void) __banked;
+extern void p_lvl146 (void) __banked;
+extern void p_lvl147 (void) __banked;
+extern void p_lvl148 (void) __banked;
+extern void p_lvl149 (void) __banked;
+extern void p_lvl150 (void) __banked;
+extern void p_lvl151 (void) __banked;
+extern void p_lvl152 (void) __banked;
+extern void p_lvl153 (void) __banked;
+extern void p_lvl154 (void) __banked;
+extern void p_lvl155 (void) __banked;
+extern void p_lvl156 (void) __banked;
+extern void p_lvl157 (void) __banked;
+extern void p_lvl158 (void) __banked;
+extern void p_lvl159 (void) __banked;
+extern void p_lvl160 (void) __banked;
+extern void p_lvl161 (void) __banked;
+extern void p_lvl162 (void) __banked;
+extern void p_lvl163 (void) __banked;
+extern void p_lvl164 (void) __banked;
+extern void p_lvl165 (void) __banked;
+extern void p_lvl166 (void) __banked;
  
 #endif

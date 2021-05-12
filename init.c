@@ -82,18 +82,13 @@ void p_init_game1 (void) NONBANKED
 
 void p_init_game2 (void) NONBANKED
 {
-        for (v_i = 0; v_i < 41; v_i++)
-        {
-                move_sprite (v_i, 0, 0);
-        }
-
+        for (v_i = 0; v_i < 41; v_i++) { move_sprite (v_i, 0, 0); }
 
         p_hud_init ();
         p_truhe_init ();
         p_schalter_init ();
         p_items_init ();
         p_gegner_init ();
-
 
         v_selectItem = 0;
 

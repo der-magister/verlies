@@ -88,6 +88,7 @@ void p_lvl121 (void) __banked
 void p_lvl122 (void) __banked
 {
 	p_truhe_karte (62, 6, 36);
+	
 	if (v_smk == 144)
 	{
 		p_engine_loadMap (v_lvl121, BANK_18, BANK_16);
@@ -156,7 +157,7 @@ void p_lvl126 (void) __banked
 {
 	if (v_smk == 98)
 	{
-		p_truhe_brotbuechse_2 ();
+		p_truhe_brotfach_2 ();
 	}
 	p_truhe_proviant (194, 38, 1);
 

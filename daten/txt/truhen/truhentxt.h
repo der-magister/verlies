@@ -16,13 +16,14 @@
 //   With this program; if not, write to the Free Software Foundation, Inc.,
 //   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 //
-//   Kontakt: magister@kabelmail.de
+//   Kontakt: projekte@kabelmail.net
 
-extern const const unsigned char truheleer [];
+extern const unsigned char truheleer [];
 extern const unsigned char tschluessel [];
 extern const unsigned char aspektberg[];
-extern unsigned char aspektwald[];
+extern const unsigned char aspektwald[];
 extern const unsigned char ausdauertrank[];
+extern const unsigned char brotfach[];
 extern const unsigned char brotbuechse_1[];
 extern const unsigned char brotbuechse_2[];
 extern const unsigned char erhalten[];
