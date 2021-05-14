@@ -54,7 +54,7 @@ void p_spieler_init (void) BANKED
         set_sprite_tile (8, 111);
 
         v_smlp = 3; v_slp = v_smlp; v_srs = 0; v_stp = 0; v_smaus = 3; v_saus = v_smaus; v_sat = 0; v_smat = 3;
-        v_sht = 0; v_smht = 5; v_sgo = 0; v_smgo = 15; v_spr = 5; v_smpr = 5; v_ske = 0; v_shk = 0; v_smhk = 2;
+        v_sht = 0; v_smht = 5; v_sgo = 0; v_smgo = 25; v_spr = 5; v_smpr = 5; v_ske = 0; v_shk = 0; v_smhk = 2;
         v_ssc = 0; v_sstaub = 0; v_smstaub = 2; v_portalrune = FALSE; v_sused = FALSE; v_spitzhacke = FALSE;
         v_walk = TRUE; v_serz = 0; v_stoff = 0;
 
