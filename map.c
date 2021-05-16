@@ -193,7 +193,7 @@ void p_showMap (void) BANKED
                 else if (v_lvl == 123) p_map_draw_mark (10, 15);
                 else if (v_lvl == 124) p_map_draw_mark (11, 15);
                 else if (v_lvl == 125) p_map_draw_mark (11, 14);
-                else if (v_lvl == 126) p_map_draw_mark (10, 13);
+                //else if (v_lvl == 126) p_map_draw_mark (11, 13);
                 else if (v_lvl == 127) p_map_draw_mark (9, 15);
                 else if (v_lvl == 128) p_map_draw_mark (8, 15);
                 else if (v_lvl == 129) p_map_draw_mark (9, 14); 
@@ -208,7 +208,7 @@ void p_showMap (void) BANKED
                 else if (v_lvl == 138) p_map_draw_mark (10, 13);
                 else if (v_lvl == 139) p_map_draw_mark (11, 12);
                 else if (v_lvl == 140) p_map_draw_mark (11, 11);
-                else if (v_lvl == 141) p_map_draw_mark (11, 12);
+                else if (v_lvl == 141) p_map_draw_mark (12, 11);
                 else if (v_lvl == 142) p_map_draw_mark (12, 12);
                 else if (v_lvl == 143) p_map_draw_mark (12, 13);
         }        

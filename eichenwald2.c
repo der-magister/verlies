@@ -180,6 +180,7 @@ void p_lvl142 (void) __banked
 		p_engine_loadMap (v_lvl145, BANK_18, BANK_17);
 		p_engine_changeLvl (145, 16, 72);
 		p_gui_show_location (laltebaum);
+		v_region = 8;
 	}
 }
 

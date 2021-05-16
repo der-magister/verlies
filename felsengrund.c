@@ -181,7 +181,7 @@ void p_lvl1 () BANKED
                                 ++v_questen [3];
                                 ++v_questen [0];
                         }
-                        else if ((v_questen [0] == 4) || (v_questen [0] == 5) || v_questen [0] == 6) {
+                        else if ((v_questen [0] == 4) || (v_questen [0] == 5) || v_questen [0] == 6) || questen {
                                 p_engine_set_txt (xavertxt31);
                                 p_engine_A ();
                                 p_engine_after_txt ();

@@ -66,6 +66,7 @@ void p_lvl120 (void) __banked
 		p_engine_loadMap (v_lvl81, BANK_5, BANK_16);
 		p_engine_changeLvl (81, 88, 24);
 		p_gui_show_location (lwiesen);
+		v_region = 3;
 	}
 }
 
