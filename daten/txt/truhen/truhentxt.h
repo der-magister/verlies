@@ -30,6 +30,7 @@ extern const unsigned char erhalten[];
 extern const unsigned char erz[];
 extern const unsigned char geldkatze1[];
 extern const unsigned char geldkatze2[];
+extern const unsigned char geldfach[];
 extern const unsigned char goldvoll[];
 extern const unsigned char heiltrank[];
 extern const unsigned char kartetruhe[];

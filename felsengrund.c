@@ -16,7 +16,7 @@
 //   With this program; if not, write to the Free Software Foundation, Inc.,
 //   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 //
-//   Kontakt: magister@kabelmail.de
+//   Kontakt: projekte@kabelmail.net
 
 //#pragma bank=15
 
@@ -53,7 +53,7 @@
 #include "daten/other/techend.h"
 
 ///Ablauf Raum 1
-void p_lvl1 () BANKED
+void p_lvl1 (void) __banked
 {
 
         //Heiler
@@ -181,7 +181,7 @@ void p_lvl1 () BANKED
                                 ++v_questen [3];
                                 ++v_questen [0];
                         }
-                        else if ((v_questen [0] == 4) || (v_questen [0] == 5) || v_questen [0] == 6) || questen {
+                        else if ((v_questen [0] == 4) || (v_questen [0] == 5) || (v_questen [0] == 6)) {
                                 p_engine_set_txt (xavertxt31);
                                 p_engine_A ();
                                 p_engine_after_txt ();
@@ -241,7 +241,7 @@ void p_lvl1 () BANKED
 }
 
 ///Ablauf Raum 2
-void p_lvl2 () BANKED
+void p_lvl2 (void) __banked
 {
         p_portal (22);
 
@@ -270,7 +270,7 @@ void p_lvl2 () BANKED
 	}
 }
 
-void p_lvl3 () BANKED
+void p_lvl3 (void) __banked
 {
         //Schild
         p_schild (195, schildtxt1e);

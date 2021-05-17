@@ -16,7 +16,7 @@
 //   With this program; if not, write to the Free Software Foundation, Inc.,
 //   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 //
-//   Kontakt: magister@kabelmail.de
+//   Kontakt: projekte@kabelmail.net
 
 //#pragma bank=13
 
@@ -29,7 +29,7 @@ const unsigned char v_kdatg_3 [19] = { 8, 9, 10, 11, 20, 21, 25, 26, 27, 32, 33,
 const unsigned char v_kdatg_4 [9] = { 5, 20, 21, 32, 33, 34, 36, 36, 37 };
 const unsigned char v_kdatg_5 [20] = { 4, 5, 6, 8, 9, 10, 11, 20, 21, 22, 24, 25, 26, 27, 28, 29, 30, 31, 36, 37 };
 const unsigned char v_kdatg_alte_baum [16] = { 46, 45, 44, 43, 37, 36, 22, 21, 20, 7, 5, 4, 12, 13 ,14 ,15 };
-const unsigned char v_kdatg_gebirgspfad [30] = { 3, 4, 5, 6, 7, 20, 21, 22, 25, 28, 29, 30, 31, 36, 37, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
+const unsigned char v_kdatg_gebirgspfad [26] = { 3, 4, 5, 6, 7, 12, 13, 14, 15, 20, 16, 17, 18, 19, 21, 22, 24, 25, 26, 27, 28, 29, 30, 31, 36, 37 };
 const unsigned char v_kdatg_mine_1 [28] = { 3, 8, 9, 10, 11, 12, 13, 14, 15, 20, 21, 25, 26, 27, 28, 29, 39, 31, 32, 33, 34, 35, 36, 37, 43, 44, 45, 46 };
 const unsigned char v_kdatg_mine_2 [28] = { 1, 3, 8, 9, 10, 11, 12, 13, 14, 15, 20, 21, 25, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 24, 0,0,0,0 };
 

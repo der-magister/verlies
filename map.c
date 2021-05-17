@@ -16,7 +16,7 @@
 //   With this program; if not, write to the Free Software Foundation, Inc.,
 //   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 //
-//   Kontakt: magister@kabelmail.de
+//   Kontakt: projekte@kabelmail.net
 
 //#pragma bank=3
 
@@ -211,7 +211,10 @@ void p_showMap (void) BANKED
                 else if (v_lvl == 141) p_map_draw_mark (12, 11);
                 else if (v_lvl == 142) p_map_draw_mark (12, 12);
                 else if (v_lvl == 143) p_map_draw_mark (12, 13);
-        }        
+        }   
+        else if ((v_region == 9) && (v_knr [7] == 1)) {
+                set_win_tiles (7, 12, 8, 5, k_gebirgspfad);
+        }     
 	else
 	{
 		set_win_tiles (4, 13, 11, 2, nomap);

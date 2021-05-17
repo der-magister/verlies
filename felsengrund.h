@@ -1,6 +1,6 @@
 //   Verlies - ein Adventure im Retrodesign
 //
-//   Copyright (C) 2018-2020 Heiko Wolf
+//   Copyright (C) 2018-2021 Heiko Wolf
 //
 //   This program is free software; you can redistribute it and/or modify
 //   it under the terms of the GNU General Public License As published by
@@ -16,15 +16,15 @@
 //   With this program; if not, write to the Free Software Foundation, Inc.,
 //   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 //
-//   Kontakt: magister@skywave-2000.de
+//   Kontakt: projekte@kabelmail.net
 
 #ifndef _FELSENGRUND_H_
 #define _FELSENGRUND_H_
 
 #include "globals.h"
 
-extern void p_lvl1 () __banked;
-extern void p_lvl2 () __banked;
-extern void p_lvl3 () __banked;
+extern void p_lvl1 (void) __banked;
+extern void p_lvl2 (void) __banked;
+extern void p_lvl3 (void) __banked;
 
 #endif

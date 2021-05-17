@@ -725,6 +725,7 @@ void p_lvl86 (void) __banked
                 p_gui_show_location (lgebirgspfad);
                 p_engine_loadMap (v_lvl168, BANK_18, BANK_16);
                 p_engine_changeLvl (168, 144, 72);   
+                v_region = 9;
         }
 }
 

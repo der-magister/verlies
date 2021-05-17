@@ -568,15 +568,13 @@ void p_truhe_brotfach_2 (void) __banked
 
 void p_truhe_geldkatze1 (void) __banked
 {
-        if (v_truhen [26] == 0)
-        {
+        if (v_truhen [26] == 0) {
                 p_engine_set_txt (geldkatze1);
-                ++v_truhen [26];
-                v_smgo = 30;
+                v_truhen [26] = 1;
+                v_smgo = 50;
                 p_truhe_status ();
         }
-        else
-        {
+        else {
 	        p_engine_set_txt (truheleer);
 	}
         p_engine_A ();
@@ -585,15 +583,13 @@ void p_truhe_geldkatze1 (void) __banked
 
 void p_truhe_geldkatze2 (void) __banked
 {
-        if (v_truhen [53] == 0)
-        {
+        if (v_truhen [53] == 0) {
                 p_engine_set_txt (geldkatze2);
-                ++v_truhen [53];
+                v_truhen [53] = 1;
                 v_smgo = 75;
                 p_truhe_status ();
         }
-        else
-        {
+        else {
                 p_engine_set_txt (truheleer);
         }
         p_engine_A ();
@@ -602,7 +598,7 @@ void p_truhe_geldkatze2 (void) __banked
 
 void p_truhe_kraeuterbeutel (void) __banked
 {
-    if (v_truhen [61] == 0)
+        if (v_truhen [61] == 0)
         {
                 p_engine_set_txt (kraeuterbeutel);
                 ++v_truhen [61];

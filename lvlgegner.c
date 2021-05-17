@@ -16,7 +16,7 @@
 //   With this program; if not, write to the Free Software Foundation, Inc.,
 //   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 //
-//   Kontakt: magister@kabelmail.de
+//   Kontakt: projekte@kabelmail.net
 
 //#pragma bank=20
 
@@ -35,7 +35,7 @@ const UINT8 table_gegner_dat [2][7] = {
 
 }; 
 
-void p_gegner_set_table (void) BANKED
+void p_gegner_set_table (void) __banked
 {
         UINT8 l_anzahl, l_pos;
 
@@ -48,7 +48,7 @@ void p_gegner_set_table (void) BANKED
 }*/
 
 ///Gegnerinformationen
-void p_set_gegner (void) BANKED
+void p_set_gegner (void) __banked
 {
         v_gspeed = 65;
 
@@ -85,6 +85,9 @@ void p_set_gegner (void) BANKED
 		p_gegner_set (1, 16, 16, 80, 72, MOVE_NORTH, 1, 1);
         }
         else if (v_lvl == 12) { p_gegner_set (0, 8, 12, 96, 64, MOVE_WEST, 1, 1); }
+        else if (v_lvl == 13) {
+            p_gegner_set (0, )
+        }
         else if (v_lvl == 20)
         {
                 v_gspeed = 60;

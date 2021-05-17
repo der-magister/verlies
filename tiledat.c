@@ -16,7 +16,7 @@
 //   With this program; if not, write to the Free Software Foundation, Inc.,
 //   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 //
-//   Kontakt: magister@kabelmail.de
+//   Kontakt: projekte@kabelmail.net
 
 //#pragma bank=21
 
@@ -90,12 +90,6 @@ UINT8 p_spieler_koli (void) __banked
                         if (v_tile [1] == v_kdat_2 [v_a]) return FALSE;
                 }
                 //die grossen wiesen
-                /*else if ((v_lvl >= 19) && (v_lvl < 40) && (v_tile [1] == v_kdat_5 [v_a])) return FALSE;
-                else if ((v_lvl >= 70) && (v_lvl <= 79) && (v_tile [1] == v_kdat_5 [v_a])) return FALSE;
-                else if ((v_lvl >= 16) && (v_lvl <= 18) && (v_tile [1] == v_kdat_5 [v_a])) return FALSE;
-                else if ((v_lvl >= 80) && (v_lvl <= 83) && (v_tile [1] == v_kdat_5 [v_a])) return FALSE;
-                else if ((v_lvl >= 84) && (v_lvl <= 87) && (v_tile [1] == v_kdat_5 [v_a])) return FALSE;*/
-
                 else if (v_region == 3) {
                         if (v_tile [1] == v_kdat_5 [v_a]) return FALSE;
                 }
@@ -111,13 +105,19 @@ UINT8 p_spieler_koli (void) __banked
                 }
 
                 //Eichenwald
-		else if ((v_lvl >= 120) && (v_lvl <= 143) && (v_tile [1] == v_kdat_eichenwald [v_a])) return FALSE;
+		if (v_region == 7) {
+                        if (v_tile [1] == v_kdat_eichenwald [v_a]) return FALSE;
+                }
 
                 //Alte Baum
-                else if ((v_lvl >= 145) && (v_lvl <= 166) && (v_tile [1] == v_kdat_alte_baum [v_a])) return FALSE;
+                if (v_region == 8) { 
+                        if (v_tile [1] == v_kdat_alte_baum [v_a]) return FALSE;
+                }
 
                 //Gebirgspfad
-                else if ((v_lvl >= 168) && (v_lvl <= 179) && (v_tile [1] == v_kdat_gebirgspfad [v_a])) return FALSE;
+                if (v_region == 9) {
+                        if (v_tile [1] == v_kdat_gebirgspfad [v_a]) return FALSE;
+                }
 
                 //Zwergenheim
                 else if ((v_lvl >= 185) && (v_lvl <= 187) && (v_tile [1] == v_kdat_zwergenheim [v_a])) return FALSE; 

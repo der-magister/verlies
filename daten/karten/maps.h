@@ -16,7 +16,7 @@
 //   With this program; if not, write to the Free Software Foundation, Inc.,
 //   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 //
-//   Kontakt: magister@kabelmail.de
+//   Kontakt: projekte@kabelmail.net
 
 #ifndef _MAPS_H_
 #define _MAPS_H_
@@ -28,5 +28,6 @@ extern const unsigned char k_oger[];
 extern const unsigned char k_dorfseefeen[];
 extern const unsigned char k_feensee[];
 extern const unsigned char k_eichenwald[];
+extern const unsigned char k_gebirgspfad[];
 
 #endif
