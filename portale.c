@@ -1,3 +1,22 @@
+//   Verlies - ein Adventure/RPG im Retrodesign
+//
+//   Copyright (C) 2018-2021 Heiko Wolf
+//
+//   This program is free software; you can redistribute it and/or modify
+//   it under the terms of the GNU General Public License As published by
+//   the Free Software Foundation; either version 2 of the License, or
+//   (at your option) any later version.
+//
+//   This program is distributed in the hope that it will be useful,
+//   but WITHOUT ANY WARRANTY; without even the implied warranty of
+//   MERCHANTABILITY Or FITNESS For A PARTICULAR PURPOSE.  See the
+//   GNU General Public License For more details.
+//
+//   You should have received a copy of the GNU General Public License along
+//   With this program; if not, write to the Free Software Foundation, Inc.,
+//   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+//
+//   Kontakt: projekte@kabelmail.net
 
 //#pragma bank=8
 
@@ -8,6 +27,7 @@
 #include "globals.h"
 #include "other.h"
 #include "locations.h"
+#include "player.h"
 
 #include "daten/txt/portale/portalfeensee.h"
 #include "daten/txt/portale/portalfelsengrund.h"
@@ -22,6 +42,13 @@
 #include "daten/lvl/lvldatdorfseefeen.h"
 #include "daten/lvl/lvldateichenwald.h"
 
+void p_portal_init (void) __banked
+{
+	for (v_i = 0; v_i != 4; ++v_i) v_portal [v_i] = 0;
+
+	v_use_portal = FALSE;
+}
+
 void p_portal_setup (void) __banked
 {
 	v_aktion = TRUE;
@@ -32,7 +59,9 @@ void p_portal_setup (void) __banked
 
 void p_portal (UINT8 l_smk) __banked
 {
-	static BOOLEAN l_quit = FALSE;
+	BOOLEAN l_quit;
+
+	l_quit = FALSE;
 
 	if (l_smk == v_smk)
 	{  
@@ -70,89 +99,92 @@ void p_portal (UINT8 l_smk) __banked
                         return;
                 }
 
+                if (v_use_portal == TRUE) {
+			p_portal_setup ();
+			
+			//Felsengrund anzeigen, wenn Portal entdeckt
+			if (v_portal [0] == 1) 
+			{
+		        	set_win_tiles (1, 1, 18, 1, portal1);
+		        }
 
-		p_portal_setup ();
-		
-		//Felsengrund anzeigen, wenn Portal entdeckt
-		if (v_portal [0] == 1) 
-		{
+		        //Feensee anzeigen, wenn Portal entdeckt
+		        if (v_portal [1] == 1) 
+		        {
+		        	set_win_tiles (1, 2, 18, 1, portal2);
+		        }
+		        //Hain anzeigen, wenn entdeckt
+		        if (v_portal [2] == 1)
+		        {
 
-	        	set_win_tiles (1, 1, 18, 1, portal1);
-	        }
+		        	set_win_tiles (1, 3, 18, 1, portal3);
+		        	if (v_syk >= 104) for (v_i = 0; v_i != 4; ++v_i) { move_sprite (v_i, 0, 0); }
+		        }
+		        if (v_portal [3] == 1)
+		        {
+		        	//set_win_tiles (1, 3, 18, 1, portal3);
 
-	        //Feensee anzeigen, wenn Portal entdeckt
-	        if (v_portal [1] == 1) 
-	        {
-	        	set_win_tiles (1, 2, 18, 1, portal2);
-	        }
-	        //Hain anzeigen, wenn entdeckt
-	        if (v_portal [2] == 1)
-	        {
+		        }
 
-	        	set_win_tiles (1, 3, 18, 1, portal3);
-	        }
-	        if (v_portal [3] == 1)
-	        {
-	        	//set_win_tiles (1, 3, 18, 1, portal3);
+		        SHOW_WIN;
+		        delay (160);
 
-	        }
-
-	        SHOW_WIN;
-	        delay (160);
-
-	        while (l_quit == FALSE)
-	        {
-	        	if ((joypad () & J_UP) && (v_portal [0] == 1)) 
-	        	{
-	        		if (v_lvl == 2)
-	    			{
-	        			l_quit = TRUE;
-	        		}
-	        		else
-	        		{
-		        		p_engine_loadTileset (BANK_2, 8, 29, felsengrund_1, BANK_8);
-	                        	p_engine_loadTileset (BANK_2, 4, 15, felsengrund_2, BANK_8);
-	                        	p_engine_loadMap (v_lvl1b, BANK_5, BANK_8);
-	                        	p_engine_changeLvl (2, 48, 32);
-	                        	p_gui_show_location (lfelsengrund);
-	                        	l_quit = TRUE;
-	                        }
-	        	}
-	        	else if ((joypad () & J_DOWN) && (v_portal [1] == 1))
-	        	{
-	        		if (v_lvl == 91)
-	        		{
-	        			l_quit = TRUE;
-                        		
-	        		}
-	        		else
-	        		{
-		        		p_engine_loadTileset (BANK_2, 4, 33, feensee_1, BANK_8);
-                        		p_engine_loadMap (v_lvl91, BANK_6, BANK_8);
-                        		p_engine_changeLvl (91, 40, 32);
-                        		p_gui_show_location (lseefeendorf);
-	                        	l_quit = TRUE;
-	                        }
-	        		
-	        	}
-	        	else if ((joypad () & J_LEFT) && (v_portal [2] == 1))
-	        	{
-	        		if (v_lvl == 138)
-	        		{
-	        			l_quit = TRUE;
-	        		}
-	        		else 
-	        		{
-	        			p_engine_loadTileset (BANK_2, 4, 38, eichenwald, BANK_8);
-                			p_engine_loadMap (v_lvl138, BANK_6, BANK_8);
-                			p_engine_changeLvl (138, 128, 104);
-                			p_gui_show_location (leichenwald);
-                			l_quit = TRUE;
-	        		}
-	        	}
-	        }
-	        p_engine_after_txt ();
+		        while (l_quit == FALSE)
+		        {
+		        	if ((joypad () & J_UP) && (v_portal [0] == 1)) 
+		        	{
+		        		if (v_lvl == 2)
+		    			{
+		        			l_quit = TRUE;
+		        		}
+		        		else
+		        		{
+			        		p_engine_loadTileset (BANK_2, 8, 29, felsengrund_1, BANK_8);
+		                        	p_engine_loadTileset (BANK_2, 4, 15, felsengrund_2, BANK_8);
+		                        	p_engine_loadMap (v_lvl1b, BANK_5, BANK_8);
+		                        	p_engine_changeLvl (2, 48, 32);
+		                        	p_gui_show_location (lfelsengrund);
+		                        	l_quit = TRUE;
+		                        	v_region = 1;
+		                        }
+		        	}
+		        	else if ((joypad () & J_DOWN) && (v_portal [1] == 1))
+		        	{
+		        		if (v_lvl == 91)
+		        		{
+		        			l_quit = TRUE;
+	                        		
+		        		}
+		        		else
+		        		{
+			        		p_engine_loadTileset (BANK_2, 4, 33, feensee_1, BANK_8);
+	                        		p_engine_loadMap (v_lvl91, BANK_6, BANK_8);
+	                        		p_engine_changeLvl (91, 40, 32);
+	                        		p_gui_show_location (lseefeendorf);
+		                        	l_quit = TRUE;
+		                        	v_region = 5;
+		                        }
+		        		
+		        	}
+		        	else if ((joypad () & J_LEFT) && (v_portal [2] == 1))
+		        	{
+		        		if (v_lvl == 138)
+		        		{
+		        			l_quit = TRUE;
+		        			if (v_syk >= 104) p_spieler_set_sprite ();
+		        		}
+		        		else 
+		        		{
+		        			p_engine_loadTileset (BANK_2, 4, 38, eichenwald, BANK_8);
+	                			p_engine_loadMap (v_lvl138, BANK_6, BANK_8);
+	                			p_engine_changeLvl (138, 128, 104);
+	                			p_gui_show_location (leichenwald);
+	                			l_quit = TRUE;
+	                			v_region = 7;
+		        		}
+		        	}
+		        }
+		        p_engine_after_txt ();
+		}
 	}
-	 
 }
-

@@ -2,7 +2,7 @@
 
 //   Verlies - ein Adventure/RPG im Retrodesign
 //
-//   Copyright (C) 2018-2020 Heiko Wolf
+//   Copyright (C) 2018-2021 Heiko Wolf
 //
 //   This program is free software; you can redistribute it and/or modify
 //   it under the terms of the GNU General Public License As published by
@@ -18,7 +18,7 @@
 //   With this program; if not, write to the Free Software Foundation, Inc.,
 //   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 //
-//   Kontakt: magister@kabelmail.de
+//   Kontakt: projekte@kabelmail.net
 
 #include "gebirgspfad.h"
 
@@ -51,10 +51,11 @@ void p_lvl168 (void) __banked
         }
         else if (v_smk == 124)
         {
-        	p_engine_loadTileset (2, 4, 33, wiesen_1, BANK_17);
+        	p_engine_loadTileset (BANK_2, 3, 34, wiesen_1, BANK_17);
                 p_engine_loadMap (v_lvl86, 5, BANK_17);
                	p_engine_changeLvl (86, 16, 72);
                	p_gui_show_location (lwiesen);
+		v_region = 3;
         }
 }
 

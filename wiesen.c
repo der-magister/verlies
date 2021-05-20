@@ -427,7 +427,7 @@ void p_lvl70 (void) __banked
         } 
         else if (v_smk == 224)
         {
-                p_engine_loadTileset (2, 4, 33, feensee_1, BANK_16);
+                p_engine_loadTileset (BANK_2, 4, 33, feensee_1, BANK_16);
                 p_engine_loadMap (v_lvl90, BANK_6, BANK_16);
                 p_engine_changeLvl (90, 80, 24);
                 p_gui_show_location (lseefeendorf);

@@ -53,6 +53,7 @@ void p_lvl145 (void) __banked
 		p_engine_loadMap (v_lvl142, BANK_18, BANK_17);
 		p_engine_changeLvl (142, 144, 72);
 		p_gui_show_location (leichenwald);
+		v_region = 7;
 	}
 }
 
@@ -232,10 +233,15 @@ void p_lvl156 (void) __banked
 		p_engine_loadMap (v_lvl155, BANK_18, BANK_17);
 		p_engine_changeLvl (155, 144, 64);
 	}
-	else if (v_smk == 106)
-	{
-		p_engine_loadMap (v_lvl157, BANK_18, BANK_17);
-		p_engine_changeLvl (157, 16, 64);
+	else if (v_smk == 106) {
+
+		if (v_schalter [5] == 0) {
+                        p_tuerzu ();	
+                }
+                else {
+			p_engine_loadMap (v_lvl157, BANK_18, BANK_17);
+			p_engine_changeLvl (157, 16, 64);
+		}
 	}
 }
 

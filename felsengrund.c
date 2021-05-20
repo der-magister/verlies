@@ -216,7 +216,7 @@ void p_lvl1 (void) __banked
                         }
                         else
                         {
-                                p_engine_loadTileset (2, 4, 15, felsengrund_2, 15);
+                                p_engine_loadTileset (BANK_2, 4, 15, felsengrund_2, 15);
                                 p_engine_loadMap (v_lvl1b, 5, 15);
                                 p_engine_changeLvl (2, 88, 120);
                         }

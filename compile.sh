@@ -108,10 +108,10 @@ lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/xavertxt.o daten/txt/npcs/xaver.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/kraeuterhaendlertxt.o daten/txt/npcs/kraeuterhaendler.c
 
 # Texte Portale
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo8 -c -o obj/portal.o daten/txt/portale/portal.c
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo8 -c -o obj/portalfelsengrund.o daten/txt/portale/portalfelsengrund.c
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo8 -c -o obj/portalfeensee.o daten/txt/portale/portalfeensee.c
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo8 -c -o obj/portaleichenwald.o daten/txt/portale/portaleichenwald.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo8 -c -o obj/portaltxt.o daten/txt/portale/portal.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/portalfelsengrund.o daten/txt/portale/portalfelsengrund.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/portalfeensee.o daten/txt/portale/portalfeensee.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/portaleichenwald.o daten/txt/portale/portaleichenwald.c
 
 #Texte Schilder
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/schildtxt1.o daten/txt/schilder/schildertxt.c
@@ -171,14 +171,14 @@ lcc -Wa-l  -Wl-m -Wl-j -Wf-bo9 -c -o obj/player.o player.c
 lcc -Wa-l  -Wl-m -Wl-j -Wf-bo9 -c -o obj/tiledat.o tiledat.c
 lcc -Wa-l  -Wl-m -Wl-j -Wf-bo10 -c -o obj/text.o text.c
 lcc -Wa-l  -Wl-m -Wl-j -Wf-bo11 -c -o obj/lvlstatus.o lvlstatus.c
+lcc -Wa-l  -Wl-m -Wl-j -Wf-bo11 -c -o obj/tiledatg.o tiledatg.c
 lcc -Wa-l  -Wl-m -Wl-j -Wf-bo12 -c -o obj/items.o items.c
 lcc -Wa-l  -Wl-m -Wl-j -Wf-bo12 -c -o obj/npc.o npc.c
 lcc -Wa-l  -Wl-m -Wl-j -Wf-bo12 -c -o obj/schilder.o schilder.c
 lcc -Wa-l  -Wl-m -Wl-j -Wf-bo12 -c -o obj/runen.o runen.c
-lcc -Wa-l  -Wl-m -Wl-j -Wf-bo13 -c -o obj/gegner.o gegner.c
 lcc -Wa-l  -Wl-m -Wl-j -Wf-bo13 -c -o obj/lvlgegner.o lvlgegner.c
-lcc -Wa-l  -Wl-m -Wl-j -Wf-bo11 -c -o obj/tiledatg.o tiledatg.c
 lcc -Wa-l  -Wl-m -Wl-j -Wf-bo14 -c -o obj/boss.o boss.c
+lcc -Wa-l  -Wl-m -Wl-j -Wf-bo14 -c -o obj/gegner.o gegner.c
 lcc -Wa-l  -Wl-m -Wl-j -Wf-bo21 -c -o obj/umgebung.o umgebung.c
 
 cd obj/

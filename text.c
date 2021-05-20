@@ -16,7 +16,7 @@
 //   With this program; if not, write to the Free Software Foundation, Inc.,
 //   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 //
-//   Kontakt: magister@kabelmail.de
+//   Kontakt: projekte@kabelmail.net
 
 //#pragma bank=10
 
@@ -38,7 +38,7 @@ void p_engine_rahmen () __banked
 ///Textausgabe
 void p_engine_set_txt (unsigned char l_txt [81]) __banked
 {
-        if (v_syk >= 104) for (v_i = 0; v_i < 4; ++v_i) { move_sprite (v_i, 0, 0); }
+        if (v_syk >= 104) for (v_i = 0; v_i != 4; ++v_i) { move_sprite (v_i, 0, 0); }
 
         if ((v_gyk [0] >= 104) && (v_kampf == TRUE)) p_gegner_hide_1 ();
         if ((v_gyk [1] >= 104) && (v_kampf == TRUE)) p_gegner_hide_2 ();

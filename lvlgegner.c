@@ -85,8 +85,16 @@ void p_set_gegner (void) __banked
 		p_gegner_set (1, 16, 16, 80, 72, MOVE_NORTH, 1, 1);
         }
         else if (v_lvl == 12) { p_gegner_set (0, 8, 12, 96, 64, MOVE_WEST, 1, 1); }
-        else if (v_lvl == 13) {
-            p_gegner_set (0, )
+        else if (v_lvl == 16) {
+            p_gegner_set (0, 24, 24, 24, 104, MOVE_EAST, 1, 1);
+            p_gegner_set (1, 44, 44, 128, 32, MOVE_WEST, 1, 1);
+        }
+        else if (v_lvl == 17) {
+                p_gegner_set (0, 20, 20, 136, 32, MOVE_SOUTH, 1, 1);
+                p_gegner_set (1, 24, 24, 72, 48, MOVE_WEST, 1, 1);
+        }
+        else if (v_lvl == 18) {
+                p_gegner_set (1, 20, 20, 56, 80, MOVE_WEST, 1, 1);
         }
         else if (v_lvl == 20)
         {
@@ -266,10 +274,26 @@ void p_set_gegner (void) __banked
                 p_gegner_set (2, 20, 20, 24, 112, MOVE_EAST, 1, 1 );
         }
         else if (v_lvl == 74) { p_gegner_set (0, 24, 24, 96, 48, MOVE_SOUTH, 2, 1); }
-        else if (v_lvl == 76)
-        {
+        else if (v_lvl == 76) {
                 p_gegner_set (0, 24, 24, 120, 72, MOVE_NORTH, 1, 1);
                 p_gegner_set (1, 20, 20, 32, 64, MOVE_SOUTH, 1, 1);
+        }
+        else if (v_lvl == 80) {
+                p_gegner_set (0, 44, 44, 24, 48, MOVE_EAST, 2, 2);
+                p_gegner_set (1, 44, 44, 104, 64, MOVE_SOUTH, 2, 2);
+        }
+        else if (v_lvl == 81) {
+                p_gegner_set (0, 20, 20, 112, 112, MOVE_NORTH, 2, 1);
+                p_gegner_set (1, 20, 20, 96, 56, MOVE_WEST, 2, 1);
+        }
+        else if (v_lvl == 84) {
+                p_gegner_set (0, 24, 24, 112, 112, MOVE_NORTH, 2, 2);
+                p_gegner_set (1, 24, 24, 24, 32, MOVE_SOUTH, 2, 2);
+                p_gegner_set (2, 24, 24, 80, 40, MOVE_EAST, 2, 2);
+        }
+        else if (v_lvl == 85) {
+                p_gegner_set (0, 20, 20, 136, 104, MOVE_WEST, 2, 1);
+                p_gegner_set (1, 24, 24, 24, 32, MOVE_EAST, 2, 2);
         }
         else if (v_lvl == 95) p_gegner_set (0, 68, 68, 48, 48, MOVE_EAST, 1, 1);
         else if (v_lvl == 96) p_gegner_set (0, 72, 72, 64, 56, MOVE_EAST, 1, 1);

@@ -23,7 +23,6 @@
 
 #include "globals.h"
 
-
 extern UINT8 p_spieler_koli (void) __banked;
 
 #endif

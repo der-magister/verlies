@@ -34,6 +34,7 @@
 #include "items.h"
 #include "map.h"
 #include "lvlstatus.h"
+#include "portale.h"
 
 //tmp
 #include "items.h"
@@ -53,6 +54,7 @@ void p_init_game1 (void) NONBANKED
 {
         p_boss_init ();
         p_schalter_init ();
+        p_portal_init ();
 
         SPRITES_8x8;
   

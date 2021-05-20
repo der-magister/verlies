@@ -40,7 +40,7 @@
 
 void p_truhe_init (void) __banked
 {
-        for (v_i = 0; v_i < 95; ++v_i)
+        for (v_i = 0; v_i != 95; ++v_i)
         {
                 v_truhen [v_i] = 0;
         }
@@ -569,7 +569,7 @@ void p_truhe_brotfach_2 (void) __banked
 void p_truhe_geldkatze1 (void) __banked
 {
         if (v_truhen [26] == 0) {
-                p_engine_set_txt (geldkatze1);
+                p_engine_set_txt (geldfach);
                 v_truhen [26] = 1;
                 v_smgo = 50;
                 p_truhe_status ();
@@ -584,7 +584,7 @@ void p_truhe_geldkatze1 (void) __banked
 void p_truhe_geldkatze2 (void) __banked
 {
         if (v_truhen [53] == 0) {
-                p_engine_set_txt (geldkatze2);
+                p_engine_set_txt (geldfach);
                 v_truhen [53] = 1;
                 v_smgo = 75;
                 p_truhe_status ();
