@@ -144,8 +144,10 @@ void p_portal (UINT8 l_smk) __banked
 		                        	p_engine_loadMap (v_lvl1b, BANK_5, BANK_8);
 		                        	p_engine_changeLvl (2, 48, 32);
 		                        	p_gui_show_location (lfelsengrund);
-		                        	l_quit = TRUE;
 		                        	v_region = 1;
+		                        	l_quit = TRUE;
+
+		                 
 		                        }
 		        	}
 		        	else if ((joypad () & J_DOWN) && (v_portal [1] == 1))
@@ -161,8 +163,9 @@ void p_portal (UINT8 l_smk) __banked
 	                        		p_engine_loadMap (v_lvl91, BANK_6, BANK_8);
 	                        		p_engine_changeLvl (91, 40, 32);
 	                        		p_gui_show_location (lseefeendorf);
-		                        	l_quit = TRUE;
 		                        	v_region = 5;
+		                        	l_quit = TRUE;
+		                        	
 		                        }
 		        		
 		        	}
@@ -179,8 +182,9 @@ void p_portal (UINT8 l_smk) __banked
 	                			p_engine_loadMap (v_lvl138, BANK_6, BANK_8);
 	                			p_engine_changeLvl (138, 128, 104);
 	                			p_gui_show_location (leichenwald);
-	                			l_quit = TRUE;
 	                			v_region = 7;
+	                			l_quit = TRUE;
+	                			
 		        		}
 		        	}
 		        }
