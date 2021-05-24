@@ -98,7 +98,7 @@ void p_init_game2 (void) NONBANKED
        
         v_keyflag = 1;
         p_engine_loadMap (v_lvl1a, BANK_5, BANK_4);
-        v_region = 1;
+        v_region = 0;
 
         p_engine_changeLvl (1, 112, 96);
         v_keyflag = 0;

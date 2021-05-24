@@ -210,7 +210,8 @@ then
 #	wine "C:\apps\bgb\bgb.exe" obj/verlies.gb &>/dev/null &
 	#BGB.exe C:\\magister\\repos\\verlies\\obj\\verlies.gb &
 
-	bgb.sh verlies.gb
+	#bgb.sh verlies.gb
+	emulicious.sh verlies.gb
 
 fi
 
