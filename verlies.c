@@ -65,7 +65,7 @@ void main (void) NONBANKED
                         //if ((v_kampf == TRUE) || (v_bosskampf == TRUE)) p_gegner_koli_player ();
       
     
-                        if (v_looptime == 7)
+                        if (v_looptime == 6)
                         {
                                 if (v_walk == TRUE) {
                                         if ((joypad () & J_UP)) p_spieler_move_north (); //p_spieler_move (MOVE_NORTH);
