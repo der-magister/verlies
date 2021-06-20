@@ -67,7 +67,7 @@ void p_engine_changeLvl (UINT16 l_lvl, UINT8 l_xk, UINT8 l_yk) __nonbanked
         {
                 v_keyflag = 0;
                 if (v_kampf == TRUE) p_gegner_stop ();
-                delay (120);
+                delay (150);
                 v_aktion = TRUE;
                 v_lvl = l_lvl;
                 set_bkg_tiles (1, 1, 18, 14, v_leveldaten);
