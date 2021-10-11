@@ -41,13 +41,15 @@ void p_gameover (void) __banked
 	HIDE_SPRITES;
 	HIDE_WIN;
         set_bkg_tiles (0, 0, 20, 18, gameover);
+        delay (120);
         waitpad (J_START);
         p_engine_loadTileset (BANK_2, 8, 34, felsengrund_1, BANK_3);
         p_engine_loadSpriteset (BANK_2, 0, 127, v_spriteset_1, BANK_3);
-        
+
         v_gameover = TRUE; v_slp = v_smlp;
         v_lvl = 1; v_info = FALSE; v_bosskampf = FALSE; v_kampf = FALSE;
         if (v_spr == 0) ++v_spr;
+
         DISPLAY_ON;
 }
 

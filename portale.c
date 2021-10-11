@@ -127,8 +127,7 @@ void p_portal (UINT8 l_smk) __banked
 		        }
 
 		        SHOW_WIN;
-		        delay (160);
-
+		  			
 		        while (l_quit == FALSE)
 		        {
 		        	if ((joypad () & J_UP) && (v_portal [0] == 1)) 
@@ -138,11 +137,12 @@ void p_portal (UINT8 l_smk) __banked
 		        			l_quit = TRUE;
 		        		}
 		        		else
-		        		{
-			        		//p_engine_loadTileset (BANK_2, 8, 29, felsengrund_1, BANK_8);
+		      			{
 		                        	p_engine_loadTileset (BANK_2, 4, 15, felsengrund_2, BANK_8);
+		                        	p_engine_loadTileset (BANK_2, 8, 29, felsengrund_1, BANK_8);
 		                        	p_engine_loadMap (v_lvl1b, BANK_5, BANK_8);
 		                        	p_engine_changeLvl (2, 48, 32);
+
 		                        	p_gui_show_location (lfelsengrund);
 		                        	v_region = 1;
 		                        	l_quit = TRUE;

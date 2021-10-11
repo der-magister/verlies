@@ -133,7 +133,7 @@ extern UINT8 v_pg;
 extern UINT8 v_looptime;
 
 ///verwendet in main ()
-extern UINT8 v_gameover;         
+extern BOOLEAN v_gameover;         
 
 ///beinhaltet Tile für dynamische Leveländerungen
 extern unsigned char v_tile [4];

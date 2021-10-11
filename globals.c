@@ -48,7 +48,7 @@ UINT8 v_g;
 UINT8 v_kg;
 UINT8 v_pg;
 UINT8 v_looptime;
-UINT8 v_gameover;         
+BOOLEAN v_gameover;         
 unsigned char v_tile [4];
 UINT8 v_attack;
 UINT8 v_aktion2;

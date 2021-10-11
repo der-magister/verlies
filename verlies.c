@@ -42,7 +42,7 @@ void main (void) NONBANKED
                 p_init_game2 ();
                 v_looptime = 7;  v_gameover = FALSE; v_attack = 0; v_bossloop = 255;
                 v_win = 0; gloop = 0;  v_itemlooptime = 255; v_kampflooptime = 255; v_aktion = FALSE;
-                p_lvl_status (); v_ausdauertimer = 0; v_sflimmtm = 255; v_quit = 1;
+                p_lvl_status (); v_ausdauertimer = 0; v_sflimmtm = 255;
                 
     
                 //game loop
