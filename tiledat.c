@@ -111,7 +111,7 @@ UINT8 p_spieler_koli (void) __banked
                 }
 
                 //Eichenwald
-		if (v_region == 7) {
+		        if (v_region == 7) {
                         if (v_tile [1] == v_kdat_eichenwald [v_a]) return FALSE;
                 }
 

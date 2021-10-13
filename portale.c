@@ -138,8 +138,10 @@ void p_portal (UINT8 l_smk) __banked
 		        		}
 		        		else
 		      			{
+		      				p_engine_loadTileset (2, 8, 37, felsengrund_1, BANK_8);
+        					p_engine_loadTileset (2, 38, 81, grundtiles, BANK_8);
+        					p_engine_loadTileset (2, 82, 127, font, BANK_8); 
 		                        	p_engine_loadTileset (BANK_2, 4, 15, felsengrund_2, BANK_8);
-		                        	p_engine_loadTileset (BANK_2, 8, 29, felsengrund_1, BANK_8);
 		                        	p_engine_loadMap (v_lvl1b, BANK_5, BANK_8);
 		                        	p_engine_changeLvl (2, 48, 32);
 
@@ -156,7 +158,10 @@ void p_portal (UINT8 l_smk) __banked
 	                        		
 		        		}
 		        		else
-		        		{
+		        		{	
+		        			p_engine_loadTileset (2, 8, 37, felsengrund_1, BANK_8);
+        					p_engine_loadTileset (2, 38, 81, grundtiles, BANK_8);
+        					p_engine_loadTileset (2, 82, 127, font, BANK_8); 
 			        		p_engine_loadTileset (BANK_2, 4, 33, feensee_1, BANK_8);
 	                        		p_engine_loadMap (v_lvl91, BANK_6, BANK_8);
 	                        		p_engine_changeLvl (91, 40, 32);
@@ -176,8 +181,11 @@ void p_portal (UINT8 l_smk) __banked
 		        		}
 		        		else 
 		        		{
-		        			p_engine_loadTileset (BANK_2, 4, 38, eichenwald, BANK_8);
-	                			p_engine_loadMap (v_lvl138, BANK_6, BANK_8);
+		        			p_engine_loadTileset (2, 8, 37, felsengrund_1, BANK_8);
+        					p_engine_loadTileset (2, 38, 81, grundtiles, BANK_8);
+        					p_engine_loadTileset (2, 82, 127, font, BANK_8); 
+		        			p_engine_loadTileset (BANK_2, 4, 38, eichenwald, BANK_8); 
+	                			p_engine_loadMap (v_lvl138, BANK_18, BANK_8);
 	                			p_engine_changeLvl (138, 128, 104);
 	                			p_gui_show_location (leichenwald);
 	                			v_region = 7;
