@@ -112,6 +112,7 @@ lcc -Wa-l -Wl-m -Wl-j -Wf-bo8 -c -o obj/portaltxt.o daten/txt/portale/portal.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/portalfelsengrund.o daten/txt/portale/portalfelsengrund.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/portalfeensee.o daten/txt/portale/portalfeensee.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/portaleichenwald.o daten/txt/portale/portaleichenwald.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/portalzwergenheim.o daten/txt/portale/portalzwergenheim.c
 
 #Texte Schilder
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/schildtxt1.o daten/txt/schilder/schildertxt.c

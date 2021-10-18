@@ -234,5 +234,6 @@ void p_lvl179 (void) __banked
                 p_gui_show_location (lzwergenheim);
                 p_engine_loadMap (v_lvl185, BANK_18, BANK_17);
                 p_engine_changeLvl (185, 144, 64);
+                v_region = 10;
 	}
 }

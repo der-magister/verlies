@@ -30,6 +30,7 @@ const unsigned char v_kdatg_4 [9] = { 5, 20, 21, 32, 33, 34, 36, 36, 37 };
 const unsigned char v_kdatg_5 [20] = { 4, 5, 6, 8, 9, 10, 11, 20, 21, 22, 24, 25, 26, 27, 28, 29, 30, 31, 36, 37 };
 const unsigned char v_kdatg_alte_baum [20] = { 46, 45, 44, 43, 37, 36, 22, 21, 20, 19, 18, 17, 16, 7, 5, 4, 12, 13 ,14, 15 };
 const unsigned char v_kdatg_gebirgspfad [13] = { 3, 4, 5, 6, 7, 20, 21, 22, 23, 25, 37, 45, 46};
+const unsigned char v_kdatg_zwergenheim [15]  = { 3, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 24, 37, 45, 46};
 const unsigned char v_kdatg_mine_1 [28] = { 3, 8, 9, 10, 11, 12, 13, 14, 15, 20, 21, 25, 26, 27, 28, 29, 39, 31, 32, 33, 34, 35, 36, 37, 43, 44, 45, 46 };
 const unsigned char v_kdatg_mine_2 [28] = { 1, 3, 8, 9, 10, 11, 12, 13, 14, 15, 20, 21, 25, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 24, 0,0,0,0 };
 
@@ -46,7 +47,7 @@ const unsigned char v_kdatg_tempel_e1 [28] = { 2, 3, 4, 5, 6, 7, 12, 13, 14, 15,
 
 UINT8 p_gegner_koli (void) __banked
 {
-	//Stadtgefängnis
+	    //Stadtgefängnis
         if (v_region == 2) {
                 for (v_a = 0; v_a != sizeof (v_kdatg_1) + 1; ++v_a) {
                         if (v_tile [2] == v_kdatg_1 [v_a]) return FALSE;
@@ -84,28 +85,34 @@ UINT8 p_gegner_koli (void) __banked
                         if (v_tile [2] == v_kdatg_alte_baum [v_a]) return FALSE;
                 }
         }
-        //Gebirgspfad
-        //else if ((v_lvl >= 168) && (v_lvl <= 179) && (v_tile [2] == v_kdatg_gebirgspfad [v_a])) return FALSE;
-        else if (v_region == 9) {
+        //Gebirgspfad und Rotgebirge
+        else if ((v_region == 9) || (v_region == 11)) {
             for (v_a = 0; v_a != sizeof (v_kdatg_gebirgspfad) + 1; ++v_a) {
                 if (v_tile [2] == v_kdatg_gebirgspfad [v_a]) return FALSE;
             }
-        }        
+        } 
+        //Zwergenheim
+        else if (v_region == 10) {
+            for (v_a = 0; v_a != sizeof (v_kdatg_zwergenheim) + 1; ++v_a) {
+                if (v_tile [2] == v_kdatg_zwergenheim [v_a]) return FALSE;
+            }
+        }
+
 
                 //Rotgebirge
-                else if ((v_lvl >= 190) && (v_lvl <= 203) && (v_tile [2] == v_kdatg_gebirgspfad [v_a])) return FALSE;
+                /*else if ((v_lvl >= 190) && (v_lvl <= 203) && (v_tile [2] == v_kdatg_gebirgspfad [v_a])) return FALSE;
 
                 //Mine EG 
                 else if ((v_lvl >= 205) && (v_lvl <= 217) && (v_tile [2] == v_kdatg_mine_1 [v_a])) return FALSE;
                 else if ((v_lvl >= 220) && (v_lvl <= 231)) {
                         if (v_tile [2] == v_kdatg_mine_2 [v_a]) return FALSE;
-                }
+                }*/
                 //Gipfelpfad
-                else if ((v_lvl >= 238) && (v_lvl <= 241)) {
+                /*else if ((v_lvl >= 238) && (v_lvl <= 241)) {
                         if (v_tile [2] == v_kdatg_gebirgspfad [v_a]) return FALSE;
-                }
+                }*/
                 //Tempel EG (außer der reihe, da ein anderes tool testweise verwendet wurde)
-                else if ((v_lvl == 245) || (v_lvl ==  253)) {
+                /*else if ((v_lvl == 245) || (v_lvl ==  253)) {
                         if (v_tile [2] == v_kdatg_tempel_245 [v_a]) return FALSE;
                 }
                 else if ((v_lvl == 246) || (v_lvl == 247) ||
@@ -115,16 +122,16 @@ UINT8 p_gegner_koli (void) __banked
                 else if (v_lvl == 248) { if (v_tile [2] == v_kdatg_tempel_248 [v_a]) return FALSE; }
                 else if (v_lvl == 249) { if (v_tile [2] == v_kdatg_tempel_249 [v_a]) return FALSE; }
                 else if (v_lvl == 250) { if (v_tile [2] == v_kdatg_tempel_249 [v_a]) return FALSE; }
-                else if (v_lvl == 254) { if (v_tile [2] == v_kdatg_tempel_254 [v_a]) return FALSE; }
+                else if (v_lvl == 254) { if (v_tile [2] == v_kdatg_tempel_254 [v_a]) return FALSE; }*/
 
                 //Tempel KG
-                else if ((v_lvl >= 260) && (v_lvl <= 270)) {
+                /*else if ((v_lvl >= 260) && (v_lvl <= 270)) {
                     if (v_tile [2] == v_kdatg_tempel_kg [v_a]) return FALSE; 
-                }
+                }*/
                 //Tempel E1
-                else if ((v_lvl >= 275) && (v_lvl <= 287)) {
+                /*else if ((v_lvl >= 275) && (v_lvl <= 287)) {
                         if (v_tile [2] == v_kdatg_tempel_e1 [v_a]) return FALSE;
-                }
+                }*/
         //}
         return TRUE;
 }

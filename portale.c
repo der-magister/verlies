@@ -32,6 +32,7 @@
 #include "daten/txt/portale/portalfeensee.h"
 #include "daten/txt/portale/portalfelsengrund.h"
 #include "daten/txt/portale/portaleichenwald.h"
+#include "daten/txt/portale/portalzwergenheim.h"
 #include "daten/txt/portale/portal.h"
 
 #include "daten/tilesets/tilesets.h"
@@ -41,6 +42,8 @@
 #include "daten/lvl/lvldatfelsengrund.h"
 #include "daten/lvl/lvldatdorfseefeen.h"
 #include "daten/lvl/lvldateichenwald.h"
+#include "daten/lvl/lvldatzwergenheim.h"
+
 
 void p_portal_init (void) __banked
 {
@@ -90,6 +93,7 @@ void p_portal (UINT8 l_smk) __banked
                         v_portal [2] = 1;
                         return;
 		}
+		//Portal im Zwergenheim aktivieren
                 else if ((v_portal [3] == 0) && (v_lvl == 187))
                 {
                         p_engine_set_txt (portalzwergenheim);
@@ -120,9 +124,10 @@ void p_portal (UINT8 l_smk) __banked
 		        	set_win_tiles (1, 3, 18, 1, portal3);
 		        	if (v_syk >= 104) for (v_i = 0; v_i != 4; ++v_i) { move_sprite (v_i, 0, 0); }
 		        }
+		        //Zwergenheim anzeigen, wenn entdeckt
 		        if (v_portal [3] == 1)
 		        {
-		        	//set_win_tiles (1, 3, 18, 1, portal3);
+		        	set_win_tiles (1, 4, 18, 1, portal4);
 
 		        }
 
@@ -189,6 +194,27 @@ void p_portal (UINT8 l_smk) __banked
 	                			p_engine_changeLvl (138, 128, 104);
 	                			p_gui_show_location (leichenwald);
 	                			v_region = 7;
+	                			l_quit = TRUE;
+	                			
+		        		}
+		        	}
+		        	else if ((joypad () & J_RIGHT) && (v_portal [3] == 1))
+		        	{
+		        		if (v_lvl == 187)
+		        		{
+		        			l_quit = TRUE;
+		        			if (v_syk >= 104) p_spieler_set_sprite ();
+		        		}
+		        		else 
+		        		{
+		        			p_engine_loadTileset (2, 8, 37, felsengrund_1, BANK_8);
+        					p_engine_loadTileset (2, 38, 81, grundtiles, BANK_8);
+        					p_engine_loadTileset (2, 82, 127, font, BANK_8); 
+        					p_engine_loadTileset (BANK_2, 3, 34, zwergenheim, BANK_8);
+		        			p_engine_loadMap (v_lvl187, BANK_18, BANK_8);
+                				p_engine_changeLvl (187, 136, 32);
+	                			p_gui_show_location (lzwergenheim);
+	                			v_region = 10;
 	                			l_quit = TRUE;
 	                			
 		        		}

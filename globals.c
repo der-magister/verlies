@@ -140,5 +140,5 @@ UINT8 v_ks; //Zählwert Kolision Spieler
        13 - Gipfelpfad
        14 - Phurs Tempel	
 */
-UINT8 v_region; 
+volatile UINT8 v_region; 
 

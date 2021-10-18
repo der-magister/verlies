@@ -96,5 +96,6 @@ void p_lvl187 (void) BANKED {
 		p_engine_loadMap (v_lvl190, BANK_19, BANK_17);
 		p_engine_changeLvl (190, 56, 120);
 		p_gui_show_location (lrotgebirge);
+		v_region = 11;
 	}
 }

@@ -334,6 +334,6 @@ extern UINT8 v_loch [10]; //für Schaufel
 
 extern UINT8 v_sflimmtm; //timer für flimmer Spieler
 extern UINT8 v_ks; //Zählwert Kolision Spieler
-extern UINT8 v_region;
+extern volatile UINT8 v_region;
 
 #endif

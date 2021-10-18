@@ -214,7 +214,27 @@ void p_showMap (void) BANKED
         }   
         else if ((v_region == 9) && (v_knr [7] == 1)) {
                 set_win_tiles (7, 12, 8, 5, k_gebirgspfad);
-        }     
+
+                if (v_lvl == 168) p_map_draw_mark (14, 16);
+                else if (v_lvl == 169) p_map_draw_mark (13, 16);
+                else if (v_lvl == 170) p_map_draw_mark (13, 15);
+                else if (v_lvl == 171) p_map_draw_mark (13, 14);
+                else if (v_lvl == 172) p_map_draw_mark (12, 14);
+                else if (v_lvl == 173) p_map_draw_mark (11, 14);
+                else if (v_lvl == 175) p_map_draw_mark (11, 13);
+                else if (v_lvl == 176) p_map_draw_mark (10, 13);
+                else if (v_lvl == 177) p_map_draw_mark (9, 13);
+                else if (v_lvl == 178) p_map_draw_mark (9, 12);
+                else if (v_lvl == 179) p_map_draw_mark (8, 12);
+        }    
+        else if ((v_region == 10) && (v_knr [8] == 1))
+        {
+                set_win_tiles (8, 12, 2, 2, k_zwergenheim);
+
+                if (v_lvl == 185) p_map_draw_mark (9, 13);
+                else if (v_lvl == 186) p_map_draw_mark (8, 13);
+                else if (v_lvl == 187) p_map_draw_mark (8, 12);
+        } 
 	else
 	{
 		set_win_tiles (4, 13, 11, 2, nomap);
