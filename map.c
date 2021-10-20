@@ -234,10 +234,48 @@ void p_showMap (void) BANKED
                 if (v_lvl == 185) p_map_draw_mark (9, 13);
                 else if (v_lvl == 186) p_map_draw_mark (8, 13);
                 else if (v_lvl == 187) p_map_draw_mark (8, 12);
-        } 
+        }
+        else if ((v_region == 11) && (v_knr [9] == 1))
+        {
+                set_win_tiles (8, 12, 4, 5, k_rotgebirge);
+
+                if (v_lvl == 190) p_map_draw_mark (10, 16);
+                else if (v_lvl == 191) p_map_draw_mark (11, 16);
+                else if (v_lvl == 192) p_map_draw_mark (10, 15);
+                else if (v_lvl == 193) p_map_draw_mark (9, 15);
+                else if (v_lvl == 194) p_map_draw_mark (9, 14);
+                else if (v_lvl == 195) p_map_draw_mark (8, 14);
+                else if (v_lvl == 196) p_map_draw_mark (9, 13);
+                else if (v_lvl == 197) p_map_draw_mark (9, 12);
+                else if (v_lvl == 198) p_map_draw_mark (10, 12);
+                else if (v_lvl == 199) p_map_draw_mark (11, 12);
+                else if (v_lvl == 200) p_map_draw_mark (11, 13);
+                else if (v_lvl == 201) p_map_draw_mark (10, 13);
+                else if (v_lvl == 202) p_map_draw_mark (11, 14);
+                else if (v_lvl == 203) p_map_draw_mark (11, 15);
+        }
+        else if ((v_region == 12) && (v_knr [10] == 1))
+        {
+                set_win_tiles (8, 12, 5, 5, k_mine_eg);
+
+                if (v_lvl == 205) p_map_draw_mark (10, 16);
+                else if (v_lvl == 206) p_map_draw_mark (9, 16);
+                else if (v_lvl == 207) p_map_draw_mark (10, 15);
+                else if (v_lvl == 208) p_map_draw_mark (10, 14);
+                else if (v_lvl == 209) p_map_draw_mark (9, 14);
+                else if (v_lvl == 210) p_map_draw_mark (11, 14);
+                else if (v_lvl == 211) p_map_draw_mark (12, 14);
+                else if (v_lvl == 212) p_map_draw_mark (10, 13);
+                else if (v_lvl == 213) p_map_draw_mark (10, 12);
+                else if (v_lvl == 214) p_map_draw_mark (9, 12);
+                else if (v_lvl == 215) p_map_draw_mark (9, 13);
+                else if (v_lvl == 216) p_map_draw_mark (8, 13);
+                else if (v_lvl == 217) p_map_draw_mark (11, 12);
+        }
 	else
 	{
 		set_win_tiles (4, 13, 11, 2, nomap);
 	}
+
 }
 

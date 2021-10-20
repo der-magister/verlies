@@ -91,12 +91,8 @@ UINT8 p_gegner_koli (void) __banked
                 if (v_tile [2] == v_kdatg_gebirgspfad [v_a]) return FALSE;
             }
         } 
-        //Zwergenheim
-        else if (v_region == 10) {
-            for (v_a = 0; v_a != sizeof (v_kdatg_zwergenheim) + 1; ++v_a) {
-                if (v_tile [2] == v_kdatg_zwergenheim [v_a]) return FALSE;
-            }
-        }
+        
+        
 
 
                 //Rotgebirge

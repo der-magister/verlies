@@ -30,5 +30,7 @@ extern const unsigned char k_feensee[];
 extern const unsigned char k_eichenwald[];
 extern const unsigned char k_gebirgspfad[];
 extern const unsigned char k_zwergenheim[];
+extern const unsigned char k_rotgebirge[];
+extern const unsigned char k_mine_eg[];
 
 #endif
