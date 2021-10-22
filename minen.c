@@ -76,6 +76,7 @@ void p_lvl207 (void) BANKED
 	else if (v_smk == 8) {
 		p_engine_loadMap (v_lvl208, BANK_19, BANK_17);
 		p_engine_changeLvl (208, 80, 120);
+		v_lvl = 208;
 	}
 }
 

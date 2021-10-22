@@ -54,7 +54,7 @@ void p_lvl20 (void) __banked
                 p_engine_loadMap (v_lvl1c, BANK_5, BANK_16);
                 p_engine_changeLvl (3, 16, 64);
                 p_gui_show_location (lfelsengrund);
-                v_region = 0;
+                v_region = 1;
         }
         else if (v_smk == 9)
         {
