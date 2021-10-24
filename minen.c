@@ -1,6 +1,6 @@
 //   Verlies - ein Adventure/RPG im Retrodesign
 //
-//   Copyright (C) 2018-2020 Heiko Wolf
+//   Copyright (C) 2018-2021 Heiko Wolf
 //
 //   This program is free software; you can redistribute it and/or modify
 //   it under the terms of the GNU General Public License As published by
@@ -74,9 +74,9 @@ void p_lvl207 (void) BANKED
 		p_engine_changeLvl (205, 80, 24);
 	}
 	else if (v_smk == 8) {
-		p_engine_loadMap (v_lvl208, BANK_19, BANK_17);
-		p_engine_changeLvl (208, 80, 120);
-		v_lvl = 208;
+		p_engine_loadMap (v_lvl206, BANK_19, BANK_17);
+		p_engine_changeLvl (206, 80, 120);
+		//v_lvl = 208;
 	}
 }
 
