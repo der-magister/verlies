@@ -201,7 +201,7 @@ void p_lvl199 (void) BANKED
 		p_engine_loadMap (v_lvl200, BANK_19, BANK_17);
 		p_engine_changeLvl (200, 80, 24);
 	}
-	//zum Gipfelpfas
+	//zum Gipfelpfad
 	else if (v_smk == 8) {
 		p_engine_loadTileset (BANK_2, 3, 34, gebirgspfad, BANK_17);
                 p_gui_show_location (lgipfelpfad);

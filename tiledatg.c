@@ -41,6 +41,7 @@ const unsigned char v_kdatg_tempel_248 [28] = { 0, 1, 2, 0,0,0,0,0,0,0,0,0,0,0,0
 const unsigned char v_kdatg_tempel_249 [28] = { 0, 1, 2, 4, 5, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }; 
 const unsigned char v_kdatg_tempel_250 [28] = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
 const unsigned char v_kdatg_tempel_254 [28] = { 0, 5, 6, 45, 46 ,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
+
 const unsigned char v_kdatg_tempel_kg [28] = { 12, 13, 14, 15, 20, 21, 24, 25, 26, 27, 28, 29, 30, 31, 37, 39, 40, 41, 42, 43, 44, 45, 46, 0,0,0,0,0 };
 const unsigned char v_kdatg_tempel_e1 [28] = { 2, 3, 4, 5, 6, 7, 12, 13, 14, 15, 20, 21, 24, 26, 27, 37, 39, 40, 41, 42, 43, 44, 45, 46, 0,0,0,0};
 
@@ -91,15 +92,26 @@ UINT8 p_gegner_koli (void) __banked
                 if (v_tile [2] == v_kdatg_gebirgspfad [v_a]) return FALSE;
             }
         } 
+        //Mine EG1
+        else if (v_region == 12) {
+
+            if (v_lvl < 218) {
+                for (v_a = 0; v_a != sizeof (v_kdatg_mine_1) + 1; ++v_a) {
+                    if (v_tile [2] == v_kdatg_mine_1 [v_a]) return FALSE;
+                }   
+            }
+            else if (v_lvl > 219) {
+                for (v_a = 0; v_a != sizeof (v_kdatg_mine_2) + 1; ++v_a) {
+                    if (v_tile [2] == v_kdatg_mine_2 [v_a]) return FALSE;
+                }    
+
+            }
+        }
+
+
         
-        
-
-
-                //Rotgebirge
-                /*else if ((v_lvl >= 190) && (v_lvl <= 203) && (v_tile [2] == v_kdatg_gebirgspfad [v_a])) return FALSE;
-
                 //Mine EG 
-                else if ((v_lvl >= 205) && (v_lvl <= 217) && (v_tile [2] == v_kdatg_mine_1 [v_a])) return FALSE;
+                /*else if ((v_lvl >= 205) && (v_lvl <= 217) && (v_tile [2] == v_kdatg_mine_1 [v_a])) return FALSE;
                 else if ((v_lvl >= 220) && (v_lvl <= 231)) {
                         if (v_tile [2] == v_kdatg_mine_2 [v_a]) return FALSE;
                 }*/

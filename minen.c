@@ -26,6 +26,13 @@
 #include "umgebung.h"
 #include "locations.h"
 
+#include "truhen.h" 
+#include "gegner.h"
+#include "lvlstatus.h"
+#include "player.h"
+#include "hud.h"
+#include "lvlgegner.h"
+
 #include "daten/tilesets/tilesets.h"
 
 #include "daten/lvl/lvldatminen-1.h"
@@ -74,9 +81,22 @@ void p_lvl207 (void) BANKED
 		p_engine_changeLvl (205, 80, 24);
 	}
 	else if (v_smk == 8) {
-		p_engine_loadMap (v_lvl206, BANK_19, BANK_17);
-		p_engine_changeLvl (206, 80, 120);
+		p_engine_loadMap (v_lvl208, BANK_19, BANK_17);
+		//p_engine_changeLvl (206, 80, 120);
 		//v_lvl = 208;
+		v_keyflag = 0;
+                p_gegner_stop ();
+                delay (150);
+                v_aktion = TRUE;
+                v_lvl = 208;
+                set_bkg_tiles (1, 1, 18, 14, v_leveldaten);
+                p_truhe_status ();
+                v_sxk = 80, v_syk = 120;
+                p_spieler_set_sprite ();
+                p_lvl_status ();
+                p_hud_showLvl ();
+                p_set_gegner ();
+                DISPLAY_ON;
 	}
 }
 
@@ -112,7 +132,20 @@ void p_lvl209 (void) BANKED
 {
 	if (v_smk == 124) {
 		p_engine_loadMap (v_lvl208, BANK_19, BANK_17);
-		p_engine_changeLvl (208, 16, 72);
+		//p_engine_changeLvl (208, 16, 72);
+		v_keyflag = 0;
+                p_gegner_stop ();
+                delay (150);
+                v_aktion = TRUE;
+                v_lvl = 208;
+                set_bkg_tiles (1, 1, 18, 14, v_leveldaten);
+                p_truhe_status ();
+                v_sxk = 16, v_syk = 72;
+                p_spieler_set_sprite ();
+                p_lvl_status ();
+                p_hud_showLvl ();
+                p_set_gegner ();
+                DISPLAY_ON;
 	}
 }
 
@@ -120,7 +153,20 @@ void p_lvl210 (void) BANKED
 {
 	if (v_smk == 144) {
 		p_engine_loadMap (v_lvl208, BANK_19, BANK_17);
-		p_engine_changeLvl (208, 144, 88);
+		//p_engine_changeLvl (208, 144, 88);
+		v_keyflag = 0;
+                p_gegner_stop ();
+                delay (150);
+                v_aktion = TRUE;
+                v_lvl = 208;
+                set_bkg_tiles (1, 1, 18, 14, v_leveldaten);
+                p_truhe_status ();
+                v_sxk = 144, v_syk = 88;
+                p_spieler_set_sprite ();
+                p_lvl_status ();
+                p_hud_showLvl ();
+                p_set_gegner ();
+                DISPLAY_ON;
 	}
 	else if (v_smk == 124) {
 		p_engine_loadMap (v_lvl211, BANK_19, BANK_17);
@@ -144,7 +190,20 @@ void p_lvl212 (void) BANKED
 {
 	if (v_smk == 224) {
 		p_engine_loadMap (v_lvl208, BANK_19, BANK_17);
-		p_engine_changeLvl (208, 80, 24);
+		//p_engine_changeLvl (208, 80, 24);
+		v_keyflag = 0;
+                p_gegner_stop ();
+                delay (150);
+                v_aktion = TRUE;
+                v_lvl = 208;
+                set_bkg_tiles (1, 1, 18, 14, v_leveldaten);
+                p_truhe_status ();
+                v_sxk = 80, v_syk = 24;
+                p_spieler_set_sprite ();
+                p_lvl_status ();
+                p_hud_showLvl ();
+                p_set_gegner ();
+                DISPLAY_ON;
 	}
 	else if (v_smk == 8) {
 		p_engine_loadMap (v_lvl213, BANK_19, BANK_17);
