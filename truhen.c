@@ -40,7 +40,7 @@
 
 void p_truhe_init (void) __banked
 {
-        for (v_i = 0; v_i != 95; ++v_i)
+        for (v_i = 0; v_i != 101; ++v_i)
         {
                 v_truhen [v_i] = 0;
         }
@@ -241,7 +241,7 @@ void p_truhe_status (void) __banked
                 if (v_truhen [74] == 1) p_truhe_change (11, 12);
         }
         else if (v_lvl == 235) {
-                if (v_truhen [75] == 1) p_truhe_change (13, 1);
+                if (v_truhen [95] == 1) p_truhe_change (13, 1);
                 if (v_truhen [76] == 1) p_truhe_change (6, 12);
         }
         else if (v_lvl == 236) { if (v_truhen [77] == 1) p_truhe_change (8, 12); }

@@ -92,7 +92,7 @@ extern unsigned char v_txt [81];
 extern UINT16 v_lvl;
 
 ///beinhaltet Zustand der Truhen
-extern UINT8 v_truhen [95];    
+extern UINT8 v_truhen [100];    
 
 extern UINT8 v_schalter [20];           
 

@@ -200,6 +200,7 @@ void p_lvl231 (void) BANKED
 			p_engine_loadMap (v_lvl233, BANK_19, BANK_17);
 			p_engine_changeLvl (233, v_sxk, v_syk);
 			p_gui_show_location (lmine3);
+			v_kampf = FALSE;
 		}
 	}
 }
