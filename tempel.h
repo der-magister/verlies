@@ -16,24 +16,24 @@
 //   With this program; if not, write to the Free Software Foundation, Inc.,
 //   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 //
-//   Kontakt: magister@kabelmail.de
+//   Kontakt: projekte@kabelmail.net
 
 #ifndef _TEMPEL_H_
 #define _TEMPEL_H_
 
 #include "globals.h"
 
-void p_lvl245 (void) BANKED;
-void p_lvl246 (void) BANKED;
-void p_lvl247 (void) BANKED;
-void p_lvl248 (void) BANKED;
-void p_lvl249 (void) BANKED;
-void p_lvl250 (void) BANKED;
-void p_lvl251 (void) BANKED;
-void p_lvl252 (void) BANKED;
-void p_lvl253 (void) BANKED;
-void p_lvl254 (void) BANKED;
-void p_lvl255 (void) BANKED;
-void p_lvl256 (void) BANKED;
+void p_lvl245 (void) __banked;
+void p_lvl246 (void) __banked;
+void p_lvl247 (void) __banked;
+void p_lvl248 (void) __banked;
+void p_lvl249 (void) __banked;
+void p_lvl250 (void) __banked;
+void p_lvl251 (void) __banked;
+void p_lvl252 (void) __banked;
+void p_lvl253 (void) __banked;
+void p_lvl254 (void) __banked;
+void p_lvl255 (void) __banked;
+void p_lvl256 (void) __banked;
 
 #endif

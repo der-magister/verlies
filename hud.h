@@ -48,6 +48,7 @@ extern void p_hud_showSpitzhacke (void) __banked;
 extern void p_hud_showStatus (void) __banked;
 extern void p_hud_init (void) __banked;
 extern void p_hud_showStaub (void) __banked;
+extern void p_hud_view_erz (void) __banked;
 extern void p_view_sword (void) __banked;
 extern void p_gui_show_infoscreen (void) __banked;
 extern void p_gui_hide_infoscreen (void) __banked;

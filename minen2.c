@@ -62,6 +62,7 @@ void p_lvl221 (void) BANKED
 
 void p_lvl222 (void) BANKED
 {
+
 	p_truhe_karte (182, 11, 67);
 
 	if (v_smk == 7) {

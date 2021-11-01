@@ -2,7 +2,7 @@
 
 //   Verlies - ein Adventure/RPG im Retrodesign
 //
-//   Copyright (C) 2018-2020 Heiko Wolf
+//   Copyright (C) 2018-2021 Heiko Wolf
 //
 //   This program is free software; you can redistribute it and/or modify
 //   it under the terms of the GNU General Public License As published by
@@ -18,7 +18,7 @@
 //   With this program; if not, write to the Free Software Foundation, Inc.,
 //   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 //
-//   Kontakt: projekte@kabelmail.de
+//   Kontakt: projekte@kabelmail.net
 
 #include "gipfelpfad.h"
 
@@ -35,7 +35,7 @@
 #include "daten/txt/schilder/schildertxt.h"
 #include "daten/txt/locations/locations.h"
 
-void p_lvl238 (void) BANKED
+void p_lvl238 (void) __banked
 {
 	if (v_smk == 8) {
 		p_engine_loadMap (v_lvl239, BANK_19, BANK_17);
@@ -46,12 +46,11 @@ void p_lvl238 (void) BANKED
 		p_engine_loadMap (v_lvl199, BANK_19, BANK_17);
 		p_engine_changeLvl (199, 80, 24);
 		p_gui_show_location (lrotgebirge);
-		v_ks = 28;
 		v_region = 11;
 	}
 }
 
-void p_lvl239 (void) BANKED
+void p_lvl239 (void) __banked
 {
 	p_truhe_proviant (51, 78, 2);
 
@@ -66,7 +65,7 @@ void p_lvl239 (void) BANKED
 
 }
 
-void p_lvl240 (void) BANKED
+void p_lvl240 (void) __banked
 {
 	p_stein (44, 49);
 
@@ -80,7 +79,7 @@ void p_lvl240 (void) BANKED
 	}		
 }
 
-void p_lvl241 (void) BANKED
+void p_lvl241 (void) __banked
 {
 	p_schild (59, schildtxt16);
 
@@ -93,5 +92,6 @@ void p_lvl241 (void) BANKED
 		p_engine_loadMap (v_lvl245, BANK_19, BANK_17);
 		p_engine_changeLvl (245, 80, 120);
 		p_gui_show_location (ltempel);
+		v_region = 14;
 	}
 }

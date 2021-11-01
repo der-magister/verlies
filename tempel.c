@@ -16,7 +16,7 @@
 //   With this program; if not, write to the Free Software Foundation, Inc.,
 //   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 //
-//   Kontakt: magister@kabelmail.de
+//   Kontakt: projekte@kabelmail.net
 
 #include "tempel.h"
 
@@ -33,7 +33,7 @@
 #include "daten/lvl/lvldattempel-kg.h"
 #include "daten/lvl/lvldattempel-E1.h"
 
-void p_lvl245 (void) BANKED
+void p_lvl245 (void) __banked
 {
 	p_stein (44, 50);
 	
@@ -53,10 +53,11 @@ void p_lvl245 (void) BANKED
                 p_gui_show_location (lgipfelpfad);
                 p_engine_loadMap (v_lvl241, BANK_19, BANK_17);
                 p_engine_changeLvl (241, 80, 24);
+                v_region = 13;
 	} 
 }
 
-void p_lvl246 (void) BANKED
+void p_lvl246 (void) __banked
 {
 	if (v_smk == 124) {
 		p_engine_loadTileset (BANK_19, 0, 5, v_tiles_lvl247, BANK_17);
@@ -71,7 +72,7 @@ void p_lvl246 (void) BANKED
 	}
 }
 
-void p_lvl247 (void) BANKED
+void p_lvl247 (void) __banked
 {
 	if (v_smk == 108) {
 		p_engine_loadTileset (BANK_19, 0, 5, v_tiles_lvl246, BANK_17);
@@ -85,7 +86,7 @@ void p_lvl247 (void) BANKED
 	}
 }
 
-void p_lvl248 (void) BANKED
+void p_lvl248 (void) __banked
 {
 	p_truhe_proviant (195, 79, 2);
 	p_truhe_karte (37, 12, 80);
@@ -97,7 +98,7 @@ void p_lvl248 (void) BANKED
 	}
 }
 
-void p_lvl249 (void) BANKED
+void p_lvl249 (void) __banked
 {
 	if (v_smk == 224) {
 		p_engine_loadTileset (BANK_19, 0, 5, v_tiles_lvl245, BANK_17);
@@ -111,7 +112,7 @@ void p_lvl249 (void) BANKED
 	}
 }
 
-void p_lvl250 (void) BANKED
+void p_lvl250 (void) __banked
 {
 	if (v_smk == 108) {
 		if ((v_tuer [4] == 0) && (v_ske == 0)) {
@@ -140,7 +141,7 @@ void p_lvl250 (void) BANKED
 	}
 }
 
-void p_lvl251 (void) BANKED
+void p_lvl251 (void) __banked
 {
 	if (v_smk == 124) {
 		p_engine_loadTileset (BANK_19, 0, 9, v_tiles_lvl250, BANK_17);
@@ -155,7 +156,7 @@ void p_lvl251 (void) BANKED
 	}
 }
 
-void p_lvl252 (void) BANKED
+void p_lvl252 (void) __banked
 {
 	if (v_smk == 224) {
 		p_engine_loadTileset (BANK_19, 0, 9, v_tiles_lvl250, BANK_17);
@@ -169,7 +170,7 @@ void p_lvl252 (void) BANKED
 	}
 }
 
-void p_lvl253 (void) BANKED
+void p_lvl253 (void) __banked
 {
 	p_stein (176, 51);
 	
@@ -185,7 +186,7 @@ void p_lvl253 (void) BANKED
 	}
 }
 
-void p_lvl254 (void) BANKED
+void p_lvl254 (void) __banked
 {
 	p_truhe_schluessel (195, 81);
 	
@@ -201,7 +202,7 @@ void p_lvl254 (void) BANKED
 	}
 }
 
-void p_lvl255 (void) BANKED
+void p_lvl255 (void) __banked
 {
 	if (v_smk == 5) {
 		p_engine_loadTileset (BANK_19, 0, 9, v_tiles_lvl254, BANK_17);
@@ -215,7 +216,7 @@ void p_lvl255 (void) BANKED
 	}
 }
 
-void p_lvl256 (void) BANKED
+void p_lvl256 (void) __banked
 {
 	if (v_smk == 106) {
 		p_engine_loadTileset (BANK_19, 0, 9, v_tiles_lvl255, BANK_17);

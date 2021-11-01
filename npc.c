@@ -368,7 +368,7 @@ void p_xaver_rotgebirge (void) BANKED
                         p_engine_set_txt (xavertxt26);
                         p_engine_A ();
                         p_engine_after_txt ();
-                        v_questen [0] = 17;
+                        v_questen [0] = 17; ++v_stoff;
                         p_lvl_status ();
                         
                 }

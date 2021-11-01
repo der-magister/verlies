@@ -182,6 +182,19 @@ void p_hud_showStaub (void) __banked
         }
 }
 
+//zeigt anzahl erz im infoscreen an
+void p_hud_view_erz (void) __banked
+{
+        p_hud_umwandlung (v_serz, 17, 5, LAYER_WIN);
+}
+
+
+//zeigt anzahl stoff im inofscreen an
+void p_hud_view_stoff (void) __banked
+{
+        p_hud_umwandlung (v_stoff, 17, 6, LAYER_WIN);
+}
+
 void p_hud_showSpitzhacke (void) __banked
 {
         
@@ -236,6 +249,8 @@ void p_view_sword (void) __banked
         }
 }
 
+
+
 ///HUD unsichtbar schalten
 void p_hud_hide (void) __banked
 {
@@ -274,6 +289,8 @@ void p_gui_show_infoscreen (void) __banked
         p_hud_showSichel ();
         p_hud_showSchaufel ();
         p_hud_showPortalrune ();
+        p_hud_view_erz ();
+        p_hud_view_stoff ();
         p_showMap ();
         
         move_win (7, 0);

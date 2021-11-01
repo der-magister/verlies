@@ -893,6 +893,7 @@ void p_truhe_zauberstaub (UINT8 l_mk, UINT8 l_tnr) __banked
                                 p_engine_set_tile (3, 1, 2);
                                 SHOW_WIN;
                                 p_truhe_status ();
+                                p_hud_showStaub ();
                    }
                    else {
                         p_engine_set_txt (zauberstaub);
