@@ -47,6 +47,7 @@ void p_lvl238 (void) BANKED
 		p_engine_changeLvl (199, 80, 24);
 		p_gui_show_location (lrotgebirge);
 		v_ks = 28;
+		v_region = 11;
 	}
 }
 

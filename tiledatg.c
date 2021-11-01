@@ -107,6 +107,11 @@ UINT8 p_gegner_koli (void) __banked
 
             }
         }
+        else if (v_region == 13) {
+                for (v_a = 0; v_a != sizeof (v_kdatg_gebirgspfad) + 1; ++v_a) {
+                        if (v_tile [2] == v_kdatg_gebirgspfad [v_a]) return FALSE;
+                }
+        }
 
 
         

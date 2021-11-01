@@ -59,8 +59,7 @@ const unsigned char v_kdat_mine_tg1 [28] = { 1, 3, 8, 9, 10, 11, 20, 21, 24, 25,
 
 const unsigned char v_kdat_mine_tg2 [28] = { 3, 4, 5, 6, 7, 20, 21, 24, 25, 45, 46, 37, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
 
-const unsigned char v_kdat_gipfelpfad [9] = { 3, 20, 21, 24, 28, 29, 30, 31, 37 };
-
+const unsigned char v_kdat_gipfelpfad [28] = { 3, 20, 21, 24, 28, 29, 30, 31, 37, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
 
 //außer der reihe, da ein anderes tool testweise verwendet wurde
 const unsigned char v_kdat_tempel_245 [28] = { 0, 5, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
