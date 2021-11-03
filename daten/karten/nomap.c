@@ -1,5 +1,3 @@
-//#pragma bank=3
-
 /*
 
  NOMAP.C
@@ -10,7 +8,7 @@
    Section       : 
    Bank          : 0
    Map size      : 11 x 2
-   Tile set      : O:\projekte\verlies-16x16\gfx\entwuerfe\tilesets\grundtiles.gbr
+   Tile set      : Z:\home\magister\repos\verlies\gfx\entwuerfe\tilesets\tempel-1E.gbr
    Plane count   : 1 plane (8 bits)
    Plane order   : Tiles are continues
    Tile offset   : 0
@@ -20,10 +18,14 @@
 
 */
 
+#define nomapWidth 11
+#define nomapHeight 2
+#define nomapBank 0
+
 const unsigned char nomap[] =
 {
   0x74,0x7A,0x76,0x71,0x7A,0x7F,0x74,0x7E,0x6D,0x6B,
-  0x7A,0x00,0x69,0x70,0x6D,0x77,0x7E,0x71,0x7B,0x7A,
+  0x7A,0x7F,0x69,0x70,0x6D,0x77,0x7E,0x71,0x7B,0x7A,
   0x71,0x7F
 };
 
