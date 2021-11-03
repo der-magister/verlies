@@ -63,9 +63,10 @@ const unsigned char v_kdat_gipfelpfad [28] = { 3, 20, 21, 24, 28, 29, 30, 31, 37
 
 //außer der reihe, da ein anderes tool testweise verwendet wurde
 const unsigned char v_kdat_tempel_245 [28] = { 0, 5, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
-const unsigned char v_kdat_tempel_246 [28] = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
+const unsigned char v_kdat_tempel_246 [28] = { 0,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
 const unsigned char v_kdat_tempel_248 [28] = { 0, 1, 2, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
 const unsigned char v_kdat_tempel_254 [28] = { 0, 5, 6, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
+const unsigned char v_kdat_tempel_256 [28] = { 0, 0, 0, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
 //
 
 //Tempel KG
@@ -152,11 +153,13 @@ UINT8 p_spieler_koli (void) __banked
                         if (v_tile [1] == v_kdat_tempel_245 [v_a]) return FALSE;
                 }
                 else if ((v_lvl == 246) || (v_lvl == 247) || (v_lvl == 249) || (v_lvl == 250) ||
-                         (v_lvl == 251) || (v_lvl == 252) || (v_lvl == 255) || (v_lvl == 256)) { 
+                         (v_lvl == 252) || (v_lvl == 255)) { 
                                  if (v_tile [1] == v_kdat_tempel_246 [v_a]) return FALSE; 
                 }
                 else if (v_lvl == 248) { if (v_tile [1] == v_kdat_tempel_248 [v_a]) return FALSE; }
+                else if (v_lvl == 251) { if (v_tile [1] == v_kdat_tempel_256 [v_a]) return FALSE; }
                 else if (v_lvl == 254) { if (v_tile [1] == v_kdat_tempel_254 [v_a]) return FALSE; }
+                else if (v_lvl == 256) { if (v_tile [1] == v_kdat_tempel_256 [v_a]) return FALSE; }
 
                 //Tempel KG
                 else if ((v_lvl >= 260) && (v_lvl <= 270)) {

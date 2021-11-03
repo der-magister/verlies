@@ -149,6 +149,9 @@ void p_lvl251 (void) __banked
 		p_engine_changeLvl (250, 16, 72);
 	}
 	else if (v_smk == 113) {
+		p_engine_loadTileset (2, 8, 37, felsengrund_1, BANK_17);
+        	p_engine_loadTileset (2, 38, 81, grundtiles, BANK_17);
+        	p_engine_loadTileset (2, 82, 127, font, BANK_17); 
 		p_engine_loadTileset (BANK_2, 3, 37, tempel_kg, BANK_17);
                 p_gui_show_location (ltempelkg);
                 p_engine_loadMap (v_lvl260, BANK_20, BANK_17);

@@ -33,5 +33,7 @@ extern const unsigned char k_zwergenheim[];
 extern const unsigned char k_rotgebirge[];
 extern const unsigned char k_mine_eg[];
 extern const unsigned char k_mine_tg[];
+extern const unsigned char k_tempel_eg[];
+extern const unsigned char k_tempel_kg[];
 
 #endif

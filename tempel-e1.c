@@ -44,7 +44,7 @@ void p_lvl275 (void) BANKED
 		p_engine_loadTileset (BANK_19, 0, 9, v_tiles_lvl256, BANK_17);
 		p_engine_loadMap (v_lvl256, BANK_19, BANK_17);
 		p_engine_changeLvl (256, v_sxk, v_syk);
-		p_gui_show_location (ltempel);
+		p_gui_show_location (ltempeleg);
 	}
 }
 

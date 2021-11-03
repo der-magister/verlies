@@ -44,7 +44,7 @@ void p_lvl260 (void) BANKED
 		p_engine_loadTileset (BANK_19, 0, 9, v_tiles_lvl251, BANK_17);
 		p_engine_loadMap (v_lvl251, BANK_19, BANK_17);
 		p_engine_changeLvl (251, v_sxk, v_syk);
-		p_gui_show_location (ltempel);
+		p_gui_show_location (ltempeleg);
 	}
 }
 
@@ -192,6 +192,6 @@ void p_lvl270 (void) BANKED
 	
 	if (v_smk == 106) {
 		p_engine_loadMap (v_lvl269, BANK_20, BANK_17);
-		p_engine_changeLvl (269, 24, 64);
+		p_engine_changeLvl (269, 16, 64);
 	}
 }

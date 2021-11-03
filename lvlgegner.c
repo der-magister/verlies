@@ -737,11 +737,11 @@ void p_set_gegner (void) __banked
                 p_gegner_set (0, 56, 56, 56, 72, MOVE_WEST, 2, 2);
                 p_gegner_set (1, 56, 56, 88, 72, MOVE_EAST, 2, 2);
         }
-        else if (v_lvl == 249) {
+        /*else if (v_lvl == 249) {
                 p_gegner_set (0, 24, 24, 80, 56, MOVE_SOUTH, 2, 2);
                 p_gegner_set (1, 20, 20, 136, 88, MOVE_WEST, 2, 2);
                 p_gegner_set (2, 92, 92, 40, 56, MOVE_WEST, 2, 2);
-        }
+        }*/
         else if (v_lvl == 250) {
                 p_gegner_set (0, 24, 24, 80, 40, MOVE_SOUTH, 2, 2);
                 p_gegner_set (1, 88, 84, 32, 64, MOVE_DOWN, 125, 3);
