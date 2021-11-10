@@ -209,7 +209,7 @@ then
 	#/usr/games/mednafen -psx.dbg_level 0 -video.fs 0 -gb.system_type dmg -gb.xscale 4,000000 -gb.yscale 4,000000 obj/verlies.gb &>/dev/null &
 	
 #	wine "C:\apps\bgb\bgb.exe" obj/verlies.gb &>/dev/null &
-	#BGB.exe C:\\magister\\repos\\verlies\\obj\\verlies.gb &
+	#bgb.exe verlies.gb &
 
 	bgb verlies.gb
 	#emulicious.sh obj/verlies.gb
