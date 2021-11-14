@@ -43,7 +43,7 @@ const unsigned char v_kdatg_tempel_254 [5] = { 0, 5, 6, 45, 46 };
 //
 
 const unsigned char v_kdatg_tempel_kg [23] = { 12, 13, 14, 15, 20, 21, 24, 25, 26, 27, 28, 29, 30, 31, 37, 39, 40, 41, 42, 43, 44, 45, 46 };
-const unsigned char v_kdatg_tempel_e1 [28] = { 2, 3, 4, 5, 6, 7, 12, 13, 14, 15, 20, 21, 24, 26, 27, 37, 39, 40, 41, 42, 43, 44, 45, 46, 0,0,0,0};
+const unsigned char v_kdatg_tempel_e1 [24] = { 2, 3, 4, 5, 6, 7, 12, 13, 14, 15, 20, 21, 24, 26, 27, 37, 39, 40, 41, 42, 43, 44, 45, 46 };
 
 
 UINT8 p_gegner_koli (void) __banked
@@ -136,9 +136,17 @@ UINT8 p_gegner_koli (void) __banked
                         if (v_tile [2] == v_kdatg_tempel_254 [v_a]) return FALSE; 
                 }
         }
+        //Tempel KG und E1
         else if (v_region == 14) {
-                for (v_a = 0; v_a != sizeof (v_kdatg_tempel_kg) + 1; ++v_a) {
-                        if (v_tile [2] == v_kdatg_tempel_kg [v_a]) return FALSE;
+                if (v_lvl < 271) {
+                        for (v_a = 0; v_a != sizeof (v_kdatg_tempel_kg) + 1; ++v_a) {
+                                if (v_tile [2] == v_kdatg_tempel_kg [v_a]) return FALSE;
+                        }
+                }
+                else if (v_lvl > 274) {
+                        for (v_a = 0; v_a != sizeof (v_kdatg_tempel_e1) + 1; ++v_a) {
+                                if (v_tile [2] == v_kdatg_tempel_e1 [v_a]) return FALSE;
+                        }       
                 }
         }        
         

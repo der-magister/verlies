@@ -224,7 +224,7 @@ void p_lvl256 (void) __banked
 	if (v_smk == 106) {
 		p_engine_loadTileset (BANK_19, 0, 9, v_tiles_lvl255, BANK_17);
 		p_engine_loadMap (v_lvl255, BANK_19, BANK_17);
-		p_engine_changeLvl (255, 24, 64);
+		p_engine_changeLvl (255, 16, 64);
 	}
 	else if (v_smk == 93) {
 		p_engine_loadTileset (BANK_2, 2, 42, tempel_1E, BANK_17);

@@ -137,7 +137,7 @@ void p_portal (UINT8 l_smk) __banked
 		        {
 		        	if ((joypad () & J_UP) && (v_portal [0] == 1)) 
 		        	{
-		        		if ((v_lvl == 2) || (v_lvl == 270))
+		        		if (v_lvl == 2)
 		    			{
 		        			l_quit = TRUE;
 		        		}
@@ -157,7 +157,7 @@ void p_portal (UINT8 l_smk) __banked
 		        	}
 		        	else if ((joypad () & J_DOWN) && (v_portal [1] == 1))
 		        	{
-		        		if ((v_lvl == 91) || (v_lvl == 270))
+		        		if (v_lvl == 91)
 		        		{
 		        			l_quit = TRUE;
 	                        		
@@ -179,7 +179,7 @@ void p_portal (UINT8 l_smk) __banked
 		        	}
 		        	else if ((joypad () & J_LEFT) && (v_portal [2] == 1))
 		        	{
-		        		if ((v_lvl == 138) || || (v_lvl == 270))
+		        		if (v_lvl == 138)
 		        		{
 		        			l_quit = TRUE;
 		        			if (v_syk >= 104) p_spieler_set_sprite ();
@@ -200,7 +200,7 @@ void p_portal (UINT8 l_smk) __banked
 		        	}
 		        	else if ((joypad () & J_RIGHT) && (v_portal [3] == 1))
 		        	{
-		        		if ((v_lvl == 187) || (v_lvl == 270))
+		        		if (v_lvl == 187)
 		        		{
 		        			l_quit = TRUE;
 		        			if (v_syk >= 104) p_spieler_set_sprite ();

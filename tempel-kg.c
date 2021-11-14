@@ -25,6 +25,7 @@
 #include "schilder.h"
 #include "truhen.h"
 #include "locations.h"
+#include "portale.h"
 
 #include "daten/tilesets/tilesets.h"
 #include "daten/lvl/lvldattempel-tg.h"
@@ -185,11 +186,9 @@ void p_lvl269 (void) BANKED
 void p_lvl270 (void) BANKED
 {
 	p_schild (134, schildtxt17);
-	p_schild (65, schildtxt18);
-	p_schild (173, schildtxt19);
-	p_schild (91, schildtxt20);
-	p_schild (127, schildtxt21);
 	
+	p_portal (96);
+
 	if (v_smk == 106) {
 		p_engine_loadMap (v_lvl269, BANK_20, BANK_17);
 		p_engine_changeLvl (269, 16, 64);

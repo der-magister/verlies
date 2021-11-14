@@ -1,6 +1,6 @@
 #!/bin/bash
 
-wine "C:\apps\GBMB\gbmb.exe" &>/dev/null &
+WINEDEBUG=-all nice -n 19 wine "C:\apps\GBMB\gbmb.exe" &>/dev/null &
 
 exit 0
 

@@ -1,5 +1,3 @@
-//#pragma bank=8
-
 /*
 
  PORTAL1.C
@@ -10,7 +8,7 @@
    Section       : 
    Bank          : 0
    Map size      : 18 x 1
-   Tile set      : D:\magister\owncloud\projekte\verlies-16x16\gfx\entwuerfe\tilesets\v_felsengrund_1.gbr
+   Tile set      : Z:\home\magister\repos\verlies\gfx\entwuerfe\tilesets\v_felsengrund_1.gbr
    Plane count   : 1 plane (8 bits)
    Plane order   : Tiles are continues
    Tile offset   : 0
@@ -26,9 +24,8 @@
 
 const unsigned char portal1[] =
 {
-  0x6A,0x6F,0x00,0x00,0x00,0x00,0x53,0x00,0x79,0x7A,
-  0x73,0x6C,0x7A,0x71,0x78,0x6D,0x59,0x00
+  0x6A,0x6F,0x7F,0x7F,0x7F,0x7F,0x53,0x00,0x79,0x7A,
+  0x73,0x6C,0x7A,0x71,0x78,0x6D,0x59,0x7F
 };
-
 
 /* End of PORTAL1.C */

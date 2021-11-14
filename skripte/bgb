@@ -1,0 +1,6 @@
+#!/bin/bash
+
+WINEDEBUG=-all nice -n 19 wine "C:\apps\bgb\bgb.exe" $1 &>/dev/null &
+
+exit 0
+

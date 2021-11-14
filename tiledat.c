@@ -72,7 +72,7 @@ const unsigned char v_kdat_tempel_256 [28] = { 0, 0, 0, 0,0,0,0,0,0,0,0,0,0,0,0,
 //Tempel KG
 const unsigned char v_kdat_tempel_kg [28] = { 20, 21, 24, 25, 26, 27, 28, 29, 30, 31, 37, 43, 44, 45, 46, 0,0,0,0,0,0,0,0,0,0,0,0,0 };
 //Tempel E1
-const unsigned char v_kdat_tempel_e1 [28] = { 2, 3, 12, 13, 14, 15, 20, 21, 24, 26, 27, 28, 29, 30, 31, 37, 43, 44, 45, 46, 0,0,0,0,0,0,0,0 };
+const unsigned char v_kdat_tempel_e1 [28] = { 2, 3, 20, 21, 24, 26, 27, 28, 29, 30, 31, 37, 43, 44, 45, 46, 0,0,0,0,0,0,0,0,0,0,0,0 };
 //Tempel E2
 const unsigned char v_kdat_tempel_e2 [28] = { 8, 9, 10, 11, 16, 17, 18, 19, 20, 21, 24, 45, 46, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
 
@@ -166,7 +166,7 @@ UINT8 p_spieler_koli (void) __banked
                         if (v_tile [1] == v_kdat_tempel_kg [v_a]) return FALSE;
                 }
                 //Tempel E1 und E2
-                else if ((v_lvl >= 275) && (v_lvl <= 286)) {
+                else if ((v_lvl >= 275) && (v_lvl <= 287)) {
                         if (v_tile [1] == v_kdat_tempel_e1 [v_a]) return FALSE;
                 }
                 else if ((v_lvl >= 290) && (v_lvl <= 295)) {
