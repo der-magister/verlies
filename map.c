@@ -320,6 +320,23 @@ void p_showMap (void) BANKED
                 else if (v_lvl == 269) p_map_draw_mark (9, 13);
                 else if (v_lvl == 270) p_map_draw_mark (8, 13);
         }
+        else if ((v_region == 14) && (v_knr [14] == 1))
+        {
+                set_win_tiles (8, 12, 4, 3, k_tempel_e1);
+
+                if (v_lvl == 275) p_map_draw_mark (9, 13);
+                else if (v_lvl == 276) p_map_draw_mark (10, 13);
+                else if (v_lvl == 277) p_map_draw_mark (11, 13);
+                else if (v_lvl == 278) p_map_draw_mark (11, 12);
+                else if (v_lvl == 279) p_map_draw_mark (10, 12);
+                else if (v_lvl == 280) p_map_draw_mark (9, 12);
+                else if (v_lvl == 281) p_map_draw_mark (8, 12);
+                else if (v_lvl == 282) p_map_draw_mark (8, 13);
+                else if (v_lvl == 283) p_map_draw_mark (8, 14);
+                else if (v_lvl == 284) p_map_draw_mark (9, 14);
+                else if (v_lvl == 285) p_map_draw_mark (10, 14);
+                else if (v_lvl == 286) p_map_draw_mark (11, 14);
+        }
 	else
 	{
 		set_win_tiles (4, 13, 11, 2, nomap);
