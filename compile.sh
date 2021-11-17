@@ -64,6 +64,7 @@ lcc -Wa-l -Wl-m -Wl-j -Wf-bo20 -c -o obj/lvldattempel-E2.o daten/lvl/lvldattempe
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo3 -c -o obj/gameover.o daten/other/gameover.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo3 -c -o obj/titel.o daten/other/titel.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo3 -c -o obj/kredits.o daten/other/kredits.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo3 -c -o obj/anleitung.o daten/other/anleitung.c
 
 #spriteset
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo2 -c -o obj/v_spriteset_1.o daten/spritesets/v_spriteset_1.c
@@ -132,6 +133,8 @@ lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/schaufeltxt.o daten/txt/truhen/schaufel
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/zauberstaubtxt.o daten/txt/truhen/zauberstaub.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/portalrunetxt.o daten/txt/truhen/portalrune.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/truhentxt.o daten/txt/truhen/truhentxt.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/alphatxt.o daten/txt/other/alpha.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o obj/introtxt.o daten/txt/other/intro.c
 
 ## Daten Ende
 

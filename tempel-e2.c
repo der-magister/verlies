@@ -24,12 +24,15 @@
 #include "truhen.h"
 #include "locations.h"
 #include "npc.h"
+#include "text.h"
+#include "other.h"
 
 
 #include "daten/tilesets/tilesets.h"
 #include "daten/lvl/lvldattempel-E1.h"
 #include "daten/lvl/lvldattempel-E2.h"
 #include "daten/txt/locations/locations.h"
+#include "daten/txt/other/alpha.h"
 
 void p_lvl290 (void) BANKED
 {
@@ -105,5 +108,12 @@ void p_lvl295 (void) BANKED
 	if (v_smk == 224) {
 		p_engine_loadMap (v_lvl293, BANK_20, BANK_17);
 		p_engine_changeLvl (293, 80, 24);
+	}
+
+	else if (v_smk == 8)
+	{
+		p_engine_set_txt (alpha);
+        	p_engine_A ();
+        	p_engine_after_txt ();
 	}
 }

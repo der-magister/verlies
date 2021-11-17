@@ -1,6 +1,6 @@
 //   Verlies - ein Adventure im Retrodesign
 //
-//   Copyright (C) 2018-2020 Heiko Wolf
+//   Copyright (C) 2018-2021 Heiko Wolf
 //
 //   This program is free software; you can redistribute it and/or modify
 //   it under the terms of the GNU General Public License As published by
@@ -22,13 +22,17 @@
 
 #include "other.h"
 #include "engine.h"
+#include "text.h"
 
 #include "daten/other/gameover.h"
 #include "daten/other/kredits.h"
 #include "daten/other/titel.h"
+#include "daten/other/anleitung.h"
 
 #include "daten/tilesets/tilesets.h"
 #include "daten/spritesets/v_spriteset_1.h"
+
+#include "daten/txt/other/intro.h"
 
 const UINT8 v_timerdat [35] = 
 {
@@ -72,7 +76,12 @@ void p_intro (void) __banked
         set_bkg_tiles (0, 0, 20, 18, kredits);
         delay (3000);
         set_bkg_tiles (0, 0, 20, 18, titel);
-        delay (3000);
+        delay (4000);
+        set_bkg_tiles (0, 0, 20, 18, anleitung);
+        p_engine_A ();
+        p_engine_set_txt (intro);
+        p_engine_A ();
+        p_engine_after_txt ();
 }
 
 ///"zufällige" Zahl ermitteln
