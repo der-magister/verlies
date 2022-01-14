@@ -42,14 +42,6 @@
 
 #include "daten/txt/schilder/schildertxt.h"
 
-/*#include "daten/txt/npcs/ranartxt1.h"
-#include "daten/txt/npcs/ranartxt2.h"
-#include "daten/txt/npcs/ranartxt3.h"
-#include "daten/txt/npcs/ranartxt4.h"
-#include "daten/txt/npcs/ranartxt5.h"
-#include "daten/txt/npcs/ranartxt6.h"
-#include "daten/txt/npcs/ranartxt7.h"*/
-
 #include "daten/txt/npcs/ranartxt.h"
 
 #include "daten/tilesets/tilesets.h"

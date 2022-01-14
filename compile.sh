@@ -90,13 +90,14 @@ lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/obj/handelnichtmoeglich.o daten/txt/ot
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/obj/zauberstaubhaendler1.o daten/txt/npcs/zauberstaubhaendler1.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/obj/zauberstaubhaendler2.o daten/txt/npcs/zauberstaubhaendler2.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/obj/feenaeltestetxt.o daten/txt/npcs/feenaeltestetxt.c
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/obj/ranartxt1.o daten/txt/npcs/ranartxt1.c
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/obj/ranartxt2.o daten/txt/npcs/ranartxt2.c
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/obj/ranartxt3.o daten/txt/npcs/ranartxt3.c
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/obj/ranartxt4.o daten/txt/npcs/ranartxt4.c
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/obj/ranartxt5.o daten/txt/npcs/ranartxt5.c
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/obj/ranartxt6.o daten/txt/npcs/ranartxt6.c
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/obj/ranartxt7.o daten/txt/npcs/ranartxt7.c
+#lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/obj/ranartxt1.o daten/txt/npcs/ranartxt1.c
+#lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/obj/ranartxt2.o daten/txt/npcs/ranartxt2.c
+#lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/obj/ranartxt3.o daten/txt/npcs/ranartxt3.c
+#lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/obj/ranartxt4.o daten/txt/npcs/ranartxt4.c
+#lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/obj/ranartxt5.o daten/txt/npcs/ranartxt5.c
+#lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/obj/ranartxt6.o daten/txt/npcs/ranartxt6.c
+#lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/obj/ranartxt7.o daten/txt/npcs/ranartxt7.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/obj/ranartxt.o daten/txt/npcs/ranartxt.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/obj/pilzwesen1txt.o daten/txt/npcs/pilzwesen1.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/obj/pilzwesen2txt.o daten/txt/npcs/pilzwesen2.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/obj/vanyratxt.o daten/txt/npcs/vanyra.c
@@ -213,7 +214,7 @@ then
 	#bgb.exe verlies.gb &
 
 	#bgb verlies.gb
-	emulicious.sh /tmp/obj/verlies.gb
+	#emulicious.sh /tmp/obj/verlies.gb
 
 fi
 
