@@ -82,7 +82,7 @@ void p_engine_changeLvl (UINT16 l_lvl, UINT8 l_xk, UINT8 l_yk) __nonbanked
 }
 
 ///setzt in v_tile angegebenes Hintergrundtile an übergebene Position und Layer
-void p_engine_set_tile (UINT8 l_xk, UINT8 l_yk, UINT8 l_layer) NONBANKED
+void p_engine_set_tile (UINT8 l_xk, UINT8 l_yk, UINT8 l_layer) __nonbanked
 {
         if (l_layer == 1)
         {
@@ -95,7 +95,7 @@ void p_engine_set_tile (UINT8 l_xk, UINT8 l_yk, UINT8 l_layer) NONBANKED
         }
 }
 
-/*UINT8 p_genzufallszahl (void) NONBANKED
+/*UINT8 p_genzufallszahl (void) __nonbanked
 {
         UWORD l_seed;
         UINT8 l_wert;
@@ -116,7 +116,7 @@ void p_engine_set_tile (UINT8 l_xk, UINT8 l_yk, UINT8 l_layer) NONBANKED
         return (l_wert);
 }*/
 
-UINT8 p_calcMap (UINT8 w1, UINT8 w2) NONBANKED
+UINT8 p_calcMap (UINT8 w1, UINT8 w2) __nonbanked
 {
         return ((w1 - 16) / 8) + 18 * ((w2 - 24) / 8);
 }

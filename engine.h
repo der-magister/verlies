@@ -28,8 +28,8 @@ extern void p_engine_loadSpriteset (UINT8 l_bank, UINT8 l_fsprite, UINT8 l_lspri
 extern void p_engine_loadMap (unsigned char l_lvldat [252], UINT8 l_bnk, UINT8 l_bank) __nonbanked;
 extern void p_engine_changeLvl (UINT16 l_lvl, UINT8 l_xk, UINT8 l_yk) __nonbanked;
 extern void p_engine_set_tile (UINT8 l_xk, UINT8 l_yk, UINT8 l_layer) __nonbanked;
-extern void p_engine_set_tile2 (unsigned char l_tile [1], UINT8 l_xk, UINT8 l_yk, UINT8 l_layer) NONBANKED;
-//UINT8 p_genzufallszahl (void) NONBANKED;
-extern UINT8 p_calcMap (UINT8 w1, UINT8 w2) NONBANKED;
+extern void p_engine_set_tile2 (unsigned char l_tile [1], UINT8 l_xk, UINT8 l_yk, UINT8 l_layer) __nonbanked;
+//UINT8 p_genzufallszahl (void) __nonbanked;
+extern UINT8 p_calcMap (UINT8 w1, UINT8 w2) __nonbanked;
 
 #endif

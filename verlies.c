@@ -33,7 +33,7 @@
 #include "boss.h"
 #include "items.h"
 
-void main (void) NONBANKED
+void main (void) __nonbanked
 {
         p_init_game1 (); v_quit = 0; 
   
