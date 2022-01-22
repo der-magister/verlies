@@ -33,7 +33,7 @@
 #include "daten/lvl/lvldattempel-kg.h"
 #include "daten/txt/schilder/schildertxt.h"
 
-void p_lvl260 (void) BANKED
+void p_lvl260 (void) __banked
 {
 	p_truhe_karte (51, 13, 82);
 	
@@ -49,7 +49,7 @@ void p_lvl260 (void) BANKED
 	}
 }
 
-void p_lvl261 (void) BANKED
+void p_lvl261 (void) __banked
 {
 	p_stein (188, 52);
 	
@@ -71,7 +71,7 @@ void p_lvl261 (void) BANKED
 	}
 }
 
-void p_lvl262 (void) BANKED
+void p_lvl262 (void) __banked
 {
 	p_truhe_proviant (181, 83, 1);
 	
@@ -85,7 +85,7 @@ void p_lvl262 (void) BANKED
 	}
 }
 
-void p_lvl263 (void) BANKED
+void p_lvl263 (void) __banked
 {
 	if (v_smk == 106) {
 		p_engine_loadMap (v_lvl262, BANK_20, BANK_17);
@@ -97,7 +97,7 @@ void p_lvl263 (void) BANKED
 	} 
 }
 
-void p_lvl264 (void) BANKED
+void p_lvl264 (void) __banked
 {
 	p_truhe_schluessel (110, 84);
 	
@@ -107,7 +107,7 @@ void p_lvl264 (void) BANKED
 	}
 }
 
-void p_lvl265 (void) BANKED
+void p_lvl265 (void) __banked
 {
 	if (v_smk == 8) {
 		p_engine_loadMap (v_lvl261, BANK_20, BANK_17);
@@ -119,7 +119,7 @@ void p_lvl265 (void) BANKED
 	}
 }
 
-void p_lvl266 (void) BANKED
+void p_lvl266 (void) __banked
 {
 	if (v_smk == 106) {
 		p_engine_loadMap (v_lvl265, BANK_20, BANK_17);
@@ -137,7 +137,7 @@ void p_lvl266 (void) BANKED
 	}
 }
 
-void p_lvl267 (void) BANKED
+void p_lvl267 (void) __banked
 {
 	p_truhe_stoff (133, 85);
 	
@@ -147,7 +147,7 @@ void p_lvl267 (void) BANKED
 	}
 }
 
-void p_lvl268 (void) BANKED
+void p_lvl268 (void) __banked
 {
 	p_schalter_tuer (181, 7);
 	
@@ -161,7 +161,7 @@ void p_lvl268 (void) BANKED
 	}
 }
 
-void p_lvl269 (void) BANKED
+void p_lvl269 (void) __banked
 {
 	if (v_smk == 106) {
 		p_engine_loadMap (v_lvl268, BANK_20, BANK_17);
@@ -183,7 +183,7 @@ void p_lvl269 (void) BANKED
 	}
 }
 
-void p_lvl270 (void) BANKED
+void p_lvl270 (void) __banked
 {
 	p_schild (134, schildtxt17);
 	

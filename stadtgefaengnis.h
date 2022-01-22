@@ -23,14 +23,14 @@
 
 #include "globals.h"
 
-extern void p_lvl5 (void) BANKED;
-extern void p_lvl6 (void) BANKED;
-extern void p_lvl7 (void) BANKED;
-extern void p_lvl8 (void) BANKED;
-extern void p_lvl9 (void) BANKED;
-extern void p_lvl10 (void)BANKED;
-extern void p_lvl11 (void) BANKED;
-extern void p_lvl12 (void) BANKED;
-extern void p_lvl13 (void) BANKED;
+extern void p_lvl5 (void) __banked;
+extern void p_lvl6 (void) __banked;
+extern void p_lvl7 (void) __banked;
+extern void p_lvl8 (void) __banked;
+extern void p_lvl9 (void) __banked;
+extern void p_lvl10 (void)__banked;
+extern void p_lvl11 (void) __banked;
+extern void p_lvl12 (void) __banked;
+extern void p_lvl13 (void) __banked;
 
 #endif

@@ -27,7 +27,7 @@
 #include "player.h"
 #include "other.h"
 
-void p_items_init (void) BANKED
+void p_items_init (void) __banked
 {
         v_selectItem == 0;
 }
@@ -53,7 +53,7 @@ void p_calc_mapK () __banked
 }
 
 ///Itemauswahl
-void p_changeItem (void) BANKED
+void p_changeItem (void) __banked
 {
         //Null
         if (v_selectItem == 0)
@@ -198,7 +198,7 @@ void p_select_sichel (void) __banked
         set_sprite_tile (12, 103);
 }
 
-void p_select_schaufel (void) BANKED
+void p_select_schaufel (void) __banked
 {
         set_sprite_tile (9, 112);
         set_sprite_tile (10, 113);

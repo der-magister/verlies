@@ -23,11 +23,11 @@
 
 #include "globals.h"
 
-void p_lvl290 (void) BANKED;
-void p_lvl291 (void) BANKED;
-void p_lvl292 (void) BANKED;
-void p_lvl293 (void) BANKED;
-void p_lvl294 (void) BANKED;
-void p_lvl295 (void) BANKED;
+void p_lvl290 (void) __banked;
+void p_lvl291 (void) __banked;
+void p_lvl292 (void) __banked;
+void p_lvl293 (void) __banked;
+void p_lvl294 (void) __banked;
+void p_lvl295 (void) __banked;
 
 #endif

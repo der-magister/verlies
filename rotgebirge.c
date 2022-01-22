@@ -39,7 +39,7 @@
 
 #include "daten/txt/schilder/schildertxt.h"
 
-void p_lvl190 (void) BANKED
+void p_lvl190 (void) __banked
 {
 	p_schild (164, schildtxt10);
 	p_schild (55, schildtxt11);
@@ -63,7 +63,7 @@ void p_lvl190 (void) BANKED
 
 }
 
-void p_lvl191 (void) BANKED
+void p_lvl191 (void) __banked
 {
 	p_truhe_proviant (51, 56, 2); 
 
@@ -73,7 +73,7 @@ void p_lvl191 (void) BANKED
 	}
 }
 
-void p_lvl192 (void) BANKED
+void p_lvl192 (void) __banked
 {
 	p_busch (195, 5);
 	p_truhe_karte (195, 9, 60); 
@@ -94,7 +94,7 @@ void p_lvl192 (void) BANKED
 	}
 }
 
-void p_lvl193 (void) BANKED
+void p_lvl193 (void) __banked
 {
 	if (v_smk == 106) {
 		p_engine_loadMap (v_lvl192, BANK_19, BANK_17);
@@ -106,7 +106,7 @@ void p_lvl193 (void) BANKED
 	}
 }
 
-void p_lvl194 (void) BANKED
+void p_lvl194 (void) __banked
 {
 	p_stein (110, 35);
 	p_stein (83, 36);
@@ -128,7 +128,7 @@ void p_lvl194 (void) BANKED
 	}
 }
 
-void p_lvl195 (void) BANKED
+void p_lvl195 (void) __banked
 {
 	p_truhe_heiltrank (181, 57);
 
@@ -141,7 +141,7 @@ void p_lvl195 (void) BANKED
 	}
 }
 
-void p_lvl196 (void) BANKED
+void p_lvl196 (void) __banked
 {
 	if (v_smk == 227) {
 		p_engine_loadMap (v_lvl194, BANK_19, BANK_17);
@@ -153,7 +153,7 @@ void p_lvl196 (void) BANKED
 	}
 }
 
-void p_lvl197 (void) BANKED
+void p_lvl197 (void) __banked
 {
 	p_truhe_gold (39, 58, 2);
 
@@ -167,7 +167,7 @@ void p_lvl197 (void) BANKED
 	}
 }
 
-void p_lvl198 (void) BANKED
+void p_lvl198 (void) __banked
 {
 	p_schild (65, schildtxt12);
 
@@ -191,7 +191,7 @@ void p_lvl198 (void) BANKED
         }
 }
 
-void p_lvl199 (void) BANKED
+void p_lvl199 (void) __banked
 {
 	if (v_smk == 72) {
 		p_engine_loadMap (v_lvl198, BANK_19, BANK_17);
@@ -211,7 +211,7 @@ void p_lvl199 (void) BANKED
 	}
 }
 
-void p_lvl200 (void) BANKED
+void p_lvl200 (void) __banked
 {
 	p_busch (110, 6);
 
@@ -229,7 +229,7 @@ void p_lvl200 (void) BANKED
 	}
 }
 
-void p_lvl201 (void) BANKED
+void p_lvl201 (void) __banked
 {
 	p_stein (187, 40);
 
@@ -244,7 +244,7 @@ void p_lvl201 (void) BANKED
 	}
 }
 
-void p_lvl202 (void) BANKED
+void p_lvl202 (void) __banked
 {
 	p_truhe_gold (181, 59, 1);
 
@@ -258,7 +258,7 @@ void p_lvl202 (void) BANKED
 	}
 }
 
-void p_lvl203 (void) BANKED
+void p_lvl203 (void) __banked
 {
 	if (v_smk == 8) {
 		p_engine_loadMap (v_lvl202, BANK_19, BANK_17);

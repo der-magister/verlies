@@ -41,7 +41,7 @@
 #include "daten/txt/npcs/ogerboss1.h"
 
 ///Ablauf Raum 40
-void p_lvl40 (void) BANKED
+void p_lvl40 (void) __banked
 {       
         if (v_smk == 108) {
                 if ((v_tuer [0] == 0) && (v_ske == 0)) {
@@ -75,7 +75,7 @@ void p_lvl40 (void) BANKED
 }
 
 ///Ablauf Raum 41
-void p_lvl41 (void) BANKED
+void p_lvl41 (void) __banked
 {
         p_truhe_proviant (188, 11, 2);
         
@@ -86,7 +86,7 @@ void p_lvl41 (void) BANKED
 }
 
 ///Ablauf Raum 42
-void p_lvl42 (void) BANKED
+void p_lvl42 (void) __banked
 {
         if (v_smk == 227) {
                 p_engine_loadMap (v_lvl40, BANK_6, BANK_16);
@@ -99,7 +99,7 @@ void p_lvl42 (void) BANKED
 }
 
 ///Ablauf Raum 43
-void p_lvl43 (void) BANKED
+void p_lvl43 (void) __banked
 {
         p_schalter_tuer (51, 1);
 
@@ -119,7 +119,7 @@ void p_lvl43 (void) BANKED
 }
 
 ///Ablauf Raum 44
-void p_lvl44 (void) BANKED
+void p_lvl44 (void) __banked
 {
         p_truhe_schluessel (44, 12);
         
@@ -130,7 +130,7 @@ void p_lvl44 (void) BANKED
 }
 
 ///Ablauf Raum 45
-void p_lvl45 (void) BANKED
+void p_lvl45 (void) __banked
 {
         p_truhe_karte (188, 3, 17);
 
@@ -144,7 +144,7 @@ void p_lvl45 (void) BANKED
                 }
 } 
 
-void p_lvl46 (void) BANKED
+void p_lvl46 (void) __banked
 {
         if (v_smk == 52) {
                 p_engine_loadMap (v_lvl45, BANK_6, BANK_16);
@@ -156,7 +156,7 @@ void p_lvl46 (void) BANKED
         }
 }
 
-void p_lvl47 (void) BANKED
+void p_lvl47 (void) __banked
 {
         if (v_smk == 142) {
                 p_engine_loadMap (v_lvl46, BANK_6, BANK_16);
@@ -176,7 +176,7 @@ void p_lvl47 (void) BANKED
         }
 }
 
-void p_lvl48 (void) BANKED
+void p_lvl48 (void) __banked
 {
         if (v_smk == 9) {
                 p_engine_loadMap (v_lvl47, BANK_6, BANK_16);
@@ -189,7 +189,7 @@ void p_lvl48 (void) BANKED
 }
 
 ///Ablauf Raum 49
-void p_lvl49 (void) BANKED
+void p_lvl49 (void) __banked
 {
         if (v_smk == 126) {
                 p_engine_loadMap (v_lvl48, BANK_6, BANK_16);
@@ -201,7 +201,7 @@ void p_lvl49 (void) BANKED
         }
 }
 
-void p_lvl50 (void) BANKED
+void p_lvl50 (void) __banked
 {
         p_truhe_proviant (42, 13, 1);
         p_truhe_schluessel (45, 14);
@@ -213,7 +213,7 @@ void p_lvl50 (void) BANKED
 }
 
 ///Ablauf Raum 51
-void p_lvl51 (void) BANKED
+void p_lvl51 (void) __banked
 {
         if (v_smk == 160) {
                 if ((v_tuer [1] == 0) && (v_ske == 0)) {
@@ -235,7 +235,7 @@ void p_lvl51 (void) BANKED
 }
 
 ///Ablauf Raum 52
-void p_lvl52 (void) BANKED
+void p_lvl52 (void) __banked
 {
         if (v_smk == 162) {
                 p_engine_loadMap (v_lvl51, BANK_6, BANK_16);
@@ -249,7 +249,7 @@ void p_lvl52 (void) BANKED
 }
 
 ///Ablauf Raum 53
-void p_lvl53 (void) BANKED
+void p_lvl53 (void) __banked
 {
         p_truhe_ausdauertrank (42, 15);
         p_truhe_heiltrank (159, 16);
@@ -261,7 +261,7 @@ void p_lvl53 (void) BANKED
 
 }
 
-void p_lvl54 (void) BANKED
+void p_lvl54 (void) __banked
 {
         if (v_smk == 124) {
                 p_engine_loadMap (v_lvl47, BANK_6, BANK_16);
@@ -273,7 +273,7 @@ void p_lvl54 (void) BANKED
         }
 }
 
-void p_lvl55 (void) BANKED
+void p_lvl55 (void) __banked
 {
         if (v_smk == 220) {
                 if ((v_tuer [2] == 0) && (v_ske == 0)) {
@@ -299,7 +299,7 @@ void p_lvl55 (void) BANKED
         }
 }
 
-void p_lvl56 (void) BANKED
+void p_lvl56 (void) __banked
 {
         if (v_smk == 228) {
                 p_engine_loadMap (v_lvl55, BANK_6, BANK_16);
@@ -311,7 +311,7 @@ void p_lvl56 (void) BANKED
         }
 }
 
-void p_lvl57 (void) BANKED
+void p_lvl57 (void) __banked
 {
         p_schalter_tuer (37, 2);
 
@@ -330,7 +330,7 @@ void p_lvl57 (void) BANKED
         }
 }
 
-void p_lvl58 (void) BANKED
+void p_lvl58 (void) __banked
 {
         p_schalter_tuer (51, 3);
 
@@ -349,7 +349,7 @@ void p_lvl58 (void) BANKED
         }
 }
 
-void p_lvl59 (void) BANKED
+void p_lvl59 (void) __banked
 {
         p_schalter_tuer (195, 4);
 
@@ -368,7 +368,7 @@ void p_lvl59 (void) BANKED
         }
 }
 
-void p_lvl60 (void) BANKED
+void p_lvl60 (void) __banked
 {
         p_truhe_schluessel (188, 18);
         p_truhe_proviant (37, 19, 1);
@@ -381,7 +381,7 @@ void p_lvl60 (void) BANKED
         }
 }
 
-void p_lvl61 (void) BANKED
+void p_lvl61 (void) __banked
 {
         if (v_smk == 126) {
                 p_engine_loadMap (v_lvl62, BANK_6, BANK_16);
@@ -393,7 +393,7 @@ void p_lvl61 (void) BANKED
         }
 }
 
-void p_lvl62 (void) BANKED
+void p_lvl62 (void) __banked
 {
         if (v_smk == 142) {
                 p_engine_loadMap (v_lvl61, BANK_6, BANK_16);
@@ -405,7 +405,7 @@ void p_lvl62 (void) BANKED
         }
 }
 
-void p_lvl63 (void) BANKED
+void p_lvl63 (void) __banked
 {
         if (v_smk == 34) {
                 p_engine_loadMap (v_lvl62, BANK_6, BANK_16);
@@ -417,7 +417,7 @@ void p_lvl63 (void) BANKED
         }
 }
 
-void p_lvl64 (void) BANKED
+void p_lvl64 (void) __banked
 {
         if (v_smk == 219) {
                 p_engine_loadMap (v_lvl63, BANK_6, BANK_16);
@@ -429,7 +429,7 @@ void p_lvl64 (void) BANKED
         }
 }
 
-void p_lvl65 () BANKED
+void p_lvl65 () __banked
 {
         if (v_smk == 223) {
                 p_engine_loadMap (v_lvl64, BANK_6, BANK_16);
@@ -446,7 +446,7 @@ void p_lvl65 () BANKED
         }
 }
 
-void p_lvl66 () BANKED
+void p_lvl66 () __banked
 {
         p_stein (112, 3);
         p_stein (120, 4);

@@ -27,7 +27,7 @@
 
 #include "daten/lvl/lvldatminen-3.h"
 
-void p_lvl233 (void) BANKED {
+void p_lvl233 (void) __banked {
 	p_stein (104, 48);
 
 	if (v_smk == 106) {
@@ -36,7 +36,7 @@ void p_lvl233 (void) BANKED {
 	}
 }
 
-void p_lvl234 (void) BANKED {
+void p_lvl234 (void) __banked {
 	if (v_smk == 90) {
 		p_engine_loadMap (v_lvl233, BANK_19, BANK_17);
 		p_engine_changeLvl (233, 144, 64);
@@ -52,7 +52,7 @@ void p_lvl234 (void) BANKED {
 	
 }
 
-void p_lvl235 (void) BANKED {
+void p_lvl235 (void) __banked {
 	p_truhe_zauberstaub (49, 95);
 	p_truhe_portalrune (186, 76);
 
@@ -63,7 +63,7 @@ void p_lvl235 (void) BANKED {
 	
 }
 
-void p_lvl236 (void) BANKED {
+void p_lvl236 (void) __banked {
 	p_hueterin ();
 	p_truhe_aspekt_berg ();
 

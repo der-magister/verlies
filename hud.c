@@ -212,7 +212,7 @@ void p_hud_showSichel (void) __banked
         }
 }
 
-void p_hud_showSchaufel (void) BANKED
+void p_hud_showSchaufel (void) __banked
 {
         if (v_schaufel == TRUE) {
                 v_tile [0] = 48; 
@@ -220,7 +220,7 @@ void p_hud_showSchaufel (void) BANKED
         }       
 }
 
-void p_hud_showPortalrune (void) BANKED
+void p_hud_showPortalrune (void) __banked
 {
         if (v_portalrune == TRUE) { 
                 v_tile [0] = 49;

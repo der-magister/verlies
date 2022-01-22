@@ -9,7 +9,7 @@
 #include "daten/txt/locations/locations.h"
 #include "daten/lvl/lvldatrotgebirge.h"
 
-void p_portalrune (void) BANKED
+void p_portalrune (void) __banked
 {
 	if ((v_sstaub != 0) && (v_keyflag == 2)) {
 		//von Mine nach Rotgebirge

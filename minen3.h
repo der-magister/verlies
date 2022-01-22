@@ -23,9 +23,9 @@
 
 #include "globals.h"
 
-extern void p_lvl233 (void) BANKED;
-extern void p_lvl234 (void) BANKED;
-extern void p_lvl235 (void) BANKED;
-extern void p_lvl236 (void) BANKED;
+extern void p_lvl233 (void) __banked;
+extern void p_lvl234 (void) __banked;
+extern void p_lvl235 (void) __banked;
+extern void p_lvl236 (void) __banked;
 
 #endif

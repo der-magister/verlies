@@ -56,7 +56,7 @@ void p_stein (UINT8 l_mk, UINT8 l_nr) __banked
 }
 
 //für Schaufel
-void p_umgebung_loch (UINT8 l_mk, UINT8 l_nr) BANKED
+void p_umgebung_loch (UINT8 l_mk, UINT8 l_nr) __banked
 {
         if ((l_mk == v_imk) && (v_keyflag == 2)) {
                 if ((v_sused == TRUE) && (v_selectItem == 7)) {
@@ -105,7 +105,7 @@ void p_busch (UINT8 l_mk, UINT8 l_nr) __banked
         }
 }
 
-void p_loch_auf (UINT8 l_xk, UINT8 l_yk) BANKED 
+void p_loch_auf (UINT8 l_xk, UINT8 l_yk) __banked 
 {
         v_tile [0] = 12;
         p_engine_set_tile (l_xk, l_yk, LAYER_BKG);

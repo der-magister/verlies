@@ -23,8 +23,8 @@
 
 #include "globals.h"
 
-void p_map_init (void) BANKED;
-void p_map_draw_mark (UINT8 l_xk, UINT8 l_yk) BANKED;
-void p_showMap (void) BANKED;
+void p_map_init (void) __banked;
+void p_map_draw_mark (UINT8 l_xk, UINT8 l_yk) __banked;
+void p_showMap (void) __banked;
 
 #endif

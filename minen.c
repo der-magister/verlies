@@ -42,7 +42,7 @@
 #include "daten/txt/schilder/schildertxt.h"
 #include "daten/txt/locations/locations.h"
 
-void p_lvl205 (void) BANKED
+void p_lvl205 (void) __banked
 {
 	p_schild (173, schildtxt13);
 	p_stein (74, 43);
@@ -64,7 +64,7 @@ void p_lvl205 (void) BANKED
 	}
 }
 
-void p_lvl206 (void) BANKED
+void p_lvl206 (void) __banked
 {
 	p_truhe_karte (181, 10, 62);
 
@@ -74,7 +74,7 @@ void p_lvl206 (void) BANKED
 	}
 }
 
-void p_lvl207 (void) BANKED
+void p_lvl207 (void) __banked
 {
 	if (v_smk == 224) {
 		p_engine_loadMap (v_lvl205, BANK_19, BANK_17);
@@ -100,7 +100,7 @@ void p_lvl207 (void) BANKED
 	}
 }
 
-void p_lvl208 (void) BANKED
+void p_lvl208 (void) __banked
 {
 	if ((v_smk == 8) && (v_keyflag == 1)) {
 		if (v_schalter [6] == 0) {
@@ -128,7 +128,7 @@ void p_lvl208 (void) BANKED
 	}
 }
 
-void p_lvl209 (void) BANKED
+void p_lvl209 (void) __banked
 {
 	if (v_smk == 124) {
 		p_engine_loadMap (v_lvl208, BANK_19, BANK_17);
@@ -149,7 +149,7 @@ void p_lvl209 (void) BANKED
 	}
 }
 
-void p_lvl210 (void) BANKED
+void p_lvl210 (void) __banked
 {
 	if (v_smk == 144) {
 		p_engine_loadMap (v_lvl208, BANK_19, BANK_17);
@@ -174,7 +174,7 @@ void p_lvl210 (void) BANKED
 	}
 }
 
-void p_lvl211 (void) BANKED
+void p_lvl211 (void) __banked
 {
 	p_stein (159, 44);
 	p_schalter_tuer (195, 6);
@@ -186,7 +186,7 @@ void p_lvl211 (void) BANKED
 
 }
 
-void p_lvl212 (void) BANKED
+void p_lvl212 (void) __banked
 {
 	if (v_smk == 224) {
 		p_engine_loadMap (v_lvl208, BANK_19, BANK_17);
@@ -211,7 +211,7 @@ void p_lvl212 (void) BANKED
 	}
 }
 
-void p_lvl213 (void) BANKED
+void p_lvl213 (void) __banked
 {
 	p_truhe_gold (193, 64, 2);
 	p_stein (92, 45);
@@ -231,7 +231,7 @@ void p_lvl213 (void) BANKED
 
 }
 
-void p_lvl214 (void) BANKED
+void p_lvl214 (void) __banked
 {
 	if (v_smk == 106) {
 		p_engine_loadMap (v_lvl213, BANK_19, BANK_17);
@@ -243,7 +243,7 @@ void p_lvl214 (void) BANKED
 	}
 }
 
-void p_lvl215 (void) BANKED
+void p_lvl215 (void) __banked
 {
 	if (v_smk == 8) {
 		p_engine_loadMap (v_lvl214, BANK_19, BANK_17);
@@ -255,7 +255,7 @@ void p_lvl215 (void) BANKED
 	}
 }
 
-void p_lvl216 (void) BANKED
+void p_lvl216 (void) __banked
 {
 	p_truhe_schaufel ();
 
@@ -265,7 +265,7 @@ void p_lvl216 (void) BANKED
 	}
 }
 
-void p_lvl217 (void) BANKED
+void p_lvl217 (void) __banked
 {
 	p_umgebung_loch (85, 1);
 

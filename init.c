@@ -50,7 +50,7 @@
 //tmp
 #include "daten/lvl/lvldattempel-E2.h"
 
-void p_init_game1 (void) NONBANKED
+void p_init_game1 (void) __banked
 {
         p_boss_init ();
         p_schalter_init ();
@@ -82,7 +82,7 @@ void p_init_game1 (void) NONBANKED
         for (v_i = 0; v_i != 10; ++v_i) { v_questen [v_i] = 0; }
 }
 
-void p_init_game2 (void) NONBANKED
+void p_init_game2 (void) __banked
 {
         for (v_i = 0; v_i < 41; v_i++) { move_sprite (v_i, 0, 0); }
 

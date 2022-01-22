@@ -23,7 +23,7 @@
 
 #include "globals.h"
 
-extern void p_init_game1 (void) NONBANKED;
-extern void p_init_game2 (void) NONBANKED;
+extern void p_init_game1 (void) __banked;
+extern void p_init_game2 (void) __banked;
 
 #endif

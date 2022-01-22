@@ -46,14 +46,14 @@
 #include "tempel-e1.h"
 #include "tempel-e2.h"
 
-void p_lvl_init (void) BANKED 
+void p_lvl_init (void) __banked 
 {
         for (v_i = 0; v_i != 15; ++v_i) {
                 v_tuer [v_i] = 0;
         }
 }
 
-void p_lvl_whichLvL (void) BANKED
+void p_lvl_whichLvL (void) __banked
 {
 	if (v_lvl == 1) p_lvl1 ();
         else if (v_lvl == 2) p_lvl2 ();
@@ -316,7 +316,7 @@ void p_lvl_whichLvL (void) BANKED
 
 }
 
-void p_lvl_status (void) BANKED
+void p_lvl_status (void) __banked
 {
         v_tile [0] = 38;
 

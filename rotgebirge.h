@@ -23,19 +23,19 @@
 
 #include "globals.h"
 
-void p_lvl190 (void) BANKED;
-void p_lvl191 (void) BANKED;
-void p_lvl192 (void) BANKED;
-void p_lvl193 (void) BANKED;
-void p_lvl194 (void) BANKED;
-void p_lvl195 (void) BANKED;
-void p_lvl196 (void) BANKED;
-void p_lvl197 (void) BANKED;
-void p_lvl198 (void) BANKED;
-void p_lvl199 (void) BANKED;
-void p_lvl200 (void) BANKED;
-void p_lvl201 (void) BANKED;
-void p_lvl202 (void) BANKED;
-void p_lvl203 (void) BANKED;
+void p_lvl190 (void) __banked;
+void p_lvl191 (void) __banked;
+void p_lvl192 (void) __banked;
+void p_lvl193 (void) __banked;
+void p_lvl194 (void) __banked;
+void p_lvl195 (void) __banked;
+void p_lvl196 (void) __banked;
+void p_lvl197 (void) __banked;
+void p_lvl198 (void) __banked;
+void p_lvl199 (void) __banked;
+void p_lvl200 (void) __banked;
+void p_lvl201 (void) __banked;
+void p_lvl202 (void) __banked;
+void p_lvl203 (void) __banked;
 
 #endif

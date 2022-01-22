@@ -23,7 +23,7 @@
 
 #include "globals.h"
 
-extern void p_items_init (void) BANKED;
+extern void p_items_init (void) __banked;
 extern void p_calc_mapK () __banked;
 extern void p_drawSelectItem () __banked;
 extern void p_changeItem (void) __banked;
@@ -35,7 +35,7 @@ extern void p_use_item () __banked;
 extern void p_hide_item () __banked;
 extern void p_use_sichel () __banked;
 extern void p_collectGold () __banked;
-extern void p_select_schaufel (void) BANKED;
+extern void p_select_schaufel (void) __banked;
 
 #endif
 

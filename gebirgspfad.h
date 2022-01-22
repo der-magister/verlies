@@ -23,17 +23,17 @@
 
 #include "globals.h"
 
-extern void p_lvl168 (void) BANKED;
-extern void p_lvl169 (void) BANKED;
-extern void p_lvl170 (void) BANKED;
-extern void p_lvl171 (void) BANKED;
-extern void p_lvl172 (void) BANKED;
-extern void p_lvl173 (void) BANKED;
-extern void p_lvl174 (void) BANKED;
-extern void p_lvl175 (void) BANKED;
-extern void p_lvl176 (void) BANKED;
-extern void p_lvl177 (void) BANKED;
-extern void p_lvl178 (void) BANKED;
-extern void p_lvl179 (void) BANKED;
+extern void p_lvl168 (void) __banked;
+extern void p_lvl169 (void) __banked;
+extern void p_lvl170 (void) __banked;
+extern void p_lvl171 (void) __banked;
+extern void p_lvl172 (void) __banked;
+extern void p_lvl173 (void) __banked;
+extern void p_lvl174 (void) __banked;
+extern void p_lvl175 (void) __banked;
+extern void p_lvl176 (void) __banked;
+extern void p_lvl177 (void) __banked;
+extern void p_lvl178 (void) __banked;
+extern void p_lvl179 (void) __banked;
 
 #endif

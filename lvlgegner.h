@@ -26,7 +26,7 @@
 
 //extern const UINT8 v_ganz [255];
 
-//void p_gegner_set_table (void) BANKED;
-extern void p_set_gegner (void) BANKED;
+//void p_gegner_set_table (void) __banked;
+extern void p_set_gegner (void) __banked;
 
 #endif

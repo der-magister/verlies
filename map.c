@@ -26,7 +26,7 @@
 #include "daten/karten/maps.h"
 #include "daten/karten/nomap.h"
 
-void p_map_init (void) BANKED
+void p_map_init (void) __banked
 {
         for (v_i = 0; v_i != 15; ++v_i) {
                 v_knr [v_i] = 0;
@@ -35,13 +35,13 @@ void p_map_init (void) BANKED
 }
 
 ///Zeichnet aktuelle Position (Raum) auf der Karte ein
-void p_map_draw_mark (UINT8 l_xk, UINT8 l_yk) BANKED
+void p_map_draw_mark (UINT8 l_xk, UINT8 l_yk) __banked
 {
 	set_win_tiles (l_xk, l_yk, 1, 1, v_tile);
 }
 
 ///zeigt aktuelle Levelkarte an
-void p_showMap (void) BANKED
+void p_showMap (void) __banked
 {
 	v_tile [0] = 52;
 

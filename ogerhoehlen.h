@@ -23,32 +23,32 @@
 
 #include "globals.h"
 
-extern void p_lvl40 (void) BANKED;
-extern void p_lvl41 (void) BANKED;
-extern void p_lvl42 (void) BANKED;
-extern void p_lvl43 (void) BANKED;
-extern void p_lvl44 (void) BANKED;
-extern void p_lvl45 (void) BANKED;
-extern void p_lvl46 (void) BANKED;
-extern void p_lvl47 (void) BANKED;
-extern void p_lvl48 (void) BANKED;
-extern void p_lvl49 (void) BANKED;
-extern void p_lvl50 (void) BANKED;
-extern void p_lvl51 (void) BANKED;
-extern void p_lvl52 (void) BANKED;
-extern void p_lvl53 (void) BANKED;
-extern void p_lvl54 (void) BANKED;
-extern void p_lvl55 (void) BANKED;
-extern void p_lvl56 (void) BANKED;
-extern void p_lvl57 (void) BANKED;
-extern void p_lvl58 (void) BANKED;
-extern void p_lvl59 (void) BANKED;
-extern void p_lvl60 (void) BANKED;
-extern void p_lvl61 (void) BANKED;
-extern void p_lvl62 (void) BANKED;
-extern void p_lvl63 (void) BANKED;
-extern void p_lvl64 (void) BANKED;
-extern void p_lvl65 (void) BANKED;
-extern void p_lvl66 (void) BANKED;
+extern void p_lvl40 (void) __banked;
+extern void p_lvl41 (void) __banked;
+extern void p_lvl42 (void) __banked;
+extern void p_lvl43 (void) __banked;
+extern void p_lvl44 (void) __banked;
+extern void p_lvl45 (void) __banked;
+extern void p_lvl46 (void) __banked;
+extern void p_lvl47 (void) __banked;
+extern void p_lvl48 (void) __banked;
+extern void p_lvl49 (void) __banked;
+extern void p_lvl50 (void) __banked;
+extern void p_lvl51 (void) __banked;
+extern void p_lvl52 (void) __banked;
+extern void p_lvl53 (void) __banked;
+extern void p_lvl54 (void) __banked;
+extern void p_lvl55 (void) __banked;
+extern void p_lvl56 (void) __banked;
+extern void p_lvl57 (void) __banked;
+extern void p_lvl58 (void) __banked;
+extern void p_lvl59 (void) __banked;
+extern void p_lvl60 (void) __banked;
+extern void p_lvl61 (void) __banked;
+extern void p_lvl62 (void) __banked;
+extern void p_lvl63 (void) __banked;
+extern void p_lvl64 (void) __banked;
+extern void p_lvl65 (void) __banked;
+extern void p_lvl66 (void) __banked;
 
 #endif

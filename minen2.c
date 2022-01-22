@@ -35,7 +35,7 @@
 #include "daten/txt/schilder/schildertxt.h"
 #include "daten/txt/locations/locations.h"
 
-void p_lvl220 (void) BANKED
+void p_lvl220 (void) __banked
 {
 	p_schild (75, schildtxt14);
 
@@ -45,7 +45,7 @@ void p_lvl220 (void) BANKED
 	}
 }
 
-void p_lvl221 (void) BANKED
+void p_lvl221 (void) __banked
 {
 	p_truhe_proviant (195, 66, 2);
 	p_stein (187, 46);
@@ -60,7 +60,7 @@ void p_lvl221 (void) BANKED
 	}
 }
 
-void p_lvl222 (void) BANKED
+void p_lvl222 (void) __banked
 {
 
 	p_truhe_karte (182, 11, 67);
@@ -79,7 +79,7 @@ void p_lvl222 (void) BANKED
 	}
 }
 
-void p_lvl223 (void) BANKED
+void p_lvl223 (void) __banked
 {
 	p_schild (194, schildtxt15);
 
@@ -93,7 +93,7 @@ void p_lvl223 (void) BANKED
 	}
 }
 
-void p_lvl224 (void) BANKED
+void p_lvl224 (void) __banked
 {
 	p_truhe_gold (183, 68, 2);
 	p_truhe_gold (195, 69, 2);
@@ -114,7 +114,7 @@ void p_lvl224 (void) BANKED
 	}
 }
 
-void p_lvl225 (void) BANKED
+void p_lvl225 (void) __banked
 {
 	p_truhe_heiltrank (37, 71);
 	p_truhe_heiltrank (51, 72);
@@ -125,7 +125,7 @@ void p_lvl225 (void) BANKED
 	}
 }
 
-void p_lvl226 (void) BANKED
+void p_lvl226 (void) __banked
 {
 	p_truhe_ausdauertrank (184, 73);
 	p_truhe_proviant (191, 74, 2);
@@ -136,7 +136,7 @@ void p_lvl226 (void) BANKED
 	}
 }
 
-void p_lvl227 (void) BANKED
+void p_lvl227 (void) __banked
 {
 	if (v_smk == 142) {
 		p_engine_loadMap (v_lvl222, BANK_19, BANK_17);
@@ -148,7 +148,7 @@ void p_lvl227 (void) BANKED
 	}
 }
 
-void p_lvl228 (void) BANKED
+void p_lvl228 (void) __banked
 {
 	if (v_smk == 214) {
 		p_engine_loadMap (v_lvl227, BANK_19, BANK_17);
@@ -160,7 +160,7 @@ void p_lvl228 (void) BANKED
 	}
 }
 
-void p_lvl229 (void) BANKED
+void p_lvl229 (void) __banked
 {
 	p_stein (104, 47);
 
@@ -179,7 +179,7 @@ void p_lvl229 (void) BANKED
 
 }
 
-void p_lvl230 (void) BANKED
+void p_lvl230 (void) __banked
 {
 	if (v_smk == 90) {
 		p_engine_loadMap (v_lvl229, BANK_19, BANK_17);
@@ -187,7 +187,7 @@ void p_lvl230 (void) BANKED
 	}
 }
 
-void p_lvl231 (void) BANKED
+void p_lvl231 (void) __banked
 {
 	p_umgebung_loch (57, 2);
 

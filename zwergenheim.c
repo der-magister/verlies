@@ -34,7 +34,7 @@
 #include "daten/tilesets/tilesets.h"
 #include "daten/txt/locations/locations.h"
 
-void p_lvl185 (void) BANKED {
+void p_lvl185 (void) __banked {
 	p_stein (188, 34);
 	p_truhe_karte (188, 8, 55);
 
@@ -57,7 +57,7 @@ void p_lvl185 (void) BANKED {
 
 }
 
-void p_lvl186 (void) BANKED {
+void p_lvl186 (void) __banked {
 	if ((v_smk == 55) || (v_smk == 93) || (v_smk == 127)) {
 		p_vanyra ();
 	}
@@ -74,7 +74,7 @@ void p_lvl186 (void) BANKED {
 	}
 }
 
-void p_lvl187 (void) BANKED {
+void p_lvl187 (void) __banked {
 	p_npc_heiler (109);
 
         p_portal (33);

@@ -34,7 +34,7 @@
 #include "daten/txt/locations/locations.h"
 #include "daten/txt/other/alpha.h"
 
-void p_lvl290 (void) BANKED
+void p_lvl290 (void) __banked
 {
 	if (v_smk == 8) {
 		p_engine_loadMap (v_lvl291, BANK_20, BANK_17);
@@ -47,7 +47,7 @@ void p_lvl290 (void) BANKED
 	}
 }
 
-void p_lvl291 (void) BANKED
+void p_lvl291 (void) __banked
 {
 	if (v_smk == 224) {
 		p_engine_loadMap (v_lvl290, BANK_20, BANK_17);
@@ -63,7 +63,7 @@ void p_lvl291 (void) BANKED
 	}
 }
 
-void p_lvl292 (void) BANKED
+void p_lvl292 (void) __banked
 {
 	p_truhe_proviant (182, 92, 2);
 	p_xaver_tempel ();
@@ -74,7 +74,7 @@ void p_lvl292 (void) BANKED
 	}
 }
 
-void p_lvl293 (void) BANKED
+void p_lvl293 (void) __banked
 {
 	if (v_smk == 224) {
 		p_engine_loadMap (v_lvl291, BANK_20, BANK_17);
@@ -90,7 +90,7 @@ void p_lvl293 (void) BANKED
 	}
 }
 
-void p_lvl294 (void) BANKED
+void p_lvl294 (void) __banked
 {
 	p_truhe_ausdauertrank (38, 93);
 	p_truhe_heiltrank (194, 94);
@@ -103,7 +103,7 @@ void p_lvl294 (void) BANKED
 	}
 }
 
-void p_lvl295 (void) BANKED
+void p_lvl295 (void) __banked
 {
 	if (v_smk == 224) {
 		p_engine_loadMap (v_lvl293, BANK_20, BANK_17);

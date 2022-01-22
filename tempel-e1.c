@@ -32,7 +32,7 @@
 #include "daten/lvl/lvldattempel-E2.h"
 #include "daten/txt/locations/locations.h"
 
-void p_lvl275 (void) BANKED
+void p_lvl275 (void) __banked
 {
 	p_stein (104, 53);
 
@@ -48,7 +48,7 @@ void p_lvl275 (void) BANKED
 	}
 }
 
-void p_lvl276 (void) BANKED
+void p_lvl276 (void) __banked
 {
 	if (v_smk == 90) {
 		p_engine_loadMap (v_lvl275, BANK_20, BANK_17);
@@ -60,7 +60,7 @@ void p_lvl276 (void) BANKED
 	}
 }
 
-void p_lvl277 (void) BANKED
+void p_lvl277 (void) __banked
 {
 	p_truhe_proviant (51, 86, 1);
 	p_truhe_karte (181, 14, 87);
@@ -75,7 +75,7 @@ void p_lvl277 (void) BANKED
 	}
 }
 
-void p_lvl278 (void) BANKED
+void p_lvl278 (void) __banked
 {	
 	p_schalter_tuer (51, 8);
 
@@ -94,7 +94,7 @@ void p_lvl278 (void) BANKED
 	}
 }
 
-void p_lvl279 (void) BANKED
+void p_lvl279 (void) __banked
 {
 	if (v_smk == 106) {
 		p_engine_loadMap (v_lvl278, BANK_20, BANK_17);
@@ -106,7 +106,7 @@ void p_lvl279 (void) BANKED
 	}
 }
 
-void p_lvl280 (void) BANKED
+void p_lvl280 (void) __banked
 {
 	if (v_smk == 106) {
 		p_engine_loadMap (v_lvl279, BANK_20, BANK_17);
@@ -118,7 +118,7 @@ void p_lvl280 (void) BANKED
 	}
 }
 
-void p_lvl281 (void) BANKED
+void p_lvl281 (void) __banked
 {
 	p_stein (187, 54);
 
@@ -132,7 +132,7 @@ void p_lvl281 (void) BANKED
 	}
 }
 
-void p_lvl282 (void) BANKED
+void p_lvl282 (void) __banked
 {
 	p_stein (90, 55);
 
@@ -150,7 +150,7 @@ void p_lvl282 (void) BANKED
 	}
 }
 
-void p_lvl283 (void) BANKED
+void p_lvl283 (void) __banked
 {
 	p_truhe_gold (37, 91, 2);
 
@@ -164,7 +164,7 @@ void p_lvl283 (void) BANKED
 	}
 }
 
-void p_lvl284 (void) BANKED
+void p_lvl284 (void) __banked
 {
 	if (v_smk == 126) {
 		p_engine_loadMap (v_lvl283, BANK_20, BANK_17);
@@ -176,7 +176,7 @@ void p_lvl284 (void) BANKED
 	}
 }
 
-void p_lvl285 (void) BANKED
+void p_lvl285 (void) __banked
 {
 	if (v_smk == 126) {
 		p_engine_loadMap (v_lvl284, BANK_20, BANK_17);
@@ -189,7 +189,7 @@ void p_lvl285 (void) BANKED
 	
 }
 
-void p_lvl286 (void) BANKED
+void p_lvl286 (void) __banked
 {
 	if (v_smk == 126) {
 		p_engine_loadMap (v_lvl285, BANK_20, BANK_17);
@@ -203,7 +203,7 @@ void p_lvl286 (void) BANKED
 
 }
 
-void p_lvl287 (void) BANKED
+void p_lvl287 (void) __banked
 {
 	p_truhe_lebenskristall (37, 88);
 	p_truhe_heiltrank (51, 89);

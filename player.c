@@ -29,7 +29,7 @@
 #include "engine.h"
 
 ///setzt das Spielersprite an angegebene Position
-void p_spieler_set_sprite (void) BANKED
+void p_spieler_set_sprite (void) __banked
 {
         //Sprites bewegen
         move_sprite (0, v_sxk, v_syk);
@@ -43,7 +43,7 @@ void p_spieler_set_sprite (void) BANKED
 }
 
 ///Init der Spielerdaten am Start des Spieles
-void p_spieler_init (void) BANKED
+void p_spieler_init (void) __banked
 {
         p_spieler_setSprite (1);
 	
@@ -61,7 +61,7 @@ void p_spieler_init (void) BANKED
 }
 
 //Spritenummerwechsel fuer Trefferanimation
-void p_spieler_setSprite (UINT8 l_set) BANKED
+void p_spieler_setSprite (UINT8 l_set) __banked
 {
         if (l_set == 1)
         {
@@ -87,13 +87,13 @@ void p_spieler_setSprite (UINT8 l_set) BANKED
         }
 }
 
-void p_spieler_blink (void) BANKED
+void p_spieler_blink (void) __banked
 {
         p_spieler_setSprite (2);
         v_sflimmtm = 0;
 }
 
-void p_spieler_blink_off (void) BANKED
+void p_spieler_blink_off (void) __banked
 {
         p_spieler_setSprite (1);
         v_sflimmtm = 255;
@@ -101,7 +101,7 @@ void p_spieler_blink_off (void) BANKED
 
 
 //Bewegung des Spielersprites Richtung Norden
-void p_spieler_move_north (void) BANKED 
+void p_spieler_move_north (void) __banked 
 {
         v_sri = MOVE_NORTH;
 
@@ -124,7 +124,7 @@ void p_spieler_move_north (void) BANKED
 }
 
 //Bewegung des Spielersprites Richtung Süden
-void p_spieler_move_south (void) BANKED
+void p_spieler_move_south (void) __banked
 {
         v_sri = MOVE_SOUTH;
 
@@ -147,7 +147,7 @@ void p_spieler_move_south (void) BANKED
 }
 
 //Bewegung des Spielersprites Richtung Westen
-void p_spieler_move_west (void) BANKED
+void p_spieler_move_west (void) __banked
 {
         v_sri = MOVE_WEST;
 
@@ -170,7 +170,7 @@ void p_spieler_move_west (void) BANKED
 }
 
 //Bewegung des Spielersprites Richtung Osten
-void p_spieler_move_east (void) BANKED
+void p_spieler_move_east (void) __banked
 {
         v_sri = MOVE_EAST;
 
@@ -192,7 +192,7 @@ void p_spieler_move_east (void) BANKED
         }
 }
 
-void p_spieler_after_move (void) BANKED
+void p_spieler_after_move (void) __banked
 {
         p_spieler_set_sprite ();
         ++v_ssc;
@@ -205,7 +205,7 @@ void p_spieler_after_move (void) BANKED
 
 
 ///Bewegungroutine des Spielersprites
-/*void p_spieler_move  (UINT8 l_ri) BANKED
+/*void p_spieler_move  (UINT8 l_ri) __banked
 {
         v_sri = l_ri;
         v_walk = TRUE; 
@@ -278,7 +278,7 @@ void p_spieler_after_move (void) BANKED
 }*/
 
 ///Angriff des Spielers
-void p_spieler_attack () BANKED
+void p_spieler_attack () __banked
 {
         //Nord
         if ((v_sri == MOVE_NORTH) && (v_syk != 24))
@@ -441,7 +441,7 @@ void p_spieler_attack () BANKED
 }
 
 ///Versteckt Attackesprites 
-void p_spieler_hideAttack (void) BANKED
+void p_spieler_hideAttack (void) __banked
 {
         move_sprite (5, 0, 0);
         move_sprite (6, 0, 0);
@@ -449,7 +449,7 @@ void p_spieler_hideAttack (void) BANKED
         move_sprite (8, 0, 0);
 }
 
-void p_spieler_inc_ausdauer (void) BANKED
+void p_spieler_inc_ausdauer (void) __banked
 {
         if (v_saus < v_smaus) ++v_saus;
         p_hud_showAD ();

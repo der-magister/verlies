@@ -30,7 +30,7 @@
 #include "tiledat.h"
 
 
-void p_gegner_init (void) BANKED
+void p_gegner_init (void) __banked
 {
         for (v_i = 0; v_i != 3; v_i++)
         {
@@ -40,7 +40,7 @@ void p_gegner_init (void) BANKED
 }
 
 ///horizontale Bewegungsroutine Gegner
-void p_gegner_move_horizontal (void) BANKED
+void p_gegner_move_horizontal (void) __banked
 {
         for (v_g = 0; v_g != 3; v_g++)
         {
@@ -98,7 +98,7 @@ void p_gegner_move_horizontal (void) BANKED
         }
 }
 
-void p_gegner_move_vertical (void) BANKED
+void p_gegner_move_vertical (void) __banked
 {
         for (v_g = 0; v_g != 3; v_g++)
         {
@@ -155,7 +155,7 @@ void p_gegner_move_vertical (void) BANKED
         }
 }
 
-void p_gegner_speer (void) BANKED
+void p_gegner_speer (void) __banked
 {
         for (v_g = 0; v_g != 3; v_g++)
         {
@@ -171,7 +171,7 @@ void p_gegner_speer (void) BANKED
 }
 
 ///Setzt Spriteverbund an Position
-void p_gegner_move (UINT8 l_nr) BANKED
+void p_gegner_move (UINT8 l_nr) __banked
 {
         if (l_nr == 0)
         {
@@ -197,7 +197,7 @@ void p_gegner_move (UINT8 l_nr) BANKED
         v_gmk [l_nr] = ((v_gxk [l_nr] - 16) / 8) + 18 * ((v_gyk [l_nr] - 24) / 8);
 }
 
-void p_gegner_hide_1 (void) BANKED
+void p_gegner_hide_1 (void) __banked
 {
         move_sprite (36, 0, 0);
         move_sprite (37, 0, 0);
@@ -205,7 +205,7 @@ void p_gegner_hide_1 (void) BANKED
         move_sprite (39, 0, 0);
 }
 
-void p_gegner_hide_2 (void) BANKED
+void p_gegner_hide_2 (void) __banked
 {
         move_sprite (32, 0, 0); 
         move_sprite (33, 0, 0);
@@ -213,7 +213,7 @@ void p_gegner_hide_2 (void) BANKED
         move_sprite (35, 0, 0);
 }
 
-void p_gegner_hide_3 (void) BANKED
+void p_gegner_hide_3 (void) __banked
 {
         move_sprite (28, 0, 0);
         move_sprite (29, 0, 0);
@@ -222,7 +222,7 @@ void p_gegner_hide_3 (void) BANKED
 }
 
 //Setz Gegner (Nr des Spriteverbundes, Starttile, XK, YK, Flag, Richtung, LP, TP)
-void p_gegner_set (UINT8 l_nr, UINT8 l_tile, UINT8 l_tile2, UINT8 l_xk, UINT8 l_yk, UINT8 l_ri, UINT8 l_lp, UINT8 l_tp) BANKED
+void p_gegner_set (UINT8 l_nr, UINT8 l_tile, UINT8 l_tile2, UINT8 l_xk, UINT8 l_yk, UINT8 l_ri, UINT8 l_lp, UINT8 l_tp) __banked
 {
         if (v_nomobs == FALSE)
         {
@@ -265,7 +265,7 @@ void p_gegner_set (UINT8 l_nr, UINT8 l_tile, UINT8 l_tile2, UINT8 l_xk, UINT8 l_
 
 
 ///Kolisionsabfrage Gegner auf Spieler
-void p_gegner_koli_player (void) BANKED
+void p_gegner_koli_player (void) __banked
 {
         for (v_kg = 0; v_kg != 3; ++v_kg)
         {
@@ -310,7 +310,7 @@ void p_gegner_koli_player (void) BANKED
 
 }
 
-void p_gegner_stop (void) BANKED
+void p_gegner_stop (void) __banked
 {
 	for (v_a = 0; v_a <= 3; v_a++)
 	{
@@ -320,7 +320,7 @@ void p_gegner_stop (void) BANKED
 	v_kampf = FALSE;
 }
 
-void p_gegner_update (UINT8 l_nr, UINT8 l_tile, UINT8 l_ri) BANKED
+void p_gegner_update (UINT8 l_nr, UINT8 l_tile, UINT8 l_ri) __banked
 {
         if (l_nr == 0)
         {

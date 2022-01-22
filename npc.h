@@ -23,21 +23,21 @@
 
 #include "globals.h"
 
-extern void p_npc_heiler (UINT8 l_mk) BANKED;
-extern void p_fiona (void) BANKED;
-extern void p_max (void) BANKED;
-extern void p_provianthaendler (void) BANKED;
-extern void p_ausdauerhandlerin (void) BANKED;
-extern void p_heiltrankhaendlerin (void) BANKED;
-extern void p_zauberstaubhaendler (void) BANKED;
+extern void p_npc_heiler (UINT8 l_mk) __banked;
+extern void p_fiona (void) __banked;
+extern void p_max (void) __banked;
+extern void p_provianthaendler (void) __banked;
+extern void p_ausdauerhandlerin (void) __banked;
+extern void p_heiltrankhaendlerin (void) __banked;
+extern void p_zauberstaubhaendler (void) __banked;
 extern void p_kraeuterhandler (void) __banked;
 extern void p_kraeuterhaendler (void) __banked;
-extern void p_vanyra (void) BANKED;
-extern void p_waechter_zwergenheim (void) BANKED;
-extern void p_zylra (void) BANKED;
-extern void p_hueterin (void) BANKED;
-extern void p_xaver_rotgebirge (void) BANKED;
-extern void p_xaver_tempel (void) BANKED;
+extern void p_vanyra (void) __banked;
+extern void p_waechter_zwergenheim (void) __banked;
+extern void p_zylra (void) __banked;
+extern void p_hueterin (void) __banked;
+extern void p_xaver_rotgebirge (void) __banked;
+extern void p_xaver_tempel (void) __banked;
 
 #endif
 

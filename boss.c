@@ -15,12 +15,12 @@
 #include "daten/txt/npcs/ogerboss2.h"
 #include "daten/txt/npcs/pilzwesen2.h"
 
-void p_boss_init () BANKED
+void p_boss_init () __banked
 {
         //for (v_i = 0; v_i != 5; ++v_i) { v_boss [v_i] = 0; }
 }
 
-void p_gegner_set_boss (UINT8 v_nr) BANKED
+void p_gegner_set_boss (UINT8 v_nr) __banked
 {
         v_stage = 1; v_bossloop = 0; v_count = 0; v_gri [0] = 1;
   
@@ -58,7 +58,7 @@ void p_gegner_set_boss (UINT8 v_nr) BANKED
   
 }
 
-void p_boss_treffer (void) BANKED
+void p_boss_treffer (void) __banked
 {
         if (v_boss == 2) { 
                 v_sxk = 24; v_syk = 40;
@@ -67,7 +67,7 @@ void p_boss_treffer (void) BANKED
 }
 
 //Ablauf Kampf gegen Ogerboss
-void p_gegner_ogerboss () BANKED
+void p_gegner_ogerboss () __banked
 {
         if (v_stage == 1)
         {
@@ -132,7 +132,7 @@ void p_gegner_ogerboss () BANKED
         }
 }
 
-void p_gegner_ogerboss_end () BANKED
+void p_gegner_ogerboss_end () __banked
 {
         v_questen [2] = 2;
         p_engine_set_txt (ogerboss2);
@@ -148,7 +148,7 @@ void p_gegner_ogerboss_end () BANKED
         p_engine_set_tile (9, 3, LAYER_BKG);
 }
 
-void p_gegner_pilzwesen (void) BANKED
+void p_gegner_pilzwesen (void) __banked
 {
         if (v_stage == 1)
         {
@@ -189,7 +189,7 @@ void p_gegner_pilzwesen (void) BANKED
         p_gegner_move (0);
 }
 
-void p_boss_effect_pilzwesen (void) BANKED
+void p_boss_effect_pilzwesen (void) __banked
 {
         move_sprite (13, v_gxk [0] - 8, v_gyk [0]);
         move_sprite (14, v_gxk [0] - 8, v_gyk [0] + 8);
@@ -217,7 +217,7 @@ void p_boss_effect_pilzwesen (void) BANKED
         }
 } 
 
-void p_gegner_pilzwesen_end (void) BANKED
+void p_gegner_pilzwesen_end (void) __banked
 {
         v_questen [0] = 11;
         p_engine_set_txt (pilzwesen2);
@@ -239,7 +239,7 @@ void p_gegner_pilzwesen_end (void) BANKED
 }
 
 //Dorgan
-/* void p_gegner_bosskampf1 () BANKED
+/* void p_gegner_bosskampf1 () __banked
 {
   if (v_gflag [1] == 9)
   {
@@ -300,7 +300,7 @@ void p_gegner_pilzwesen_end (void) BANKED
 }
 
 //Zorgus
-void p_gegner_bosskampf2 () BANKED
+void p_gegner_bosskampf2 () __banked
 {
   if (v_gflag [5] == 9)
   {
@@ -350,7 +350,7 @@ void p_gegner_bosskampf2 () BANKED
 }
 
 //Varos
-void p_gegner_bosskampf3 () BANKED
+void p_gegner_bosskampf3 () __banked
 {
   if (v_gflag [1] == 9)
   {

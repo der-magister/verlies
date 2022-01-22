@@ -45,7 +45,7 @@
 #include "daten/txt/npcs/xaver.h"
 
 ///Heiler
-void p_npc_heiler (UINT8 l_mk) BANKED
+void p_npc_heiler (UINT8 l_mk) __banked
 {
 	if ((l_mk == v_smk) && (v_keyflag == 1))
 	{
@@ -68,7 +68,7 @@ void p_npc_heiler (UINT8 l_mk) BANKED
 	}
 }
 
-void p_fiona (void) BANKED
+void p_fiona (void) __banked
 {
         if (v_keyflag == 1)
         {
@@ -78,7 +78,7 @@ void p_fiona (void) BANKED
         }
 }
 
-void p_zylra (void) BANKED
+void p_zylra (void) __banked
 {
         if (v_keyflag == 1)
         {
@@ -89,7 +89,7 @@ void p_zylra (void) BANKED
 }
 
 
-void p_max (void) BANKED
+void p_max (void) __banked
 {
         if (v_keyflag == 1)
         {
@@ -100,7 +100,7 @@ void p_max (void) BANKED
 }
 
 ///Provianthändler
-void p_provianthaendler (void) BANKED
+void p_provianthaendler (void) __banked
 {
         static BOOLEAN l_quit;
 
@@ -144,7 +144,7 @@ void p_provianthaendler (void) BANKED
 }
 
 ///Ausdauertrankverkäuferin
-void  p_ausdauerhandlerin (void) BANKED
+void  p_ausdauerhandlerin (void) __banked
 {
         static BOOLEAN l_quit;
 
@@ -186,7 +186,7 @@ void  p_ausdauerhandlerin (void) BANKED
         }
 }
 
-void p_heiltrankhaendlerin (void) BANKED
+void p_heiltrankhaendlerin (void) __banked
 {
         static BOOLEAN l_quit;
 
@@ -228,7 +228,7 @@ void p_heiltrankhaendlerin (void) BANKED
         }
 }
 
-void p_zauberstaubhaendler (void) BANKED
+void p_zauberstaubhaendler (void) __banked
 {
         static BOOLEAN l_quit;
 
@@ -311,7 +311,7 @@ void p_kraeuterhandler (void) __banked
         }
 }
 
-void p_vanyra (void) BANKED 
+void p_vanyra (void) __banked 
 {
         if (v_questen [0] == 13) {
                 p_engine_set_txt (vanyratxt1);
@@ -330,7 +330,7 @@ void p_vanyra (void) BANKED
         p_engine_after_txt ();
 }
 
-void p_waechter_zwergenheim (void) BANKED 
+void p_waechter_zwergenheim (void) __banked 
 {
         if (v_questen [0] == 13) {
                 p_engine_set_txt (waechtertxt1);
@@ -339,7 +339,7 @@ void p_waechter_zwergenheim (void) BANKED
         p_engine_after_txt ();
 }
 
-void p_hueterin (void) BANKED 
+void p_hueterin (void) __banked 
 {
         if (v_smk == 152)
         {
@@ -355,7 +355,7 @@ void p_hueterin (void) BANKED
         }
 } 
 
-void p_xaver_rotgebirge (void) BANKED
+void p_xaver_rotgebirge (void) __banked
 {
         if (v_questen [0] == 16) { 
                 if ((v_smk == 59) || (v_smk == 21)) {
@@ -375,7 +375,7 @@ void p_xaver_rotgebirge (void) BANKED
         }
 }
 
-void p_xaver_tempel (void) BANKED
+void p_xaver_tempel (void) __banked
 {
     if (v_questen [0] == 17) {
         if ((v_smk == 138) || (v_smk == 104) || (v_smk == 176)) {
