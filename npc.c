@@ -1,6 +1,6 @@
 //   Verlies - ein Adventure im Retrodesign
 //
-//   Copyright (C) 2018-2021 Heiko Wolf
+//   Copyright (C) 2018-2022 Heiko Wolf
 //
 //   This program is free software; you can redistribute it and/or modify
 //   it under the terms of the GNU General Public License As published by
@@ -16,7 +16,7 @@
 //   With this program; if not, write to the Free Software Foundation, Inc.,
 //   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 //
-//   Kontakt: heiko.wolf.mail@gmail.com
+//   Kontakt: projekte@kabelmail.net
 
 //#pragma bank=12
 
@@ -28,14 +28,7 @@
 #include "other.h"
 
 #include "daten/txt/npcs/heilertxt.h"
-#include "daten/txt/npcs/provianthaendler.h"
-#include "daten/txt/npcs/fiona-1.h"
-#include "daten/txt/npcs/max-1.h"
-#include "daten/txt/npcs/ausdauerverkaeuferin.h"
-#include "daten/txt/npcs/heiltrankverkaeuferin.h"
-#include "daten/txt/npcs/zauberstaubhaendler1.h"
-#include "daten/txt/npcs/zauberstaubhaendler2.h"
-#include "daten/txt/npcs/kraeuterhaendler.h"
+#include "daten/txt/npcs/haendler.h"
 
 #include "daten/txt/other/handelnichtmoeglich.h"
 #include "daten/txt/npcs/vanyra.h"

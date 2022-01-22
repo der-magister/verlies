@@ -75,37 +75,20 @@ lcc -Wa-l -Wl-m -Wl-j -Wf-bo2 -c -o /tmp/obj/tilesets.o daten/tilesets/tilesets.
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo3 -c -o /tmp/obj/locationstxt.o daten/txt/locations/locations.c
 
 #Texte von Npcs und Gegnern
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/obj/ausdauerverkaeuferin.o daten/txt/npcs/ausdauerverkaeuferin.c
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/obj/fiona-1.o daten/txt/npcs/fiona-1.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/obj/haendler.o daten/txt/npcs/haendler.c
+lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/obj/bosstxt.o daten/txt/npcs/boss.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/obj/heilertxt.o daten/txt/npcs/heilertxt.c
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/obj/heiltrankverkaeuferin.o daten/txt/npcs/heiltrankverkaeuferin.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/obj/hugotxt.o daten/txt/npcs/hugo.c
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/obj/max-1.o daten/txt/npcs/max-1.c
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/obj/ogerboss1.o daten/txt/npcs/ogerboss1.c
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/obj/ogerboss2.o daten/txt/npcs/ogerboss2.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/obj/phobetxt1.o daten/txt/npcs/phobetxt.c
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/obj/provianthaendler.o daten/txt/npcs/provianthaendler.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/obj/saratxt.o daten/txt/npcs/sara.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/obj/handelnichtmoeglich.o daten/txt/other/handelnichtmoeglich.c
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/obj/zauberstaubhaendler1.o daten/txt/npcs/zauberstaubhaendler1.c
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/obj/zauberstaubhaendler2.o daten/txt/npcs/zauberstaubhaendler2.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/obj/feenaeltestetxt.o daten/txt/npcs/feenaeltestetxt.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/obj/ranartxt1.o daten/txt/npcs/ranartxt1.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/obj/ranartxt2.o daten/txt/npcs/ranartxt2.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/obj/ranartxt3.o daten/txt/npcs/ranartxt3.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/obj/ranartxt4.o daten/txt/npcs/ranartxt4.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/obj/ranartxt5.o daten/txt/npcs/ranartxt5.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/obj/ranartxt6.o daten/txt/npcs/ranartxt6.c
-#lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/obj/ranartxt7.o daten/txt/npcs/ranartxt7.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/obj/ranartxt.o daten/txt/npcs/ranartxt.c
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/obj/pilzwesen1txt.o daten/txt/npcs/pilzwesen1.c
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/obj/pilzwesen2txt.o daten/txt/npcs/pilzwesen2.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/obj/vanyratxt.o daten/txt/npcs/vanyra.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/obj/othertxt.o daten/txt/npcs/others.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/obj/zylratxt1.o daten/txt/npcs/zylra-1.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/obj/hueterintxt.o daten/txt/npcs/hueterin.c
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/obj/xavertxt.o daten/txt/npcs/xaver.c
-lcc -Wa-l -Wl-m -Wl-j -Wf-bo10 -c -o /tmp/obj/kraeuterhaendlertxt.o daten/txt/npcs/kraeuterhaendler.c
 
 # Texte Portale
 lcc -Wa-l -Wl-m -Wl-j -Wf-bo8 -c -o /tmp/obj/portaltxt.o daten/txt/portale/portal.c
@@ -196,16 +179,13 @@ if [ -f verlies.gb ]
 then
 
 #	echo "Starte Emulation"
-	
-	#mgba-qt ../verlies.gb &>/dev/null &
-	
+		
 	#https://github.com/bbbbbr/romusage
 	romusage verlies.map
 
 	#cp /tmp/obj/verlies.gb /home/magister/repos/verlies/verlies.gb
 	#killall -15 mednafen
 
-	#flatpak run io.mgba.mGBA /tmp/obj/verlies.gb &>/dev/null &
 
 	#better performance on raspberry pi 400
 	#/usr/games/mednafen -psx.dbg_level 0 -video.fs 0 -gb.system_type dmg -gb.xscale 4,000000 -gb.yscale 4,000000 /tmp/obj/verlies.gb &>/dev/null &
@@ -214,7 +194,8 @@ then
 	#bgb.exe verlies.gb &
 
 	#bgb verlies.gb
-	#emulicious.sh /tmp/obj/verlies.gb
+		
+	emulicious.sh verlies.gb
 
 fi
 
@@ -224,4 +205,4 @@ date
 
 exit 0
 
-#2022, mail@heikowolf.info
+#2022, projekte@kabelmail.net

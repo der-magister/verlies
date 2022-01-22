@@ -1,6 +1,6 @@
 //   Verlies - ein Adventure im Retrodesign
 //
-//   Copyright (C) 2018-2019 Heiko Wolf
+//   Copyright (C) 2018-2022 Heiko Wolf
 //
 //   This program is free software; you can redistribute it and/or modify
 //   it under the terms of the GNU General Public License As published by
@@ -16,7 +16,7 @@
 //   With this program; if not, write to the Free Software Foundation, Inc.,
 //   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 //
-//   Kontakt: magister@skywave-2000.de
+//   Kontakt: projekte@kabelmail.net
 
 #ifndef _LOCATIONS_H_
 #define _LOCATIONS_H_

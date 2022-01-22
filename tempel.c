@@ -1,6 +1,6 @@
 //   Verlies - ein Adventure im Retrodesign
 //
-//   Copyright (C) 2018-2021 Heiko Wolf
+//   Copyright (C) 2018-2022 Heiko Wolf
 //
 //   This program is free software; you can redistribute it and/or modify
 //   it under the terms of the GNU General Public License As published by
@@ -118,7 +118,7 @@ void p_lvl250 (void) __banked
 		if ((v_tuer [4] == 0) && (v_ske == 0)) {
 			p_tuerzu ();
                 }
-                else if ((v_tuer [4] == 0) && (v_ske == 1)) {
+                else if ((v_tuer [4] == 0) && (v_ske != 0)) {
 			v_tuer [4] = 1;
                         --v_ske;
                 } 

@@ -1,6 +1,6 @@
 //   Verlies - ein Adventure im Retrodesign
 //
-//   Copyright (C) 2018-2021 Heiko Wolf
+//   Copyright (C) 2018-2022 Heiko Wolf
 //
 //   This program is free software; you can redistribute it and/or modify
 //   it under the terms of the GNU General Public License As published by
@@ -16,12 +16,14 @@
 //   With this program; if not, write to the Free Software Foundation, Inc.,
 //   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 //
-//   Kontakt: magister@kabelmail.de
+//   Kontakt: projekte@kabelmail.net
 
-#ifndef _AUSDAUERVERKAEUFERIN_H_
-#define _AUSDAUERVERKAEUFERIN_H_
+#ifndef _BOSSTXT_H_
+#define _BOSSTXT_H_
 
-extern const unsigned char ausdauerverkaeuferin1[];
-extern const unsigned char ausdauerverkaeuferin2[];
+extern const unsigned char ogerboss1[];
+extern const unsigned char ogerboss2[];
+extern const unsigned char pilzwesen1[];
+extern const unsigned char pilzwesen2[];
 
 #endif
